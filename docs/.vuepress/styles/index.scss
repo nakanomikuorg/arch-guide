@@ -49,7 +49,8 @@
   --code-hl-bg-color: rgba(0, 0, 0, 0.66);
   --code-ln-color: #9e9e9e;
   --code-ln-wrapper-width: 3.5rem;
-  --font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --font-family-code: Hack, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
   // layout vars
   --navbar-height: 3.6rem;
   --navbar-padding-v: 0.7rem;
@@ -158,11 +159,7 @@ html.dark .DocSearch {
 }
 
 html {
-  height: 100%;
-
   body {
-    height: 100%;
-
     &::-webkit-scrollbar-thumb {
       border: 3px solid transparent;
       border-radius: 5px;
@@ -303,17 +300,6 @@ html {
   }
 }
 
-// #app > div:nth-child(1) > div > header {
-//   border-color: transparent !important;
-//   background-color: transparent !important;
-
-//   backdrop-filter: blur(10px);
-// }
-
-// .navbar .links {
-//   background-color: transparent !important;
-// }
-
 a.sidebar-link {
   overflow: hidden;
 
@@ -370,9 +356,24 @@ a.sidebar-link {
   }
 }
 
+.grabient-text {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+}
+
 @media (max-width: 419px) {
-  .theme-default-content div[class*="language-"] {
-    margin: 0.85rem -0.5rem;
+  .theme-default-content div[class*="language-"],
+  .code-group__nav {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
 
     border-radius: 6px;
   }
