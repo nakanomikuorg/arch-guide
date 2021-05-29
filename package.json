@@ -1,0 +1,18 @@
+{
+  "name": "arch-guide",
+  "version": "1.0.0",
+  "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
+  "main": "index.js",
+  "repository": "https://github.com/NakanoMikuOrg/archGuide",
+  "author": "icekylin <wminid@yeah.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.15",
+    "@vuepress/plugin-search": "^2.0.0-beta.16",
+    "vuepress": "^2.0.0-beta.16"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

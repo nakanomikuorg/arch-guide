@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2578093 */
+  src: url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff2?t=1622195242467")
+      format("woff2"),
+    url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff?t=1622195242467")
+      format("woff"),
+    url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.ttf?t=1622195242467")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("/static/font/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "pacifico";
+
+  src: url("/static/font/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "seguiemj";
+
+  src: url("/static/font/seguiemj.ttf");
+}

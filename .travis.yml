@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - lts/*
+install:
+  - yarn install
+script:
+  - yarn docs:build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/.vuepress/dist
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  fqdn: arch.icekylin.online
+  on:
+    branch: main
