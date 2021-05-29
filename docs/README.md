@@ -8,7 +8,7 @@ actions:
     link: "/prologue.html"
     type: primary
   - text: Github
-    link: "https://github.com/NakanoMikuOrg/archGuide"
+    link: "https://github.com/NakanoMikuOrg/arch-guide"
     type: secondary
 navbar: false
 features:
