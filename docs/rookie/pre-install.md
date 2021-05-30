@@ -1,3 +1,7 @@
+---
+prev: /prepare/understand.md
+---
+
 # 安装前的准备
 
 由于当前 UEFI 已普及十余年，安装将全部以 UEFI+GPT 的形式进行，传统 BIOS 方式不再赘述。
