@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://arch.icekylin.online/">
-    <img width="240" align="center" src="./docs/static/svg/arch.svg" alt="ArchLinuxGuide" />
+    <img width="240" align="center" src="./docs/.vuepress/public/static/svg/arch.svg" alt="ArchLinuxGuide" />
   </a>
   </br>
   <h1 align="center">archlinux 简明指南</h1>

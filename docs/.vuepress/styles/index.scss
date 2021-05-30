@@ -1,6 +1,6 @@
 :root {
   // font vars
-  --font-family: ubuntu, seguiemj, "Open Sans", -apple-system,
+  --font-family: ubuntu, seguiemj, iconfont, "Open Sans", -apple-system,
     "BlinkMacSystemFont", "Microsoft YaHei", "Clear Sans";
   // brand colors
 
@@ -317,6 +317,10 @@ a.sidebar-link {
   margin-top: 1.382rem;
 }
 
+.code-group__nav-tab {
+  font-family: var(--font-family);
+}
+
 .page-nav {
   .prev,
   .next {
@@ -358,8 +362,6 @@ a.sidebar-link {
 
 .grabient-text {
   color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
   background-color: #ff3cac;
   background-image: linear-gradient(
     225deg,
@@ -367,6 +369,8 @@ a.sidebar-link {
     #784ba0 50%,
     #2b86c5 100%
   );
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media (max-width: 419px) {
@@ -376,6 +380,12 @@ a.sidebar-link {
     margin-left: -0.5rem;
 
     border-radius: 6px;
+  }
+}
+
+@media (max-width: 719px) {
+  .navbar .site-name {
+    display: none !important;
   }
 }
 

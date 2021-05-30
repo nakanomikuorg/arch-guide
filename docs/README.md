@@ -49,7 +49,7 @@ footerHtml: true
 :::: code-group
 ::: code-group-item Pacman
 
-```bash
+```bash{4-5}
 sudo pacman -S nodejs yarn # 安装 nodejs 和 yarn
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
 cd ./arch-guide
@@ -60,7 +60,7 @@ yarn docs:dev
 :::
 ::: code-group-item HomeBrew
 
-```zsh
+```zsh{4-5}
 brew install yarn # 安装 yarn
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
 cd ./arch-guide
@@ -71,7 +71,7 @@ yarn docs:dev
 :::
 ::: code-group-item Scoop
 
-```cmd
+```cmd{5-6}
 scoop install nodejs # 安装 nodejs
 scoop install yarn # 安装 yarn
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
@@ -95,13 +95,13 @@ yarn docs:dev
 
 目前指南存在的问题包括但不限于：
 
-1. 文档部分内容格式依然为完成优化
+1. 文档部分格式依然未完成优化
 2. 由于使用 VuePress V2 Beta 版本导致兼容性问题缺失了部分插件（评论）
 3. 缺失外语翻译
 
-更多信息请参阅 [贡献](/contribute.md) 章节。
+更多信息请参阅 [贡献说明](/contribute.md) 章节。
 
-## 🪴 版权说明
+## 🎋 版权说明
 
 [![by-sa](./static/svg/by-sa.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -112,3 +112,5 @@ yarn docs:dev
 #### 字体
 
 - [Segoe UI Emoji](https://docs.microsoft.com/zh-cn/typography/font-list/segoe-ui-emoji) © 2018 Microsoft Corporation. All Rights Reserved.
+
+更多信息请参阅 [关于指南](/about.md#版权声明) 章节。
