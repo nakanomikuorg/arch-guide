@@ -53,13 +53,19 @@ prev: /prepare/understand.md
 
 ## 3. 刻录安装优盘
 
-准备一个 2G 以上的优盘，刻录一个安装启动盘。
+准备一个 2G 以上的优盘，刻录一个安装盘。
 
 Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php) 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
 
 除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)。
 
-Linux 下可以直接用 `dd` 命令进行刻录。注意 `of` 的参数为 `sdx`，不是 `sdx1`、`sdx2` 等。
+::: tip ℹ️ 提示
+
+使用 [balenaEtcher](https://www.balena.io/etcher/) 制作完成的安装盘若要重新作为普通优盘使用，需要用磁盘分区管理工具（如 [DiskGenius](https://www.diskgenius.cn/)）重建分区表才能正常格式化。
+
+:::
+
+Linux 下同样可以使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)，也可以直接用 `dd` 命令进行刻录。注意 `of` 的参数为 `sdx`，不是 `sdx1`、`sdx2` 等。
 
 ```bash
 sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
@@ -73,24 +79,56 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
-如果是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个磁盘上的话，往往要在 win10 上分出硬盘空间给 archlinux。这里建议至少分 `128GB` 给 archlinux。
+如果是目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
+
+### 具体步骤
+
+![disk-step_1](../static/rookie/pre-install_disk-1.png)
+
+1. 右键点击 _开始菜单_ > _磁盘管理_
+
+![disk-step_2](../static/rookie/pre-install_disk-2.png)
+
+2. 右键点击 _需要压缩的分区_ > _压缩卷_
+
+![disk-step_3](../static/rookie/pre-install_disk-3.png)
+
+3. 在 _输入压缩空间量(MB)_ 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB = 1024MB，128GB = 128 \* 1024MB = 131072MB）
+
+4. 完成之后关闭磁盘管理即可
+
+::: warning ⚠️ 注意
+
+请不要做多余的动作！不要在这里为分出的硬盘空间创建分区！
+
+:::
 
 ## 5. 进入主板 BIOS 进行设置
 
-插入优盘并开机。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 BIOS 设置界面。
+插入优盘并开机。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 `BIOS` 设置界面。
+
+> #### 🍧 碎碎念
+>
+> 随着时代的发展，主板的 `BIOS` 界面也越来越现代；很多主板都有了中文，根据主板 `BIOS` 界面的提示进行操作吧！
 
 ## 6. 关闭主板设置中的 Secure Boot
 
-在类似名为 `security` 的选项卡中，找到一项名为 `Secure Boot`（名称可能略有差异）的选项，选择 `Disable` 将其禁用。
+在类似名为 `security`（安全） 的选项卡中，找到一项名为 `Secure Boot`（安全启动，名称可能略有差异）的选项，选择 `Disable` 将其禁用。
 
-## 7. 调整启动方式为 UEFI
+> #### 🍧 碎碎念
+>
+> 有少数恶心的主板里面，`Secure Boot` 被设置为开启，却不存在关闭它的选项，但系统主板内置有 windows 系统的公钥证书签名，使其只能加载 windows，其它系统（包括 archlinux）一律不予加载。用户不能关闭它，还没法换系统，实在让人无语 😶
+>
+> 如果你正好是这样的电脑，emmm...
+
+## 7. 调整启动方式为 UEFI（可能不需要）
 
 在某些旧的主板里，需要调整启动模式为 `UEFI`,而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode` 的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
 
 ## 8. 调整硬盘启动顺序
 
-在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Options`（名称可能略有差异）的设置选项，将 USB 优盘的启动顺序调至首位。
+在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Options`（名称可能略有差异）的设置选项，将优盘的启动顺序调至首位。
 
 ## 9. 准备安装
 
-最后保存 BIOS 设置并退出，一般的按键是 `F10`。此时电脑重启，不出意外你应该可以顺利进入 archlinux 的安装界面（有一头 🐄 小牛在讲话）。
+最后保存 BIOS 设置并退出，一般的按键是 `F10`。此时电脑重启，不出意外的话根据提示你应该可以顺利进入 archlinux 的安装界面了（有一头 🐄 牛牛在讲话）。

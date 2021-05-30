@@ -1,5 +1,6 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2578093 */
+  font-family: "iconfont";
+
   src: url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff2?t=1622195242467")
       format("woff2"),
     url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff?t=1622195242467")
@@ -10,6 +11,7 @@
 
 @font-face {
   font-family: "ubuntu";
+
   src: url("/static/font/Ubuntu-Regular.ttf");
 }
 

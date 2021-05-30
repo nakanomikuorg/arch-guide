@@ -151,7 +151,7 @@ Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](
 3. 和平共处两项原则：
 
 - archlinux 用户不觉得自己高人一等，劝导 Manjaro Linux 用户前往对应的社区是善意的行为
-- 不要攻击 archlinux 配置繁琐。繁琐是自由的代价。这是 archlinux 的选择，也是 arch 之道的一部分。
+- 不要攻击 archlinux 配置繁琐。繁琐是自由的代价。这是 archlinux 的选择，也是 arch 之道的一部分
 
 :::
 
