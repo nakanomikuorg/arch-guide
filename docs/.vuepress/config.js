@@ -137,6 +137,7 @@ gtag("config", "G-MQRPJQK9SC");`,
       {
         id: "G-MQRPJQK9SC",
       },
+      "@vuepress/plugin-medium-zoom",
     ],
   ],
 };

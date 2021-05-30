@@ -300,6 +300,12 @@ html {
   }
 }
 
+.theme-default-content:not(.custom) img {
+  zoom: 50%;
+
+  border-radius: 6px;
+}
+
 a.sidebar-link {
   overflow: hidden;
 
@@ -319,6 +325,12 @@ a.sidebar-link {
 
 .code-group__nav-tab {
   font-family: var(--font-family);
+}
+
+.custom-container.tip,
+.custom-container.warning,
+.custom-container.danger {
+  border-radius: 0 6px 6px 0;
 }
 
 .page-nav {
