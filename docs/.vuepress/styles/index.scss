@@ -2,12 +2,10 @@
   // font vars
   --font-family: ubuntu, seguiemj, iconfont, "Open Sans", -apple-system,
     "BlinkMacSystemFont", "Microsoft YaHei", "Clear Sans";
-
   // brand colors
 
   --c-brand: #fa6594;
   --c-brand-light: #ff3cac;
-
   // background colors
   --c-bg: #fff;
   --c-bg-light: #f3f4f5;
@@ -15,7 +13,6 @@
   --c-bg-navbar: var(--c-bg);
   --c-bg-sidebar: var(--c-bg);
   --c-bg-arrow: #ccc;
-
   // text colors
   --c-text: #2c3e50;
   --c-text-accent: var(--c-brand);
@@ -23,11 +20,9 @@
   --c-text-lighter: #4e6e8e;
   --c-text-lightest: #6a8bad;
   --c-text-quote: #999;
-
   // border colors
   --c-border: #eaecef;
   --c-border-dark: #dfe2e5;
-
   // custom container colors
   --c-tip: #42b983;
   --c-tip-bg: var(--c-bg-light);
@@ -45,12 +40,10 @@
   --c-danger-text: #600;
   --c-danger-text-accent: var(--c-text);
   --c-details-bg: #eee;
-
   // badge component colors
   --c-badge-tip: var(--c-tip);
   --c-badge-warning: var(--c-warning);
   --c-badge-danger: var(--c-danger);
-
   // code blocks vars
   --code-bg-color: #282c34;
   --code-hl-bg-color: rgba(0, 0, 0, 0.66);
@@ -58,7 +51,6 @@
   --code-ln-wrapper-width: 3.5rem;
   --font-family-code: Hack, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-
   // layout vars
   --navbar-height: 3.6rem;
   --navbar-padding-v: 0.7rem;
@@ -128,22 +120,18 @@ html.dark {
   // brand colors
   --c-brand: #fa6594;
   --c-brand-light: #ff3cac;
-
   // background colors
   --c-bg: #121212;
   --c-bg-light: #2b313a;
   --c-bg-lighter: #262c34;
-
   // text colors
   --c-text: #adbac7;
   --c-text-light: #96a7b7;
   --c-text-lighter: #8b9eb0;
   --c-text-lightest: #8094a8;
-
   // border colors
   --c-border: #3e4c5a;
   --c-border-dark: #34404c;
-
   // custom container colors
   --c-tip: #318a62;
   --c-warning: #ceab00;
@@ -155,7 +143,6 @@ html.dark {
   --c-danger-title: #610000;
   --c-danger-text: #3a0000;
   --c-details-bg: #323843;
-
   // code blocks vars
   --code-hl-bg-color: #363b46;
 }
@@ -191,26 +178,25 @@ html {
 
     .home .hero {
       h1 {
-        font-size: 40px !important;
-        font-weight: 300 !important;
+        font-size: 40px;
+        font-weight: 300;
 
         word-break: keep-all;
       }
 
       .description {
-        font-size: 16px !important;
+        font-size: 16px;
       }
 
       .action-button {
         position: relative;
         z-index: 1;
 
-        border-radius: 2rem !important;
+        border-radius: 2rem;
 
         &.primary {
-          color: #fff !important;
-          border: none !important;
-          border: 2px solid #ff3cac;
+          color: #fff;
+          border: none;
           background-color: #ff3cac;
           background-image: linear-gradient(
             225deg,
@@ -294,7 +280,7 @@ html {
 
     .site-name {
       font-family: pacifico, var(--font-family);
-      font-weight: 100 !important;
+      font-weight: 100;
 
       display: inline-block;
       overflow: hidden;
@@ -303,7 +289,7 @@ html {
 
       white-space: nowrap;
 
-      color: transparent !important;
+      color: transparent;
       background-color: #ff3cac;
       background-image: linear-gradient(
         225deg,
