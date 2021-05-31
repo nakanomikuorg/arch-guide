@@ -1,53 +1,75 @@
 # archlinux 基础安装
 
-本节从安装最基础的无图形化 ArchLinux 系统开始。[官方安装指南](https://wiki.archlinux.org/index.php/Installation_guide)
+> ### ⛵ 万事俱备，只欠东风
+>
+> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读上一节。如果对本节的步骤不理解或者有疑问，请阅读下一节
 
-## 1.再次确保是否为 UEFI 模式
+> ### 🔖 这一节将会讨论：
+>
+> 1. 安装基础的 archlinux 系统
 
-在一系列的信息刷屏后，可以看到已经以 root 登陆安装系统了，此时第一个执行的命令是：
+本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要也可以同时参阅 [官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
-```bash
+::: tip ℹ️ 提示
+
+本节中的截图来自虚拟机和已经安装好的 archlinux。不用担心！和你在实体机看到的是一样的
+
+:::
+
+## 1.禁用 reflector 服务
+
+2020 年，archlinux 安装镜像中加入了 `reflector` 服务，它会自己更新 `mirrorlist`（软件包管理器 `pacman` 的软件源）。在特定情况下，它会误删某些有用的源信息。这里联网后的第一件事就是将其禁用。也许它是一个好用的工具，但是很明显，因为地理上造成的特殊网络环境，它并不适合启用。
+
+```zsh
+systemctl stop reflector.service
+```
+
+1. 通过如上命令将该服务禁用
+
+```zsh
+systemctl status reflector.service
+```
+
+2. 通过如上命令查看该服务是否被禁用
+
+## 2. 再次确认是否为 UEFI 模式
+
+禁用 reflector 服务后，我们再来确认以下是否为 `UEFI` 模式
+
+```zsh
 ls /sys/firmware/efi/efivars
 ```
 
-若输出了一堆东西，即 efi 变量，则说明已在 UEFI 模式。否则请确认你的启动方式是否为 UEFI。
+若输出了一堆东西（`efi` 变量），则说明已在 `UEFI` 模式。否则请确认你的启动方式是否为 `UEFI`。
 
-## 2.连接网络
+## 3. 连接网络
 
-### 无线连接:
+### 无线连接：
 
-无线连接使用 iwctl 进行：
+无线连接使用 `iwctl` 进行连接：
 
-```bash
-iwctl                           #进入交互式命令行
-device list                     #列出设备名，比如无线网卡看到叫 wlan0
-station wlan0 scan              #扫描网络
-station wlan0 get-networks      #列出网络 比如想连接CMCC-5AQ7这个无线
-station wlan0 connect CMCC-5AQ7 #进行连接 输入密码即可
-exit                            #成功后exit退出
+```zsh
+iwctl # 进入交互式命令行
+device list # 列出无线网卡设备名，比如无线网卡看到叫 wlan0
+station wlan0 scan # 扫描网络
+station wlan0 get-networks # 列出网络 比如想连接CMCC-5AQ7这个无线
+station wlan0 connect CMCC-5AQ7 # 进行连接 输入密码即可
+exit #成功后退出
 ```
 
-### 有线连接:
+### 有线连接：
 
-正常来说，只要插上一个已经联网的路由器分出的网线(DHCP)，直接就能联网。
+正常来说，只要插上一个已经联网的路由器分出的网线（DHCP），直接就能联网。
 
-可以等待几秒等网络建立链接后再进行下步测试网络的操作。
+可以等待几秒等网络建立连接后再进行下一步测试网络的操作。
 
-## 3.测试网络
+## 4. 测试网络连通性
 
-```bash
-ping www.gnu.org
+```zsh
+ping www.baidu.com
 ```
 
 稍等片刻，若能看到数据返回，即说明已经联网，ctrl+c 终止退出当前命令。如果还是无法连接，使用 `ip link set xxx up` 命令确认你已经激活了对应的网卡，再重新继续网络链接与测试。若看到类似`Operation not possible due to RF-kill`的报错，继续尝试`rfkill unblock wifi`来解锁无线网卡。[[1]](https://wiki.archlinux.org/index.php/Network_configuration/Wireless#Check_the_driver_status)
-
-## 4.禁用 reflector
-
-2020 年新版 archliveiso 加入了 reflector 服务，它会自己更新 mirrorlist。在特定情况下，它会误删某些有用的源信息。这里联网后的第一件事就是将其禁用。也许它是一个好用的工具，但是很明显，它并不适合在安装的时候启用，尤其在中国。
-
-```bash
-systemctl stop reflector.service
-```
 
 ## 5.更新系统时钟
 
