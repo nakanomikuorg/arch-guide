@@ -1,7 +1,13 @@
 module.exports = {
   base: "/",
   head: [
-    ["meta", { name: "title", content: "archlinux 简明指南" }],
+    [
+      "meta",
+      {
+        name: "title",
+        content: "archlinux 简明指南 —— Arch Linux 安装使用教程",
+      },
+    ],
     [
       "link",
       {
@@ -33,7 +39,7 @@ module.exports = {
       "meta",
       {
         name: "keywords",
-        href: "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,显卡驱动,Linux",
+        href: "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux",
       },
     ],
     [
@@ -46,20 +52,26 @@ module.exports = {
     ["meta", { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:url", content: "https://arch.icekylin.online/" }],
-    ["meta", { property: "og:title", content: "archlinux 简明指南" }],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "archlinux 简明指南 — Arch Linux 安装使用教程",
+      },
+    ],
     [
       "meta",
       {
         property: "og:description",
         content:
-          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
+          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
       },
     ],
     [
       "meta",
       {
         property: "og:image",
-        content: "https://arch.icekylin.online/image.jpg",
+        content: "https://arch.icekylin.online/image-400x400.png",
       },
     ],
     ["meta", { property: "twitter:card", content: "summary_large_image" }],
@@ -67,13 +79,19 @@ module.exports = {
       "meta",
       { property: "twitter:url", content: "https://arch.icekylin.online/" },
     ],
-    ["meta", { property: "twitter:title", content: "archlinux 简明指南" }],
+    [
+      "meta",
+      {
+        property: "twitter:title",
+        content: "archlinux 简明指南 — Arch Linux 安装使用教程",
+      },
+    ],
     [
       "meta",
       {
         property: "twitter:description",
         content:
-          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
+          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
       },
     ],
     [
@@ -110,9 +128,9 @@ gtag("config", "G-MQRPJQK9SC");`,
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "archlinux 简明指南",
+      title: "archlinux 简明指南 — Arch Linux 安装使用教程",
       description:
-        "本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
+        "本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
     },
     // "/en/": {
     //   lang: "en-US",
