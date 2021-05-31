@@ -1,7 +1,34 @@
 module.exports = {
   base: "/",
   head: [
-    ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    ["meta", { name: "title", content: "archlinux 简明指南" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "128x128",
+        href: "/favicon-128x128.png",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
+      },
+    ],
     [
       "meta",
       {
@@ -17,6 +44,45 @@ module.exports = {
       },
     ],
     ["meta", { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://arch.icekylin.online/" }],
+    ["meta", { property: "og:title", content: "archlinux 简明指南" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content:
+          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://arch.icekylin.online/image.jpg",
+      },
+    ],
+    ["meta", { property: "twitter:card", content: "summary_large_image" }],
+    [
+      "meta",
+      { property: "twitter:url", content: "https://arch.icekylin.online/" },
+    ],
+    ["meta", { property: "twitter:title", content: "archlinux 简明指南" }],
+    [
+      "meta",
+      {
+        property: "twitter:description",
+        content:
+          "本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "twitter:image",
+        content: "https://arch.icekylin.online/image.jpg",
+      },
+    ],
     [
       "link",
       { rel: "stylesheet", type: "text/css", href: "/static/css/font.css" },
