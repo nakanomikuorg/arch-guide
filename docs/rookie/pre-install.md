@@ -32,10 +32,10 @@ prev: /prepare/understand.md
 
 下面是国内常用的提供 archlinux 安装镜像的开源镜像站（选一个即可）：
 
-1. [中国科学技术大学开源镜像站](http://mirrors.ustc.edu.cn/)
-2. [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
-3. [华为开源镜像站](https://repo.huaweicloud.com/archlinux/)
-4. [兰州大学开源镜像站](https://mirror.lzu.edu.cn/archlinux/)
+- [中国科学技术大学开源镜像站](http://mirrors.ustc.edu.cn/)
+- [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+- [华为开源镜像站](https://repo.huaweicloud.com/archlinux/)
+- [兰州大学开源镜像站](https://mirror.lzu.edu.cn/archlinux/)
 
 ![清华大学开源软件镜像站](../static/rookie/pre-install_tuna.png)
 
@@ -52,6 +52,10 @@ prev: /prepare/understand.md
 这里也可以看出 archlinux 每月 1 日释出新的安装镜像。
 
 :::
+
+![download-speed](../static/rookie/pre-install_download-speed.png)
+
+中科大的开源镜像站下载速度还是很快的。
 
 ## 3. 刻录安装优盘
 
@@ -164,6 +168,10 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 最后保存 BIOS 设置并退出，一般的按键是 `F10`。
 
 ## 10. 准备安装
+
+![archlinux-iso-1](../static/rookie/pre-virt_vb-17.png)
+
+![archlinux-iso-2](../static/rookie/pre-virt_vb-18.png)
 
 此时电脑重启，不出意外的话根据提示你应该可以顺利进入 archlinux 的安装界面了（有一头 🐄 牛牛在讲话）。
 

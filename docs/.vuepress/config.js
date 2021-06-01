@@ -158,6 +158,7 @@ gtag("config", "G-MQRPJQK9SC");`,
         text: "🌱 新手上路",
         children: [
           "/rookie/pre-install.md",
+          "/rookie/pre-virt.md",
           "/rookie/basic-install.md",
           "/rookie/desktop-env-and-app.md",
           "/rookie/graphic-driver.md",

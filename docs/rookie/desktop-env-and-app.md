@@ -1,5 +1,7 @@
 # 桌面环境与常用应用
 
+> ### 🏔 两岸猿声啼不住，轻舟已过万重山
+
 官方文档: [安装后的工作](https://wiki.archlinux.org/index.php/General_recommendations)  
 本文只介绍最基本的，能使系统真正意义上可用所需的组件  
 相关视频链接： [2020ArchLinux 安装 KDE 桌面&Fcitx5 输入法配置](https://www.bilibili.com/video/BV1Vk4y117jc) 视频文字结合效果更好  
