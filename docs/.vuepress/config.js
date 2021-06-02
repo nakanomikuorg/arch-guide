@@ -102,6 +102,34 @@ module.exports = {
       },
     ],
     [
+      "meta",
+      {
+        name: "baidu-site-verification",
+        content: "code-CJJd7gooWE",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "msvalidate.01",
+        content: "5F7926C2A8770A498525E9E64994663C",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "360-site-verification",
+        content: "87416cd673fcfd727db0aeb869a17caf",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "sogou_site_verification",
+        content: "qR7UVhkopC",
+      },
+    ],
+    [
       "link",
       { rel: "stylesheet", type: "text/css", href: "/static/css/font.css" },
     ],
@@ -114,15 +142,23 @@ module.exports = {
   hm.src = "https://hm.baidu.com/hm.js?e7059486ad3b16e21ea7058836c51b9b";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
-})();
-
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-
-gtag("config", "G-MQRPJQK9SC");`,
+})();`,
+    ],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-MQRPJQK9SC",
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+    
+gtag('config', 'G-MQRPJQK9SC');`,
     ],
   ],
   locales: {
@@ -169,9 +205,9 @@ gtag("config", "G-MQRPJQK9SC");`,
         isGroup: true,
         text: "🛠️ 进阶话题",
         children: [
-          "/advanced/systemCtl.md",
+          "/advanced/system-ctl.md",
           "/advanced/debug.md",
-          "/advanced/powerCtl.md",
+          "/advanced/power-ctl.md",
           "/advanced/beauty.md",
         ],
       },
@@ -179,10 +215,10 @@ gtag("config", "G-MQRPJQK9SC");`,
         isGroup: true,
         text: "📐 办公娱乐",
         children: [
-          "/play&office/office.md",
-          "/play&office/media.md",
-          "/play&office/play.md",
-          "/play&office/android.md",
+          "/play-and-office/office.md",
+          "/play-and-office/media.md",
+          "/play-and-office/play.md",
+          "/play-and-office/android.md",
         ],
       },
       {
@@ -202,12 +238,14 @@ gtag("config", "G-MQRPJQK9SC");`,
     activeHeaderLinks: false,
     lastUpdatedText: "📑 最后更新",
     contributorsText: "🎨 参与贡献",
-    repo: "https://github.com/NakanoMikuOrg/archGuide",
+    repo: "https://github.com/NakanoMikuOrg/arch-guide",
     docsDir: "docs",
     docsBranch: "main",
     repoLabel: "🍺 Github",
     editLinks: true,
     editLinkText: "📝 编辑本文",
+    notFound: ["👻 页面走丢了", "👻 这个页面不存在呢"],
+    backToHome: "🏠 把我带回家",
   },
   plugins: [
     [
@@ -219,11 +257,19 @@ gtag("config", "G-MQRPJQK9SC");`,
           },
         },
       },
-      "@vuepress/plugin-google-analytics",
+    ],
+    // [
+    //   "@vuepress/plugin-google-analytics",
+    //   {
+    //     id: "G-MQRPJQK9SC",
+    //   },
+    // ],
+    "@vuepress/plugin-medium-zoom",
+    [
+      "sitemap",
       {
-        id: "G-MQRPJQK9SC",
+        hostname: "https://arch.icekylin.online",
       },
-      "@vuepress/plugin-medium-zoom",
     ],
   ],
 };
