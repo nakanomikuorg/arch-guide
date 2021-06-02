@@ -43,7 +43,7 @@ prev: /prepare/understand.md
 
 ![华为开源镜像站](../static/rookie/pre-install_huawei.png)
 
-后两者需要依次点击 _iso_ > _20XX.XX.XX_ > _archlinux-20XX.XX.XX-x86_64.iso_。
+后两者需要依次点击 `iso` > `20XX.XX.XX` > `archlinux-20XX.XX.XX-x86_64.iso`。
 
 ::: warning ⚠️ 注意
 
@@ -63,6 +63,8 @@ prev: /prepare/understand.md
 
 Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php) 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
 
+![ethcer](../static/rookie/pre-install_ethcer.png)
+
 除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)。
 
 ::: tip ℹ️ 提示
@@ -79,29 +81,27 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 > 📑 命令参数说明：
 >
-> - `bs=4M` 指定一个较为合理的文件输入输出块大小
-> - `status=progress` 用来输出刻录过程总的信息
-> - `oflag=sync` 用来控制写入数据时的行为特征。确保命令结束时数据及元数据真正写入磁盘，而不是刚写入缓存就返回
+> - `bs=4M` —— 指定一个较为合理的文件输入输出块大小
+> - `status=progress` —— 用来输出刻录过程总的信息
+> - `oflag=sync` —— 用来控制写入数据时的行为特征。确保命令结束时数据及元数据真正写入磁盘，而不是刚写入缓存就返回
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
 如果是目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
-### 具体步骤
-
 ![disk-step_1](../static/rookie/pre-install_disk-1.png)
 
-1. 右键点击 _开始菜单_ > _磁盘管理_
+1. 右键点击 `开始菜单` > 点击 `磁盘管理`
 
 ![disk-step_2](../static/rookie/pre-install_disk-2.png)
 
-2. 右键点击 _需要压缩的分区_ > _压缩卷_
+2. 右键点击 `需要压缩的分区` > 点击 `压缩卷`
 
 ![disk-step_3](../static/rookie/pre-install_disk-3.png)
 
-3. 在 _输入压缩空间量(MB)_ 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB = 1024MB，128GB = 128 \* 1024MB = 131072MB）
+3. 在 `输入压缩空间量(MB)` 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB = 1024MB，128GB = 128 \* 1024MB = 131072MB）
 
-4. 点击 _压缩_，完成之后关闭磁盘管理即可
+4. 点击 `压缩`，完成之后关闭磁盘管理即可
 
 ::: warning ⚠️ 注意
 
@@ -111,33 +111,33 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 5. 进入主板 BIOS 进行设置
 
-插入优盘并开机。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 `BIOS` 设置界面。
+**插入优盘并开机**。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 BIOS 设置界面。
 
-除此之外，如果你还嫌麻烦，还可以使用以下方法进入 `BIOS`：
+除此之外，如果你还嫌麻烦，还可以使用以下方法进入 BIOS：
 
 ![uefi-step_1](../static/rookie/pre-install_uefi-2.png)
 
-1. 在 win10 下 按住 _Shift_ 键同时点击 _重启_
+1. 在 win10 下 按住 `Shift` 键同时点击 `重启`
 
 ![uefi-step_2](../static/rookie/pre-install_uefi-3.png)
 
-2. 保持按住 _Shift_ 键直到进入如图所示界面
+2. 保持按住 `Shift` 键直到进入如图所示界面
 
-3. 选择 _疑难解答_ 并按下 _Enter_
+3. 选择 `疑难解答` 并回车 `Enter`
 
 ![uefi-step_3](../static/rookie/pre-install_uefi-4.png)
 
-4. 选择 _UEFI 固件设置_ 并按下 _Enter_
+4. 选择 `UEFI 固件设置` 并回车 `Enter`
 
 ![uefi-step_4](../static/rookie/pre-install_uefi-5.png)
 
-5. 按下 _Enter_ 重启，此时应该已经进入了 `BIOS`
+5. 按下 `Enter` 重启，此时应该已经进入了 BIOS
 
 > #### 🍧 碎碎念
 >
-> 随着时代的发展，主板的 `BIOS` 界面也越来越现代；很多主板都有了中文，根据主板 `BIOS` 界面的提示进行操作吧！
+> 随着时代的发展，主板的 BIOS 界面也越来越现代；很多主板都有了中文，根据主板 BIOS 界面的提示进行操作吧！
 
-## 6. 关闭主板设置中的 Secure Boot
+## 6. 关闭 BIOS 设置中的 Secure Boot
 
 ![uefi-step_5](../static/rookie/pre-install_uefi-6.png)
 
@@ -151,7 +151,7 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 7. 调整启动方式为 UEFI（可能不需要）
 
-在某些旧的主板里，需要调整启动模式为 `UEFI`,而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode` 的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
+在某些旧的主板里，需要调整启动模式为 `UEFI`，而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode` 的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
 
 ## 8. 调整硬盘启动顺序
 

@@ -2,33 +2,17 @@
 
 > ### ⛵ 万事俱备，只欠东风
 >
-> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](./pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节
+> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](./pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装步骤详解](/basic-install-detail.md)
 
 > ### 🔖 这一节将会讨论：
 >
 > 1. 安装基础的 archlinux 系统
 
-本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要也可以同时参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ::: tip ℹ️ 提示
 
 本节中的截图来自虚拟机和已经安装好的 archlinux。不用担心！和你在实体机看到的是一样的。
-
-:::
-
-::: tip ℹ️ 提示
-
-archlinux 在 2021 年 4 月在安装镜像中内置了一个 [安装脚本](https://archlinux.org/packages/extra/any/archinstall/)，类似一个一键安装脚本，提供一些选项，即可快速安装（填问卷安系统）。和所有一键安装脚本类似，提供自动化，但不灵活的安装过程。缺陷包括但不限于：
-
-1. 只提供有限的文件系统格式
-2. 只可限定在一个磁盘
-3. 不能指定软件仓库镜像源
-4. 只提供有限的桌面选择
-5. 自动分区不可手动干预
-6. 输入错误直接崩溃退出
-7. 仅支持 UEFI 等
-
-不建议使用这个安装脚本，除了以上各种原因，初学者也无法在这种安装过程中学到任何东西。如果你因为某些原因需要快速启动一个基础的 archlinux 环境，那么可以尝试此脚本。
 
 :::
 
@@ -39,6 +23,16 @@ archlinux 在 2021 年 4 月在安装镜像中内置了一个 [安装脚本](htt
 另外，如果安装中有报错，请弄清楚报错的原因（这要求你起码能看懂有报错）！常见的原因包括但不限于输错了命令、添加了多余的步骤等。在解决了问题之后再进行下一步！
 
 :::
+
+## 0. 进入安装环境
+
+![archlinux-iso-1](../static/rookie/pre-virt_vb-17.png)
+
+1. 在第一个选项回车
+
+![archlinux-iso-2](../static/rookie/pre-virt_vb-18.png)
+
+2. 进入安装环境后（看见 🐂 牛牛），便可以开始通过命令安装 archlinux 了
 
 ## 1. 禁用 reflector 服务
 
@@ -86,6 +80,12 @@ ls /sys/firmware/efi/efivars
 
 ::: tip ℹ️ 提示
 
+archlinux 的安装**必须**要求网络环境。
+
+:::
+
+::: tip ℹ️ 提示
+
 若为虚拟机且按照上一节 [虚拟机安装前的准备](./pre-virt.md#_3-配置-virtualbox) 进行了配置；同时宿主机连接了网络，那么虚拟机应该已经连接网络了。
 
 :::
@@ -100,7 +100,7 @@ device list # 列出无线网卡设备名，比如无线网卡看到叫 wlan0
 station wlan0 scan # 扫描网络
 station wlan0 get-networks # 列出所有 wifi 网络
 station wlan0 connect wifi-name # 进行连接，注意这里无法输入中文。回车后输入密码即可
-exit #成功后退出
+exit # 连接成功后退出
 ```
 
 ::: tip ℹ️ 提示
@@ -170,9 +170,15 @@ timedatectl status # 检查服务状态
 vim /etc/pacman.d/mirrorlist # 使用 vim 编辑镜像源文件
 ```
 
+::: tip ℹ️ 提示
+
 如果不会使用 `vim` 编辑器，请参阅 [这里]()。
 
-放在最上面的是会使用的软件仓库镜像源，推荐的的镜像源如下：
+`vim` 编辑器在安装和配置系统的过程中还需要使用多次。
+
+:::
+
+放在最上面的是会使用的软件仓库镜像源，推荐的镜像源如下：
 
 ```mirrorlist {1}
 Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch # 中国科学技术大学开源镜像站
@@ -205,7 +211,7 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 ::: tip ℹ️ 提示
 
-分区步骤对于有些人来说是个难点，如果有不理解的地方请参考下一节 [基础安装步骤详解](./basic-install-detail.md#分区和格式化步骤详解)。
+分区步骤对于有些人来说是个难点，如果有不理解的地方请参阅下一节 [基础安装步骤详解](./basic-install-detail.md#分区和格式化步骤详解)。
 
 同时，分区的设置和参考案例也会在下一节 [基础安装步骤详解](./basic-install-detail.md#分区和格式化步骤详解) 详细列出。
 
@@ -287,11 +293,11 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 进入 `cfdisk` 分区工具之后，你会看到如图所示的界面。通过方向键 `↑` 和 `↓` 可以在要操作磁盘分区或空余空间中移动；通过方向键 `←` 和 `→` 在对当前高亮的磁盘分区或空余空间要执行的操作中移动。
 
-3. 首先创建 Swap 分区。选中 _`Free space`_ > 再选中操作 _`[New]`_ > 然后按下回车 _`Enter`_ 以新建 `swap` 分区（类似 windows 的交换文件）
+3. 首先创建 Swap 分区。选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建 `swap` 分区（类似 windows 的交换文件）
 
 ![partition-3](../static/rookie/basic-install_partition-3.png)
 
-4. 按下回车后会提示输入 _分区大小_，Swap 分区建议为**电脑内存大小的 60%**，或者和内存大小相等 > 然后按下回车 _`Enter`_
+4. 按下回车后会提示输入 `分区大小`，Swap 分区建议为**电脑内存大小的 60%**，或者和内存大小相等 > 然后按下回车 `Enter`
 
 ![partition-4](../static/rookie/basic-install_partition-4.png)
 
@@ -301,7 +307,7 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 :::
 
-5. 默认新建的类型是 `Linux filesystem`，我们需要将类型更改为 `Linux swap`。选中操作 _`[Type]`_ > 然后按下回车 _`Enter`_ > 通过方向键 `↑` 和 `↓` 选中 _`Linux swap`_ > 最后按下回车 _`Enter`_
+5. 默认新建的类型是 `Linux filesystem`，我们需要将类型更改为 `Linux swap`。选中操作 `[Type]` > 然后按下回车 `Enter` > 通过方向键 `↑` 和 `↓` 选中 `Linux swap` > 最后按下回车 `Enter`
 
 ![partition-5](../static/rookie/basic-install_partition-5.png)
 
@@ -309,15 +315,15 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 ![partition-7](../static/rookie/basic-install_partition-7.png)
 
-6. 因为我们再只需要一个分区即可（我们将使用 `Btrfs` 文件系统，所以根目录和用户主目录在一个分区上），所以类似的选中 _`Free space`_ > 再选中操作 _`[New]`_ > 然后按下回车 _`Enter`_ 以新建分区
+6. 因为我们再只需要一个分区即可（因为使用 `Btrfs` 文件系统，所以根目录和用户主目录在一个分区上），所以类似的：选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建分区
 
 ![partition-8](../static/rookie/basic-install_partition-8.png)
 
-7. 输入 _分区大小_，默认是剩余的全部空间。请根据实际情况输入 > 然后按下回车 _`Enter`_
+7. 输入 `分区大小`（默认是剩余的全部空间。请根据实际情况输入）> 然后按下回车 `Enter`
 
 ![partition-9](../static/rookie/basic-install_partition-9.png)
 
-8. 分区类型默认即可，无需更改。接下来选中操作 _`[Write]`_ 并回车 > 输入 _`yes`_ 并回车确认分区操作
+8. 分区类型默认即可，无需更改。接下来选中操作 `[Write]` 并回车 `Enter` > 输入 `yes` 并回车 `Enter` 确认分区操作
 
 ![partition-10](../static/rookie/basic-install_partition-10.png)
 
@@ -329,7 +335,7 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 :::
 
-9. 选中操作 _`[Quit]`_ 并回车以退出 `cfdisk` 分区工具
+9. 选中操作 `[Quit]` 并回车 `Enter` 以退出 `cfdisk` 分区工具
 
 ![partition-12](../static/rookie/basic-install_partition-12.png)
 
@@ -368,7 +374,7 @@ lsblk # 复查磁盘情况
 
 #### 7-2-1. 格式化 Swap 分区
 
-通过以下命令格式化对应的 Swap 分区，请按照实际情况替换 `x` 和 `n`：
+通过以下命令格式化对应的 Swap 分区，请按照实际情况替换 `x` 和 `n`（下同）：
 
 :::: code-group
 ::: code-group-item SATA
@@ -692,7 +698,7 @@ hwclock --systohc
 
 `Locale` 决定了软件使用的语言、书写习惯和字符集。
 
-1. 编辑 `/etc/locale.gen`，去掉 `en_US.UTF-8 UTF-8` 行以及 `zh_CN.UTF-8 UTF-8` 的注释符号（`#`）：
+1. 编辑 `/etc/locale.gen`，去掉 `en_US.UTF-8 UTF-8` 以及 `zh_CN.UTF-8 UTF-8` 行前的注释符号（`#`）：
 
 ```bash
 vim /etc/locale.gen
@@ -880,3 +886,29 @@ neofetch
 到此为止，一个基础的，无图形界面的 archlinux 已经安装完成了！这时你应该可以感到满满的满足感（即使你还没有见到图形化的界面）。好好享受一下成功安装 archlinux 的喜悦吧！
 
 如果你对本节的部分步骤不理解，请仔细阅读下一节 [基础安装步骤详解](./basic-install-detail.md)。在此之后，我们来安装图形界面。
+
+::: tip ℹ️ 提示
+
+你可以使用以下命令关机：
+
+```bash
+shutdown -h now
+```
+
+:::
+
+::: tip ℹ️ 提示
+
+archlinux 在 2021 年 4 月在安装镜像中内置了一个 [安装脚本](https://archlinux.org/packages/extra/any/archinstall/)，类似一个一键安装脚本，提供一些选项，即可快速安装（填问卷安系统）。和所有一键安装脚本类似，提供自动化，但不灵活的安装过程。缺陷包括但不限于：
+
+1. 只提供有限的文件系统格式
+2. 只可限定在一个磁盘
+3. 不能指定软件仓库镜像源
+4. 只提供有限的桌面选择
+5. 自动分区不可手动干预
+6. 输入错误直接崩溃退出
+7. 仅支持 UEFI 等
+
+不建议使用这个安装脚本，除了以上各种原因，初学者也无法在这种安装过程中学到任何东西。如果你因为某些原因需要快速启动一个基础的 archlinux 环境，那么可以尝试此脚本。
+
+:::

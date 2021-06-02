@@ -2,9 +2,8 @@
 
 > ### 🏔 两岸猿声啼不住，轻舟已过万重山
 
-官方文档: [安装后的工作](https://wiki.archlinux.org/index.php/General_recommendations)  
-本文只介绍最基本的，能使系统真正意义上可用所需的组件  
-相关视频链接： [2020ArchLinux 安装 KDE 桌面&Fcitx5 输入法配置](https://www.bilibili.com/video/BV1Vk4y117jc) 视频文字结合效果更好  
+官方文档: [安装后的工作](https://wiki.archlinux.org/index.php/General_recommendations)
+
 注: 文档中带有 <sup>AUR</sup> 角标的软件代表是用户自行打包的第三方软件[AUR](https://aur.archlinux.org/)，不在 Arch 官方支持范围内，可能会出现各种问题。如果不是实在没有官方支持的同类软件，则不建议使用。
 
 ## 1.确保系统为最新

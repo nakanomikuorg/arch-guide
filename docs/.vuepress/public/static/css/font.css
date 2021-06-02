@@ -11,24 +11,84 @@
 
 @font-face {
   font-family: "ubuntu";
+  font-weight: normal;
+  font-style: normal;
 
-  src: url("/static/font/Ubuntu-Regular.ttf");
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 400;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Italic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 500;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 500;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 700;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 300;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Light.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 300;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-LightItalic.ttf");
 }
 
 @font-face {
   font-family: "hack";
 
-  src: url("/static/font/Hack-Regular.ttf");
+  src: local("Hack"), url("/static/font/Hack-Regular.ttf");
 }
 
 @font-face {
   font-family: "pacifico";
 
-  src: url("/static/font/Pacifico-Regular.ttf");
+  src: local("Pacifico"), url("/static/font/Pacifico-Regular.ttf");
 }
 
 @font-face {
   font-family: "seguiemj";
+  font-weight: normal;
+  font-weight: bold;
 
-  src: url("/static/font/seguiemj.ttf");
+  src: local("Segoe UI Emoji"), url("/static/font/seguiemj.ttf");
 }

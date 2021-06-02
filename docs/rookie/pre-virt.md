@@ -35,7 +35,7 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 
 ![Configure-vb_step-1](../static/rookie/pre-virt_vb-1.png)
 
-1. 打开 _VirtualBox_ > 点击 _新建_
+1. 打开 VirtualBox > 点击 `新建`
 
 ![Configure-vb_step-2](../static/rookie/pre-virt_vb-2.png)
 
@@ -43,23 +43,23 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 
 ![Configure-vb_step-3](../static/rookie/pre-virt_vb-3.png)
 
-3. 将内存大小修改为合适大小。建议大于 2GB。因为即使 archlinux 可以在 512MB 的内存下运行，但安装则需要更多的内存
+3. 将内存大小修改为合适大小。建议大于 2GB。因为即使 archlinux 可以在 512MB 的内存下运行，但安装还需要更多的内存
 
 ![Configure-vb_step-4](../static/rookie/pre-virt_vb-4.png)
 
-4. 点击 _创建_
+4. 点击 `创建`
 
 ![Configure-vb_step-5](../static/rookie/pre-virt_vb-5.png)
 
-5. 选择 _VDI_ 类型（默认） > 点击 _下一步_
+5. 选择 `VDI` 类型（默认） > 点击 `下一步`
 
 ![Configure-vb_step-6](../static/rookie/pre-virt_vb-6.png)
 
-6. 选择 _动态分配_ （默认） > 点击 _下一步_
+6. 选择 `动态分配` （默认） > 点击 `下一步`
 
 ![Configure-vb_step-7](../static/rookie/pre-virt_vb-7.png)
 
-7. 选择合适的储存位置（一般默认即可） > 指定虚拟磁盘大小。建议大于 64 GB（因为是动态分配，不会立即占用硬盘空间，请放心选择；同时我们在虚拟机里不会安装过多的软件，所以 64GB 足够我们使用，当然你也可以自由调整） > 点击 _创建_
+7. 选择合适的储存位置（一般默认即可） > 指定虚拟磁盘大小。建议大于 64 GB（因为是动态分配，不会立即占用硬盘空间，请放心选择；同时我们在虚拟机里不会安装过多的软件，所以 64GB 足够我们使用，当然你也可以自由调整） > 点击 `创建`
 
 ::: tip ℹ️ 提示
 
@@ -69,37 +69,37 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 
 ![Configure-vb_step-8](../static/rookie/pre-virt_vb-8.png)
 
-8. 点击 _设置_
+8. 点击 `设置`
 
 ![Configure-vb_step-9](../static/rookie/pre-virt_vb-9.png)
 
-9. 点击侧栏 _系统_ > _主板_ > 在 _扩展特性_ 中勾上 _启用 EFI_
+9. 点击侧栏 `系统` > `主板` > 在 `扩展特性` 中勾上 `启用 EFI`
 
 ![Configure-vb_step-10](../static/rookie/pre-virt_vb-10.png)
 
 ![Configure-vb_step-11](../static/rookie/pre-virt_vb-11.png)
 
-10. _处理器数量_ 和 _显存大小_ 可做适当调整
+10. `处理器数量` 和 `显存大小` 可做适当调整
 
 ![Configure-vb_step-12](../static/rookie/pre-virt_vb-12.png)
 
-11. 在侧栏 _网络_ > _网卡 1_ > 将 _连接方式_ 改为 _桥接网卡_
+11. 在侧栏 `网络` > `网卡 1` > 将 `连接方式` 改为 `桥接网卡`
 
 ![Configure-vb_step-13](../static/rookie/pre-virt_vb-13.png)
 
-12. 点击 _启动_，开启虚拟机
+12. 点击 `启动`，开启虚拟机
 
 ![Configure-vb_step-14](../static/rookie/pre-virt_vb-14.png)
 
-13. 在弹出的选择启动盘窗口点击 _文件夹小图标_
+13. 在弹出的选择启动盘窗口点击 `文件夹小图标`
 
 ![Configure-vb_step-15](../static/rookie/pre-virt_vb-15.png)
 
-14. 点击 _注册_
+14. 点击 `注册` > 在弹出的资源管理器中选择 `archlinux 安装镜像`
 
 ![Configure-vb_step-16](../static/rookie/pre-virt_vb-16.png)
 
-15. 选中 _archlinux 安装镜像_ > 点击 _选择_
+15. 选中 `archlinux 安装镜像` > 点击 `选择`
 
 ![Configure-vb_step-17](../static/rookie/pre-virt_vb-17.png)
 
