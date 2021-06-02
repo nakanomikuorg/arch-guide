@@ -123,13 +123,6 @@ module.exports = {
       },
     ],
     [
-      "meta",
-      {
-        name: "sogou_site_verification",
-        content: "qR7UVhkopC",
-      },
-    ],
-    [
       "link",
       { rel: "stylesheet", type: "text/css", href: "/static/css/font.css" },
     ],
@@ -265,11 +258,5 @@ gtag('config', 'G-MQRPJQK9SC');`,
     //   },
     // ],
     "@vuepress/plugin-medium-zoom",
-    [
-      "sitemap",
-      {
-        hostname: "https://arch.icekylin.online",
-      },
-    ],
   ],
 };
