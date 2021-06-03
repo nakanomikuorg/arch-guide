@@ -75,15 +75,6 @@ next: /prepare/head-on-blow.md
   </a>
 </p>
 
-<h2 align="center">
-  <a
-    href="https://arch.icekylin.online/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >📖 阅读地址</a
-  >
-</h2>
-
 本指南是 [Arch Linux 安装使用教程](https://github.com/ArchLinuxStudio/ArchLinuxTutorial) 的下游文档，相比原教程，本指南进行了如下更改：
 
 1. 📖 格式优化 —— 由 VuePress 驱动，相对原教程格式进行优化
