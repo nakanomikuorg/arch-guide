@@ -103,7 +103,7 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 
 ![Configure-vb_step-17](../static/rookie/pre-virt_vb-17.png)
 
-16. 在第一个选项回车
+16. 在第一个选项回车 `Enter`
 
 ![Configure-vb_step-18](../static/rookie/pre-virt_vb-18.png)
 
