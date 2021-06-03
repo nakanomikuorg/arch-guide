@@ -13,34 +13,40 @@ next: /prepare/head-on-blow.md
 ## 📕 相关信息
 
 <p class="shields normal-img-p">
-  <a href="https://arch.icekylin.online/">
+  <a href="https://github.com/NakanoMikuOrg/arch-guide" target: '_blank', rel: 'noopener noreferrer'>
     <img
       alt="Lines of code"
       src="https://img.shields.io/tokei/lines/github/NakanoMikuOrg/arch-guide"
     /> </a
   >&nbsp;
-  <a href="https://arch.icekylin.online/">
+  <a href="https://github.com/NakanoMikuOrg/arch-guide" target: '_blank', rel: 'noopener noreferrer'>
     <img
       alt="arch-guide"
       src="https://travis-ci.com/NakanoMikuOrg/arch-guide.svg?branch=main"
     /> </a
   >&nbsp;
-  <a href="https://github.com/NakanoMikuOrg/arch-guide">
+  <a href="https://github.com/NakanoMikuOrg/arch-guide" target: '_blank', rel: 'noopener noreferrer'>
     <img
       alt="GitHub last commit"
       src="https://img.shields.io/github/last-commit/NakanoMikuOrg/arch-guide"
     /> </a
   >&nbsp;
-  <a href="https://github.com/NakanoMikuOrg/arch-guide">
+  <a href="https://github.com/NakanoMikuOrg/arch-guide" target: '_blank', rel: 'noopener noreferrer'>
     <img
       alt="GitHub Repo stars"
       src="https://img.shields.io/github/stars/NakanoMikuOrg/arch-guide?style=social"
     /> </a
   >&nbsp;
-  <a href="https://gitee.com/nakano-miku/arch-guide/stargazers">
+  <a href="https://gitee.com/nakano-miku/arch-guide/stargazers" target: '_blank', rel: 'noopener noreferrer'>
     <img
       src="https://gitee.com/nakano-miku/arch-guide/badge/star.svg?theme=white"
-      alt="star"
+      alt="Gitee Repo stars"
+    />
+  </a>&nbsp;
+    <a href="https://tongji.baidu.com/web/welcome/ico?s=e7059486ad3b16e21ea7058836c51b9b" target: '_blank', rel: 'noopener noreferrer'>
+    <img
+      src="https://img.shields.io/badge/Baidu-%E7%BB%9F%E8%AE%A1-blue"
+      alt="百度统计"
     />
   </a>
 </p>
