@@ -23,6 +23,8 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/virtualbox/)
 - [哈尔滨工业大学开源镜像站](https://mirrors.hit.edu.cn/virtualbox/)
 
+![vb-install](../static/rookie/pre-virt_vb-install-1.png)
+
 根据安装包的提示安装即可。
 
 ## 2. 下载安装镜像

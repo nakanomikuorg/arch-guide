@@ -164,10 +164,10 @@ timedatectl status # 检查服务状态
 
 ## 6. 更换国内软件仓库镜像源加快下载速度
 
-通过修改 `/etc/pacman.d/mirrorlist` 文件将 `pacman` 软件仓库源更换为国内软件仓库镜像源：
+使用 `vim` 编辑器修改 `/etc/pacman.d/mirrorlist` 文件。将 `pacman` 软件仓库源更换为国内软件仓库镜像源：
 
 ```zsh
-vim /etc/pacman.d/mirrorlist # 使用 vim 编辑镜像源文件
+vim /etc/pacman.d/mirrorlist
 ```
 
 ::: tip ℹ️ 提示
@@ -847,10 +847,10 @@ reboot # 重启
 
 ![last-step-2](../static/rookie/basic-install_last-step-2.png)
 
-3. 开启 dhcp 服务，即可连接网络：
+3. 设置开机自启并立即启动 dhcp 服务，即可连接网络：
 
 ```bash
-systemctl start dhcpcd # 立即启动 dhcp 服务
+systemctl enable --now dhcpcd # 设置开机自启并立即启动 dhcp 服务
 ping www.bilibili.com # 测试网络连接
 ```
 
