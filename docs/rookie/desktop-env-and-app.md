@@ -181,13 +181,19 @@ reboot
 
 ![desktop](../static/rookie/desktop-env-and-app_desktop.png)
 
+::: tip ℹ️ 提示
+
+若虚拟机下在 sddm 输入密码登录后无法进入桌面，只有黑屏和光标，请确认在步骤 [3. 配置 VirtualBox](./pre-virt.md#_3-配置-virtualbox) 中没有勾选 `启用3D加速`。
+
+:::
+
 ## 7. 安装基础功能包
 
-1. 进入桌面后，在开始菜单搜索并打开 `konsole`。它是 KDE 桌面环境默认的终端模拟器
+1. 进入桌面后，在开始菜单搜索并打开 Konsole。它是 KDE 桌面环境默认的终端模拟器
 
 ![konsole](../static/rookie/desktop-env-and-app_konsole.png)
 
-2. 首先先进行桌面环境中的网络设置：
+2. 首先进行桌面环境中的网络设置：
 
 ```bash
 sudo systemctl disable iwd # 确保 iwd 开机处于关闭状态，因为其无线连接会与 NetworkManager 冲突
@@ -198,7 +204,7 @@ ping www.bilibili.com # 测试网络连通性
 
 ![network](../static/rookie/desktop-env-and-app_network.png)
 
-KDE 桌面环境连接网络和 win10 一样，这里不再赘述。
+KDE 桌面环境中连接网络和 win10 一样，这里不再赘述。
 
 3. 接下来安装一些基础功能包：
 
@@ -286,7 +292,7 @@ SDL_IM_MODULE DEFAULT=fcitx
 
 ![fcitx5_step-1](../static/rookie/desktop-env-and-app_fcitx5-1.png)
 
-`konsole` 以及 `dophin` 都需要这些环境变量，倒是 Firefox 和 Chromium 都不需要就可以输入中文。
+Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium 都不需要就可以输入中文。
 
 ::: tip ℹ️ 提示
 
@@ -348,8 +354,8 @@ Timeshift 在虚拟机下运行有些问题，请使用 VirtualBox 自带的快�
 
 ## ✨ 太棒了
 
-自此，一个可以当作日常系统使用的 archlinux 已经基本配置完成了！KDE 桌面环境经过了多年的迭代更新，已经非常完善和强大了。
+自此，一个可以当作日常系统使用的 archlinux 已经基本配置完成了！KDE 桌面环境经过了多年的迭代更新，已经非常完善和强大了，将 archlinux 作为日常使用的主力系统不在话下。
 
-接下来，在下一节 [显卡驱动](./rookie/graphic-driver.md) 中，我们将配置显卡驱动；然后我们将在 []() 一节中做一些可选的设置，包括休眠的设置、字体的设置以及使虚拟机体验更好的设置；最后将迎来 🌱 新手上路的最后一节 [系统美化](./rookie/beauty.md)。
+接下来，在下一节 [显卡驱动](./rookie/graphic-driver.md) 中，我们将配置显卡驱动；然后我们将在 [其它可选配置](./optional-cfg.md) 一节中做一些可选的设置 —— 包括休眠的设置、字体的设置以及使虚拟机体验更好的设置等等；最后将迎来 🌱 新手上路的最后一节 [系统美化](./rookie/beauty.md)。
 
 祝你好运！
