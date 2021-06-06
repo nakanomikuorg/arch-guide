@@ -1,4 +1,8 @@
-# 桌面环境与常用应用
+---
+description: archlinux 安装桌面环境与常用应用 | 本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！
+---
+
+# 桌面环境与常用应用安装
 
 > ### 🏔 两岸猿声啼不住，轻舟已过万重山
 >
@@ -12,7 +16,11 @@
 
 ::: tip ℹ️ 提示
 
-指南中带有 <sup>AUR</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题。
+指南中带有 <sup>aur</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题。
+
+指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。
+
+指南中带有 <sup>EULA</sup> 角标的软件代表是专有软件。
 
 :::
 
@@ -28,7 +36,7 @@ pacman -Syyu # 升级系统中全部包
 
 ## 2. 准备非 root 用户
 
-1. 通过以下命令添加用户，比如新增加的用户叫 myusername：
+1. 通过以下命令添加用户，比如新增加的用户叫 `myusername`：
 
 ```bash
 useradd -m -G wheel -s /bin/bash myusername
@@ -48,7 +56,9 @@ useradd -m -G wheel -s /bin/bash myusername
 passwd myusername
 ```
 
-3. 使用 `vim` 编辑器编辑 `sudo` 文件：
+![add-user](../static/rookie/desktop-env-and-app_add-user.png)
+
+3. 使用 `vim` 编辑器通过 `visudo` 命令编辑 `sudoers` 文件：
 
 ```bash
 EDITOR=vim visudo
@@ -59,6 +69,8 @@ EDITOR=vim visudo
 ```sudoers
 #%wheel ALL=(ALL) ALL
 ```
+
+![visudo](../static/rookie/desktop-env-and-app_visudo.png)
 
 > 📑 这里稍微解释一下：
 >
@@ -97,15 +109,23 @@ EDITOR=vim visudo
 
 ## 3. 安装 KDE Plasma 桌面环境
 
+1. 通过以下命令安装相关软件包：
+
 ```bash
-pacman -S plasma-meta konsole dolphin # 安装 plasma-meta 元软件包以及 konsole 终端模拟器和 dolphin 文件管理器
+pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终端模拟器和 dolphin 文件管理器
 ```
+
+![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
+
+2. 一路回车完成安装即可
 
 ## 4. 配置 greeter sddm
 
 ```
 systemctl enable sddm
 ```
+
+![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
 
 ## 5. 开启 32 位支持库与 Arch Linux 中文社区仓库（archlinuxcn）
 
@@ -117,6 +137,8 @@ vim /etc/pacman.conf
 
 2. 去掉 `[multilib]` 一节中两行的注释，来开启 32 位库支持
 
+![multilib](../static/rookie/desktop-env-and-app_multilib.png)
+
 3. 在文档结尾处加入下面的文字，来添加 `archlinuxcn` 源。推荐的镜像源（选一个即可）也一并列出：
 
 ```pacman.conf {2}
@@ -126,6 +148,8 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch # 清华大学�
 Server = https://mirrors.hit.edu.cn/archlinuxcn/$arch # 哈尔滨工业大学开源镜像站
 Server = https://repo.huaweicloud.com/archlinuxcn/$arch # 华为开源镜像站
 ```
+
+![archlinuxcn](../static/rookie/desktop-env-and-app_archlinuxcn.png)
 
 ::: tip ℹ️ 提示
 
@@ -143,17 +167,25 @@ archlinuxcn 仓库服务器位于欧洲，在中国大陆、中国香港、美�
 pacman -Syyu
 ```
 
+![syyu](../static/rookie/desktop-env-and-app_syyu.png)
+
 6. 通过以下命令重启电脑，即可看到欢迎界面：
 
 ```bash
 reboot
 ```
 
-7. 输入新用户的密码即可登录桌面
+![sign-in](../static/rookie/desktop-env-and-app_sign-in.png)
+
+7. 输入新用户的密码并回车 `Enter` 即可登录桌面
+
+![desktop](../static/rookie/desktop-env-and-app_desktop.png)
 
 ## 7. 安装基础功能包
 
-1. 进入桌面后，搜索 `konsole`。它是 KDE 桌面环境默认的终端模拟器。
+1. 进入桌面后，在开始菜单搜索并打开 `konsole`。它是 KDE 桌面环境默认的终端模拟器
+
+![konsole](../static/rookie/desktop-env-and-app_konsole.png)
 
 2. 首先先进行桌面环境中的网络设置：
 
@@ -161,12 +193,17 @@ reboot
 sudo systemctl disable iwd # 确保 iwd 开机处于关闭状态，因为其无线连接会与 NetworkManager 冲突
 sudo systemctl stop iwd # 立即关闭 iwd
 sudo systemctl enable --now NetworkManager # 确保先启动 NetworkManager，并进行网络连接。若 iwd 已经与 NetworkManager 冲突，则执行完上一步重启一下电脑即可
+ping www.bilibili.com # 测试网络连通性
 ```
+
+![network](../static/rookie/desktop-env-and-app_network.png)
+
+KDE 桌面环境连接网络和 win10 一样，这里不再赘述。
 
 3. 接下来安装一些基础功能包：
 
 ```bash
-sudo pacman -S ntfs-3g # 识别 NTFS 格式的硬盘
+sudo pacman -S ntfs-3g # 使系统可以识别 NTFS 格式的硬盘
 sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 安装几个开源中文字体。一般装上文泉驿就能解决大多 wine 应用中文方块的问题
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安装谷歌开源字体及表情
 sudo pacman -S firefox chromium # 安装常用的火狐、chromium 浏览器
@@ -195,14 +232,21 @@ sudo pacman -S yay # yay 命令可以让用户安装 AUR 中的软件（yay 在 
 
 ```bash
 cd ~
+ls -hl
 mkdir Desktop Documents Downloads Music Pictures Videos
 ```
 
+![mkdir](../static/rookie/desktop-env-and-app_mkdir.png)
+
 ## 9. 设置系统为中文
 
-1. 打开 `System Settings` > `Regional Settings` > 在 `Language` 中选择中文加入，再拖拽到第一位 > `Apply`
+1. 打开 `System Settings` > `Regional Settings` > 在 `Language` 中点击 `Add languages...` > 选择中文加入 `ADD`，再拖拽到第一位 > 点击 `Apply`
 
-2. 注销并重新登陆即可
+![language](../static/rookie/desktop-env-and-app_language.png)
+
+2. 注销并重新登陆即可生效
+
+![language-effect](../static/rookie/desktop-env-and-app_effect.png)
 
 ::: tip ℹ️ 提示
 
@@ -240,15 +284,43 @@ XMODIFIERS DEFAULT=\@im=fcitx5
 SDL_IM_MODULE DEFAULT=fcitx
 ```
 
+![fcitx5_step-1](../static/rookie/desktop-env-and-app_fcitx5-1.png)
+
 `konsole` 以及 `dophin` 都需要这些环境变量，倒是 Firefox 和 Chromium 都不需要就可以输入中文。
 
-4. 打开 系统设置 > 区域设置 > 输入法，点击 `添加输入法`，找到简体中文下的 `Pinyin`，点击添加即可加入拼音输入法
+::: tip ℹ️ 提示
 
-5. 接下来点击 `Pinyin` 右侧的配置按钮，点选`云拼音`和`在程序中显示预编辑文本` 最后应用
+检查一下是否有拼写错误。
 
-6. 回到输入法设置，点击 `配置附加组件`，找到 _classic user interface_ 在主题里选择一个你喜欢的颜色最后应用
+:::
 
-7. 注销并重新登陆，就可以发现已经可以在各个软件中输入中文了
+4. 打开 `系统设置` > `区域设置` > `输入法`
+
+5. 点击提示信息中的 `运行 Fcitx`
+
+![fcitx5_step-2](../static/rookie/desktop-env-and-app_fcitx5-2.png)
+
+6. 点击 `添加输入法` > 找到简体中文下的 `Pinyin` > 点击 `添加` 即可加入拼音输入法
+
+![fcitx5_step-3](../static/rookie/desktop-env-and-app_fcitx5-3.png)
+
+7. 接下来点击 `Pinyin` 右侧的配置按钮 > 点选 `云拼音` 和 `在程序中显示预编辑文本` > 最后点击 `应用`
+
+![fcitx5_step-4](../static/rookie/desktop-env-and-app_fcitx5-4.png)
+
+8. 回到输入法设置 > 点击 `配置附加组件` > 找到 `Classic User Interface` > 在主题里选择一个你喜欢的颜色 > 最后点击 `应用`
+
+![fcitx5_step-5](../static/rookie/desktop-env-and-app_fcitx5-5.png)
+
+9. 注销并重新登陆，发现已经可以在各个软件中输入中文了
+
+![fcitx5_step-6](../static/rookie/desktop-env-and-app_fcitx5-6.png)
+
+::: tip ℹ️ 提示
+
+通过 `Ctrl` + `空格` 切换中英文输入。
+
+:::
 
 ## 11. 启动蓝牙（若有）
 
@@ -257,3 +329,27 @@ SDL_IM_MODULE DEFAULT=fcitx
 ```bash
 sudo systemctl enable --now bluetooth
 ```
+
+## 12. 设置 Timeshift 快照
+
+1. 通过以下命令安装 Timeshift<sup>cn</sup>：
+
+```bash
+sudo pacman -S timeshift
+```
+
+2. 打开 Timeshift
+
+::: tip ℹ️ 提示
+
+Timeshift 在虚拟机下运行有些问题，请使用 VirtualBox 自带的快照功能。
+
+:::
+
+## ✨ 太棒了
+
+自此，一个可以当作日常系统使用的 archlinux 已经基本配置完成了！KDE 桌面环境经过了多年的迭代更新，已经非常完善和强大了。
+
+接下来，在下一节 [显卡驱动](./rookie/graphic-driver.md) 中，我们将配置显卡驱动；然后我们将在 []() 一节中做一些可选的设置，包括休眠的设置、字体的设置以及使虚拟机体验更好的设置；最后将迎来 🌱 新手上路的最后一节 [系统美化](./rookie/beauty.md)。
+
+祝你好运！

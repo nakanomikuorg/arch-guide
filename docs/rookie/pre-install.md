@@ -147,7 +147,7 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 >
 > 有少数恶心的主板里面，`Secure Boot` 被设置为开启，却不存在关闭它的选项，但系统主板内置有 windows 系统的公钥证书签名，使其只能加载 windows，其它系统（包括 archlinux）一律不予加载。用户不能关闭它，还没法换系统，实在让人无语 😶
 >
-> 如果你正好是这样的电脑，emmm... 不妨在虚拟机里试下 archlinux 吧！
+> 如果你正好是这样的电脑，emmm... 不妨在虚拟机里尝试下 archlinux 吧！
 
 ## 7. 调整启动方式为 UEFI（可能不需要）
 

@@ -22,7 +22,7 @@
   --c-text-light: #3a5169;
   --c-text-lighter: #4e6e8e;
   --c-text-lightest: #6a8bad;
-  --c-text-quote: #999;
+  --c-text-quote: var(--c-text-light);
 
   // border colors
   --c-border: #eaecef;
