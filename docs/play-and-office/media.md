@@ -15,11 +15,12 @@ yay -S qqmusic-bin #QQ 音乐
 
 ## 视频播放器
 
-本地音视频播放一般使用 vlc 或 mpv
+本地音视频播放一般使用 vlc 或 mpv, 也可使用SMplayer
 
 ```bash
 sudo pacman -S vlc #VLC 播放器
 sudo pacman -S mpv #MPV 播放器
+sudo pacman -S smplayer #SMplayer 播放器
 ```
 
 [zy-player](https://aur.archlinux.org/packages/zy-player-bin/)是一个跨平台视频资源播放器, 整合全网资源，可以播放一些电影。
