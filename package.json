@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "main": "index.js",
-  "repository": "https://github.com/NakanoMikuOrg/archGuide",
+  "repository": "https://github.com/NakanoMikuOrg/arch-guide",
   "author": "icekylin <wminid@yeah.net>",
   "license": "MIT",
   "devDependencies": {

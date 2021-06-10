@@ -1,6 +1,10 @@
-# Btrfs 介绍与相关操作
+---
+title: Btrfs 介绍与相关操作
+---
 
-![Btrfs](../static/rookie/btrfs-logo.svg)
+![Btrfs](../static/svg/btrfs-logo.svg)
+
+# Btrfs 介绍与相关操作
 
 ## Btrfs 介绍
 

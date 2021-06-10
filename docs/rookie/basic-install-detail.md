@@ -21,7 +21,7 @@
 
 ### 💾 为什么要用 Btrfs 文件系统
 
-![Btrfs](../static/rookie/btrfs-logo.svg)
+![Btrfs](../static/svg/btrfs-logo.svg)
 
 纵观 Btrfs 的历史，可以说 Btrfs 未来的发展是道阻且长的。也让我们感受到开源社区也并不是一根绳上的蚂蚱 —— 开源社区之间也有着各种各样的分歧。
 
