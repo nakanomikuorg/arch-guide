@@ -128,7 +128,7 @@ yarn docs:dev
 
 ### Scoop
 
-```cmd
+```bat
 scoop install nodejs # 安装 nodejs
 scoop install yarn # 安装 yarn
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
