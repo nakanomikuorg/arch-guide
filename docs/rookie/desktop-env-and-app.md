@@ -1,4 +1,5 @@
 ---
+title: 桌面环境与常用应用
 description: archlinux 安装桌面环境与常用应用 | 本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！
 ---
 
@@ -338,24 +339,79 @@ sudo systemctl enable --now bluetooth
 
 ## 12. 设置 Timeshift 快照
 
-1. 通过以下命令安装 Timeshift<sup>cn</sup>：
+1. 通过以下命令安装 Timeshift<sup>cn / aur</sup>：
+
+:::: code-group
+::: code-group-item cn
 
 ```bash
 sudo pacman -S timeshift
 ```
 
-2. 打开 Timeshift
+:::
+::: code-group-item aur
+
+```bash
+yay -S aur/timeshift
+```
+
+:::
+::::
+
+![timeshift-install](../static/rookie/desktop-env-and-app_timeshift-install.png)
 
 ::: tip ℹ️ 提示
 
-Timeshift 在虚拟机下运行有些问题，请使用 VirtualBox 自带的快照功能。
+Timeshift<sup>cn</sup> 目前有问题（参见 [#2317](https://github.com/archlinuxcn/repo/issues/2317)），请使用 Timeshift<sup>aur</sup>。
 
 :::
+
+::: tip ℹ️ 提示
+
+若安装 AUR 时无法正常下载，请先参照章节 [透明代理](./transparent.md) 配置透明代理。
+
+:::
+
+2. 打开 Timeshift，第一次启动会自动启动设置向导
+
+3. 快照类型选择 `BTRFS`，点击 `下一步`：
+
+![timeshift-config_step-1](../static/rookie/desktop-env-and-app_timeshift-cfg-1.png)
+
+4. 快照位置选择 `BTRFS` 分区，点击 `下一步`：
+
+![timeshift-config_step-2](../static/rookie/desktop-env-and-app_timeshift-cfg-2.png)
+
+::: tip ℹ️ 提示
+
+Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布局（`@` 和 `@home` 子卷）的 BTRFS 分区。
+
+若此处提示不支持的子卷布局，请确保按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 的说明分区。
+
+:::
+
+5. 选择快照计划，点击 `下一步`：
+
+![timeshift-config_step-3](../static/rookie/desktop-env-and-app_timeshift-cfg-3.png)
+
+::: tip ℹ️ 提示
+
+由于 BTRFS 类型快照占用空间相对较小，可以适当提高快照数量。
+
+:::
+
+6. 若希望 `/home` 用户主目录也快照，则勾选在备份中包含 `@home` 子卷，然后点击 `下一步`：
+
+![timeshift-config_step-4](../static/rookie/desktop-env-and-app_timeshift-cfg-4.png)
+
+7. 点击 `完成` 结束配置
+
+自此，Timeshift 快照已经成功设置。Timeshift 将按照计划快照系统并删除久远的快照。Timeshift 快照为系统增加了一层保障。
 
 ## ✨ 太棒了
 
 自此，一个可以当作日常系统使用的 archlinux 已经基本配置完成了！KDE 桌面环境经过了多年的迭代更新，已经非常完善和强大了，将 archlinux 作为日常使用的主力系统不在话下。
 
-接下来，在下一节 [显卡驱动](./rookie/graphic-driver.md) 中，我们将配置显卡驱动；然后我们将在 [其它可选配置](./optional-cfg.md) 一节中做一些可选的设置 —— 包括休眠的设置、字体的设置以及使虚拟机体验更好的设置等等；最后将迎来 🌱 新手上路的最后一节 [系统美化](./rookie/beauty.md)。
+接下来，在下一节 [显卡驱动](./graphic-driver.md) 中，我们将配置显卡驱动；然后我们将在 [其它可选配置](./optional-cfg.md) 一节中做一些可选的设置 —— 包括休眠的设置、字体的设置以及使虚拟机体验更好的设置等等；然后是大概率要用到的 [透明代理](./transparent.md)。最后将迎来 🌱 新手上路的最后一节 [系统美化](./beauty.md)。
 
 祝你好运！

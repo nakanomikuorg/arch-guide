@@ -18,6 +18,12 @@ prev: /prepare/understand.md
 
 :::
 
+::: tip ℹ️ 提示
+
+指南中带有 <sup>EULA</sup> 角标的软件代表是专有软件。
+
+:::
+
 ## 1. 确保网络环境
 
 如果你可以使用路由器分接出来的网线，以 dhcp 的方式直接上网，那么不用准备什么。如果你的环境只能使用无线网络安装，需要事先把自己所用的 wifi 名称改成自己能记住的英文名称。因为**安装时无法显示和输入中文名的 wifi**，你会看到一堆不知道是什么的方块，并且在安装过程中你将没有办法输入中文的无线名称进行连接。
@@ -61,7 +67,7 @@ prev: /prepare/understand.md
 
 准备一个 2G 以上的优盘，刻录一个安装盘。
 
-Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php) 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
+Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
 
 ![ethcer](../static/rookie/pre-install_ethcer.png)
 
@@ -69,7 +75,7 @@ Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Ru
 
 ::: tip ℹ️ 提示
 
-使用 [balenaEtcher](https://www.balena.io/etcher/) 制作完成的安装盘若要重新作为普通优盘使用，需要用磁盘分区管理工具（如 [DiskGenius](https://www.diskgenius.cn/)）重建分区表才能正常格式化。
+使用 [balenaEtcher](https://www.balena.io/etcher/) 制作完成的安装盘若要重新作为普通优盘使用，需要用磁盘分区管理工具（如 [DiskGenius](https://www.diskgenius.cn/)<sup>EULA</sup>）重建分区表才能正常格式化。
 
 :::
 
