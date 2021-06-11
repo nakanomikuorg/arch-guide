@@ -6,7 +6,7 @@
 
 > ### 🔖 这一节将会讨论：
 >
-> 1. 安装基础的 archlinux 系统
+> [[toc]]
 
 本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 

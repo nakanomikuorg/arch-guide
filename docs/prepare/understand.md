@@ -12,15 +12,13 @@ next: /rookie/pre-install.md
 
 > ### 🔖 这一节将会讨论：
 >
-> 1. archlinux 的历史
-> 2. archlinux 有什么特点？
-> 3. archlinux 和其它发行版有什么不同？
+> [[toc]]
 
 ## archlinux 的历史
 
 > 历史是现实的根源。反省过去，明晰当下，指导未来
 
-![Judd Vinet](../static/prepare/understand-vinet.png)
+![Judd Vinet](../static/prepare/understand/vinet.png)
 
 - `2001 ~ 2002` —— 加拿大程序员兼吉他手 [Judd Vinet](https://github.com/jvinet) 从 2001 年初开始开发 archlinux，并在 2002 年 3 月 11 日正式发行 0.1 版。它受到 Slackware、BSD、PLD Linux 和 CRUX 的启发。但是那时候这些发行版缺少软件包管理器。所以 Judd Vinet 以同样的简洁原则建立了 archlinux 发行版，并编写了 `pacman` 软件包管理器，自动处理软件包的安装、删除和更新
 
@@ -73,7 +71,16 @@ archlinux 的仓库中包含大量的软件包和编译脚本。用户可以按�
 
 许多 Linux 发行版都试图变得更“用户友好”，archlinux 则一直是且永远会是“以用户为中心”。archlinux 是为了满足贡献者的需求，而不是为了吸引尽可能多的用户。archlinux 适用于乐于自己动手的用户，他们愿意花时间阅读文档，解决自己的问题。
 
-archlinux 鼓励每一个用户 参与 和贡献，报告和帮助修复 bugs，提供软件包补丁和参加核心项目：archlinux 开发者都是志愿者，通过持续的贡献成为团队的一员。Archers 可以自行贡献软件包到 Arch 用户仓库（`AUR`）；提升 archWiki 文档质量；在论坛、邮件列表、IRC 中给其他用户提供技术支持. archlinux 是全球很多用户的选择，已经有很多国际社区提供帮助和文档翻译。
+archlinux 鼓励每一个用户 [参与](<https://wiki.archlinux.org/title/Getting_involved_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 和贡献，报告和帮助修复 [bugs](https://bugs.archlinux.org/)，提供软件包补丁和参加核心 [项目](https://git.archlinux.org/) —— archlinux 开发者都是志愿者，通过持续的贡献成为团队的一员。
+
+Archers 可以自行贡献软件包到 [Arch 用户仓库](<https://wiki.archlinux.org/title/Arch_User_Repository_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)（`AUR`）；提升 [archWiki 文档质量](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)；在 [论坛](https://bbs.archlinux.org/)、[邮件列表](https://lists.archlinux.org/listinfo/)、[IRC](<https://wiki.archlinux.org/title/Arch_IRC_channels_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 中给其他用户提供技术支持. archlinux 是全球很多用户的选择，已经有很多 [国际社区](<https://wiki.archlinux.org/title/International_communities_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 提供帮助和文档翻译。
+
+> #### 💕 相关链接：archlinux 中文社区
+>
+> - [Arch Linux 中文社区](https://www.archlinuxcn.org/)
+> - [Arch Linux 中文论坛](https://bbs.archlinuxcn.org/)
+> - [archlinux 百度贴吧](https://tieba.baidu.com/f?kw=archlinux)
+> - [Telegram 交流群](https://t.me/archlinuxcn_group)
 
 > #### 🍧 碎碎念
 >
@@ -111,14 +118,14 @@ Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](
 
 > 了解 archlinux 与其它的发行版之间的区别，有助于判断 archlinux 是否能满足个人的需求
 
-### ![Ubuntu](../static/prepare/understand-os_ubuntu.png) Ubuntu / Kubuntu
+### ![Ubuntu](../static/prepare/understand/os-ubuntu.png) Ubuntu / Kubuntu
 
 - Ubuntu 基于 Debian，由 Canonical 公司提供商业支持；而 archlinux 是由社区创建、支持和拥有的
 - Ubuntu 提供自动配置好的系统（包括桌面环境），对用户来说更“友好”；而 archlinux 设计了一个最小化的基础系统，然后严重依赖用户按自己的特定需求进行定制
 - Ubuntu 每 6 个月发布一次新版本；而 archlinux 采用滚动升级
 - archlinux 提供类 ports 的软件包构建系统和 Arch User Repository（`AUR`），用户可以分享源代码编译脚本，然后用 `pacman` 安装管理；而 Ubuntu 使用更复杂的 `apt`，可以通过 PPA 分发软件
 
-### ![Linux Mint](../static/prepare/understand-os_linuxmint.png) Linux Mint
+### ![Linux Mint](../static/prepare/understand/os-linuxmint.png) Linux Mint
 
 - 基于 Ubuntu 的 Linux Mint
   - Linux Mint 主要运行 Cinnamon 和 MATE 作为它的图形界面，也可以选择 KDE 或者 Xfce4，同时这些桌面环境是开箱即用的；而 archlinux 需要手动选择并安装桌面环境
@@ -128,7 +135,7 @@ Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](
   - LMDE 基于 Debian 稳定版，并且采取不间断的对于 bug 和安全性问题进行修复的方式，同时间也会保持 Mint 其它组件的更新；而 archlinux 采用滚动升级
 - Linux Mint 提供一种更为开箱即用的用户体验，免去用户在安装系统后还要自己安装一系列满足基本使用需求的软件
 
-### ![Manjaro Linux](../static/prepare/understand-os_manjaro.png) Manjaro Linux
+### ![Manjaro Linux](../static/prepare/understand/os-manjaro.png) Manjaro Linux
 
 - Manjaro Linux 基于 archlinux
 - Manjaro Linux 提供自动配置好的系统（包括桌面环境），对用户来说更“友好”；而 archlinux 设计了一个最小化的基础系统，然后严重依赖用户按自己的特定需求进行定制
@@ -150,8 +157,8 @@ Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](
 2. 很多 Manjaro Linux 的问题，不能用 archlinux 的解决方案解决
 3. 和平共处两项原则：
 
-- archlinux 用户不觉得自己高人一等，劝导 Manjaro Linux 用户前往对应的社区是善意的行为
-- 不要攻击 archlinux 配置繁琐。繁琐是自由的代价。这是 archlinux 的选择，也是 arch 之道的一部分
+   - archlinux 用户不觉得自己高人一等，劝导 Manjaro Linux 用户前往对应的社区是善意的行为
+   - 不要攻击 archlinux 配置繁琐。繁琐是自由的代价。这是 archlinux 的选择，也是 arch 之道的一部分
 
 :::
 

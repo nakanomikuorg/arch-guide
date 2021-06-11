@@ -240,7 +240,6 @@ gtag('config', 'G-MQRPJQK9SC');`,
       {
         isGroup: true,
         text: "🍰 写在后面",
-        sidebarDepth: 0,
         children: ["/contribute.md", "/about.md"],
       },
     ],

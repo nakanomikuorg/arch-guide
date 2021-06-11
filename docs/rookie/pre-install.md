@@ -10,7 +10,7 @@ prev: /prepare/understand.md
 
 > ### 🔖 这一节将会讨论：
 >
-> 1. 正式安装 archlinux 前需要做的准备
+> [[toc]]
 
 ::: tip ℹ️ 提示
 
@@ -28,7 +28,7 @@ prev: /prepare/understand.md
 
 如果你可以使用路由器分接出来的网线，以 dhcp 的方式直接上网，那么不用准备什么。如果你的环境只能使用无线网络安装，需要事先把自己所用的 wifi 名称改成自己能记住的英文名称。因为**安装时无法显示和输入中文名的 wifi**，你会看到一堆不知道是什么的方块，并且在安装过程中你将没有办法输入中文的无线名称进行连接。
 
-![wireless-network-card-switch](../static/rookie/pre-install_uefi-1.png)
+![wireless-network-card-switch](../static/rookie/pre-install/uefi-1.png)
 
 其次，有些笔记本电脑上存在无线网卡的硬件开关或者键盘控制，开机后安装前需要**确保你的无线网卡硬件开关处于打开状态**。
 
@@ -43,11 +43,11 @@ prev: /prepare/understand.md
 - [华为开源镜像站](https://repo.huaweicloud.com/archlinux/)
 - [兰州大学开源镜像站](https://mirror.lzu.edu.cn/archlinux/)
 
-![清华大学开源软件镜像站](../static/rookie/pre-install_tuna.png)
+![清华大学开源软件镜像站](../static/rookie/pre-install/tuna.png)
 
 其中前两者点击网页右侧侧栏的获取下载链接，选择 archlinux 下载即可。
 
-![华为开源镜像站](../static/rookie/pre-install_huawei.png)
+![华为开源镜像站](../static/rookie/pre-install/huawei.png)
 
 后两者需要依次点击 `iso` > `20XX.XX.XX` > `archlinux-20XX.XX.XX-x86_64.iso`。
 
@@ -59,7 +59,7 @@ prev: /prepare/understand.md
 
 :::
 
-![download-speed](../static/rookie/pre-install_download-speed.png)
+![download-speed](../static/rookie/pre-install/download-speed.png)
 
 中科大的开源镜像站下载速度还是很快的。
 
@@ -69,7 +69,7 @@ prev: /prepare/understand.md
 
 Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
 
-![ethcer](../static/rookie/pre-install_ethcer.png)
+![ethcer](../static/rookie/pre-install/ethcer.png)
 
 除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)。
 
@@ -93,17 +93,17 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
-如果是目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
+如果目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
-![disk-step_1](../static/rookie/pre-install_disk-1.png)
+![disk-step_1](../static/rookie/pre-install/disk-1.png)
 
 1. 右键点击 `开始菜单` > 点击 `磁盘管理`
 
-![disk-step_2](../static/rookie/pre-install_disk-2.png)
+![disk-step_2](../static/rookie/pre-install/disk-2.png)
 
 2. 右键点击 `需要压缩的分区` > 点击 `压缩卷`
 
-![disk-step_3](../static/rookie/pre-install_disk-3.png)
+![disk-step_3](../static/rookie/pre-install/disk-3.png)
 
 3. 在 `输入压缩空间量(MB)` 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB = 1024MB，128GB = 128 \* 1024MB = 131072MB）
 
@@ -121,21 +121,21 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 除此之外，如果你还嫌麻烦，还可以使用以下方法进入 BIOS：
 
-![uefi-step_1](../static/rookie/pre-install_uefi-2.png)
+![uefi-step_1](../static/rookie/pre-install/uefi-2.png)
 
 1. 在 win10 下 按住 `Shift` 键同时点击 `重启`
 
-![uefi-step_2](../static/rookie/pre-install_uefi-3.png)
+![uefi-step_2](../static/rookie/pre-install/uefi-3.png)
 
 2. 保持按住 `Shift` 键直到进入如图所示界面
 
 3. 选择 `疑难解答` 并回车 `Enter`
 
-![uefi-step_3](../static/rookie/pre-install_uefi-4.png)
+![uefi-step_3](../static/rookie/pre-install/uefi-4.png)
 
 4. 选择 `UEFI 固件设置` 并回车 `Enter`
 
-![uefi-step_4](../static/rookie/pre-install_uefi-5.png)
+![uefi-step_4](../static/rookie/pre-install/uefi-5.png)
 
 5. 按下 `Enter` 重启，此时应该已经进入了 BIOS
 
@@ -145,7 +145,7 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 6. 关闭 BIOS 设置中的 Secure Boot
 
-![uefi-step_5](../static/rookie/pre-install_uefi-6.png)
+![uefi-step_5](../static/rookie/pre-install/uefi-6.png)
 
 在类似名为 `security`（安全） 的选项卡中，找到一项名为 `Secure Boot`（安全启动，名称可能略有差异）的选项，选择 `Disable` 将其禁用。
 
@@ -161,23 +161,23 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ## 8. 调整硬盘启动顺序
 
-![uefi-step_6](../static/rookie/pre-install_uefi-7.png)
+![uefi-step_6](../static/rookie/pre-install/uefi-7.png)
 
-![uefi-step_7](../static/rookie/pre-install_uefi-8.png)
+![uefi-step_7](../static/rookie/pre-install/uefi-8.png)
 
 在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Options`（名称可能略有差异）的设置选项，将优盘的启动顺序调至首位。
 
 ## 9. 保存 BIOS 设置
 
-![uefi-step_8](../static/rookie/pre-install_uefi-9.png)
+![uefi-step_8](../static/rookie/pre-install/uefi-9.png)
 
 最后保存 BIOS 设置并退出，一般的按键是 `F10`。
 
 ## 10. 准备安装
 
-![archlinux-iso-1](../static/rookie/pre-virt_vb-17.png)
+![archlinux-iso_1](../static/rookie/pre-virt_vb-17.png)
 
-![archlinux-iso-2](../static/rookie/pre-virt_vb-18.png)
+![archlinux-iso_2](../static/rookie/pre-virt_vb-18.png)
 
 此时电脑重启，不出意外的话根据提示你应该可以顺利进入 archlinux 的安装界面了（有一头 🐄 牛牛在讲话）。
 
