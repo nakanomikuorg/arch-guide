@@ -64,15 +64,23 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 推荐在 [TECHPOWERUP](https://www.techpowerup.com/) 进行查询，信息非常全面。在确定了显卡架构后，再根据架构对照下表决定安装什么驱动。
 
-|   GPU 架构    |                                 Radeon 显卡                                 |                                                                 开源驱动                                                                 |                        非开源驱动                         |
-| :-----------: | :-------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------: |
-| GCN 4 及之后  | [多种](https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units) |                        [AMDGPU](<https://wiki.archlinux.org/title/AMDGPU_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)                        | [AMDGPU PRO](https://wiki.archlinux.org/title/AMDGPU_PRO) |
-|     GCN 3     | [多种](https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units) |                        [AMDGPU](<https://wiki.archlinux.org/title/AMDGPU_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)                        | [AMDGPU PRO](https://wiki.archlinux.org/title/AMDGPU_PRO) |
-|     GCN 2     | [多种](https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units) | [AMDGPU](<https://wiki.archlinux.org/title/AMDGPU_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) / [ATI](https://wiki.archlinux.org/title/ATI) |                          不支持                           |
-|     GCN 1     | [多种](https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units) | [AMDGPU](<https://wiki.archlinux.org/title/AMDGPU_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) / [ATI](https://wiki.archlinux.org/title/ATI) |                          不支持                           |
-| TeraScale 2&3 |                              HD 5000 - HD 6000                              |                           [ATI](<https://wiki.archlinux.org/title/ATI_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)                           |                          不支持                           |
-|  TeraScale 1  |                              HD 2000 - HD 4000                              |                           [ATI](<https://wiki.archlinux.org/title/ATI_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)                           |                          不支持                           |
-|    旧型号     |                                X1000 及之前                                 |                           [ATI](<https://wiki.archlinux.org/title/ATI_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)                           |                          不支持                           |
+|   GPU 架构    |    Radeon 显卡    |   开源驱动    |  非开源驱动  |
+| :-----------: | :---------------: | :-----------: | :----------: |
+| GCN 4 及之后  |      多种\*       |   AMDGPU\*    | AMDGPU PRO\* |
+|     GCN 3     |       多种        |    AMDGPU     |  AMDGPU PRO  |
+|     GCN 2     |       多种        | AMDGPU/ ATI\* |    不支持    |
+|     GCN 1     |       多种        | AMDGPU / ATI  |    不支持    |
+| TeraScale 2&3 | HD 5000 - HD 6000 |      ATI      |    不支持    |
+|  TeraScale 1  | HD 2000 - HD 4000 |      ATI      |    不支持    |
+|    旧型号     |   X1000 及之前    |      ATI      |    不支持    |
+
+\*[多种](https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units)
+
+\*[AMDGPU](<https://wiki.archlinux.org/title/AMDGPU_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+
+\*[AMDGPU PRO](https://wiki.archlinux.org/title/AMDGPU_PRO)
+
+\*[ATI](<https://wiki.archlinux.org/title/ATI_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 ::: tip ℹ️ 提示
 
@@ -125,7 +133,7 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 2. 游戏无法正常运行
 3. 画面撕裂
 
-若遇到了上诉问题，建议在 arcrlinux 中还是单独使用核芯显卡（如果有）吧（还可以节省电量）。如果要 🎮 打游戏不妨重启到 win10。
+若遇到了上述问题，建议在 arcrlinux 中还是单独使用核芯显卡（如果有）吧（还可以节省电量）。如果要 🎮 打游戏不妨重启到 win10。
 
 :::
 
@@ -225,6 +233,14 @@ hybrid 动态切换模式本质上是使用 PRIME 方法进行切换 —— 这�
 2. 用 nvidia-prime 包提供的命令 `prime-run`
 
 ##### prime-run 方法
+
+::: tip ℹ️ 提示
+
+`prime-run` 部分应用可以不需要安装 optimus-manager，直接运行。
+
+但不推荐这样，因为除了部分应用会报错之外也无法使用仅独立显卡模式。
+
+:::
 
 1. 通过以下命令安装 nvidia-prime 包：
 
@@ -396,11 +412,37 @@ DRI_PRIME=1 glmark2
 
 如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/Benchmarking_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
-最传统和广为人知的方式是使用 `glxgears` 命令进行测试，其属于 [mesa-demos](https://www.archlinux.org/packages/extra/x86_64/mesa-demos/) 包。但其仅仅只能提供简单的测试场景及帧数显示，只测试了当前 OpenGL 功能的一小部分，功能明显不足。笔者推荐如下两种工具。
+### glxgears
+
+最传统和广为人知的方式是使用 `glxgears` 命令进行测试，其属于 [mesa-demos](https://www.archlinux.org/packages/extra/x86_64/mesa-demos/) 包。
+
+1. 通过以下命令安装 [mesa-demos](https://www.archlinux.org/packages/extra/x86_64/mesa-demos/) 包（可能已经安装了）：
+
+```bash
+sudo pacman -S mesa-demos
+```
+
+2. 通过以下命令进行测试：
+
+```bash
+glxgears
+```
+
+随后会弹出一个小窗口运行测试程序：
+
+![glxgears-1](../static/rookie/graphic-driver/glxgears-1.png)
+
+帧数会打印在终端中：
+
+![glxgears-2](../static/rookie/graphic-driver/glxgears-2.png)
+
+3. 使用 `Ctrl` + `C` 退出测试
+
+`glxgears` 仅仅只能提供简单的测试场景及帧数显示，只测试了当前 OpenGL 功能的一小部分，功能明显不足。笔者推荐如下两种工具。
 
 ### glmark2
 
-glmark2 提供了一系列丰富的测试，涉及图形单元性能（缓冲、建筑、照明、纹理等）的不同方面，允许进行更全面和有意义的测试。每次测试单独计算帧速率。最终，用户根据以前的所有测试获得了一个成绩分数。在 archlinux 上属于包 [glmark2](https://aur.archlinux.org/packages/glmark2/)<sup>cn / aur</sup>。
+glmark2 提供了一系列丰富的测试，涉及图形单元性能（缓冲、建筑、照明、纹理等）的不同方面，允许进行更全面和有意义的测试。每次测试单独计算帧速率。最终，程序根据之前的所有测试给出一个最终分数。在 archlinux 上属于包 [glmark2](https://aur.archlinux.org/packages/glmark2/)<sup>cn / aur</sup>。
 
 1. 使用以下命令安装 glmark2：
 
