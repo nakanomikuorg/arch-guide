@@ -115,7 +115,15 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 :::
 
-## 5. 进入主板 BIOS 进行设置
+## 5. 获取 Bitlocker 恢复密钥
+
+若 win10 分区使用了 🔐 Bitlocker 加密，请提前获取恢复密钥。
+
+关于解锁密钥的查找请参阅 [Mircosoft 相关页面](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD%E6%9F%A5%E6%89%BE-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5-6b71ad27-0b89-ea08-f143-056f5ab347d6)。
+
+一般来说使用与 win10 相同的微软帐号登录 [aka.ms 相关页面](aka.ms/myrecoverykey) 即可获取。
+
+## 6. 进入主板 BIOS 进行设置
 
 **插入优盘并开机**。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 BIOS 设置界面。
 
@@ -143,7 +151,7 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 >
 > 随着时代的发展，主板的 BIOS 界面也越来越现代；很多主板都有了中文，根据主板 BIOS 界面的提示进行操作吧！
 
-## 6. 关闭 BIOS 设置中的 Secure Boot
+## 7. 关闭 BIOS 设置中的 Secure Boot
 
 ![uefi-step_5](../static/rookie/pre-install/uefi-6.png)
 
@@ -155,11 +163,11 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 >
 > 如果你正好是这样的电脑，emmm... 不妨在虚拟机里尝试下 archlinux 吧！
 
-## 7. 调整启动方式为 UEFI（可能不需要）
+## 8. 调整启动方式为 UEFI（可能不需要）
 
 在某些旧的主板里，需要调整启动模式为 `UEFI`，而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode` 的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
 
-## 8. 调整硬盘启动顺序
+## 9. 调整硬盘启动顺序
 
 ![uefi-step_6](../static/rookie/pre-install/uefi-7.png)
 
@@ -167,13 +175,13 @@ sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Options`（名称可能略有差异）的设置选项，将优盘的启动顺序调至首位。
 
-## 9. 保存 BIOS 设置
+## 10. 保存 BIOS 设置
 
 ![uefi-step_8](../static/rookie/pre-install/uefi-9.png)
 
 最后保存 BIOS 设置并退出，一般的按键是 `F10`。
 
-## 10. 准备安装
+## 11. 准备安装
 
 ![archlinux-iso_1](../static/rookie/pre-virt_vb-17.png)
 

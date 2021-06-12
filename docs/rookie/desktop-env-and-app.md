@@ -27,7 +27,7 @@ description: archlinux 安装桌面环境与常用应用 | 本指南包含从 ar
 
 ## 1. 确保系统为最新
 
-如果你在做完章节 [archlinux 基础安装](./basic-install.md) 的内容后，关机并放置过一段时间，那么需要先按照 [18. 完成安装](/basic-install.html#_18-完成安装) 中连接网络的方法重新连网，然后使用以下命令更新系统：
+如果你在做完章节 [archlinux 基础安装](./basic-install.md) 的内容后，关机并放置过一段时间，那么需要先按照 [18. 完成安装](./basic-install.html#_18-完成安装) 中连接网络的方法重新连网，然后使用以下命令更新系统：
 
 ```bash
 pacman -Syyu # 升级系统中全部包
@@ -184,7 +184,7 @@ reboot
 
 ::: tip ℹ️ 提示
 
-若虚拟机下在 sddm 输入密码登录后无法进入桌面，只有黑屏和光标，请确认在步骤 [3. 配置 VirtualBox](./pre-virt.md#_3-配置-virtualbox) 中没有勾选 `启用3D加速`。
+若虚拟机下在 sddm 输入密码登录后无法进入桌面，只有黑屏和光标，请确认在步骤 [3. 配置 VirtualBox](./pre-virt.md#_3-配置-virtualbox) 中**没有**勾选 `启用3D加速`。
 
 :::
 

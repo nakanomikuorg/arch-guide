@@ -6,13 +6,33 @@ title: 显卡驱动
 
 > ### 🪁 接天莲叶无穷碧，映日荷花别样红
 >
-> 近年来，archlinux 的显卡驱动安装已经变得非常容易。本小节区分核芯显卡和独立显卡两大类讨论 archlinux 显卡驱动的安装
+> 近年来，archlinux 的显卡驱动安装已经变得非常容易。本小节区分核芯显卡、独立显卡和双显卡（核显 + 独显）三大类讨论 archlinux 显卡驱动的安装
 
 > ### 🔖 这一节将会讨论：
 >
 > [[toc]]
 
 所有 AMD 显卡建议使用开源驱动，英伟达显卡建议使用闭源驱动。
+
+::: tip ℹ️ 提示
+
+进行本小节内容时建议按照步骤 [12. 设置 Timeshift 快照](./desktop-env-and-app.md#_12-设置-timeshift-快照) 设置了 Timeshift 快照，并且已经有至少一张快照。
+
+:::
+
+::: tip ℹ️ 提示
+
+虚拟机不需要安装显卡驱动。
+
+:::
+
+::: tip ℹ️ 提示
+
+若在设置过程中导致黑屏无法进入桌面，请尝试使用使用 `Ctrl` + `Alt` + `F1 ~ F6` 在 `tty1 ~ tty6` 之间切换。
+
+将导致黑屏的配置删掉或使用快照恢复后重新启动电脑。
+
+:::
 
 ## 核芯显卡
 
@@ -95,11 +115,19 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 
 ## 独立显卡
 
-这部分会分为仅有独立显卡（无核显）与同时拥有独立显卡和核芯显卡两种情况进行讨论。
+### NVIDIA 独立显卡
 
-### 仅独显
+::: tip ℹ️ 提示
 
-#### NVIDIA 独立显卡
+部分 NVIDIA 独立显卡目前在 archlinux 下体验非常不好，存在以下问题：
+
+1. 部分桌面特效（如窗口惯性晃动）很卡
+2. 游戏无法正常运行
+3. 画面撕裂
+
+若遇到了上诉问题，建议在 arcrlinux 中还是单独使用核芯显卡（如果有）吧（还可以节省电量）。如果要 🎮 打游戏不妨重启到 win10。
+
+:::
 
 如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -121,42 +149,54 @@ yay -S nvidia-390xx-dkms nvidia-settings lib32-nvidia-390xx-utils
 sudo pacman -S mesa lib32-mesa xf86-video-nouveau
 ```
 
-#### AMD 独立显卡
+### AMD 独立显卡
 
 AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的**，都需要先确定架构，然后选定正确的驱动安装即可。参考步骤 [AMD 核芯显卡](./graphic-driver.md#amd-核芯显卡)。
 
-此外，可以使用 `glmark2`，`DRI_PRIME=1 glmark2` 分别对核显和独显进行测试，选择分数更高的一个进行使用。
+## 双显卡（核显 + 独显）
 
-可以在 steam 游戏的启动前缀中加入 `DRI_PRIME=1 mangohud %command%` 来使用独显。
+### NVIDIA 独立显卡
 
-关于 [mangohud](https://aur.archlinux.org/packages/mangohud) 的使用请参阅 [这里]()。
+::: tip ℹ️ 提示
 
-笔记本上使用独立显卡运行 steam 游戏的另一个例子：
+optimus-manager 已经支持 AMD 核芯显卡 + NVIDIA 独立显卡组合。
 
-```bash
-DRI_PRIME=1 steam steam://rungameid/570 # 运行 Dota 2
-DRI_PRIME=1 steam steam://rungameid/730 # 运行 CS:GO
-```
+:::
 
-### 双显卡
+如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_Optimus_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BD%BF%E7%94%A8_PRIME_%E6%B8%B2%E6%9F%93%E5%8D%B8%E6%8D%A2%EF%BC%88render_offload%EF%BC%89>) 以及 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
 
-如有需要可以参考 [NVIDIA 官方文档](https://wiki.archlinux.org/index.php/NVIDIA_Optimus) 以及 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
-
-同时拥有核芯显卡与独立显卡的笔记本电脑，同样需要按照上述步骤先安装各个软件包。除此之外还需要安装 optimus-manager<sup>cn / aur</sup>。可以在核芯显卡和独立显卡间轻松切换。optimus-manager 提供三种模式，分别为仅用独显，仅用核显，和 hybrid 动态切换模式。
+同时拥有核芯显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>cn / aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在核芯显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用核显以及 hybrid 动态切换模式。
 
 1. 使用以下命令安装相关软件包：
+
+:::: code-group
+::: code-group-item cn
 
 ```bash
 yay -S optimus-manager optimus-manager-qt
 ```
 
-2. 安装完成后重启即可使用。optimus-manager 安装完成后会默认启动 `optimus-manager` 服务，你可在重启前检查其状态，若没有 enable 则手动将其 enable。重启后在菜单栏搜索 optimus-manager 点击即可使用。可在其设置中设置开机自动启动。
+:::
+::: code-group-item aur
 
 ```bash
-sudo systemctl enable optimus-manager
+yay -S aur/optimus-manager optimus-manager-qt
 ```
 
-此时你应该已经可以进行显卡切换了
+:::
+::::
+
+2. 安装完成后重启即可使用。optimus-manager 安装完成后会默认设置 `optimus-manager.service` 服务自动启动，但建议还是通过以下命令手动设置一下：
+
+```bash
+sudo systemctl enable optimus-manager.service
+```
+
+3. 重启后在在菜单栏打开 optimus-manager 即可使用。可在其设置中设置开机自动启动：
+
+![optimus-manager-1](../static/rookie/graphic-driver/optimus-manager-1.png)
+
+此时你应该已经可以进行显卡切换了。
 
 ::: tip ℹ️ 提示
 
@@ -164,23 +204,108 @@ sudo systemctl enable optimus-manager
 
 - 如果需要在独显和核显模式间切换，要注意你没安装各类 GPU 监控插件，它们会阻止显卡切换，导致不可预料的错误
 - 不要使用 Nvidia Control Panel 中的 `Save to X Configuration file` ，会导致配置冲突
-- 在显卡之间的切换时，重新登陆后如在 splash screen 卡住或者黑屏，可以尝试在 `tty` 之间进行切换
+- 在显卡之间的切换时，重新登陆后如在 splash screen 卡住或者黑屏，可以尝试按照上述提示在 `tty1 ~ tty6` 之间进行切换
 
 :::
 
-最后详细说下动态切换模式。本质上其还是使用官方的 [PRIME](https://wiki.archlinux.org/index.php/PRIME#PRIME_render_offload) 方法进行切换。需要设置三个环境变量，或者用 nvidia-prime 包提供的命令 prime-run，二者本质也是一样的，都是设置三个环境变量。
+#### 动态切换
+
+如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+
+::: tip ℹ️ 提示
+
+hybrid 动态切换模式并不是自动的（类似 win10），需要手动添加环境变量。
+
+:::
+
+hybrid 动态切换模式本质上是使用 PRIME 方法进行切换 —— 这需要设置三个环境变量。有两种方法：
+
+1. 通过命令手动添加前缀，也可直接添加环境变量在全局环境下（不推荐）。如果加在了全局环境中，在从 hybrid 动态切换模式切换到其他模式之前一定要去掉这三个环境变量，否则会黑屏
+
+2. 用 nvidia-prime 包提供的命令 `prime-run`
+
+##### prime-run 方法
+
+1. 通过以下命令安装 nvidia-prime 包：
 
 ```bash
-sudo pacman -S nvidia-prime #这个包提供prime-run 命令，其作为前缀可以自动帮你为启动的程序添加这三个环境变量
+sudo pacman -S nvidia-prime
 ```
 
-在你要使用动态模式启动程序前需要添加如下三个环境变量，或者添加 prime-run 前缀。也可直接添加环境变量在/etc/environment 全局环境下。如果加在了全局环境中，在从 hybrid 模式切换到其他模式之前一定要去掉这三个环境变量，否则会黑屏。
+2. 通过以下命令（请将 `%command%` 替换为要运行的命令）以使用 NVIDIA 独立显卡运行程序：
+
+```bash
+prime-run %command%
+```
+
+运行 steam 游戏的例子：
+
+```bash
+prime-run steam steam://rungameid/570 # 运行 Dota 2
+prime-run steam steam://rungameid/730 # 运行 CS:GO
+```
+
+::: tip ℹ️ 提示
+
+steam 游戏的启动参数 `steam://rungameid/xxx` 可通过以下方式查找：
+
+1. 右键需要运行的游戏图标 > 点击 `编辑应用程序...`：
+
+![steam-id_step-1](../static/rookie/graphic-driver/steam-id-1.png)
+
+2. 在 `应用程序` 选项卡 > `命令` 处查看：
+
+![steam-id_step-2](../static/rookie/graphic-driver/steam-id-2.png)
+
+:::
+
+##### 环境变量方法
+
+###### 手动输入
+
+通过以下命令（请将 `%command%` 替换为要运行的命令）以使用 NVIDIA 独立显卡运行程序：
+
+```bash
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME="nvidia" __VK_LAYER_NV_optimus="NVIDIA_only" %command%
+```
+
+运行 steam 游戏的例子：
+
+```bash
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME="nvidia" __VK_LAYER_NV_optimus="NVIDIA_only"  steam steam://rungameid/570 # 运行 Dota 2
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME="nvidia" __VK_LAYER_NV_optimus="NVIDIA_only"  steam steam://rungameid/730 # 运行 CS:GO
+```
+
+###### 全局变量
+
+::: warning ⚠️ 注意
+
+[optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki/Nvidia-GPU-offloading-for-%22hybrid%22-mode#setup) 中不推荐将此环境变量添加到全局环境。
+
+_It is not recommended to set those variables system-wide (like in `/etc/environment`), since it would defeat the point of hybrid mode, and can also break desktop compositing on some environment (resulting in a black screen)._
+
+也就是说会遇到这些问题：
+
+1. Kwin / 显示特效混合器（混成器）奔溃（毛玻璃效果消失，原本是透明或毛玻璃效果的背景变黑）
+2. 黑屏
+
+:::
+
+1. 使用 `vim` 编辑 `/etc/environment` 文件：
+
+```bash
+sudo vim /etc/environment
+```
+
+加入以下内容：
 
 ```bash
 __NV_PRIME_RENDER_OFFLOAD=1
 __GLX_VENDOR_LIBRARY_NAME="nvidia"
 __VK_LAYER_NV_optimus="NVIDIA_only"
 ```
+
+2. 保存并退出 `vim`
 
 #### 电源管理
 
@@ -200,13 +325,72 @@ __VK_LAYER_NV_optimus="NVIDIA_only"
 
 针对大多数笔记本适用的 Bbswitch，此处进行安装使用的讲解。
 
-1. 通过以下命令安装包 bbswitch：
+1. 通过以下命令安装包 `bbswitch`；若使用其它内核，则安装包 `bbswitch-dkms`：
+
+:::: code-group
+::: code-group-item linux
 
 ```bash
 sudo pacman -S bbswitch
 ```
 
-2. 右键点击 optimus-manager 的托盘设置，在 Optimus 选项卡中的 switch method 选择 Bbswitch 即可
+:::
+::: code-group-item others
+
+```bash
+sudo pacman -S bbswitch-dkms
+```
+
+:::
+::::
+
+2. 右键 optimus-manager 的托盘图标 > 点击 `设置` > 在 Optimus 选项卡中的 `switch method` 中选择 `Bbswitch` 即可：
+
+![Bbswitch](../static/rookie/graphic-driver/bbswitch.png)
+
+### AMD 独立显卡
+
+虽然 AMD 独立显卡无法使用 optimus-manager，但可以使用 `DRI_PRIME=1` 前缀使用独立显卡（可能还更简单了？🤔）。
+
+- 通过以下命令（请将 `%command%` 替换为要运行的命令）以使用 AMD 独立显卡运行程序：
+
+```bash
+DRI_PRIME=1 %command%
+```
+
+运行 steam 游戏的例子：
+
+```bash
+DRI_PRIME=1 steam steam://rungameid/570 # 运行 Dota 2
+DRI_PRIME=1 steam steam://rungameid/730 # 运行 CS:GO
+```
+
+- 可以使用以下命令分别对核芯显卡和独立显卡进行性能测试，选择分数更高的一个使用：
+
+```bash
+glmark2
+```
+
+:::: code-group
+::: code-group-item 核芯显卡
+
+```bash
+glmark2
+```
+
+:::
+::: code-group-item 独立显卡
+
+```bash
+DRI_PRIME=1 glmark2
+```
+
+:::
+::::
+
+关于 glmark2 的说明请参阅 [glmark2](./graphic-driver.md#glmark2)。
+
+- 可以在 steam 游戏的启动前缀中加入 `DRI_PRIME=1 mangohud %command%` 来使用独显的同时显示帧数等信息。关于 [mangohud](https://aur.archlinux.org/packages/mangohud)<sup>aur</sup> 的使用请参阅 [这里]()。
 
 ## 性能测试
 
@@ -247,7 +431,7 @@ glmark2
 
 ![glmark2-1](../static/rookie/graphic-driver/glmark2-1.png)
 
-以笔者的硬件为例（核芯显卡），结果如下：
+以笔者的硬件为例（核芯显卡），测试结果如下：
 
 ![glmark2-2](../static/rookie/graphic-driver/glmark2-2.png)
 

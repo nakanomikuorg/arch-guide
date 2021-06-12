@@ -211,9 +211,11 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 ::: tip ℹ️ 提示
 
+虚拟机安装请同时参阅步骤 [🆕 全新安装](./basic-install-detail.md#🆕-全新安装)。
+
 分区步骤对于有些人来说是个难点，如果有不理解的地方请参阅下一节 [基础安装详解](./basic-install-detail.md#💾-分区和格式化)。
 
-同时，分区的设置和参考案例也会在下一节 [基础安装详解](./basic-install-detail.md#💾-分区和格式化) 详细列出。
+同时，分区其它说明也会在下一节 [基础安装详解](./basic-install-detail.md#💾-分区和格式化) 详细列出。
 
 :::
 
@@ -767,10 +769,12 @@ pacman -S amd-ucode # AMD
 
 ## 17. 安装引导程序
 
+如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+
 1. 安装相应的包：
 
 ```bash
-pacman -S grub efibootmgr
+pacman -S grub efibootmgr os-prober
 ```
 
 > 📑 命令参数说明：
@@ -778,6 +782,7 @@ pacman -S grub efibootmgr
 > - `-S` 选项后指定要通过 `pacman` 包管理器安装的包：
 >   - `grub` —— 启动引导器
 >   - `efibootmgr` —— `efibootmgr` 被 `grub` 脚本用来将启动项写入 NVRAM
+>   - `os-prober` —— 为了能够引导 win10，需要安装 `os-prober` 以检测到它
 
 2. 安装 GRUB 到 EFI 分区：
 
@@ -792,13 +797,33 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ARCH
 
 ![grub_step-1](../static/rookie/basic-install_grub-1.png)
 
-3. 接下来编辑 `/etc/default/grub` 文件，去掉 `GRUB_CMDLINE_LINUX_DEFAULT` 一行中最后的 `quiet` 参数，同时把 `loglevel` 的数值从 `3` 改成 `5`。这样是为了后续如果出现系统错误，方便排错。同时加入 `nowatchdog` 参数，这可以显著提高开关机速度：
+3. 接下来使用 `vim` 编辑 `/etc/default/grub` 文件：
 
 ```bash
 vim /etc/default/grub
 ```
 
+进行如下修改：
+
+- 去掉 `GRUB_CMDLINE_LINUX_DEFAULT` 一行中最后的 `quiet` 参数
+- 把 `loglevel` 的数值从 `3` 改成 `5`。这样是为了后续如果出现系统错误，方便排错
+- 加入 `nowatchdog` 参数，这可以显著提高开关机速度
+
 ![grub_step-2](../static/rookie/basic-install_grub-2.png)
+
+- 为了引导 win10，则还需要添加新的一行 `GRUB_DISABLE_OS_PROBER=false`
+
+```grub {8}
+# GRUB boot loader configuration
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="Arch"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=5 nowatchdog"
+GRUB_CMDLINE_LINUX=""
+GRUB_DISABLE_OS_PROBER=false
+...
+```
 
 4. 最后生成 `GRUB` 所需的配置文件：
 
@@ -807,6 +832,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ![grub_step-3](../static/rookie/basic-install_grub-3.png)
+
+若引导了 win10，则输出应该包含倒数第二行：
+
+![os-prober-1](../static/rookie/basic-install/os-prober-1.png)
 
 ::: tip ℹ️ 提示
 
@@ -841,7 +870,17 @@ reboot # 重启
 
 ![last-step-1](../static/rookie/basic-install_last-step-1.png)
 
-如图即为 GRUB 引导界面。
+如图即为 GRUB 引导界面（若引导了 win10 也会显示出来）。
+
+::: tip ℹ️ 提示
+
+若 win10 分区使用了 🔐 Bitlocker 加密，则第一次从 GRUB 进入需要输入解锁密钥。
+
+你应该在步骤 [5. 获取 Bitlocker 恢复密钥](./pre-install.md#_5-获取-bitlocker-恢复密钥) 中已经知晓了 Bitlocker 解锁密钥。
+
+若无法从 [aka.ms 相关页面](aka.ms/myrecoverykey) 获取解锁密钥，请尝试在 BIOS 中将 Windows Boot Manager 移动到启动顺序首位再尝试进入 win10。
+
+:::
 
 2. 重启后使用 root 账户登录系统：
 

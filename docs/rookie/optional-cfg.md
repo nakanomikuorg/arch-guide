@@ -56,3 +56,9 @@ MODULES=(intel_lpss_pci)
 ```bash
 sudo mkinitcpio -P
 ```
+
+## rEFind
+
+## 输入法
+
+## zsh
