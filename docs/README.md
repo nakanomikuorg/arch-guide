@@ -99,7 +99,7 @@ yarn docs:dev
 2. 由于使用 VuePress V2 Beta 版本导致兼容性问题缺失了部分插件（评论）
 3. 缺失外语翻译
 
-更多信息请参阅 [贡献说明](/contribute.md) 章节。
+更多信息请参阅 [贡献指南](/contribute.md) 章节。
 
 ## 🎋 版权说明
 

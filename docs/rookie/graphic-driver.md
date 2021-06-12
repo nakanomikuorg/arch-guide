@@ -84,21 +84,21 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 ::: tip ℹ️ 提示
 
-对于 `GCN 2.0` 及以下架构的老显卡，均强烈建议**安装开源 ATI 驱动**，**不要使用闭源 Catalyst 驱动**，实际上即使 GCN3.0 显卡的用户也不应该使用 Catalyst 驱动。因为此闭源驱动已经停止支持，并且需要降级 Xorg 才能使用，非常麻烦且容易出错，基本在 archlinux 上已经处于无法使用的地步。
+对于 `GCN 2.0` 及以下架构的老显卡，**直接安装开源 ATI 驱动即可**，原本老旧的闭源 Catalyst 驱动在 2021 年已被废弃。
 
 `GCN 2.0` 及以下架构的老显卡也**不要使用开源 AMPGPU 驱动**，因为其仅处于实验性质，需要各种自定义内核编译选项与配置，非常麻烦、得不偿失。
 
-对于新型号（`GCN 3` 架构及更新）的核心显卡，直接安装开源驱动 AMDGPU 即可。
+对于新型号（`GCN 3` 架构及更新）的核心显卡，**直接安装开源驱动 AMDGPU 即可**。
 
 :::
 
 下面是一些例子：
 
-- 比如你的笔记本 cpu 是目前常见的 AMD R7 4800U，那么它的核显为 Vega 8。通过查询，可知其为 GCN 5.0 架构，那么对照 arch 官方文档，你可选择安装 AMDGPU 开源驱动。
+- 你的笔记本 cpu 是目前常见的 AMD Ryzen™ 7 4800U，它的核显为 Vega 8。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
 
-- 再比如你的台式机 cpu 是目前常见的 锐龙 5 3400G，那么它的核显为 Vega 11。通过查询，可知其为 GCN 5.0 架构，那么对照 arch 官方文档，你可选择安装 AMDGPU 开源驱动。
+- 你的台式机 cpu 是目前常见的 AMD Ryzen™ 5 3400G，它的核显为 Vega 11。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
 
-- 再老一些的 apu A10-9700 处理器 ，它的核显为 Radeon R7。通过查询，可知其为 GCN 2.0 架构，那么对照 arch 官方文档，你可选择安装 ATI 开源驱动。
+- 再老一些的 7th Gen A10-9700 APU 处理器 ，它的核显为 Radeon R7。通过查询，可知其为 `GCN 2.0` 架构，那么对照上表，你应该安装 ATI 开源驱动。
 
 #### 安装驱动
 
@@ -163,6 +163,8 @@ AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的
 
 ## 双显卡（核显 + 独显）
 
+如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+
 ### NVIDIA 独立显卡
 
 ::: tip ℹ️ 提示
@@ -171,7 +173,7 @@ optimus-manager 已经支持 AMD 核芯显卡 + NVIDIA 独立显卡组合。
 
 :::
 
-如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_Optimus_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BD%BF%E7%94%A8_PRIME_%E6%B8%B2%E6%9F%93%E5%8D%B8%E6%8D%A2%EF%BC%88render_offload%EF%BC%89>) 以及 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
+如有需要可以参考 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
 
 同时拥有核芯显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>cn / aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在核芯显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用核显以及 hybrid 动态切换模式。
 
@@ -218,15 +220,13 @@ sudo systemctl enable optimus-manager.service
 
 #### 动态切换
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
-
 ::: tip ℹ️ 提示
 
 hybrid 动态切换模式并不是自动的（类似 win10），需要手动添加环境变量。
 
 :::
 
-hybrid 动态切换模式本质上是使用 PRIME 方法进行切换 —— 这需要设置三个环境变量。有两种方法：
+hybrid 动态切换模式本质上是使用**针对使用闭源驱动**的双显卡 [PRIME](https://wiki.archlinux.org/title/PRIME#PRIME_render_offload) 方法进行切换 —— 这需要设置三个环境变量。有两种方法：
 
 1. 通过命令手动添加前缀，也可直接添加环境变量在全局环境下（不推荐）。如果加在了全局环境中，在从 hybrid 动态切换模式切换到其他模式之前一定要去掉这三个环境变量，否则会黑屏
 
@@ -329,15 +329,15 @@ __VK_LAYER_NV_optimus="NVIDIA_only"
 
 如果不是强烈追求能效控制以及注重电池寿命的用户，那么可以略过此段。配置电源管理需要针对你的硬件以及笔记本型号尝试正确的电源管理方式。
 
-此部分的设置可能导致黑屏，并且尝试过程可能较长，也可能会遇到各类问题。
+此部分的设置可能导致黑屏，并且尝试过程可能较长，也可能会遇到各类问题。请根据自身需求和能力选择是否操作。
 
 :::
 
-电源管理做的事情是，在只用核显的模式下，确保正确关闭独立显卡；在混合模式下，在不需要独立显卡时使其处于关闭或低功耗的状态。
+电源管理做的事情是，在只用核显的模式下，确保正确关闭独立显卡；而在混合模式下，绝大多数情况下 NVIDIA 模块实际是始终开启的，电源管理并不生效。
 
-这件事情其实很复杂，因为对于不同的显卡型号，以及笔记本型号的组合，可行的方案都是不同的。笼统来说，最广泛适用的办法是 Bbswitch。但**不建议上来就按照此方式安装使用**，因为某些特定的硬件就是会出问题，也就是黑屏。
+这件事情其实很复杂，因为对于不同的显卡型号，以及笔记本型号的组合，可行的方案都是不同的。笼统来说，最广泛适用的办法是 Bbswitch。但**不建议上来就按照此方式安装使用**，因为某些特定的硬件就是会出问题（黑屏）。
 
-建议按照 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki/A-guide--to-power-management-options) 一步一步来，按步骤尝试，最后找到属于你自己的电脑合适的电源管理方式。**此文档必须详细阅读！**
+建议按照 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki/A-guide--to-power-management-options) 一步步尝试，最后找到属于你自己电脑合适的电源管理方式。**此文档必须详细阅读！**
 
 针对大多数笔记本适用的 Bbswitch，此处进行安装使用的讲解。
 
@@ -366,7 +366,7 @@ sudo pacman -S bbswitch-dkms
 
 ### AMD 独立显卡
 
-虽然 AMD 独立显卡无法使用 optimus-manager，但可以使用 `DRI_PRIME=1` 前缀使用独立显卡（可能还更简单了？🤔）。
+虽然 AMD 独立显卡无法使用 optimus-manager，但可以使用**针对使用开源驱动**的双显卡 [PRIME](https://wiki.archlinux.org/title/PRIME#For_open_source_drivers_-_PRIME) 方法进行切换。也就是使用 `DRI_PRIME=1` 前缀使用独立显卡（可能还更简单了？🤔）。
 
 - 通过以下命令（请将 `%command%` 替换为要运行的命令）以使用 AMD 独立显卡运行程序：
 
@@ -382,10 +382,6 @@ DRI_PRIME=1 steam steam://rungameid/730 # 运行 CS:GO
 ```
 
 - 可以使用以下命令分别对核芯显卡和独立显卡进行性能测试，选择分数更高的一个使用：
-
-```bash
-glmark2
-```
 
 :::: code-group
 ::: code-group-item 核芯显卡
@@ -517,7 +513,7 @@ unigine-sanctuary
 
 5. 点击左上角 `退出` 并 `确定` 即可退出测试
 
-这些基准测试工具拥有实时的环境遮挡、来自不同来源的相互关联的灯光、HDR 效果图、逼真的水和具有大气光散射的动态天空。用户还可以设置抗锯齿级别、纹理质量和滤波、各向异性和着色器质量。除了能够以多个步骤测试硬件的“基准测试”按钮之外，您还可以自由地漫游，改变一天中的时间（改变世界的照明），并准确地确定“掰弯”硬件最多的条件。
+此基准测试工具拥有实时的环境遮挡、来自不同来源的相互关联的灯光、HDR 效果图、逼真的水和具有大气光散射的动态天空。此外还可以设置抗锯齿级别、纹理质量和滤波、各向异性和着色器质量。
 
 ## 显卡信息查看
 
