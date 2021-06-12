@@ -4,13 +4,17 @@ title: 可选配置
 
 # 其它可选配置
 
+## 调整部分系统设置
+
+### 以空会话启动
+
 ## 字体设置
 
 笔者的设置是英文使用 Hack，中文使用 Noto Sans CJK SC。可以在 `系统设置` > `字体` 中进行设置。
 
 有关用户全局级别更改日文异型字的设置，可参考 [archWiki 相关说明](<https://wiki.archlinux.org/index.php/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BF%AE%E6%AD%A3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%BC%82%E4%BD%93%EF%BC%88%E6%97%A5%E6%96%87%EF%BC%89%E5%AD%97%E5%BD%A2>)。
 
-## 休眠（hibernate）设置（可选）
+## 休眠（hibernate）设置
 
 KDE 自身提供开箱即用的睡眠功能（sleep），即将系统挂起到内存，消耗少量的电量。休眠（hibernate）则会将系统挂起到交换分区或交换文件，几乎不消耗电量。如果睡眠功能已可满足你的需求，不需要休眠到硬盘的功能，则可略过此步。
 

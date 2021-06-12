@@ -1,5 +1,6 @@
 ---
 title: 透明代理
+sidebarDepth: 2
 ---
 
 # archlinux 透明代理
@@ -239,6 +240,24 @@ cgproxy 默认配置是代理所有 `tcp` 和 `udp`、`ipv4` 和 `ipv6` 的流�
 sudo systemctl start cgproxy.service
 ```
 
+::: tip ℹ️ 提示
+
+每次重启后都要重新命令启动 cgproxy 服务。
+
+若要设为开机自启，请执行以下命令：
+
+```bash
+sudo systemctl enable cgproxy.service
+```
+
+若要关闭 cgproxy 服务，请执行以下命令：
+
+```bash
+sudo systemctl stop cgproxy.service
+```
+
+:::
+
 4. 通过以下命令检查 cgproxy 服务运行情况：
 
 ```bash
@@ -250,6 +269,130 @@ systemctl status cgproxy.service
 5. 打开不存在的网站验证连接：
 
 ![check](../static/rookie/transparent_check.png)
+
+::: tip ℹ️ 提示
+
+如果 cgproxy 不生效 😢，请尝试以下步骤：
+
+1. 观察 Qv2ray 日志，看流量是否被定向到了 Qv2ray
+2. 如果没有，请检查配置是否准确、cgproxy 服务是否开启等
+3. 如果还是没发现问题，尝试更换端口
+4. 使用以下命令尝试给核心文件加上相应的特权：
+
+:::
+
+:::: code-group
+::: code-group-item V2Ray
+
+```bash
+sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/v2ray
+```
+
+:::
+::: code-group-item Xray
+
+```bash
+sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/xray
+```
+
+:::
+::::
+
+## 其它代理方法（非透明代理）
+
+> 虽然 cgproxy 很好，但有的时候就是会有诡异的 bug。本指南为了内容的全面性，介绍其它的代理方法。
+
+### 系统代理
+
+如步骤 [4. 通过系统代理方式尝试连接](./transparent.md#_4-通过系统代理方式尝试连接) 所述，但在很多应用不生效（主流浏览器已支持 KDE 的系统代理）。
+
+### 应用自身的代理配置
+
+#### Firefox
+
+Firefox 可使用系统代理，也可手动配置：
+
+![Firefox](../static/rookie/transparent/firefox.png)
+
+#### Telegram
+
+1. 点击 `Settings` > `Advanced` > `Connection type` > `Use custom proxy`
+
+![Telegram_step-1](../static/rookie/transparent/telegram-1.png)
+
+2. 点击 `ADD PROXY` > 填写合适的类型和端口 > `SAVE`：
+
+![Telegram_step-2](../static/rookie/transparent/telegram-2.png)
+
+#### Visual Studio Code（code OSS）
+
+1. 点击 `File`（`文件`） > `Preference`（`首选项`） > `Settings`（`设置`）
+
+2. 搜索 `proxy`，在其中填入 http 代理地址（`http://127.0.0.1:xxxx`）即可：
+
+![vscode](../static/rookie/transparent/vscode.png)
+
+::: tip ℹ️ 提示
+
+其它应用请自行寻找代理设置。
+
+:::
+
+### export
+
+通过以下 `export` 命令设置当前终端的代理方式：
+
+```bash
+export https_proxy=http://127.0.0.1:xxxx
+export http_proxy=http://127.0.0.1:xxxx
+export all_proxy=http://127.0.0.1:xxxx
+```
+
+::: tip ℹ️ 提示
+
+不同终端命令所识别的环境变量名不同，如 `all_proxy` 对 `curl` 生效，而对 `wget` 则不生效，具体可查看各个命令的 `man page`
+
+:::
+
+### proxychains-ng
+
+如果对于一个应用，KDE 系统代理不生效，在终端 `export` 了 `ALL_PROXY` 变量再用终端启动此应用代理也不生效，并且这个应用自身也没有配置代理的选项，此时可以尝试使用 proxychains-ng。
+
+它可以为单行命令配置代理。它是一个预加载的 hook，允许通过一个或多个 SOCKS 或 HTTP 代理重定向现有动态链接程序的 TCP 流量。
+
+1. 通过以下命令安装 proxychains-ng 包：
+
+```bash
+sudo pacman -S proxychains-ng
+```
+
+2. 通过 `vim` 编辑 `/etc/proxychains.conf` 文件：
+
+```bash
+sudo vim /etc/proxychains.conf
+```
+
+把配置文件中最后两行改为 Qv2ray 代理的 ip 和端口：
+
+![proxychains_step-1](../static/rookie/transparent/proxychains-1.png)
+
+在 `proxy_dns` 一行前添加 `#` 注释掉此行，否则使用 `proxychains` 启动 yay 会报错：
+
+![proxychains_step-2](../static/rookie/transparent/proxychains-2.png)
+
+3. 使用代理方式为在单一命令前添加 `proxychains` 前缀：
+
+```bash
+proxychains %command%
+```
+
+如使用 proxychains-ng 代理 yay:
+
+```bash
+proxychains yay -Syyu
+```
+
+![proxychains_step-3](../static/rookie/transparent/proxychains-3.png)
 
 > 📔 本节参考资料：
 >
