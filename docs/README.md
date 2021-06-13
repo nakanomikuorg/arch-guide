@@ -27,18 +27,18 @@ features:
 footer: '<p style="font-size: 8px">
   Code licensed under MIT, documentation under
   <a
-    href="http://creativecommons.org/licenses/by-sa/4.0/"
+    href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"
     class="grabient-text"
     target="_blank"
     rel="noopener noreferrer"
     >CC BY-SA 4.0</a
   >. Made with ❤️️ love by
   <a
-    href="https://github.com/ice-kylin"
+    href="https://github.com/NakanoMikuOrg/arch-guide/graphs/contributors"
     class="grabient-text"
     target="_blank"
     rel="noopener noreferrer"
-    >icekylin</a
+    >ALL volunteers</a
   >.
 </p>'
 footerHtml: true
@@ -99,18 +99,12 @@ yarn docs:dev
 2. 由于使用 VuePress V2 Beta 版本导致兼容性问题缺失了部分插件（评论）
 3. 缺失外语翻译
 
-更多信息请参阅 [贡献指南](/contribute.md) 章节。
+更多信息请参阅 [贡献指南](/postscript/contribute.md)。
 
 ## 🎋 版权说明
 
-[![by-sa](./static/svg/by-sa.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![by-sa](./static/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 
-网站源代码采用 MIT 许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
+网站源代码采用 MIT 许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 进行许可。
 
-### 特殊说明
-
-#### 字体
-
-- [Segoe UI Emoji](https://docs.microsoft.com/zh-cn/typography/font-list/segoe-ui-emoji) © 2018 Microsoft Corporation. All Rights Reserved.
-
-更多信息请参阅 [关于指南](/about.md#版权声明) 章节。
+更多信息请参阅 [版权说明](/postscript/copyright.md)。
