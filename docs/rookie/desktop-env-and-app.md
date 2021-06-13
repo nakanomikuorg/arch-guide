@@ -357,23 +357,23 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 4. 打开 `系统设置` > `区域设置` > `输入法`
 
-5. 点击提示信息中的 `运行 Fcitx`
+5. 点击提示信息中的 `运行 Fcitx`：
 
 ![fcitx5_step-2](../static/rookie/desktop-env-and-app_fcitx5-2.png)
 
-6. 点击 `添加输入法` > 找到简体中文下的 `Pinyin` > 点击 `添加` 即可加入拼音输入法
+6. 点击 `添加输入法` > 找到简体中文下的 `Pinyin` > 点击 `添加` 即可加入拼音输入法：
 
 ![fcitx5_step-3](../static/rookie/desktop-env-and-app_fcitx5-3.png)
 
-7. 接下来点击 `Pinyin` 右侧的配置按钮 > 点选 `云拼音` 和 `在程序中显示预编辑文本` > 最后点击 `应用`
+7. 接下来点击 `Pinyin` 右侧的配置按钮 > 点选 `云拼音` 和 `在程序中显示预编辑文本` > 最后点击 `应用`：
 
 ![fcitx5_step-4](../static/rookie/desktop-env-and-app_fcitx5-4.png)
 
-8. 回到输入法设置 > 点击 `配置附加组件` > 找到 `Classic User Interface` > 在主题里选择一个你喜欢的颜色 > 最后点击 `应用`
+8. 回到输入法设置 > 点击 `配置附加组件` > 找到 `Classic User Interface` > 在主题里选择一个你喜欢的颜色 > 最后点击 `应用`：
 
 ![fcitx5_step-5](../static/rookie/desktop-env-and-app_fcitx5-5.png)
 
-9. 注销并重新登陆，发现已经可以在各个软件中输入中文了
+9. 注销并重新登陆，发现已经可以在各个软件中输入中文了：
 
 ![fcitx5_step-6](../static/rookie/desktop-env-and-app_fcitx5-6.png)
 
