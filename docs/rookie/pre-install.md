@@ -20,7 +20,7 @@ prev: /prepare/understand.md
 
 ::: tip ℹ️ 提示
 
-指南中带有 <sup>EULA</sup> 角标的软件代表是专有软件。
+指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
 
 :::
 

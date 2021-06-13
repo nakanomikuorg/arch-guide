@@ -17,15 +17,15 @@ description: archlinux 安装桌面环境与常用应用 | 本指南包含从 ar
 
 ::: tip ℹ️ 提示
 
-指南中带有 <sup>aur</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题。
+指南中带有 <sup>aur</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
 
-指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。
+指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
 
-指南中带有 <sup>EULA</sup> 角标的软件代表是专有软件。
+指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
 
 :::
 
-## 1. 确保系统为最新
+## 0. 确保系统为最新
 
 如果你在做完章节 [archlinux 基础安装](./basic-install.md) 的内容后，关机并放置过一段时间，那么需要先按照 [18. 完成安装](./basic-install.html#_18-完成安装) 中连接网络的方法重新连网，然后使用以下命令更新系统：
 
@@ -34,6 +34,34 @@ pacman -Syyu # 升级系统中全部包
 ```
 
 ![update](../static/rookie/desktop-env-and-app_update.png)
+
+## 1. 配置 root 账户的默认编辑器
+
+默认情况下，archlinux 在一些终端编辑场景调用 `vi` 编辑器，但是我们使用 `vim` 编辑器。
+
+如果不做额外配置且不显式的指定编辑器，在一些终端场景下（如下面的 `visudo`、`git` 等）调用编辑器时会出错。
+
+1. 使用 `vim` 编辑 `~/.bash_profile` 文件：
+
+```bash
+vim ~/.bash_profile
+```
+
+在适当位置加入以下内容：
+
+```bash
+export EDITOR='vim'
+```
+
+::: tip ℹ️ 提示
+
+也可以添加到 `~/.bashrc` 中，但是（如果不做其它配置或显式的执行）在登录命令行 `tty` 后不会被执行，也就失去了意义。
+
+一般来说我们登录 root 账户时很可能是在命令行 `tty` 登录的（有时也会 `su`）。
+
+:::
+
+2. 保存并退出 `vim`
 
 ## 2. 准备非 root 用户
 
@@ -57,12 +85,18 @@ useradd -m -G wheel -s /bin/bash myusername
 passwd myusername
 ```
 
+::: tip ℹ️ 提示
+
+弱密码已经不被接受，请设置一个较为复杂的密码，如 `i_love_archlinux`。
+
+:::
+
 ![add-user](../static/rookie/desktop-env-and-app_add-user.png)
 
 3. 使用 `vim` 编辑器通过 `visudo` 命令编辑 `sudoers` 文件：
 
 ```bash
-EDITOR=vim visudo
+EDITOR=vim visudo # 这里需要显式的指定编辑器，因为上面的环境变量还未生效
 ```
 
 4. 找到如下这样的一行，把前面的注释符号 `#` 去掉：
@@ -245,7 +279,27 @@ mkdir Desktop Documents Downloads Music Pictures Videos
 
 ![mkdir](../static/rookie/desktop-env-and-app_mkdir.png)
 
-## 9. 设置系统为中文
+## 9. 配置非 root 账户的默认编辑器
+
+1. 使用 `vim` 编辑 `~/.bashrc` 文件：
+
+```bash
+vim ~/.bashrc
+```
+
+2. 在适当位置加入以下内容：
+
+```bash
+export EDITOR='vim'
+```
+
+::: tip ℹ️ 提示
+
+也可以添加到 `~/.bash_profile` 中。
+
+:::
+
+## 10. 设置系统为中文
 
 1. 打开 `System Settings` > `Regional Settings` > 在 `Language` 中点击 `Add languages...` > 选择中文加入 `ADD`，再拖拽到第一位 > 点击 `Apply`
 
@@ -261,7 +315,7 @@ mkdir Desktop Documents Downloads Music Pictures Videos
 
 :::
 
-## 10. 安装输入法
+## 11. 安装输入法
 
 如有需要可以参阅 [Fcitx5 官方文档](<https://wiki.archlinux.org/index.php/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -329,7 +383,7 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 :::
 
-## 11. 启动蓝牙（若有）
+## 12. 启动蓝牙（若有）
 
 通过以下命令开启蓝牙相关服务并设置开机自动启动：
 
@@ -337,7 +391,7 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 sudo systemctl enable --now bluetooth
 ```
 
-## 12. 设置 Timeshift 快照
+## 13. 设置 Timeshift 快照
 
 1. 通过以下命令安装 Timeshift<sup>cn / aur</sup>：
 

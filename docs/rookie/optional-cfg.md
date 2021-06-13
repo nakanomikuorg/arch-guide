@@ -4,9 +4,21 @@ title: 可选配置
 
 # 其它可选配置
 
+> ### 🍜 一分耕耘，一分收获
+>
+> 这一节的配置都是可选的。这些配置根据个人喜好进行配置，往往可以让系统变得更好用
+
+> ### 🔖 这一节将会讨论：
+>
+> [[toc]]
+
 ## 调整部分系统设置
 
 ### 以空会话启动
+
+### 点击文件 / 文件夹行为
+
+## DPI 设置
 
 ## 字体设置
 
@@ -65,4 +77,53 @@ sudo mkinitcpio -P
 
 ## 输入法
 
+> 由于 fcitx5 自带词库简陋，部分本地化符号难以输入（如中文输入下按下 `/` 键无法打出 `、`），Emoji 无法输入等问题，提供额外输入方案
+
+1. 安装 Fcitx5
+
+```bash
+sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool
+```
+
+2. 安装 Rime
+
+```bash
+sudo pacman -S fcitx5-rime
+```
+
+3. 添加 Rime 输入法
+
+打开 _系统设置_ > _区域设置_ > _输入法_
+
+点击`添加输入法`，找到汉语下的 Rime ，点击添加
+
+4. 安装 🍀️ 四叶草拼音输入方案
+
+```bash
+yay -S rime-cloverpinyin
+```
+
+5. 切换到 🍀️ 四叶草拼音输入方案
+
+在 `~/.local/share/fcitx5/rime` 下创建 `default.custom.yaml` 并加入以下内容
+
+```yaml
+patch:
+  "menu/page_size": 8
+  schema_list:
+    - schema: clover
+```
+
+其中 `8` 表示打字的时候输入面板的每一页的候选词数目，可以设置成 `1~9` 任意数字
+
+关于 `default.custom.yaml` 文件的更多解释，可以参考官方文档[定制指南](https://github.com/rime/home/wiki/CustomizationGuide)
+
+编辑好该文件之后，点击输入法托盘图标右键菜单，点 `重新部署`，然后再点右键，在方案列表里面应该就有 `🍀️四叶草拼音输入法` 的选项了
+
+注销，重新登陆，就可以发现已经可以在各个软件中输入中文了
+
+关于 Fcitx5 输入法的美化请参阅 [系统美化]()。
+
 ## zsh
+
+## 虚拟机增强功能
