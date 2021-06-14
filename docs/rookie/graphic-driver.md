@@ -339,7 +339,7 @@ __VK_LAYER_NV_optimus="NVIDIA_only"
 
 :::
 
-电源管理做的事情是，在只用核显的模式下，确保正确关闭独立显卡；而在混合模式下，绝大多数情况下 NVIDIA 模块实际是始终开启的，电源管理并不生效。
+电源管理做的事情是，**在只用核显的模式下，确保正确关闭独立显卡**；而在混合模式下，绝大多数情况下 NVIDIA 模块实际是始终开启的，**电源管理并不生效**。
 
 这件事情其实很复杂，因为对于不同的显卡型号，以及笔记本型号的组合，可行的方案都是不同的。笼统来说，最广泛适用的办法是 Bbswitch。但**不建议上来就按照此方式安装使用**，因为某些特定的硬件就是会出问题（黑屏）。
 
@@ -369,6 +369,16 @@ sudo pacman -S bbswitch-dkms
 2. 右键 optimus-manager 的托盘图标 > 点击 `设置` > 在 Optimus 选项卡中的 `switch method` 中选择 `Bbswitch` 即可：
 
 ![Bbswitch](../static/rookie/graphic-driver/bbswitch.png)
+
+3. 重启之后，若使用仅核显模式使用如下命令验证 NVIDIA 独立显卡是否被禁用：
+
+```bash
+lspci | grep NVIDIA
+```
+
+![off-check](../static/rookie/graphic-driver/off-check.png)
+
+若有 `rev ff` 字样，则表示独显已经成功禁用。
 
 ### AMD 独立显卡
 

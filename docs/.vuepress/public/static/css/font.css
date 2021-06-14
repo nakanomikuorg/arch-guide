@@ -74,6 +74,60 @@
 }
 
 @font-face {
+  font-family: "harmony";
+  font-weight: normal;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 500;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 900;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Black.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Bold.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 300;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Light.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 100;
+  font-style: normal;
+
+  src: local("Harmony"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Thin.ttf");
+}
+
+@font-face {
   font-family: "hack";
 
   src: local("Hack"), url("/static/font/Hack-Regular.ttf");

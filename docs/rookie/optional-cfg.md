@@ -312,10 +312,44 @@ sudo mkinitcpio -P
 
 虚拟机也可以通过休眠成功唤醒。
 
+::: tip ℹ️ 提示
+
+虚拟机可能在休眠唤醒后的关机时发生内核崩溃（Caps Lock 灯也会闪烁）。
+
+:::
+
 ## 🔍 rEFind
 
 ## 🚀 zsh
 
 ## ✨ DPI 设置
+
+若发现 SDDM 显示字体和图标过小，可以尝试以下步骤。
+
+1. 打开 `系统设置` > 点击侧栏 `开机与关机` > `登录屏幕（SDDM）`：
+
+![dpi-1](../static/rookie/optional-cfg/dpi-1.png)
+
+2. 点击 `同步配置` > `同步`：
+
+![dpi-2](../static/rookie/optional-cfg/dpi-2.png)
+
+3. 重启查看是否成功修改。若大小已经改变，则无需下面的步骤。若没有改变（通常发生在 NVIDIA 独显模式下），请确保你已经按照步骤 []() 安装了 optimus-manager，然后右键 optimus-manager 托盘图标 > 点击 `设置` > 点击侧栏 `NVIDIA`
+
+4. 将 `DPI` 的数值适量提高：
+
+![dpi-3](../static/rookie/optional-cfg/dpi-3.png)
+
+::: tip ℹ️ 提示
+
+`DPI` 数值可参考步骤 [🀄 字体设置](./optional-cfg.md#🀄-字体设置) 中下方的 `固定字体 DPI`：
+
+![dpi-4](../static/rookie/optional-cfg/dpi-4.png)
+
+:::
+
+5. 点击 `确定` 保存设置
+
+6. 重启查看效果
 
 ## ⚒ 虚拟机增强功能
