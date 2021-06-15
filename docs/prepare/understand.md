@@ -108,7 +108,15 @@ archlinux 在更新内核的时候会立即删除旧内核（因为内核也是�
 >
 > -- Wikipedia
 
-### 7. 由社区创建、支持和拥有
+### 7. 软件包管理体系
+
+不同于 Debian 系列的 `apt / dpkg` 和 Red Hat 系列的 `dnf（yum）/ rpm` 包管理体系，archlinux 只用了一个工具 pacman 就解决了获取和安装两个功能。这降低了为 archlinux 制作软件包的门槛，这也是 AUR 几乎能涵盖整个 Linux 软件生态的主要原因。但是这也导致 pacman 不支持虚包（virtual package）。
+
+> #### 📑 相关资料：什么是虚包？
+>
+> 虚包是一个通用名称，适用于一组提供类似的基本功能的包中的任何一个包。
+
+### 8. 由社区创建、支持和拥有
 
 Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](https://www.redhat.com/zh)（现在是 IBM 的一部分），openSUSE 来自 [SUSE](https://www.suse.com/zh-cn/)。这些主流发行版都是企业支持的。
 
