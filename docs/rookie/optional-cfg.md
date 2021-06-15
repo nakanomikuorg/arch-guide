@@ -344,7 +344,170 @@ sudo mkinitcpio -P
 
 ## 🔍 rEFind
 
+如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/REFInd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+
+相对于 GRUB，rEFind 的启动项更加灵活，相对来说也更加美观。
+
+1. 使用以下命令安装 `refind` 包：
+
+```bash
+sudo pacman -S refind
+```
+
+![refind-1](../static/rookie/optional-cfg/refind-1.png)
+
+2. 使用以下命令安装 rEFInd 启动管理器到 EFI 分区：
+
+```bash
+sudo refind-install
+```
+
+![refind-2](../static/rookie/optional-cfg/refind-2.png)
+
+3. 使用以下命令复查安装情况：
+
+```bash
+ls -ahl /boot/efi/EFI/
+```
+
+::: tip ℹ️ 提示
+
+若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
+
+:::
+
+![refind-3](../static/rookie/optional-cfg/refind-3.png)
+
+输出结果应该可以看到 `refind` 文件夹。
+
+4. 使用 `vim` 编辑 `/boot/efi/EFI/refind/refind.conf` 文件：
+
+```bash
+sudo vim /boot/efi/EFI/refind/refind.conf
+```
+
+修改等待时间为合适数值（自定义）：
+
+```bash
+timeout 5
+```
+
+![refind-4](../static/rookie/optional-cfg/refind-4.png)
+
+为了使 rEFInd 支持 archlinux 内核命名方案并使其与各自的 initramfs 镜像相匹配，取消注释并编辑 `extra_kernel_version_strings` 所在行：
+
+```bash
+extra_kernel_version_strings linux-hardened,linux-zen,linux-lts,linux
+```
+
+![refind-5](../static/rookie/optional-cfg/refind-5.png)
+
+为了允许在 Btrfs 子卷上进行内核自动检测，取消注释并编辑 `also_scan_dirs`，在最后加上 `@/boot`：
+
+```bash
+also_scan_dirs boot,ESP2:EFI/linux/kernels,@/boot
+```
+
+::: tip ℹ️ 提示
+
+若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux：
+
+- 若使用了 ext4 文件系统，则不用修改这一行。
+- 若使用了 Btrfs 文件系统，请确认根目录或 `/boot` 目录对应子卷位置（简而言之这个位置是从 Btrfs 文件系统最上层开始寻找的）
+
+:::
+
+![refind-6](../static/rookie/optional-cfg/refind-6.png)
+
+5. 保存并退出 `vim`
+
+6. 若安装 archlinux 时按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用了 Btrfs 文件系统，为了让 rEFind 支持 Btrfs 子卷，需要使用以下命令将 `/usr/share/refind/drivers_x64/btrfs_x64.efi` 复制到 `/boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi` 以手动为 rEFind 安装驱动：
+
+```bash
+sudo cp /usr/share/refind/drivers_x64/btrfs_x64.efi /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
+```
+
+![refind-7](../static/rookie/optional-cfg/refind-7.png)
+
+7. 使用以下命令复查安装情况：
+
+```bash
+ls -ahl /boot/efi/EFI/refind/drivers_x64/
+```
+
+输出如下：
+
+```bash {1}
+-rwxr-xr-x 1 root root 114K Jun 15 23:00 /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
+```
+
+8. 使用以下命令在内核所在文件夹（`/boot`）创建包含内核参数的 `refind_linux.conf` 文件：
+
+```bash
+sudo mkrlconf --force
+```
+
+::: tip ℹ️ 提示
+
+对于自动检测到的内核，可以在 `/boot/refind_linux.conf` 中显式指定内核参数，也可以依靠 rEFInd 识别根分区和内核参数的能力。此处便是使用了后者。
+
+若要修改内核参数，可以用 GRUB 使用新内核参数登录系统后重新使用此步骤命令重新生成 `/boot/refind_linux.conf` 文件，也可以直接在 `/boot/refind_linux.conf` 显式指定内核参数。
+
+:::
+
+9. 复查 `/boot/refind_linux.conf` 文件：
+
+```bash
+cat /boot/refind_linux.conf
+```
+
+输出如下：
+
+```bash
+"Boot with standard options"  "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a"
+"Boot to single-user mode"    "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a single"
+"Boot with minimal options"   "ro root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90"
+```
+
+10. 重启电脑，便可以看到 rEFind 的引导页面了：
+
+![refind-8](../static/rookie/optional-cfg/refind-8.png)
+
+这个选项是通过 GRUB 套娃启动系统。
+
+![refind-9](../static/rookie/optional-cfg/refind-9.png)
+
+这个选项是通过 rEFind 直接引导进入系统。
+
+::: tip ℹ️ 提示
+
+若引导了 win10 也会显示出来。
+
+:::
+
+::: tip ℹ️ 提示
+
+后面两位是虚拟机安装 archlinux 后留下来的安装镜像（实体机没有），不想要可以请使用以下步骤移除
+
+1. 关闭虚拟机后打开虚拟机设置 > 侧栏 `存储` > 点击右侧 `分配光驱` 的右侧光盘小图标：
+
+![refind-10](../static/rookie/optional-cfg/refind-10.png)
+
+2. 点击 `移除虚拟盘`：
+
+![refind-11](../static/rookie/optional-cfg/refind-11.png)
+
+3. 开启虚拟机，查看效果：
+
+![refind-12](../static/rookie/optional-cfg/refind-12.png)
+
+:::
+
+关于 rEFind 的美化请参阅 [系统美化]()。
+
 ## 🚀 zsh
+
+关于 zsh 的美化请参阅 [系统美化]()。
 
 ## ✨ DPI 设置
 
@@ -375,6 +538,8 @@ sudo mkinitcpio -P
 5. 点击 `确定` 保存设置
 
 6. 重启查看效果
+
+## 🐧 更换可选内核
 
 ## ⚒ 虚拟机增强功能（客体机插件）
 

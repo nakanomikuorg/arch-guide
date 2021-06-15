@@ -870,7 +870,13 @@ reboot # 重启
 
 ![last-step-1](../static/rookie/basic-install_last-step-1.png)
 
-如图即为 GRUB 引导界面（若引导了 win10 也会显示出来）。
+如图即为 GRUB 引导界面。
+
+::: tip ℹ️ 提示
+
+若引导了 win10 也会显示出来。
+
+:::
 
 ::: tip ℹ️ 提示
 
