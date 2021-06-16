@@ -13,6 +13,8 @@ sidebarDepth: 2
 >
 > [[toc]]
 
+Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
+
 ## ⚙ 调整部分系统设置
 
 ### 以空会话启动
@@ -106,7 +108,7 @@ yay -S aur/rime-cloverpinyin
 
 ![rime_step-4](../static/rookie/optional-cfg/rime-4.png)
 
-5. 然后切换到 🍀️ 四叶草拼音输入方案。使用 `vim` 创建并编辑 `~/.local/share/fcitx5/rime/default.custom.yaml`：
+5. 然后切换到 🍀️ 四叶草拼音输入方案。使用 `vim` 创建并编辑下述文件：
 
 ```bash
 mkdir ~/.local/share/fcitx5/rime # 创建 rime 目录
@@ -159,6 +161,222 @@ patch:
 :::
 
 关于 Fcitx5 输入法的美化请参阅 [系统美化]()。
+
+## 🚀 zsh
+
+zsh 完全兼容 bash，但相比 bash，又有诸多优点：
+
+1. 更强大的 `tab` 补全
+2. 更智能的切换目录
+3. 大小写字母自动更正
+4. 更强大的 `alias` 命令
+5. 丰富多彩的主题
+6. 可以集成各种类型的插件
+
+> #### 🍧 碎碎念
+>
+> 当然，也有很多人对 bash 爱的深沉，这些都看个人喜好啦。
+
+::: tip ℹ️ 提示
+
+[oh-my-zsh](https://ohmyz.sh/) 实际上并没有那么好用，反而拖慢了 Zsh 的速度，本指南不会介绍。
+
+若有需要请自行查阅相关资料。
+
+:::
+
+1. 通过以下命令安装 zsh 相关的包：
+
+```bash
+sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
+```
+
+> 📑 相关包说明：
+>
+> - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) —— 命令自动补全插件
+> - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) —— 语法上高亮插件
+> - [`zsh-completions`](https://github.com/zsh-users/zsh-completions) —— 补充补全定义
+
+![zsh_step-1](../static/rookie/optional-cfg/zsh-1.png)
+
+2. 安装 [autojump](https://github.com/wting/autojump)<sup>cn / aur</sup> 插件：
+
+:::: code-group
+::: code-group-item cn
+
+```bash
+sudo pacman -S autojump
+```
+
+:::
+::: code-group-item aur
+
+```bash
+yay -S aur/autojump
+```
+
+:::
+::::
+
+![zsh_step-2](../static/rookie/optional-cfg/zsh-2.png)
+
+3. 更改账户的默认 Shell：
+
+:::: code-group
+::: code-group-item 非 root 账户
+
+```bash
+chsh -l # 查看安装了哪些 Shell
+chsh -s /usr/bin/zsh # 修改当前账户的默认 Shell
+```
+
+:::
+::: code-group-item root
+
+```bash
+chsh -l # 查看安装了哪些 Shell
+sudo chsh -s /usr/bin/zsh root
+```
+
+:::
+::::
+
+![zsh_step-3](../static/rookie/optional-cfg/zsh-3.png)
+
+![zsh_step-4](../static/rookie/optional-cfg/zsh-4.png)
+
+::: tip ℹ️ 提示
+
+可以不为 root 账户更改默认 shell。
+
+:::
+
+4. 注销并重新登录 > 打开终端，此时会弹出如下界面进行设置：
+
+![zsh_step-5](../static/rookie/optional-cfg/zsh-5.png)
+
+- 按下 `0` 将创建一个只包含注释的 `~/.zshrc` 文件，在下次启动时不会再次弹出设置选项。
+- 按下 `1` 即可进入设置：
+
+```zsh
+Please pick one of the following options:
+
+(1)  Configure settings for history, i.e. command lines remembered
+     and saved by the shell.  (Recommended.)
+
+(2)  Configure the new completion system.  (Recommended.)
+
+(3)  Configure how keys behave when editing command lines.  (Recommended.)
+
+(4)  Pick some of the more common shell options.  These are simple "on"
+     or "off" switches controlling the shell's features.
+
+(0)  Exit, creating a blank ~/.zshrc file.
+
+(a)  Abort all settings and start from scratch.  Note this will overwrite
+     any settings from zsh-newuser-install already in the startup file.
+     It will not alter any of your other settings, however.
+
+(q)  Quit and do nothing else.  The function will be run again next time.
+```
+
+根据提示完成设置即可。也可以创建一个只包含注释的 `~/.zshrc` 文件以使用默认值。
+
+::: tip ℹ️ 提示
+
+root 账户需要手动创建 `root/.zshrc` 文件。
+
+:::
+
+::: tip ℹ️ 提示
+
+若希望重新设置，只需要把 `~/.zshrc` 文件删掉即可。
+
+:::
+
+5. 为了让插件生效，需要修改 `~/.zshrc`。使用 `vim` 编辑 `~/.zshrc` 文件：
+
+:::: code-group
+::: code-group-item 非 root 账户
+
+```zsh
+vim ~/.zshrc
+```
+
+:::
+::: code-group-item root
+
+```zsh
+sudo vim root/.zshrc
+```
+
+:::
+::::
+
+将以下内容分别添加到需要设置 zsh 账户的 `~/.zshrc` 中：
+
+```zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/autojump/autojump.zsh
+```
+
+![zsh_step-6](../static/rookie/optional-cfg/zsh-6.png)
+
+6. 关闭并重新打开终端，测试一下：
+
+![zsh_step-7](../static/rookie/optional-cfg/zsh-7.png)
+
+::: tip ℹ️ 提示
+
+有关 autojump 的使用可以参阅 [autojump repo](https://github.com/wting/autojump)。
+
+:::
+
+::: tip ℹ️ 提示
+
+可能需要：
+
+- 将在 `~/.bash_profile` 所做的配置复制到 `~/.zsh_profile`
+- 将在 `~/.bashrc` 所做的配置复制到 `~/.zshrc`
+
+如在步骤 [1. 配置 root 账户的默认编辑器](./desktop-env-and-app.md#_1-配置-root-账户的默认编辑器) 和 [9. 配置非 root 账户的默认编辑器](./desktop-env-and-app.md#_9-配置非-root-账户的默认编辑器) 所做的配置。
+
+:::
+
+关于 zsh 的美化请参阅 [系统美化]()。
+
+## ✨ DPI 设置
+
+若发现 SDDM 显示字体和图标过小，可以尝试以下步骤。
+
+1. 打开 `系统设置` > 点击侧栏 `开机与关机` > `登录屏幕（SDDM）`：
+
+![dpi-1](../static/rookie/optional-cfg/dpi-1.png)
+
+2. 点击 `同步配置` > `同步`：
+
+![dpi-2](../static/rookie/optional-cfg/dpi-2.png)
+
+3. 重启查看是否成功修改。若大小已经改变，则无需下面的步骤。若没有改变（通常发生在 NVIDIA 独显模式下），请确保你已经按照步骤 []() 安装了 optimus-manager，然后右键 optimus-manager 托盘图标 > 点击 `设置` > 点击侧栏 `NVIDIA`
+
+4. 将 `DPI` 的数值适量提高：
+
+![dpi-3](../static/rookie/optional-cfg/dpi-3.png)
+
+::: tip ℹ️ 提示
+
+`DPI` 数值可参考步骤 [🀄 字体设置](./optional-cfg.md#🀄-字体设置) 中下方的 `固定字体 DPI`：
+
+![dpi-4](../static/rookie/optional-cfg/dpi-4.png)
+
+:::
+
+5. 点击 `确定` 保存设置
+
+6. 重启查看效果
+
+## 🐧 更换可选内核
 
 ## 💤 休眠（hibernate）设置
 
@@ -421,7 +639,7 @@ also_scan_dirs boot,ESP2:EFI/linux/kernels,@/boot
 
 5. 保存并退出 `vim`
 
-6. 若安装 archlinux 时按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用了 Btrfs 文件系统，为了让 rEFind 支持 Btrfs 子卷，需要使用以下命令将 `/usr/share/refind/drivers_x64/btrfs_x64.efi` 复制到 `/boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi` 以手动为 rEFind 安装驱动：
+6. 若安装 archlinux 时按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用了 Btrfs 文件系统，为了让 rEFind 支持 Btrfs 子卷，需要使用以下命令手动为 rEFind 安装驱动：
 
 ```bash
 sudo cp /usr/share/refind/drivers_x64/btrfs_x64.efi /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
@@ -504,42 +722,6 @@ cat /boot/refind_linux.conf
 :::
 
 关于 rEFind 的美化请参阅 [系统美化]()。
-
-## 🚀 zsh
-
-关于 zsh 的美化请参阅 [系统美化]()。
-
-## ✨ DPI 设置
-
-若发现 SDDM 显示字体和图标过小，可以尝试以下步骤。
-
-1. 打开 `系统设置` > 点击侧栏 `开机与关机` > `登录屏幕（SDDM）`：
-
-![dpi-1](../static/rookie/optional-cfg/dpi-1.png)
-
-2. 点击 `同步配置` > `同步`：
-
-![dpi-2](../static/rookie/optional-cfg/dpi-2.png)
-
-3. 重启查看是否成功修改。若大小已经改变，则无需下面的步骤。若没有改变（通常发生在 NVIDIA 独显模式下），请确保你已经按照步骤 []() 安装了 optimus-manager，然后右键 optimus-manager 托盘图标 > 点击 `设置` > 点击侧栏 `NVIDIA`
-
-4. 将 `DPI` 的数值适量提高：
-
-![dpi-3](../static/rookie/optional-cfg/dpi-3.png)
-
-::: tip ℹ️ 提示
-
-`DPI` 数值可参考步骤 [🀄 字体设置](./optional-cfg.md#🀄-字体设置) 中下方的 `固定字体 DPI`：
-
-![dpi-4](../static/rookie/optional-cfg/dpi-4.png)
-
-:::
-
-5. 点击 `确定` 保存设置
-
-6. 重启查看效果
-
-## 🐧 更换可选内核
 
 ## ⚒ 虚拟机增强功能（客体机插件）
 
