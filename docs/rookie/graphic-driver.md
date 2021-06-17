@@ -147,9 +147,22 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 
 - 较新型号的独立显卡使用以下命令直接安装如下几个包即可：
 
+:::: code-group
+::: code-group-item linux
+
 ```bash
 sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils # 必须安装
 ```
+
+:::
+::: code-group-item others
+
+```bash
+sudo pacman -S nvidia-dkms nvidia-settings lib32-nvidia-utils # 必须安装
+```
+
+:::
+::::
 
 - 如果是 GeForce 630 以下到 GeForce 400 系列的老卡，使用以下命令安装 [nvidia-390xx-dkms](https://aur.archlinux.org/packages/nvidia-390xx-dkms/)<sup>aur</sup> 及其 32 位支持包：
 
