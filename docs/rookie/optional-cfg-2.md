@@ -58,6 +58,12 @@ sudo pacman -S linux-hardened linux-hardened-headers
 :::
 ::::
 
+![zen](../static/rookie/optional-cfg/zen.png)
+
+![lts](../static/rookie/optional-cfg/lts.png)
+
+![hardened](../static/rookie/optional-cfg/hardened.png)
+
 ::: tip ℹ️ 提示
 
 更换内核后还需要留意部分应用需要更换为相应的 dkms 版本。
@@ -73,7 +79,25 @@ sudo pacman -S linux-hardened linux-hardened-headers
 >
 > DKMS，即 **D**ynamic **K**ernel **M**odule **S**ystem。可以使内核变更（如升级）后自动编译模块，适配新内核。
 
-2. 安装完毕后通过以下命令更新一下引导配置即可：
+2. 为了让 GRUB 记住最后在 GRUB 引导菜单里选择的内核，以便在下次启动时自动使用对应的内核，需要编辑 `/etc/default/grub` 文件：
+
+```bash
+sudo vim /etc/default/grub
+```
+
+在适当位置添加或修改为如下三行：
+
+```bash
+GRUB_DEFAULT=saved # 默认使用保存的内核条目
+GRUB_SAVEDEFAULT=true # 保存最后一个使用的内核条目
+GRUB_DISABLE_SUBMENU=y # 可选，禁用 GRUB 子菜单，使选择内核的操作更简单
+```
+
+![kernel-grub_step-0](../static/rookie/optional-cfg/kernel-grub-0.png)
+
+![kernel-grub_step-1](../static/rookie/optional-cfg/kernel-grub-1.png)
+
+3. 安装完毕后通过以下命令更新一下引导配置即可：
 
 :::: code-group
 ::: code-group-item GRUB
@@ -86,11 +110,54 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ::: code-group-item rEFind
 
 ```bash
-sudo mkrlconf --force
+sudo mkrlconf --force # 建议使用 GRUB 选择新内核进入系统后运行
 ```
 
 :::
 ::::
+
+![kernel-grub_step-2](../static/rookie/optional-cfg/kernel-grub-2.png)
+
+4. 复查：
+
+```bash
+cat /boot/refind_linux.conf
+```
+
+结果如下：
+
+```bash
+"Boot with standard options"  "pti=on page_alloc.shuffle=1 BOOT_IMAGE=/@/boot/vmlinuz-linux-hardened root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a"
+"Boot to single-user mode"    "pti=on page_alloc.shuffle=1 BOOT_IMAGE=/@/boot/vmlinuz-linux-hardened root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a single"
+"Boot with minimal options"   "ro root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90"
+```
+
+4. 重启，查看引导菜单效果：
+
+![kernel-grub_step-3](../static/rookie/optional-cfg/kernel-grub-3.png)
+
+5. 使用以下命令查看内核：
+
+:::: code-group
+::: code-group-item uname
+
+```bash
+uname -r
+```
+
+:::
+::: code-group-item neofetch
+
+```bash
+neofetch
+```
+
+:::
+::::
+
+![kernel-version-1](../static/rookie/optional-cfg/kernel-version-1.png)
+
+![kernel-version-2](../static/rookie/optional-cfg/kernel-version-2.png)
 
 ## 💤 休眠（hibernate）设置
 
