@@ -75,3 +75,30 @@ sudo pacman -S kvantum-qt5
 在[这里](https://www.pling.com/p/1325246/)下载 Layan 的 Kvantum 主题，并解压。打开 Kvantum Manager,选择主题并安装，接下来在`Change/Delete Theme`中选择 Layan,Use this theme。最后在系统设置，外观中的应用程序风格中选择 kvantum 即可。
 
 > 如果透明的效果没有显示，确保 KDE 的全局缩放比例为整数倍。或者尝试切换混成器中 openGL 的设置。
+
+## GRUB 主题
+
+开机时有个漂亮的 GRUB 也是很舒服的。
+
+在[这里](https://www.pling.com/p/1482847/)下载 Distro 的 GRUB 主题并解压。接下来 `cd` 进解压出来的文件夹，打开 konsole 输入
+
+```bash
+sudo cp . /usr/share/grub/themes/Distro -rf
+```
+
+以将主题放置在系统的 GRUB 默认文件夹内。
+
+接着编辑 `/etc/default/grub` 文件，找到 `#GRUB_THEME=` 一行，将前面的注释去掉，并指向主题的 `theme.txt` 文件。即
+
+```bash
+#GRUB_THEME=
+GRUB_THEME="/usr/share/grub/themes/Distro/theme.txt" #修改后
+```
+
+然后再在终端输入
+
+```bash
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+更新 GRUB 即可。
