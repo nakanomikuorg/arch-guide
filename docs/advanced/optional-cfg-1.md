@@ -1,15 +1,13 @@
 ---
-title: 可选配置（上）
+title: 可选配置（基础）
 sidebarDepth: 2
 ---
 
-# 其它可选配置（上）
+# 其它可选配置（基础篇）
 
 > ### 🎑 一分耕耘，一分收获
 >
 > 这一节的配置都是可选的。这些配置根据个人喜好进行配置，往往可以让系统变得更好用
->
-> 可选配置的上篇相对容易，下篇则稍微有一点复杂
 
 > ### 🔖 这一节将会讨论：
 >
@@ -29,7 +27,7 @@ Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
 
 2. 将 `登入时` 的选项改为 `以空会话启动`：
 
-![empty](../static/rookie/optional-cfg/empty.png)
+![empty](../static/advanced/optional-cfg/empty.png)
 
 3. 点击 `应用` 保存设置
 
@@ -43,7 +41,7 @@ Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
 
 2. 将 `点击文件或文件夹时` 的选项改为 `选中它们`：
 
-![select](../static/rookie/optional-cfg/select.png)
+![select](../static/advanced/optional-cfg/select.png)
 
 3. 点击 `应用` 保存设置
 
@@ -51,7 +49,7 @@ Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
 
 字体可以在 `系统设置` > `外观` > `字体` 中进行设置，一般默认即可：
 
-![font](../static/rookie/optional-cfg/font.png)
+![font](../static/advanced/optional-cfg/font.png)
 
 有关用户全局级别更改日文异型字的设置，可参阅 [archWiki 相关说明](<https://wiki.archlinux.org/index.php/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BF%AE%E6%AD%A3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%BC%82%E4%BD%93%EF%BC%88%E6%97%A5%E6%96%87%EF%BC%89%E5%AD%97%E5%BD%A2>)。
 
@@ -69,11 +67,11 @@ Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
 sudo pacman -S fcitx5-rime
 ```
 
-![rime_step-1](../static/rookie/optional-cfg/rime-1.png)
+![rime_step-1](../static/advanced/optional-cfg/rime-1.png)
 
 2. 然后添加 Rime 输入法。打开 `系统设置` > 点击侧栏 `区域设置` > `输入法`：
 
-![rime_step-2](../static/rookie/optional-cfg/rime-2.png)
+![rime_step-2](../static/advanced/optional-cfg/rime-2.png)
 
 ::: tip ℹ️ 提示
 
@@ -83,11 +81,11 @@ sudo pacman -S fcitx5-rime
 
 3. 点击 `添加输入法` > 找到**汉语**下的 `Rime` > 点击 `添加`：
 
-![rime_step-3](../static/rookie/optional-cfg/rime-3.png)
+![rime_step-3](../static/advanced/optional-cfg/rime-3.png)
 
 4. 若不想要之前的 Pinyin 输入法了，可以点击它最右边的按钮移除掉：
 
-![remove](../static/rookie/optional-cfg/remove.png)
+![remove](../static/advanced/optional-cfg/remove.png)
 
 5. 通过以下命令安装 [🍀️ 四叶草拼音输入方案](https://github.com/fkxxyz/rime-cloverpinyin)<sup>cn / aur</sup>：
 
@@ -108,7 +106,7 @@ yay -S aur/rime-cloverpinyin
 :::
 ::::
 
-![rime_step-4](../static/rookie/optional-cfg/rime-4.png)
+![rime_step-4](../static/advanced/optional-cfg/rime-4.png)
 
 5. 然后切换到 🍀️ 四叶草拼音输入方案。使用 `vim` 创建并编辑下述文件：
 
@@ -128,7 +126,7 @@ patch:
 
 其中 `8` 表示打字的时候输入面板的每一页的候选词数目，可以设置成 `1 ~ 9` 任意数字。
 
-![rime_step-5](../static/rookie/optional-cfg/rime-5.png)
+![rime_step-5](../static/advanced/optional-cfg/rime-5.png)
 
 ::: tip ℹ️ 提示
 
@@ -140,7 +138,7 @@ patch:
 
 7. 在可输入的位置通过 `Ctrl` + `空格` 切换到 `Rime` 输入法（此时将提示 `Rime` 就绪），在输入法托盘菜单的 `🌏 方案列表` 里面应该就有 `🍀️四叶草拼音输入法` 的选项了：
 
-![rime_step-6](../static/rookie/optional-cfg/rime-6.png)
+![rime_step-6](../static/advanced/optional-cfg/rime-6.png)
 
 ::: tip ℹ️ 提示
 
@@ -148,13 +146,13 @@ patch:
 
 若 `🍀️四叶草拼音输入法` 不是默认方案，只需点击 `🌏 方案列表` > 点击 `🍀️四叶草拼音输入法` 即可：
 
-![rime_step-7](../static/rookie/optional-cfg/rime-7.png)
+![rime_step-7](../static/advanced/optional-cfg/rime-7.png)
 
 :::
 
 8. 尝试在各个软件中输入中文：
 
-![rime_step-8](../static/rookie/optional-cfg/rime-8.png)
+![rime_step-8](../static/advanced/optional-cfg/rime-8.png)
 
 ::: tip ℹ️ 提示
 
@@ -199,7 +197,7 @@ sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 > - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) —— 语法上高亮插件
 > - [`zsh-completions`](https://github.com/zsh-users/zsh-completions) —— 补充补全定义
 
-![zsh_step-1](../static/rookie/optional-cfg/zsh-1.png)
+![zsh_step-1](../static/advanced/optional-cfg/zsh-1.png)
 
 2. 安装 [autojump](https://github.com/wting/autojump)<sup>cn / aur</sup> 插件：
 
@@ -220,7 +218,7 @@ yay -S aur/autojump
 :::
 ::::
 
-![zsh_step-2](../static/rookie/optional-cfg/zsh-2.png)
+![zsh_step-2](../static/advanced/optional-cfg/zsh-2.png)
 
 3. 更改账户的默认 Shell：
 
@@ -243,9 +241,9 @@ sudo chsh -s /usr/bin/zsh root
 :::
 ::::
 
-![zsh_step-3](../static/rookie/optional-cfg/zsh-3.png)
+![zsh_step-3](../static/advanced/optional-cfg/zsh-3.png)
 
-![zsh_step-4](../static/rookie/optional-cfg/zsh-4.png)
+![zsh_step-4](../static/advanced/optional-cfg/zsh-4.png)
 
 ::: tip ℹ️ 提示
 
@@ -255,7 +253,7 @@ sudo chsh -s /usr/bin/zsh root
 
 4. 注销并重新登录 > 打开终端，此时会弹出如下界面进行设置：
 
-![zsh_step-5](../static/rookie/optional-cfg/zsh-5.png)
+![zsh_step-5](../static/advanced/optional-cfg/zsh-5.png)
 
 - 按下 `0` 将创建一个只包含注释的 `~/.zshrc` 文件，在下次启动时不会再次弹出设置选项。
 - 按下 `1` 即可进入设置：
@@ -323,11 +321,11 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/autojump/autojump.zsh
 ```
 
-![zsh_step-6](../static/rookie/optional-cfg/zsh-6.png)
+![zsh_step-6](../static/advanced/optional-cfg/zsh-6.png)
 
 6. 关闭并重新打开终端，测试一下：
 
-![zsh_step-7](../static/rookie/optional-cfg/zsh-7.png)
+![zsh_step-7](../static/advanced/optional-cfg/zsh-7.png)
 
 ::: tip ℹ️ 提示
 
@@ -354,23 +352,23 @@ source /usr/share/autojump/autojump.zsh
 
 1. 打开 `系统设置` > 点击侧栏 `开机与关机` > `登录屏幕（SDDM）`：
 
-![dpi-1](../static/rookie/optional-cfg/dpi-1.png)
+![dpi-1](../static/advanced/optional-cfg/dpi-1.png)
 
 2. 点击 `同步配置` > `同步`：
 
-![dpi-2](../static/rookie/optional-cfg/dpi-2.png)
+![dpi-2](../static/advanced/optional-cfg/dpi-2.png)
 
 3. 重启查看是否成功修改。若大小已经改变，则无需下面的步骤。若没有改变（通常发生在 NVIDIA 独显模式下），请确保你已经按照步骤 []() 安装了 optimus-manager，然后右键 optimus-manager 托盘图标 > 点击 `设置` > 点击侧栏 `NVIDIA`
 
 4. 将 `DPI` 的数值适量提高：
 
-![dpi-3](../static/rookie/optional-cfg/dpi-3.png)
+![dpi-3](../static/advanced/optional-cfg/dpi-3.png)
 
 ::: tip ℹ️ 提示
 
 `DPI` 数值可参考步骤 [🀄 字体设置](./optional-cfg.md#🀄-字体设置) 中下方的 `固定字体 DPI`：
 
-![dpi-4](../static/rookie/optional-cfg/dpi-4.png)
+![dpi-4](../static/advanced/optional-cfg/dpi-4.png)
 
 :::
 
@@ -394,19 +392,19 @@ sudo pacman -S virtualbox-guest-utils
 sudo systemctl enable vboxservice.service
 ```
 
-![virt_step-1](../static/rookie/optional-cfg/virt-1.png)
+![virt_step-1](../static/advanced/optional-cfg/virt-1.png)
 
 3. 重启虚拟机 > 点击菜单栏 `设备` > `拖放` > 点击 `双向`：
 
-![virt_step-2](../static/rookie/optional-cfg/virt-2.png)
+![virt_step-2](../static/advanced/optional-cfg/virt-2.png)
 
 4. 同理，`共享粘贴板` > 点击 `双向`：
 
-![virt_step-3](../static/rookie/optional-cfg/virt-3.png)
+![virt_step-3](../static/advanced/optional-cfg/virt-3.png)
 
 5. 尝试调整窗口大小、共享粘贴板、拖拽文件功能：
 
-![virt_step-4](../static/rookie/optional-cfg/virt-4.png)
+![virt_step-4](../static/advanced/optional-cfg/virt-4.png)
 
 archlinux 向 win10 拖拽文件。
 
@@ -416,10 +414,10 @@ archlinux 向 win10 拖拽文件。
 
 :::
 
-![virt_step-5](../static/rookie/optional-cfg/virt-5.png)
+![virt_step-5](../static/advanced/optional-cfg/virt-5.png)
 
 archlinux 根据窗口大小自动调整分辨率。
 
-![virt_step-6](../static/rookie/optional-cfg/virt-6.png)
+![virt_step-6](../static/advanced/optional-cfg/virt-6.png)
 
 共享粘贴板。

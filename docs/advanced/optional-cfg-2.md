@@ -1,15 +1,13 @@
 ---
-title: 可选配置（下）
+title: 可选配置（进阶）
 sidebarDepth: 2
 ---
 
-# 其它可选配置（下）
+# 其它可选配置（进阶篇）
 
 > ### 🎑 一分耕耘，一分收获
 >
 > 这一节的配置都是可选的。这些配置根据个人喜好进行配置，往往可以让系统变得更好用
->
-> 可选配置的上篇相对容易，下篇则稍微有一点复杂
 
 > ### 🔖 这一节将会讨论：
 >
@@ -58,11 +56,11 @@ sudo pacman -S linux-hardened linux-hardened-headers
 :::
 ::::
 
-![zen](../static/rookie/optional-cfg/zen.png)
+![zen](../static/advanced/optional-cfg/zen.png)
 
-![lts](../static/rookie/optional-cfg/lts.png)
+![lts](../static/advanced/optional-cfg/lts.png)
 
-![hardened](../static/rookie/optional-cfg/hardened.png)
+![hardened](../static/advanced/optional-cfg/hardened.png)
 
 ::: tip ℹ️ 提示
 
@@ -93,9 +91,9 @@ GRUB_SAVEDEFAULT=true # 保存最后一个使用的内核条目
 GRUB_DISABLE_SUBMENU=y # 可选，禁用 GRUB 子菜单，使选择内核的操作更简单
 ```
 
-![kernel-grub_step-0](../static/rookie/optional-cfg/kernel-grub-0.png)
+![kernel-grub_step-0](../static/advanced/optional-cfg/kernel-grub-0.png)
 
-![kernel-grub_step-1](../static/rookie/optional-cfg/kernel-grub-1.png)
+![kernel-grub_step-1](../static/advanced/optional-cfg/kernel-grub-1.png)
 
 3. 安装完毕后通过以下命令更新一下引导配置即可：
 
@@ -116,7 +114,7 @@ sudo mkrlconf --force # 建议使用 GRUB 选择新内核进入系统后运行
 :::
 ::::
 
-![kernel-grub_step-2](../static/rookie/optional-cfg/kernel-grub-2.png)
+![kernel-grub_step-2](../static/advanced/optional-cfg/kernel-grub-2.png)
 
 4. 复查：
 
@@ -134,7 +132,7 @@ cat /boot/refind_linux.conf
 
 4. 重启，查看引导菜单效果：
 
-![kernel-grub_step-3](../static/rookie/optional-cfg/kernel-grub-3.png)
+![kernel-grub_step-3](../static/advanced/optional-cfg/kernel-grub-3.png)
 
 5. 使用以下命令查看内核：
 
@@ -155,9 +153,9 @@ neofetch
 :::
 ::::
 
-![kernel-version-1](../static/rookie/optional-cfg/kernel-version-1.png)
+![kernel-version-1](../static/advanced/optional-cfg/kernel-version-1.png)
 
-![kernel-version-2](../static/rookie/optional-cfg/kernel-version-2.png)
+![kernel-version-2](../static/advanced/optional-cfg/kernel-version-2.png)
 
 ## 💤 休眠（hibernate）设置
 
@@ -243,7 +241,7 @@ sudo vim /etc/default/grub
 resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a
 ```
 
-![hibernate_step-1](../static/rookie/optional-cfg/hibernate-1.png)
+![hibernate_step-1](../static/advanced/optional-cfg/hibernate-1.png)
 
 > #### 🍧 碎碎念
 >
@@ -291,7 +289,7 @@ resume=UUID=9a940a0a-fa72-4973-9ccc-3eb93ad73b37 resume_offset=6418432
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-![hibernate-same_step-1](../static/rookie/optional-cfg/hibernate-same-1.png)
+![hibernate-same_step-1](../static/advanced/optional-cfg/hibernate-same-1.png)
 
 2. 除此之外，还需配置 `initranfs` 的 `resume` 钩子。使用 `vim` 编辑 `/etc/mkinitcpio.conf`：
 
@@ -301,7 +299,7 @@ sudo vim /etc/mkinitcpio.conf
 
 在 HOOKS 行添加 `resume` 值。注意，`resume` 需要加入在 `udev` 后。若使用了 LVM 分区，`resume` 需要加入在 `lvm2` 后：
 
-![hibernate-same_step-2](../static/rookie/optional-cfg/hibernate-same-2.png)
+![hibernate-same_step-2](../static/advanced/optional-cfg/hibernate-same-2.png)
 
 ::: tip ℹ️ 提示
 
@@ -321,17 +319,17 @@ MODULES=(intel_lpss_pci)
 sudo mkinitcpio -P
 ```
 
-![hibernate-same_step-3](../static/rookie/optional-cfg/hibernate-same-3.png)
+![hibernate-same_step-3](../static/advanced/optional-cfg/hibernate-same-3.png)
 
 4. 重启电脑
 
 5. 重启之后可以开几个应用，尝试休眠：
 
-![try-1](../static/rookie/optional-cfg/try-1.png)
+![try-1](../static/advanced/optional-cfg/try-1.png)
 
-![try-2](../static/rookie/optional-cfg/try-2.png)
+![try-2](../static/advanced/optional-cfg/try-2.png)
 
-![try-3](../static/rookie/optional-cfg/try-3.png)
+![try-3](../static/advanced/optional-cfg/try-3.png)
 
 虚拟机也可以通过休眠成功唤醒。
 
@@ -353,7 +351,7 @@ sudo mkinitcpio -P
 sudo pacman -S refind
 ```
 
-![refind-1](../static/rookie/optional-cfg/refind-1.png)
+![refind-1](../static/advanced/optional-cfg/refind-1.png)
 
 2. 使用以下命令安装 rEFInd 启动管理器到 EFI 分区：
 
@@ -361,7 +359,7 @@ sudo pacman -S refind
 sudo refind-install
 ```
 
-![refind-2](../static/rookie/optional-cfg/refind-2.png)
+![refind-2](../static/advanced/optional-cfg/refind-2.png)
 
 3. 使用以下命令复查安装情况：
 
@@ -375,7 +373,7 @@ ls -ahl /boot/efi/EFI/
 
 :::
 
-![refind-3](../static/rookie/optional-cfg/refind-3.png)
+![refind-3](../static/advanced/optional-cfg/refind-3.png)
 
 输出结果应该可以看到 `refind` 文件夹。
 
@@ -391,7 +389,7 @@ sudo vim /boot/efi/EFI/refind/refind.conf
 timeout 5
 ```
 
-![refind-4](../static/rookie/optional-cfg/refind-4.png)
+![refind-4](../static/advanced/optional-cfg/refind-4.png)
 
 为了使 rEFInd 支持 archlinux 内核命名方案并使其与各自的 initramfs 镜像相匹配，取消注释并编辑 `extra_kernel_version_strings` 所在行：
 
@@ -399,7 +397,7 @@ timeout 5
 extra_kernel_version_strings linux-hardened,linux-zen,linux-lts,linux
 ```
 
-![refind-5](../static/rookie/optional-cfg/refind-5.png)
+![refind-5](../static/advanced/optional-cfg/refind-5.png)
 
 为了允许在 Btrfs 子卷上进行内核自动检测，取消注释并编辑 `also_scan_dirs`，在最后加上 `@/boot`：
 
@@ -416,7 +414,7 @@ also_scan_dirs boot,ESP2:EFI/linux/kernels,@/boot
 
 :::
 
-![refind-6](../static/rookie/optional-cfg/refind-6.png)
+![refind-6](../static/advanced/optional-cfg/refind-6.png)
 
 5. 保存并退出 `vim`
 
@@ -426,7 +424,7 @@ also_scan_dirs boot,ESP2:EFI/linux/kernels,@/boot
 sudo cp /usr/share/refind/drivers_x64/btrfs_x64.efi /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
 ```
 
-![refind-7](../static/rookie/optional-cfg/refind-7.png)
+![refind-7](../static/advanced/optional-cfg/refind-7.png)
 
 7. 使用以下命令复查安装情况：
 
@@ -470,11 +468,11 @@ cat /boot/refind_linux.conf
 
 10. 重启电脑，便可以看到 rEFind 的引导页面了：
 
-![refind-8](../static/rookie/optional-cfg/refind-8.png)
+![refind-8](../static/advanced/optional-cfg/refind-8.png)
 
 这个选项是通过 GRUB 套娃启动系统。
 
-![refind-9](../static/rookie/optional-cfg/refind-9.png)
+![refind-9](../static/advanced/optional-cfg/refind-9.png)
 
 这个选项是通过 rEFind 直接引导进入系统。
 
@@ -490,15 +488,15 @@ cat /boot/refind_linux.conf
 
 1. 关闭虚拟机后打开虚拟机设置 > 侧栏 `存储` > 点击右侧 `分配光驱` 的右侧光盘小图标：
 
-![refind-10](../static/rookie/optional-cfg/refind-10.png)
+![refind-10](../static/advanced/optional-cfg/refind-10.png)
 
 2. 点击 `移除虚拟盘`：
 
-![refind-11](../static/rookie/optional-cfg/refind-11.png)
+![refind-11](../static/advanced/optional-cfg/refind-11.png)
 
 3. 开启虚拟机，查看效果：
 
-![refind-12](../static/rookie/optional-cfg/refind-12.png)
+![refind-12](../static/advanced/optional-cfg/refind-12.png)
 
 :::
 
