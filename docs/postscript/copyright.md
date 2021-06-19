@@ -475,6 +475,7 @@ Creative Commons may be contacted at creativecommons.org.
 
 - [icekylin](https://github.com/ice-kylin)
 - [LinuXP](https://github.com/LagrangeOranges)
+- [Chumo2791](https://github.com/Chumo2791)
 
 ## 特殊说明
 

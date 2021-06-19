@@ -15,7 +15,7 @@ sidebarDepth: 2
 
 ## 🐧 更换可选内核
 
-如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Kernel_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Kernel_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 以及 [rEFind 官方文档](http://www.rodsbooks.com/refind/linux.html)。
 
 除了 [linux](https://archlinux.org/packages/core/x86_64/linux/) 内核，还有以下官方支持的内核可供选择：
 
@@ -97,44 +97,37 @@ GRUB_DISABLE_SUBMENU=y # 可选，禁用 GRUB 子菜单，使选择内核的操�
 
 3. 安装完毕后通过以下命令更新一下引导配置即可：
 
-:::: code-group
-::: code-group-item GRUB
-
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-:::
-::: code-group-item rEFind
-
-```bash
-sudo mkrlconf --force # 建议使用 GRUB 选择新内核进入系统后运行
-```
-
-:::
-::::
-
 ![kernel-grub_step-2](../static/advanced/optional-cfg/kernel-grub-2.png)
 
-4. 复查：
+4. rEFind 不需要做额外步骤，但会使用安装的最后一个内核作为默认内核。若想改变默认启动内核，需要修改 rEFind 配置文件：
 
 ```bash
-cat /boot/refind_linux.conf
+sudo vim /boot/efi/EFI/refind/refind.conf
 ```
 
-结果如下：
+::: tip ℹ️ 提示
 
-```bash
-"Boot with standard options"  "pti=on page_alloc.shuffle=1 BOOT_IMAGE=/@/boot/vmlinuz-linux-hardened root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a"
-"Boot to single-user mode"    "pti=on page_alloc.shuffle=1 BOOT_IMAGE=/@/boot/vmlinuz-linux-hardened root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a single"
-"Boot with minimal options"   "ro root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90"
-```
+若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
 
-4. 重启，查看引导菜单效果：
+:::
+
+将 `fold_linux_kernels false` 前面的注释（`#`）去掉：
+
+![kernel-refind-0](../static/advanced/optional-cfg/kernel-refind-0.png)
+
+诚然，这不是一个优雅（elegant）的方案。它会将所有的内核直接在引导菜单首页显示出来，而不是在子菜单选择。但 [唯有这样](https://bbs.archlinux.org/viewtopic.php?id=258751) rEFind 才能记住最后选择的内核，而不是安装的最后一个内核。
+
+5. 重启，查看引导菜单效果：
 
 ![kernel-grub_step-3](../static/advanced/optional-cfg/kernel-grub-3.png)
 
-5. 使用以下命令查看内核：
+![kernel-refind-1](../static/advanced/optional-cfg/kernel-refind-1.png)
+
+6. 使用以下命令查看内核：
 
 :::: code-group
 ::: code-group-item uname
@@ -465,6 +458,12 @@ cat /boot/refind_linux.conf
 "Boot to single-user mode"    "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a single"
 "Boot with minimal options"   "ro root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90"
 ```
+
+::: tip ℹ️ 提示
+
+若需要配置默认引导内核，请参阅步骤 [🐧 更换可选内核](./optional-cfg-2.md#🐧-更换可选内核)。
+
+:::
 
 10. 重启电脑，便可以看到 rEFind 的引导页面了：
 
