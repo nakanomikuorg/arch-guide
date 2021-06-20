@@ -1,7 +1,7 @@
 ---
 title: 透明代理
 sidebarDepth: 2
-next: /advanced/beauty.md
+next: /advanced/beauty-1.md
 ---
 
 # archlinux 透明代理
