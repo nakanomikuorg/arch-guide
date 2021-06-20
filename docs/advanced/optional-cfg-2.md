@@ -427,7 +427,7 @@ ls -ahl /boot/efi/EFI/refind/drivers_x64/
 
 输出如下：
 
-```bash {1}
+```bash
 -rwxr-xr-x 1 root root 114K Jun 15 23:00 /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
 ```
 
@@ -445,7 +445,28 @@ sudo mkrlconf --force
 
 :::
 
-9. 复查 `/boot/refind_linux.conf` 文件：
+9. 加载微码的内核参数不会自动创建。为了加载微码，需要手动编辑 `/boot/refind_linux.conf`：
+
+```bash
+sudo vim /boot/refind_linux.conf
+```
+
+在内核参数中加入以下内容：
+
+```conf
+initrd=@\boot\intel-ucode.img initrd=@\boot\initramfs-%v.img # Intel
+initrd=@\boot\amd-ucode.img initrd=@\boot\initramfs-%v.img # AMD
+```
+
+::: tip ℹ️ 提示
+
+若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的微码位置。
+
+此外，参数 `initrd` 中使用反斜杠（`\`）而不是斜杠（`/`）作为路径分隔符。
+
+:::
+
+10. 复查 `/boot/refind_linux.conf` 文件：
 
 ```bash
 cat /boot/refind_linux.conf
@@ -454,8 +475,8 @@ cat /boot/refind_linux.conf
 输出如下：
 
 ```bash
-"Boot with standard options"  "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a"
-"Boot to single-user mode"    "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a single"
+"Boot with standard options"  "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a initrd=@\boot\intel-ucode.img initrd=@\boot\initramfs-%v.img"
+"Boot to single-user mode"    "root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90 rw rootflags=subvol=@ loglevel=5 nowatchdog resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a initrd=@\boot\intel-ucode.img initrd=@\boot\initramfs-%v.img single"
 "Boot with minimal options"   "ro root=UUID=860b9d91-590c-44d0-9d38-e4bf137b5d90"
 ```
 
@@ -465,7 +486,7 @@ cat /boot/refind_linux.conf
 
 :::
 
-10. 重启电脑，便可以看到 rEFind 的引导页面了：
+11. 重启电脑，便可以看到 rEFind 的引导页面了：
 
 ![refind-8](../static/advanced/optional-cfg/refind-8.png)
 
@@ -474,6 +495,12 @@ cat /boot/refind_linux.conf
 ![refind-9](../static/advanced/optional-cfg/refind-9.png)
 
 这个选项是通过 rEFind 直接引导进入系统。
+
+::: tip ℹ️ 提示
+
+在对应系统的位置按下 `F2` 可进入子菜单：
+
+:::
 
 ::: tip ℹ️ 提示
 
