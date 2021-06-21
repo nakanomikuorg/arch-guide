@@ -7,15 +7,46 @@ sidebarDepth: 2
 
 > ### 🌺 爱美之心，人皆有之
 >
-> 这一小节将会介绍如何对 KDE 桌面环境进行美化。需要说明的是，不要过度美化！过度美化可能导致系统稳定性和性能下降等后果
+> 美化这个话题是永恒的。有些人用 Linux 的原因就是一开始被美化后桌面的截图惊艳到了
 >
-> 实际上默认的 [微风（breeze）](https://github.com/KDE/breeze)主题是最耐看的。当然，尊重用户的个人选择，这也是 arch 之道
+> 这一小节将会介绍如何对 KDE 桌面环境进行美化。受限于篇幅，本小节分为上下篇
 
 > ### 🔖 这一节将会讨论：
 >
 > [[toc]]
 
-## 1. 更换全局主题
+## 0. 配置 Split Digital Clock
+
+1. 在 [Google Fonts](https://fonts.google.com/specimen/Pacifico) 上点击右上角的 `Download family` 下载 Pacifico 字体
+
+2. 解压后安装字体：
+
+   ![split-digital-clock-cfg-1](../static/advanced/beauty/split-digital-clock-cfg-1.png)
+
+3. 将 Split Digital Clock 拖拽到桌面后配置：
+
+   - 更改 `Font Style` 为 `Pacifico`
+   - 勾选 `Show Date`
+   - 调整 `Color of text` 为 `#ffffff` 或合适颜色
+   - 调整小部件为合适大小
+
+   ![split-digital-clock-cfg-2](../static/advanced/beauty/split-digital-clock-cfg-2.png)
+
+4. 查看效果：
+
+   ![split-digital-clock-cfg-3](../static/advanced/beauty/split-digital-clock-cfg-3.png)
+
+## 1. 文字艺术与终端玩具
+
+## 2. 设置 Konsole 样式
+
+打开 konsole， _设置_ > _编辑当前方案_ > _外观_，选择`Red-Black` 应用确认即可。
+
+## 3. zsh 美化
+
+## 4. 更改 Fcitx5 输入法皮肤
+
+## 5. 更改全局主题
 
 ::: tip ℹ️ 提示
 
@@ -27,15 +58,11 @@ sidebarDepth: 2
 
 :::
 
-## 2. 设置窗口装饰
+## 6. 设置窗口装饰
 
 在 _系统设置_ > _外观_ > _窗口装饰_ 中，获取新窗口装饰，搜索 layan，并应用即可。
 
-## 3. 终端样式设置
-
-打开 konsole， _设置_ > _编辑当前方案_ > _外观_，选择`Red-Black` 应用确认即可。
-
-## 4. Kvantum Manager
+## 7. 配置 Kvantum Manager
 
 主题配合 Kvantum Manager 可以达到更好的效果。
 
@@ -47,13 +74,11 @@ sudo pacman -S kvantum-qt5
 
 > 如果透明的效果没有显示，确保 KDE 的全局缩放比例为整数倍。或者尝试切换混成器中 openGL 的设置。
 
-## 5. 更改字体
+## 8. 更改字体
 
-## 6. 更换 Fcitx5 输入法皮肤
+## 9. 引导界面美化
 
-## 7. 引导界面美化
-
-### 7-1. 设置 GRUB 主题
+### 9-1. 设置 GRUB 主题
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
@@ -80,4 +105,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 更新 GRUB 即可。
 
-### 7-2. 设置 rEFind 主题
+### 9-2. 设置 rEFind 主题

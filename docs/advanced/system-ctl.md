@@ -1,3 +1,7 @@
+---
+title: Linux 日常
+---
+
 # Linux 日常操作与基础知识
 
 阅读完`新手上路`章节，你的系统已完全可以使用，KDE 桌面环境提供了强大的 [GUI](https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2) 以供普通用户使用。按`windows`键(Linux 下也常被叫做 Meta 键)呼出菜单栏，找到`设置`=>`系统设置`，可以找到绝大多数系统设置项。

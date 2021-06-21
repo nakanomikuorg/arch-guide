@@ -1,6 +1,7 @@
 ---
 title: 可选配置（基础）
 sidebarDepth: 2
+prev: /rookie/transparent.md
 ---
 
 # 其它可选配置（基础篇）

@@ -324,6 +324,10 @@ nav.table-of-contents > ul > li {
   }
 }
 
+code {
+  background-color: var(--c-bg-lighter);
+}
+
 .theme-default-content:not(.custom) img {
   border-radius: 6px;
 }
