@@ -1,9 +1,9 @@
 ---
-title: 系统美化（下篇）
+title: 系统美化（主题）
 sidebarDepth: 2
 ---
 
-# archlinux 系统美化（下篇）
+# archlinux 系统美化（主题篇）
 
 > ### 🌺 爱美之心，人皆有之
 >
@@ -15,38 +15,171 @@ sidebarDepth: 2
 >
 > [[toc]]
 
-## 0. 配置 Split Digital Clock
+## 1. 更改系统图标
 
-1. 在 [Google Fonts](https://fonts.google.com/specimen/Pacifico) 上点击右上角的 `Download family` 下载 Pacifico 字体
+如果觉得默认的微风主题图标不能满足你的审美，那么可以下载新的图标主题。
 
-2. 解压后安装字体：
+1. 安装图标主题：
 
-   ![split-digital-clock-cfg-1](../static/advanced/beauty/split-digital-clock-cfg-1.png)
+   - 使用包管理器安装（推荐）
 
-3. 将 Split Digital Clock 拖拽到桌面后配置：
+     ::: tip ℹ️ 提示
 
-   - 更改 `Font Style` 为 `Pacifico`
-   - 勾选 `Show Date`
-   - 调整 `Color of text` 为 `#ffffff` 或合适颜色
-   - 调整小部件为合适大小
+     推荐使用包管理器安装。
 
-   ![split-digital-clock-cfg-2](../static/advanced/beauty/split-digital-clock-cfg-2.png)
+     实际上所有能用包管理器安装的（无论是图标主题、全局主题还是小组件）**都应该用包管理器安装**。
 
-4. 查看效果：
+     这样做不仅可以简化安装步骤，还可以将这些东西纳入升级。
 
-   ![split-digital-clock-cfg-3](../static/advanced/beauty/split-digital-clock-cfg-3.png)
+     :::
 
-## 1. 文字艺术与终端玩具
+     1. 安装 [`tela-icon-theme`](https://github.com/vinceliuice/Tela-icon-theme)<sup>cn / aur</sup> 图标主题：
 
-## 2. 设置 Konsole 样式
+        :::: code-group
+        ::: code-group-item cn（git）
 
-打开 konsole， _设置_ > _编辑当前方案_ > _外观_，选择`Red-Black` 应用确认即可。
+        ```bash
+        sudo pacman -S tela-icon-theme-git
+        ```
 
-## 3. zsh 美化
+        :::
+        ::: code-group-item aur（git）
 
-## 4. 更改 Fcitx5 输入法皮肤
+        ```bash
+        yay -S aur/tela-icon-theme-git
+        ```
 
-## 5. 更改全局主题
+        :::
+        ::: code-group-item aur
+
+        ```bash
+        yay -S aur/tela-icon-theme
+        ```
+
+        :::
+        ::::
+
+        ![icon-yay-1](../static/advanced/beauty/icon-yay-1.png)
+
+        ::: tip ℹ️ 提示
+
+        其它图标主题请自行寻找对应包。
+
+        :::
+
+     2. 打开 `系统设置` > 点击侧栏 `外观` > `图标`
+
+     3. 选择刚刚下载好的图标主题 > 点击 `应用`：
+
+        ![icon-yay-2](../static/advanced/beauty/icon-yay-2.png)
+
+        查看效果：
+
+        ![icon-yay-3](../static/advanced/beauty/icon-yay-3.png)
+
+   - 使用 KDE 系统设置安装
+
+     1. 打开 `系统设置` > 点击侧栏 `外观` > `图标` > `获取新图标主题`：
+
+        ![icon-1](../static/advanced/beauty/icon-1.png)
+
+        ::: tip ℹ️ 提示
+
+        为了流畅的连接服务器，你可能需要按照章节 [透明代理](/rookie/transparent.md) 配置透明代理。
+
+        :::
+
+     2. 搜索图标名 `Tela-icon-theme` 或喜欢的一套图标主题 > 点击 `安装` > 选择喜欢的颜色 `安装`：
+
+        ![icon-2](../static/advanced/beauty/icon-2.png)
+
+        ![icon-3](../static/advanced/beauty/icon-3.png)
+
+     3. 安装完成后点击 `关闭`
+
+     4. 选择刚刚下载好的图标主题 > 点击 `应用`：
+
+        ![icon-4](../static/advanced/beauty/icon-4.png)
+
+        查看效果：
+
+        ![icon-5](../static/advanced/beauty/icon-5.png)
+
+## 1. 更改 Fcitx5 输入法皮肤
+
+## 4. 设置 SDDM 主题
+
+默认的登录界面不太好看，我们将它替换掉。
+
+1. 打开 `系统设置` > 点击侧栏 `开机和关机` > `登录屏幕（SDDM）`
+
+2. 设置 SDDM 主题：
+
+   - 若希望使用微风 SDDM 主题：
+
+     你可能会发现默认选择的 SDDM 主题就是微风，实际上这只是显示有问题而已。
+
+     1. 随便选择另外一套 SDDM 主题 > 点击 `应用`
+
+     2. 重新选择微风 SDDM 主题 > 点击 `应用`
+
+     3. 重启，查看效果：
+
+        ![sddm-2](../static/advanced/beauty/sddm-2.png)
+
+   - 若希望使用其它 SDDM 主题：
+
+     1. 点击右下角的 `获取新 SDDM 主题...`
+
+     2. 搜索 SDDM 主题名 `McSur-light Sddm Theme` 或喜欢的一套 SDDM 主题 > 点击 `安装`：
+
+        ![sddm-3](../static/advanced/beauty/sddm-3.png)
+
+     3. 安装完成后点击 `关闭`
+
+     4. 选择刚刚下载好的 SDDM 主题 > 点击 `应用` 即可：
+
+        ![sddm-4](../static/advanced/beauty/sddm-4.png)
+
+     5. 重启，查看效果：
+
+        ![sddm-5](../static/advanced/beauty/sddm-5.png)
+
+3. 部分 SDDM 主题可以更换背景。点击对应 SDDM 主题中间的图片小图标 > `加载图像文件...` > 选择你想要的图片
+
+4. 点击 `应用`
+
+5. 重启，查看效果：
+
+   ![sddm-6](../static/advanced/beauty/sddm-6.png)
+
+::: tip ℹ️ 提示
+
+若发现 SDDM 显示字体和图标过小，请参阅 [✨ DPI 设置](./optional-cfg-1.md#✨-dpi-设置)。
+
+:::
+
+## 5. 设置欢迎屏幕主题
+
+登录界面后的欢迎屏幕也可以进行美化。
+
+1. 打开 `系统设置` > 点击侧栏 `外观` > `欢迎屏幕` > `获取新欢迎屏幕...`：
+
+   ![splashscreen-1](../static/advanced/beauty/splashscreen-1.png)
+
+2. 搜索欢迎屏幕主题名 `Snowy Night Miku` 或喜欢的一套欢迎屏幕主题 > 点击 `安装`：
+
+   ![splashscreen-2](../static/advanced/beauty/splashscreen-2.png)
+
+3. 选择刚刚下载好的欢迎屏幕主题 > 点击 `应用` 即可：
+
+   ![splashscreen-3](../static/advanced/beauty/splashscreen-3.png)
+
+4. 注销，查看效果：
+
+   ![splashscreen-4](../static/advanced/beauty/splashscreen-4.png)
+
+## 2. 更改全局主题
 
 ::: tip ℹ️ 提示
 
@@ -58,11 +191,11 @@ sidebarDepth: 2
 
 :::
 
-## 6. 设置窗口装饰
+### 2-1. 设置窗口装饰
 
 在 _系统设置_ > _外观_ > _窗口装饰_ 中，获取新窗口装饰，搜索 layan，并应用即可。
 
-## 7. 配置 Kvantum Manager
+### 2-2. 配置 Kvantum Manager
 
 主题配合 Kvantum Manager 可以达到更好的效果。
 
@@ -74,11 +207,11 @@ sudo pacman -S kvantum-qt5
 
 > 如果透明的效果没有显示，确保 KDE 的全局缩放比例为整数倍。或者尝试切换混成器中 openGL 的设置。
 
-## 8. 更改字体
+## 3. 更改字体
 
-## 9. 引导界面美化
+## 4. 引导界面美化
 
-### 9-1. 设置 GRUB 主题
+### 4-1. 设置 GRUB 主题
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
@@ -105,4 +238,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 更新 GRUB 即可。
 
-### 9-2. 设置 rEFind 主题
+### 4-2. 设置 rEFind 主题
