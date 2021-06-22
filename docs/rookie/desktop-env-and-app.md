@@ -428,11 +428,15 @@ Timeshift<sup>cn</sup> 目前有问题（参见 [#2317](https://github.com/archl
 
 2. 打开 Timeshift，第一次启动会自动启动设置向导
 
-3. 快照类型选择 `BTRFS`，点击 `下一步`：
+### 13-1. 若使用 Btrfs 文件系统
+
+若按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用的 Btrfs 文件系统，则进行如下操作。
+
+1. 快照类型选择 `BTRFS`，点击 `下一步`：
 
 ![timeshift-config_step-1](../static/rookie/desktop-env-and-app_timeshift-cfg-1.png)
 
-4. 快照位置选择 `BTRFS` 分区，点击 `下一步`：
+2. 快照位置选择 `BTRFS` 分区，点击 `下一步`：
 
 ![timeshift-config_step-2](../static/rookie/desktop-env-and-app_timeshift-cfg-2.png)
 
@@ -444,7 +448,7 @@ Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布�
 
 :::
 
-5. 选择快照计划，点击 `下一步`：
+3. 选择快照计划，点击 `下一步`：
 
 ![timeshift-config_step-3](../static/rookie/desktop-env-and-app_timeshift-cfg-3.png)
 
@@ -454,11 +458,34 @@ Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布�
 
 :::
 
-6. 若希望 `/home` 用户主目录也快照，则勾选在备份中包含 `@home` 子卷，然后点击 `下一步`：
+4. 若希望 `/home` 用户主目录也快照，则勾选在备份中包含 `@home` 子卷，然后点击 `下一步`：
 
 ![timeshift-config_step-4](../static/rookie/desktop-env-and-app_timeshift-cfg-4.png)
 
-7. 点击 `完成` 结束配置
+5. 点击 `完成` 结束配置
+
+### 13-2. 若使用 ext4 文件系统
+
+若使用的为传统的 ext4 文件系统，则进行如下操作。
+
+1. 快照类型选择 `RSYNC`，点击 `下一步`
+2. 快照位置选择较大的分区，快照将保存在此分区的 `/timeshift` 目录下
+3. 选择快照计划，点击 `下一步`
+
+::: tip ℹ️ 提示
+
+由于 RSYNC 类型快照占用空间较大，请不要保存过多的历史快照。
+
+:::
+
+4. `/home` 用户主目录可选全部包含，或者**选择排除一切，在下一项中进行更详细配置**。其中 `root` 默认全备份（即使选择排除一切）
+5. 若用户主目录选择排除一切，在包含/排除模式中建议进行如下配置（注意顺序，可拖拽移动顺序）：
+   - `+ /home/user/.config/***`（注意是 `***`）
+   - `+ /home/user/.local/***`
+   - `- /home/user/.**`
+   - `- /home/user/**`
+   - `- /root/**`
+6. 点击 `完成` 结束配置
 
 自此，Timeshift 快照已经成功设置。Timeshift 将按照计划快照系统并删除久远的快照。Timeshift 快照为系统增加了一层保障。
 

@@ -1,5 +1,6 @@
 ---
 title: 合格的系统管理员
+sidebarDepth: 2
 ---
 
 # Linux 日常操作与基础知识
@@ -77,6 +78,7 @@ sudo pacman -Qdt # 找出孤立包。Q：查询本地软件包数据库、d：�
 sudo pacman -Rs $(pacman -Qtdq) # 删除孤立软件包
 sudo pacman -Fy # 更新命令查询文件列表数据库
 sudo pacman -F xxx # 当不知道某个命令属于哪个包时，用来查询某个 xxx 命令属于哪个包
+sudo some_command # 使普通用户以 root 权限执行某些命令
 ```
 
 ### Octopi
@@ -154,7 +156,7 @@ systemctl status dhcpcd # 查看服务状态
 systemctl enable dhcpcd # 设置开机启动服务
 systemctl enable --now dhcpcd # 设置服务为开机启动并立即启动这个单元
 systemctl disable dhcpcd # 取消开机自动启动
-systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或变更的服务单元、不会重新加载变更的配置。加载变更的配置用 reload
+systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或变更的服务单元、不会重新加载变更的配置
 ```
 
 > ⛓ 拓展链接：
@@ -162,99 +164,304 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
 > - [systemd 配置文件样例解释](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples)
 
-## 硬件信息检测
+## 文件解压缩
 
-### 磁盘检测
+除了众所周知的 `tar` 命令，我们在之前安装过的 `ark` 包可以配合 Dolphin 文件管理器轻松的右键压缩包直接解压。其可选依赖提供了各个压缩格式的支持，可以自行选择安装。
 
-使用 [smartmontools](https://archlinux.org/packages/extra/x86_64/smartmontools/)
+但是使用此方法解压 windows 下的压缩包可能会乱码。使用 [Unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) 可以避免这个问题。
 
-```bash
-sudo pacman -S smartmontools
-sudo smartctl -A /dev/sda   #硬盘
-sudo smartctl -d sat -A /dev/sdc #usb设备
-```
+1. 安装 Unarchiver：
 
-磁盘空间分析：
+   ```bash
+   sudo pacman -S unarchiver
+   ```
 
-```bash
-df -h # 以人类可读格式显示文件系统磁盘使用情况统计
-```
+2. 解压压缩包：
 
-使用 [Filelight](https://archlinux.org/packages/extra/x86_64/filelight/)
+   ```bash
+   unar xxx.zip
+   ```
 
-图形化界面直观查看磁盘占用情况
+## 磁盘空间信息
 
-```bash
-sudo pacman -S filelight
-```
+### df 命令
 
-### CPU 与显卡
-
-如下两款是目前找到的，最佳的图形化查看 cpu 与显卡信息的软件。
+使用 `df` 命令即可显示目前在 Linux 系统上的文件系统对应的磁盘空间使用情况统计：
 
 ```bash
-yay -S cpu-x
-yay -S gpu-viewer
+df -h # 以人类可读格式显示
 ```
 
-系统完整信息:  
-使用 dmidecode 可以完整查看系统绝大部分硬件信息，包括较难得到的内存频率等。
+### Filelight
 
-```bash
-sudo pacman -S dmidecode
-sudo dmidecode
-```
+使用 [Filelight](https://github.com/KDE/filelight)<sup>extra / aur</sup> 即可在图形化界面直观查看磁盘占用情况。
+
+1. 安装 Filelight：
+
+   :::: code-group
+   ::: code-group-item extra
+
+   ```bash
+   sudo pacman -S filelight
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```bash
+   yay -S filelight-git
+   ```
+
+   :::
+   ::::
+
+2. 打开 Filelight 即可直观的看到空间占用情况：
+
+   ![filelight](../static/advanced/system-ctl/filelight.png)
+
+   ::: tip ℹ️ 提示
+
+   点击相应区块即可进一步深入分析。
+
+   :::
 
 ## 磁盘空间清理
 
-有时需要对磁盘空间进行清理，以免磁盘空间不足，保证系统的正常运行。首先应结合上文对磁盘空间占用情况进行分析，随后采取对应的有效应对措施。下面介绍一些通用措施。
+有时需要对磁盘空间进行清理，以免磁盘空间不足，从而保证系统的正常运行。
 
-### 清理 `yay` 缓存
+首先应通过上文介绍的内容 [磁盘空间信息](/system-ctl.md#磁盘空间信息) 对磁盘空间占用情况进行分析，随后采取对应的有效应对措施。
 
-如果使用 `yay` 来安装 AUR 中的软件包的话，可以清理 `yay` 的缓存目录。
+下面介绍一些通用措施。
+
+### 清理软件包缓存及孤立包
+
+执行以下命令清理软件包文件缓存及删除孤立软件包：
+
+```bash {1}
+sudo pacman -Rns $(pacman -Qtdq) # 如上文所述，删除孤立软件包（常用）
+sudo pacman -Sc # 删除当前未安装的所有缓存包和未使用的同步数据库（可选）
+sudo pacman -Scc # 从缓存中删除所有文件，这是最激进的方法，不会在缓存文件夹中留下任何内容（一般不使用）
+```
+
+#### pacman-contrib
+
+`pacman-contrib` 包中提供的 `paccache` 脚本默认情况下会删除已安装和未安装包的所有缓存版本，但最近 3 个版本除外。
+
+1. 安装 `pacman-contrib`：
+
+   :::: code-group
+   ::: code-group-item community
+
+   ```bash
+   sudo pacman -S pacman-contrib
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```bash
+   yay -S pacman-contrib-git
+   ```
+
+   :::
+   ::::
+
+2. 删除已安装和未安装包的所有缓存版本，但最近 3 个版本除外：
+
+   ```bash
+   paccache -r
+   ```
+
+### 清理 yay 缓存
+
+如果使用了 yay 来安装 AUR 中的软件包的话，可以选择清理 yay 的缓存目录：
 
 ```bash
 rm -rf ~/.cache/yay
 ```
 
-### 清理软件包缓存及孤立包
-
-执行以下命令清理软件包文件缓存及删除孤立软件包。
-
-```bash
-sudo pacman -Rns $(pacman -Qtdq) # 如上文所述，删除孤立软件包
-paccache -r # 删除已安装和未安装包的所有缓存版本，但最近 3 个版本除外
-sudo pacman -Sc # 删除当前未安装的所有缓存包和未使用的同步数据库（可选）
-sudo pacman -Scc # 从缓存中删除所有文件，这是最激进的方法，不会在缓存文件夹中留下任何内容（一般不使用）
-```
-
 ### 考虑快照大小
 
-此外，若使用了 RSYNC 方式的 `Timeshift` 快照，还应考虑 `Timeshift` 快照占用情况。一般来说 RSYNC 方式的快照大小略大于当前实际使用大小。因为虽然 RSYNC 方式的快照是增量的，但历史最久远的快照依然是完整备份，随后是增量的。而简单来说增量大小取决于历史最久远的快照和最新快照之间的差异。通过 `Timeshift` 自动清理历史最久远的快照是简单有效的方法。
+若在步骤 [13. 设置 Timeshift 快照](../rookie/desktop-env-and-app.md#_13-设置-timeshift-快照) 中没有使用 BTRFS 方式的 Timeshift 快照，而是使用了 RSYNC 方式的 Timeshift 快照，还应考虑 Timeshift 快照占用情况。
 
-## 文件传输与系统备份
+一般来说 RSYNC 方式的快照大小略大于当前实际使用大小。因为虽然 RSYNC 方式的快照是增量的，但**历史最久远的快照依然是完整备份**，随后才是增量的。而简单来说增量大小取决于历史最久远的快照和最新快照之间的差异。
 
-有一点 Linux 经验的同学应该知道[scp](<https://wiki.archlinux.org/index.php/SCP_and_SFTP#Secure_copy_protocol_(SCP)>)这个命令。它常被用来在服务器间传输文件。但是目前它应该被更现代的工具[rsync](https://wiki.archlinux.org/index.php/Rsync)替代，其拥有即时压缩，差量传输等新特性。同时，`rsync`也被用来进行备份操作。
+通过 Timeshift 自动清理历史最久远的快照是简单有效的方法，但仍然需要注意不要保存太多快照。
+
+## 硬件信息检测
+
+### 磁盘信息
+
+#### Smartmontools
+
+使用 [Smartmontools](https://archlinux.org/packages/extra/x86_64/smartmontools/)
+
+1. 安装 Smartmontools：
+
+   ```bash
+   sudo pacman -S smartmontools
+   ```
+
+2. 查看磁盘信息：
+
+   :::: code-group
+   ::: code-group-item SATA
+
+   ```bash
+   sudo smartctl -A /dev/sdx # 硬盘
+   sudo smartctl -d sat -A /dev/sdx # USB 设备
+   ```
+
+   :::
+   ::: code-group-item NVME
+
+   ```bash
+   sudo smartctl -A /dev/nvmexn1 # 硬盘
+   sudo smartctl -d sat -A /dev/sdx # USB 设备
+   ```
+
+   :::
+   ::::
+
+### CPU 信息
+
+类似 windows 下的 [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)<sup>EULA</sup>，Linux 下有 [CPU-X](https://x0rg.github.io/CPU-X/)<sup>cn / aur</sup>。
+
+1.  安装 CPU-X：
+
+    :::: code-group
+    ::: code-group-item cn
+
+    ```bash
+    sudo pacman -S cpu-x
+    ```
+
+    :::
+    ::: code-group-item aur
+
+    ```bash
+    yay -S aur/cpu-x
+    ```
+
+    :::
+    ::: code-group-item aur（git）
+
+    ```bash
+    yay -S cpu-x-git
+    ```
+
+    :::
+    ::::
+
+2.  打开 CPU-X 即可看到 CPU 详细信息：
+
+### GPU 信息
+
+使用 [GPU-Viewer](https://github.com/arunsivaramanneo/GPU-Viewer)<sup>aur</sup> 即可。
+
+1. 安装 GPU-Viewer：
+
+   ```bash
+   yay -S gpu-viewer
+   ```
+
+2. 打开 GPU-Viewer 即可看到 GPU 详细信息：
+
+### 硬件完整信息
+
+使用 [Dmidecode](http://www.nongnu.org/dmidecode/)<sup>extra / aur</sup> 可以完整查看系统绝大部分硬件信息，包括较难得到的内存频率等。
+
+1. 安装 Dmidecode：
+
+   :::: code-group
+   ::: code-group-item extra
+
+   ```bash
+   sudo pacman -S dmidecode
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```bash
+   yay -S dmidecode-git
+   ```
+
+   :::
+   ::::
+
+2. 输入以下命令使用 Dmidecode 查看系统硬件信息：
+
+   ```bash
+   sudo dmidecode
+   ```
+
+## 系统快照（备份）与文件传输
+
+### 从 Timeshift 快照中恢复
+
+::: tip ℹ️ 提示
+
+Timeshift 还能恢复到其它硬盘用作系统迁移，通过 arch 安装盘重新安装引导即可，这里不再赘述。
+
+:::
+
+#### 若能够进入桌面环境 😎
+
+直接打开 Timeshift，选择快照后根据提示还原即可。
+
+#### 若无法进入桌面环境 😥
+
+1. 通过 `Ctrl + Alt + F2 ~ F6` 进入 tty 终端。
+
+2. ```bash
+   sudo timeshift --list # 获取快照列表
+   sudo timeshift --restore --snapshot '20XX-XX-XX_XX-XX-XX' --skip-grub # 选择一个快照进行还原，并跳过 GRUB 安装，一般来说 GRUB 不需要重新安装
+   ```
+
+3. 根据提示继续，完成还原。
+
+#### 若无法进入系统 😱
+
+此时系统一般已经完全奔溃，可以通过 `Live CD` 进行还原。（若使用 arch 安装盘请连接网络和配置好源后安装 Timeshift，然后通过命令行方式还原）
+
+1. 进入 Live 系统后打开 Timeshift，点击设置按钮，设置为原来快照的存储位置。
+2. 选择快照后根据提示还原即可。
+
+或者通过命令行进行还原，但需要首先设置原来快照存储的位置：
 
 ```bash
-rsync foo.txt me@server:/home/me/   # 最基础的复制文件 与scp的操作完全相同
-rsync -a bar/ me@server:/home/me/   # -a 标记实现目录复制等 比scp -r 能更好的处理符号链接等情况
+sudo timeshift --restore --snapshot-device /dev/sdbx
 ```
 
-关于全盘备份，请阅读[官方文档](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
+后续步骤同 [若无法进入桌面环境](#若无法进入桌面环境)。
 
-## 文件解压缩
+### rsync 命令
 
-除了众所周知的 tar 命令，我们在之前安装过的 ark 包可以配合 dolphin 文件管理器轻松的右键直接解压缩，其可选依赖提供了各个压缩格式的支持，可以自行选择安装。需要注意的是解压 windows 下的压缩包，可能会乱码。使用 unar 可以避免这个问题。
+有一点 Linux 经验的同学应该知道 `scp` 这个命令。它常被用来在服务器间传输文件。
+
+但是目前它应该被更现代的工具 [rsync](https://rsync.samba.org/) 替代。其拥有即时压缩、差量传输等新特性。同时，`rsync` 也被用来进行备份操作（Timeshift 的 RSYNC 模式即基于此实现）。
 
 ```bash
-sudo pacman -S unarchiver
-unar xxx.zip
+rsync foo.txt me@server:/home/me/ # 最基础的复制文件。与 scp 的操作完全相同
+rsync -a bar/ me@server:/home/me/ # a：标记实现目录复制等。比 scp -r 能更好的处理符号链接等情况
 ```
 
-## 制作 win10 启动盘
+> ⛓ 拓展链接：[archWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
 
-有时你可能在 Linux 下需要制作 win10 的启动盘。在以往，在 Linux 下制作一个 win10 启动盘还是很简单的，但是随着近几年微软的更新，其 iso 安装镜像中存在一个名为`install.wim`的文件，其大小已经超出了 4GB，超出了 fat32 所要求的单个文件最大 4GB 的限制。这使得必须用额外的步骤才能制作一个启动盘。这里依旧使用 fat32 格式是因为其兼容性是最好的，ntfs 的 uefi 启动盘很多情况下不被识别。
+## 制作系统启动盘
+
+### 通用方法
+
+#### dd 命令
+
+#### ventoy
+
+#### balenaEtcher
+
+### 制作 win10 启动盘
+
+以往在 Linux 下制作一个 win10 启动盘还是很简单的，但是随着近几年微软的更新，其 iso 安装镜像中存在一个名为`install.wim`的文件，其大小已经超出了 4GB，超出了 fat32 所要求的单个文件最大 4GB 的限制。这使得必须用额外的步骤才能制作一个启动盘。这里依旧使用 fat32 格式是因为其兼容性是最好的，ntfs 的 uefi 启动盘很多情况下不被识别。
 
 首先和基础安装中的部分步骤类似，首先用 parted 命令创建 U 盘的分区 label 为 gpt。接下来用 cfdisk 命令创建新分区，在 Type 中选择 Microsoft basic data。接下来使用 mkfs.vfat 命令格式化所创建的分区。这样 U 盘就准备好了。
 
