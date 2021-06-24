@@ -10,9 +10,81 @@
 
 ## 通用方法
 
-### ventoy
+### Ventoy
+
+[Ventoy](https://www.ventoy.net/cn/index.html)<sup>cn / aur</sup> 是一个制作可启动 U 盘的开源工具。
+
+Ventoy 有诸多优点：
+
+- **无需反复地格式化 U 盘**，只需要把 ISO / WIM / IMG / VHD(x) / EFI 等类型的文件拷贝到 U 盘里面就可以启动了，无需其它操作
+- 可以一次性拷贝多个不同类型的镜像文件，Ventoy 会在启动时显示一个菜单来供用户进行选择
+- 同一个 U 盘可以同时支持 x86 Legacy BIOS、IA32 UEFI、x86_64 UEFI、ARM64 UEFI 和 MIPS64EL UEFI 模式
+
+Ventoy 支持 [大部分常见类型的操作系统](https://www.ventoy.net/cn/isolist.html)。
+
+安装 Ventoy：
+
+:::: code-group
+::: code-group-item cn
+
+```bash
+sudo pacman -S ventoy-bin
+```
+
+:::
+::: code-group-item aur
+
+```bash
+yay -S aur/ventoy-bin
+```
+
+:::
+::::
+
+#### 命令行模式
+
+1. 制作
+
+2. 拷贝镜像文件
+
+#### 图形化模式
 
 ### balenaEtcher
+
+[balenaEtcher](https://www.balena.io/etcher/)<sup>aur</sup> 界面更加傻瓜一点。但是只支持对单个完整 U 盘进行制作，即使还有剩余的空间也无法使用。
+
+1. 安装 balenaEtcher：
+
+   :::: code-group
+   ::: code-group-item aur
+
+   ```bash
+   yay -S etcher-bin
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```bash
+   yay -S etcher-git
+   ```
+
+   :::
+   ::::
+
+   ![balena-etcher-1](../static/advanced/make-install-disk/balena-etcher-1.png)
+
+   ::: tip ℹ️ 提示
+
+   [`balena-etcher`](https://aur.archlinux.org/packages/balena-etcher) 打开后会白屏，无法正常使用。
+
+   请安装 [`etcher-bin`](https://aur.archlinux.org/packages/etcher-bin/) 或 [`etcher-git`](https://aur.archlinux.org/packages/etcher-git/)。
+
+   :::
+
+2. 打开 balenaEtcher，按提示操作即可：
+
+   ![balena-etcher-2](../static/advanced/make-install-disk/balena-etcher-2.png)
 
 ## 手动制作
 
@@ -74,7 +146,7 @@
 
    ![win-5](../static/advanced/make-install-disk/win-5.png)
 
-5. 得到复制出来的文件后，最后要进行的就是压缩 `install.wim` 文件（在 `sources` 文件夹下）。这里需要首先安装一个包 `wimlib`（可能已经作为依赖安装了）：
+5. 得到复制出来的文件后，最后要进行的就是压缩 `install.wim` 文件（在 `sources` 文件夹下）。这里需要首先安装一个包 [`wimlib`](https://archlinux.org/packages/community/x86_64/wimlib/)（可能已经作为依赖安装了）：
 
    ```bash
    sudo pacman -S wimlib
