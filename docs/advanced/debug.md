@@ -4,7 +4,27 @@ title: 常见问题
 
 # 常见问题排除与解决
 
-本结描述一些在日常使用过程中你很有可能遇到的问题，并提供解决方法。
+> ### 🏔️ 山重水复疑无路，柳暗花明又一村
+>
+> 本节介绍日常使用 archlinux 时可能会遇到的问题以及解决方法
+
+> ### 🔖 这一节将会讨论：
+>
+> [[toc]]
+
+## 硬件相关
+
+### 系统没有声音
+
+### 键盘没有反应
+
+若为联想小新 Pro14 / YOGA 14s 2021 或相似机型，可能发现笔记本内建键盘没有反应。
+
+请参阅 [🥙 杂七杂八](../rookie/basic-install-detail.md#🥙-杂七杂八) 解决。
+
+## 服务相关
+
+### 关闭出错服务（错误启动项）
 
 ### 关机时卡住很久才能关机
 
@@ -32,6 +52,8 @@ journalctl -p5
 
 ref: [[1](https://forum.manjaro.org/t/a-stop-job-is-running-for-user-manager-for-uid-1000-during-shutdown/37799)][[2](https://unix.stackexchange.com/questions/273876/a-stop-job-is-running-for-session-c2-of-user)]
 
+## 软件包相关
+
 ### 软件的降级
 
 在 archlinux 上偶尔会出现某一个包的最新版本有各种问题的情况，此时需要降级该包以正常使用，包可以是普通软件，也可以是内核。
@@ -42,7 +64,7 @@ yay -S downgrade
 
 安装此包即可，使用方法也很简单，downgrade 后加上需要降级的包名即可，随后会提示你选择需要降级到的版本，点选即可。
 
-### 升级系统时出现形如`error: failed to update core (unable to lock database)`的错误
+### 升级系统时
 
 可能存在升级系统时异常关机或程序异常退出的情况，移除 pacman 的 db 锁即可
 
@@ -50,11 +72,11 @@ yay -S downgrade
 sudo rm /var/lib/pacman/db.lck
 ```
 
-### 手动开关混成器
+## 手动开关显示特效混合器（混成器）
 
-有时混成器会因为某些原因需要手动开启或关闭，但是目前在 KDE 下混成器在设置里无法在不关机的情况下直接关闭，下面命令提供手动开关混成器的效果。[[1]](https://unix.stackexchange.com/questions/597736/disabling-kwin-compositor-from-command-line)
+有时显示特效混合器会因为某些原因需要手动开启或关闭，但是目前在 KDE 下显示特效混合器在设置里无法在不关机的情况下直接关闭，下面命令提供手动开关混成器的效果：
 
 ```bash
-qdbus org.kde.KWin /Compositor suspend  # 禁用
-qdbus org.kde.KWin /Compositor resume   # 开启
+qdbus org.kde.KWin /Compositor suspend # 禁用
+qdbus org.kde.KWin /Compositor resume # 开启
 ```

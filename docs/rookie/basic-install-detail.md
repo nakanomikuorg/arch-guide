@@ -119,9 +119,9 @@ lsblk # 显示当前分区情况
 
 ```zsh
 parted /dev/sdx # 执行 parted，进行磁盘类型变更
-(parted)mktable # 输入 mktable
-New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 yes 即可
-quit # 退出 parted 命令行交互
+(parted) mktable # 输入 mktable
+New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 Yes 即可
+(parted) quit # 退出 parted 命令行交互
 ```
 
 :::
@@ -129,9 +129,9 @@ quit # 退出 parted 命令行交互
 
 ```zsh
 parted /dev/nvmexn1 # 执行 parted，进行磁盘类型变更
-(parted)mktable # 输入 mktable
-New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 yes 即可
-quit # 退出 parted 命令行交互
+(parted) mktable # 输入 mktable
+New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 Yes 即可
+(parted) quit # 退出 parted 命令行交互
 ```
 
 :::

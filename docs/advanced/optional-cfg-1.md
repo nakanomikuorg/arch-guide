@@ -54,7 +54,9 @@ Linux 基础相关的一些配置（如 alias 的配置）**不会**被讨论。
 
 有关用户全局级别更改日文异型字的设置，可参阅 [archWiki 相关说明](<https://wiki.archlinux.org/index.php/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BF%AE%E6%AD%A3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%BC%82%E4%BD%93%EF%BC%88%E6%97%A5%E6%96%87%EF%BC%89%E5%AD%97%E5%BD%A2>)。
 
-关于字体的更多设置请参阅 [系统美化]()。
+> #### ⛓ 相关链接
+>
+> 关于字体的美化请参阅 [系统美化]()。
 
 ## 🍀️ 输入法
 
@@ -161,7 +163,9 @@ patch:
 
 :::
 
-关于 Fcitx5 输入法的美化请参阅 [系统美化]()。
+> #### ⛓ 相关链接
+>
+> 关于 Fcitx5 输入法的美化请参阅 [系统美化]()。
 
 ## 🚀 zsh
 
@@ -345,7 +349,9 @@ source /usr/share/autojump/autojump.zsh
 
 :::
 
-关于 zsh 的美化请参阅 [系统美化]()。
+> #### ⛓ 相关链接
+>
+> 关于 zsh 的美化请参阅 [系统美化]()。
 
 ## ✨ DPI 设置
 
