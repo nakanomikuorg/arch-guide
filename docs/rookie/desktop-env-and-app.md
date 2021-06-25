@@ -176,7 +176,7 @@ vim /etc/pacman.conf
 
 3. 在文档结尾处加入下面的文字，来添加 `archlinuxcn` 源。推荐的镜像源（选一个即可）也一并列出：
 
-```pacman.conf {2}
+```conf {2}
 [archlinuxcn]
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch # 中国科学技术大学开源镜像站
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch # 清华大学开源软件镜像站

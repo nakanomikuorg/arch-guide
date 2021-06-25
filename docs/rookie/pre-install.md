@@ -63,33 +63,29 @@ prev: /prepare/understand.md
 
 中科大的开源镜像站下载速度还是很快的。
 
-## 3. 刻录安装优盘
+## 3. 刻录安装 U 盘
 
-准备一个 2G 以上的优盘，刻录一个安装盘。
+准备一个 2G 以上的 U 盘，刻录一个安装盘。
 
-Windows 下推荐使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行优盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
+### 3-1. windows
+
+windows 下推荐使用 [Ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行 U 盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
+
+除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)：
 
 ![ethcer](../static/rookie/pre-install/ethcer.png)
 
-除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)。
-
 ::: tip ℹ️ 提示
 
-使用 [balenaEtcher](https://www.balena.io/etcher/) 制作完成的安装盘若要重新作为普通优盘使用，需要用磁盘分区管理工具（如 [DiskGenius](https://www.diskgenius.cn/)<sup>EULA</sup>）重建分区表才能正常格式化。
+使用 balenaEtcher 制作完成的安装盘若要重新作为普通 U 盘使用，需要用磁盘分区管理工具（如 [KDE 分区管理器](https://apps.kde.org/partitionmanager/)、[DiskGenius](https://www.diskgenius.cn/)<sup>EULA</sup>）重建分区表才能正常格式化。
 
 :::
 
-Linux 下同样可以使用 [ventoy](https://www.ventoy.net/cn/doc_start.html)，也可以直接用 `dd` 命令进行刻录。注意 `of` 的参数为 `sdx`，不是 `sdx1`、`sdx2` 等。
+### 3-2. Linux
 
-```bash
-sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
-```
+Linux 下同样可以使用 Ventoy 和 balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-install-disk.md#ventoy-推荐) 以及 [balenaEtcher](../advanced/make-install-disk.md#balenaetcher)。
 
-> 📑 命令参数说明：
->
-> - `bs=4M` —— 指定一个较为合理的文件输入输出块大小
-> - `status=progress` —— 用来输出刻录过程总的信息
-> - `oflag=sync` —— 用来控制写入数据时的行为特征。确保命令结束时数据及元数据真正写入磁盘，而不是刚写入缓存就返回
+也可以直接用 `dd` 命令进行刻录，具体步骤可参阅 [dd 命令](/advanced/make-install-disk.html#dd-命令)。
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
