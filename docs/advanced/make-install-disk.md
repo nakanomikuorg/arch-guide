@@ -349,6 +349,12 @@ sudo umount /mnt/mount_point
 
 ## 制作 archlinux 内存系统盘
 
+::: warning ⚠️ 注意
+
+此处内容待核实。
+
+:::
+
 > #### ⛓ 相关链接
 >
 > 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。

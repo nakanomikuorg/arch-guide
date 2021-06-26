@@ -230,6 +230,7 @@ gtag('config', 'G-MQRPJQK9SC');`,
         isGroup: true,
         text: "📐 办公娱乐",
         children: [
+          "/play-and-office/communication.md",
           "/play-and-office/office.md",
           "/play-and-office/media.md",
           "/play-and-office/play.md",
