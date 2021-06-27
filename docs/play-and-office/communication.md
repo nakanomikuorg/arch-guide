@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 > ### 🍻 海上生明月，天涯共此时
 >
-> 这一小节讨论在 archlinux 上安装常用的聊天软件
+> 这一小节讨论在 archlinux 上安装常用的聊天通讯软件
 
 > ### 🔖 这一节将会讨论：
 >
@@ -59,10 +59,10 @@ Telegram 有两种加密模式：
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur（dev）
 
    ```sh
-   yay -S aur/telegram-desktop-git
+   yay -S telegram-desktop-bin-dev
    ```
 
    :::
@@ -123,7 +123,9 @@ Telegram 有两种加密模式：
 
 ### QQ
 
-QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，不建议安装。这里推荐使用基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
+QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，不建议安装。
+
+推荐使用基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
 
 1. 安装 [`com.qq.im.deepin`](https://aur.archlinux.org/packages/com.qq.im.deepin/)<sup>aur</sup>：
 
@@ -188,7 +190,9 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 
 ### Skype
 
-Skype 是一款通信应用软件，可通过互联网为电脑、平板电脑和移动设备提供与其它联网设备或传统电话 / 智能手机间进行视频通话和语音通话的服务。用户也可通过 Skype 收发即时通讯信息、传输文件、收发多媒体信息、进行视频会议。目前 Skype 归微软所有。
+Skype 是一款通信应用软件，可通过互联网为电脑、平板电脑和移动设备提供与其它联网设备或传统电话 / 智能手机间进行视频通话和语音通话的服务。用户也可通过 Skype 收发即时通讯信息、传输文件、收发多媒体信息、进行视频会议。
+
+目前 Skype 归微软所有。
 
 安装 [Skype](https://www.skype.com/zh-Hans/)<sup>EULA / cn / aur</sup>：
 
@@ -239,11 +243,13 @@ sudo pacman -S discord
 
 ::: tip ℹ️ 提示
 
-类似 Telegram，Discord 同样存在诸多不正当内容（包括但不限于种族歧视、色情内容等）。请注意安全、保护好隐私、文明上网。
+类似 Telegram，Discord 同样存在诸多不正当内容（包括但不限于种族歧视、色情内容等）。
+
+请注意安全、保护好隐私、文明上网。
 
 :::
 
-## 😪 网络会议
+## 📹 网络会议
 
 ### Zoom
 

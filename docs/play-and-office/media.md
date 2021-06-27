@@ -1,26 +1,277 @@
+---
+sidebarDepth: 2
+---
+
 # 视频影音
 
-本节记录在 arch linux 上观看影视，收听音乐等相关信息。
+> ### 🍵 采菊东篱下，悠然见南山
+>
+> 本小节讨论在 archlinux 上观看视频，聆听音乐等相关信息。
 
-## 音视频播放器
+> ### 🔖 这一节将会讨论：
+>
+> [[toc]]
 
-网络音乐收听可以使用官方网易云音乐，qq 音乐，或者一些资源整合类型的第三方客户端，它们的资源是全网整合，一般较为完整。官方客户端已经多年没有更新。
+::: tip ℹ️ 提示
 
-```bash
-sudo pacman -S netease-cloud-music #官方网易云音乐(ArchLinuxCN)
-yay -S yesplaymusic-electron #目前最强第三方网易云客户端
-yay -S cocomusic #存在隐藏下载功能的客户读
-yay -S qqmusic-bin #QQ 音乐
+指南中带有 <sup>aur</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
+
+指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
+
+指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
+
+:::
+
+## 🎬 音视频播放器
+
+本地音视频播放一般使用 VLC 或 MPV, 也可使用 SMplayer。
+
+### VLC
+
+VLC 是一款自由开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。
+
+安装 [`VLC`](https://www.videolan.org/vlc/)<sup>extra / cn / aur</sup>：
+
+:::: code-group
+::: code-group-item extra
+
+```sh
+sudo pacman -S vlc
 ```
 
-## 视频播放器
+:::
+::: code-group-item cn（git）
 
-本地音视频播放一般使用 vlc 或 mpv, 也可使用SMplayer
-
-```bash
-sudo pacman -S vlc #VLC 播放器
-sudo pacman -S mpv #MPV 播放器
-sudo pacman -S smplayer #SMplayer 播放器
+```sh
+sudo pacman -S vlc-git
 ```
 
-[zy-player](https://aur.archlinux.org/packages/zy-player-bin/)是一个跨平台视频资源播放器, 整合全网资源，可以播放一些电影。
+:::
+::: code-group-item aur（obs）
+
+```sh
+yay -S vlc-luajit
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S aur/vlc-git
+```
+
+:::
+::::
+
+![vlc](../static/play-and-office/media/vlc.png)
+
+### mpv
+
+mpv 是一个自由免费的媒体播放器。它支持多种媒体文件格式、音频和视频编解码器以及字幕类型。相比 VLC 更加简洁。
+
+安装 [`mpv`](https://mpv.io/)<sup>community / cn / aur</sup>：
+
+:::: code-group
+::: code-group-item community
+
+```sh
+sudo pacman -S mpv
+```
+
+:::
+::: code-group-item cn（git）
+
+```sh
+sudo pacman -S mpv-git
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S aur/mpv-git
+```
+
+:::
+::::
+
+![mpv](../static/play-and-office/media/mpv.png)
+
+### SMplayer
+
+SMPlayer 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，内置解码器，可以播放几乎所有格式的视频和音频文件。无需再安装任何外部解码器。只要安装了 SMPlayer，就能够播放所有的格式，不用再费事查找安装解码包。
+
+1. 安装 [`SMplayer`](https://www.smplayer.info/)<sup>community / cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item community
+
+   ```sh
+   sudo pacman -S smplayer
+   ```
+
+   :::
+   ::: code-group-item aur（svn）
+
+   ```sh
+   yay -S smplayer-svn
+   ```
+
+   :::
+   ::::
+
+2. 默认的外观不太美观，可选安装皮肤 [`papirus-smplayer-theme-git`](https://github.com/PapirusDevelopmentTeam/papirus-smplayer-theme)<sup>aur</sup>：
+
+   ```sh
+   yay -S papirus-smplayer-theme-git
+   ```
+
+3. 在设置中调整为下图即可：
+
+   ![smplayer-1](../static/play-and-office/media/smplayer-1.png)
+
+![smplayer-2](../static/play-and-office/media/smplayer-2.png)
+
+### ZY Player
+
+如果想收看在线影视资源等等，[ZY Player](https://aur.archlinux.org/packages/zy-player-bin/) 是一个很好的选择。
+
+ZY Player 是一个简洁、免费、无广告的跨平台视频资源播放器，整合全网资源，甚至可以观看 📺 IPTV（需自行配置直播源）。
+
+安装 [`ZY Player`](https://github.com/cuiocean/ZY-Player)<sup>aur</sup>：
+
+```sh
+yay -S zy-player-bin
+```
+
+![zyplayer](../static/play-and-office/media/zyplayer.png)
+
+## 🎵 音乐播放器
+
+本地音乐播放可以使用上述的音视频播放器，也可以使用 DeaDBeeF（Linux 下的 [foobar2000](https://www.foobar2000.org/)<sup>EULA</sup>）
+
+在线音乐收听可以使用官方的网易云音乐或企鹅的 QQ 音乐，但在 Linux 下体验不佳，且很久没有更新了。显然这些企业是不会愿意向 Linux 桌面投放精力的。推荐使用维护到位的自由开源软件，它们一般是资源整合类型的第三方客户端，曲库较为完整。
+
+### DeaDBeeF
+
+DeaDBeeF 是一个自由开源（[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)）模块化的**无损**音频播放器，用于 GNU/Linux、\*BSD、OpenSolaris、macOS 和其它类 UNIX 系统。
+
+DeaDBeeF 可以播放各种音频格式，在它们之间进行转换，以几乎任何想要的方式自定义 UI，并使用许多额外的插件来扩展它。
+
+安装 [`deadbeef`](https://deadbeef.sourceforge.io/)<sup>cn / aur</sup>：
+
+:::: code-group
+::: code-group-item cn
+
+```sh
+sudo pacman -S deadbeef
+```
+
+:::
+::: code-group-item cn（git）
+
+```sh
+sudo pacman -S deadbeef-git
+```
+
+:::
+::: code-group-item aur
+
+```sh
+yay -S aur/deadbeef
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S aur/deadbeef-git
+```
+
+:::
+::::
+
+![deadbeef-1](../static/play-and-office/media/deadbeef-1.png)
+
+::: tip ℹ️ 提示
+
+若音乐无法正常播放，请将菜单栏 `编辑` > `偏好设置` > 标签页 `声音` > `输出插件` 改为其它选项：
+
+![deadbeef-2](../static/play-and-office/media/deadbeef-2.png)
+
+:::
+
+### YesPlayMusic（推荐）
+
+高颜值的第三方网易云播放器，显著的优点包括但不限于：
+
+- ☑️ 使用 Vue.js 全家桶开发
+- 🔴 网易云账号登录（扫码/手机/邮箱登录）
+- 📺 支持 MV 播放
+- 📃 支持歌词显示
+- 📻 支持私人 FM / 每日推荐歌曲
+- 🚫🤝 无任何社交功能
+- 🌎 海外用户可直接播放（需要登录网易云账号）
+
+安装 [`YesPlayMusic`](https://github.com/qier222/YesPlayMusic)<sup>aur</sup>：
+
+```sh
+yay -S yesplaymusic
+```
+
+![yesplaymusic-1](../static/play-and-office/media/yesplaymusic-1.png)
+
+![yesplaymusic-2](../static/play-and-office/media/yesplaymusic-2.png)
+
+### Listen 1（推荐）
+
+Listen 1 作为“老牌”的听歌软件可以搜索和播放来自网易云音乐、虾米、QQ 音乐、酷狗音乐、酷我音乐、Bilibili、咪咕音乐网站的歌曲，让你的曲库更全面。
+
+安装 [`Listen 1`](https://aur.archlinux.org/packages/listen1-desktop-appimage/)<sup>aur</sup>：
+
+```bash
+yay -S listen1-desktop-appimage
+```
+
+![listen1](../static/play-and-office/media/listen1.png)
+
+### 网易云音乐
+
+不推荐使用，建议使用上述第三方客户端。
+
+网易和深度合作开发的客户端。已经很久没更新了，无法输入中文并且缩放有问题。
+
+安装 [`netease-cloud-music`](https://aur.archlinux.org/packages/netease-cloud-music/)<sup>EULA / cn / aur</sup>：
+
+:::: code-group
+::: code-group-item cn
+
+```sh
+sudo pacman -S netease-cloud-music
+```
+
+:::
+::: code-group-item aur
+
+```sh
+yay -S aur/netease-cloud-music
+```
+
+:::
+::::
+
+![netease-cloud-music](../static/play-and-office/media/netease-cloud-music.png)
+
+### QQ 音乐
+
+不推荐使用，建议使用上述第三方客户端。
+
+基于 `deepin-wine5` 的 QQ 音乐 [`com.qq.music.deepin`](https://aur.archlinux.org/packages/com.qq.music.deepin/)<sup>EULA / aur</sup> 已无法下载，只能用官方的原生 QQ 音乐：
+
+安装 [`qqmusic-bin`](https://aur.archlinux.org/packages/wechat-uos/)<sup>aur</sup>：
+
+```sh
+yay -S qqmusic-bin
+```
+
+![official-qq-music](../static/play-and-office/media/official-qq-music.png)
