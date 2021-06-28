@@ -24,7 +24,7 @@ sidebarDepth: 2
 
 ## 🎬 音视频播放器
 
-本地音视频播放一般使用 VLC 或 MPV, 也可使用 SMplayer。
+本地音视频播放一般使用 VLC 或 MPV，但也有很多其它优秀的开源音视频播放器。
 
 ### VLC
 
@@ -97,6 +97,18 @@ yay -S aur/mpv-git
 
 ![mpv](../static/play-and-office/media/mpv.png)
 
+### Dragon Player
+
+Dragon Player 是 KDE 开发的一个相比于功能来说更注重简洁的多媒体播放器。Dragon Player 做且只做一件事，就是播放多媒体文件。界面简单、减少干扰、立即播放文件。
+
+安装 [`Dragon Player`](https://archlinux.org/packages/extra/x86_64/dragon/)：
+
+```sh
+sudo pacman -S dragon
+```
+
+![dragon](../static/play-and-office/media/dragon.png)
+
 ### SMplayer
 
 SMPlayer 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，内置解码器，可以播放几乎所有格式的视频和音频文件。无需再安装任何外部解码器。只要安装了 SMPlayer，就能够播放所有的格式，不用再费事查找安装解码包。
@@ -132,6 +144,18 @@ SMPlayer 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，�
 
 ![smplayer-2](../static/play-and-office/media/smplayer-2.png)
 
+### parole
+
+Xfce 开发的基于 GStreamer 框架的现代媒体播放器。
+
+安装 [`parole`](https://archlinux.org/packages/community/x86_64/parole/)：
+
+```sh
+sudo pacman -S parole
+```
+
+![parole](../static/play-and-office/media/parole.png)
+
 ### ZY Player
 
 如果想收看在线影视资源等等，[ZY Player](https://aur.archlinux.org/packages/zy-player-bin/) 是一个很好的选择。
@@ -148,7 +172,7 @@ yay -S zy-player-bin
 
 ## 🎵 音乐播放器
 
-本地音乐播放可以使用上述的音视频播放器，也可以使用 DeaDBeeF（Linux 下的 [foobar2000](https://www.foobar2000.org/)<sup>EULA</sup>）
+本地音乐播放可以使用上述的音视频播放器，也可以使用 DeaDBeeF（Linux 下的 [foobar2000](https://www.foobar2000.org/)<sup>EULA</sup>）等播放器。
 
 在线音乐收听可以使用官方的网易云音乐或企鹅的 QQ 音乐，但在 Linux 下体验不佳，且很久没有更新了。显然这些企业是不会愿意向 Linux 桌面投放精力的。推荐使用维护到位的自由开源软件，它们一般是资源整合类型的第三方客户端，曲库较为完整。
 
@@ -200,6 +224,18 @@ yay -S aur/deadbeef-git
 ![deadbeef-2](../static/play-and-office/media/deadbeef-2.png)
 
 :::
+
+### Juk
+
+JuK 是 KDE 开发的一款音乐播放器和管理程序，支持 MP3、Ogg Vorbis 和 FLAC 等音频文件。它侧重于音乐管理功能，可以用它编辑音频文件的标签、管理音乐和播放列表。
+
+安装 [`juk`](https://archlinux.org/packages/extra/x86_64/juk/)：
+
+```sh
+sudo pacman -S juk
+```
+
+![juk](../static/play-and-office/media/juk.png)
 
 ### YesPlayMusic（推荐）
 

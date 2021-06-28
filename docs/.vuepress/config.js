@@ -231,6 +231,7 @@ gtag('config', 'G-MQRPJQK9SC');`,
         text: "📐 办公娱乐",
         children: [
           "/play-and-office/communication.md",
+          "/play-and-office/daily.md",
           "/play-and-office/office.md",
           "/play-and-office/media.md",
           "/play-and-office/play.md",
