@@ -39,7 +39,8 @@ module.exports = {
       "meta",
       {
         name: "keywords",
-        href: "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux",
+        href:
+          "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux",
       },
     ],
     [
@@ -188,17 +189,14 @@ gtag('config', 'G-MQRPJQK9SC');`,
     displayAllHeaders: true,
     sidebar: [
       {
-        isGroup: true,
         text: "🎐 千里之行",
         children: ["/prologue.md"],
       },
       {
-        isGroup: true,
         text: "ℹ️ 尝试之前",
         children: ["/prepare/head-on-blow.md", "/prepare/understand.md"],
       },
       {
-        isGroup: true,
         text: "🌱 新手上路",
         children: [
           "/rookie/pre-install.md",
@@ -211,14 +209,23 @@ gtag('config', 'G-MQRPJQK9SC');`,
         ],
       },
       {
-        isGroup: true,
         text: "🛠️ 进阶话题",
         children: [
-          "/advanced/optional-cfg-1.md",
-          "/advanced/optional-cfg-2.md",
-          "/advanced/beauty-1.md",
-          "/advanced/beauty-2.md",
-          "/advanced/beauty-3.md",
+          {
+            text: "⚙️ 可选配置",
+            children: [
+              "/advanced/optional-cfg-1.md",
+              "/advanced/optional-cfg-2.md",
+            ],
+          },
+          {
+            text: "🌸 系统美化",
+            children: [
+              "/advanced/beauty-1.md",
+              "/advanced/beauty-2.md",
+              "/advanced/beauty-3.md",
+            ],
+          },
           "/advanced/system-ctl.md",
           "/advanced/debug.md",
           "/advanced/power-ctl.md",
@@ -227,7 +234,6 @@ gtag('config', 'G-MQRPJQK9SC');`,
         ],
       },
       {
-        isGroup: true,
         text: "📐 办公娱乐",
         children: [
           "/play-and-office/communication.md",
@@ -239,12 +245,10 @@ gtag('config', 'G-MQRPJQK9SC');`,
         ],
       },
       {
-        isGroup: true,
         text: "🔬 专有领域",
         children: ["/exclusive/media.md", "/exclusive/code.md"],
       },
       {
-        isGroup: true,
         text: "🍰 写在后面",
         children: [
           "/postscript/contributor-covenant.md",
@@ -255,7 +259,7 @@ gtag('config', 'G-MQRPJQK9SC');`,
       },
     ],
     sidebarDepth: 1,
-    // smoothScroll: true,
+    smoothScroll: true,
     activeHeaderLinks: false,
     lastUpdatedText: "📑 最后更新",
     contributorsText: "🎨 参与贡献",
