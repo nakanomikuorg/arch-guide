@@ -39,8 +39,7 @@ module.exports = {
       "meta",
       {
         name: "keywords",
-        href:
-          "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux",
+        href: "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux",
       },
     ],
     [
@@ -199,13 +198,23 @@ gtag('config', 'G-MQRPJQK9SC');`,
       {
         text: "🌱 新手上路",
         children: [
-          "/rookie/pre-install.md",
-          "/rookie/pre-virt.md",
-          "/rookie/basic-install.md",
-          "/rookie/basic-install-detail.md",
-          "/rookie/desktop-env-and-app.md",
-          "/rookie/graphic-driver.md",
-          "/rookie/transparent.md",
+          {
+            text: "💾 基础安装",
+            children: [
+              "/rookie/pre-install.md",
+              "/rookie/pre-virt.md",
+              "/rookie/basic-install.md",
+              "/rookie/basic-install-detail.md",
+            ],
+          },
+          {
+            text: "🔩 进阶安装",
+            children: [
+              "/rookie/desktop-env-and-app.md",
+              "/rookie/graphic-driver.md",
+              "/rookie/transparent.md",
+            ],
+          },
         ],
       },
       {
@@ -216,6 +225,7 @@ gtag('config', 'G-MQRPJQK9SC');`,
             children: [
               "/advanced/optional-cfg-1.md",
               "/advanced/optional-cfg-2.md",
+              "/advanced/power-ctl.md",
             ],
           },
           {
@@ -226,11 +236,15 @@ gtag('config', 'G-MQRPJQK9SC');`,
               "/advanced/beauty-3.md",
             ],
           },
-          "/advanced/system-ctl.md",
-          "/advanced/debug.md",
-          "/advanced/power-ctl.md",
-          "/advanced/make-install-disk.md",
-          "/advanced/btrfs.md",
+          {
+            text: "🪛 系统管理",
+            children: [
+              "/advanced/system-ctl.md",
+              "/advanced/debug.md",
+              "/advanced/make-install-disk.md",
+              "/advanced/btrfs.md",
+            ],
+          },
         ],
       },
       {

@@ -246,7 +246,7 @@ sudo pacman -S vivaldi
 
 ## PDF 以及电子书阅读器
 
-PDF 可以使用上述的网页浏览器，也可以使用专门的阅读器。而一些特别的电子书格式（如 azw3）则只能使用这些专门的电子书阅读器了。
+PDF 可以使用上述的网页浏览器进行查看，也可使用专门的阅读器。而一些特别的电子书格式（如 azw3）则只能使用专门的电子书阅读器。
 
 ### Okular
 
@@ -327,13 +327,181 @@ yay -S calibre-git
 
 ## 网盘存储
 
-## 图片查看器
+### MEGA
+
+MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 日在新西兰上线，该服务供应商广泛宣传其隐私性，所有文件在上传之前进行本地加密，提供 20 GB 的免费存储空间，付费账户最高存储空间可达 16 TB。
+
+1. 安装 [MEGA](https://archlinux.org/packages/community/x86_64/calibre/)<sup>EULA / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item cn
+
+   ```sh
+   sudo pacman -S megasync
+   ```
+
+   :::
+   ::: code-group-item aur
+
+   ```sh
+   yay -S aur/megasync
+   ```
+
+   :::
+   ::::
+
+2. 根据提示登录账户以及配置同步文件夹后即可：
+
+   ![megasync](../static/play-and-office/daily/megasync.png)
+
+::: tip ℹ️ 提示
+
+虽然该服务供应商广泛宣传其隐私性，但是否将数据存储在其服务器仍需用户判断：
+
+- `2015` —— 7 月 1 日，MEGA 创始人金·达康（Kim Dotcom）在技术网站 Slashdot 表示，他将不信任 MEGA 服务，并声称该公司已经受到因犯有欺诈罪被通缉的中国投资者闫永明（中国吉林通化快大茂人，1969 年 6 月 15 日出生，曾为通化金马药业集团有限公司董事长，因涉嫌职务侵占犯罪被吉林省通化市公安局立案，2001 年 11 月逃亡新西兰，2005 年 8 月 22 日由国际刑警组织发布红色通缉令）的恶意收购
+- `2016`
+  - 8 月 23 日，闫永明与新西兰法院达成和解，需缴纳 4285 万新西兰币的财产，包括 Mega 公司 18.8%的股份
+  - 11 月 12 日，在中央反腐败协调小组国际追逃追赃工作办公室的统筹协调下，经中新两国执法部门密切合作，潜逃海外 15 年之久的闫永明回国投案自首
+- `2017` —— 1 月 12 日，闫永明返回新西兰
+
+:::
+
+### 百度网盘
+
+### 坚果云
+
+## 图像查看器
+
+除了 Gwenview，还有其它开源免费的优秀图片浏览器可供选择。
+
+### Gwenview
+
+在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+
+Gwenview 是 KDE 出品的一款轻便易用的图像查看器，是浏览、显示多张图像时的理想工具。
+
+安装 [Gwenview](https://archlinux.org/packages/extra/x86_64/gwenview/)<sup>extra / aur</sup>：
+
+:::: code-group
+::: code-group-item extra
+
+```sh
+sudo pacman -S gwenview
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S gwenview-git
+```
+
+:::
+::::
+
+![gwenview](../static/play-and-office/daily/gwenview.png)
+
+### nomacs
+
+nomacs 是一个免费的开源图像查看器，支持多平台。可以使用它来查看所有常见的图像格式，包括 RAW 和 psd 图像。
+
+安装 [nomacs](https://archlinux.org/packages/community/x86_64/nomacs/)<sup>community / aur</sup>：
+
+:::: code-group
+::: code-group-item community
+
+```sh
+sudo pacman -S nomacs
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S nomacs-git
+```
+
+:::
+::::
+
+![nomacs-1](../static/play-and-office/daily/nomacs-1.png)
+
+::: tip ℹ️ 提示
+
+可能需要在菜单栏 `编辑` > `设置` > 侧边栏 `一般` > `颜色设置` 中改变颜色以适应暗色模式：
+
+![nomacs-2](../static/play-and-office/daily/nomacs-2.png)
+
+:::
+
+### Ristretto
+
+Xfce 开发的图像查看器。相对来说更加简洁。
+
+安装 [Ristretto](https://archlinux.org/packages/extra/x86_64/ristretto/)：
+
+```sh
+sudo pacman -S ristretto
+```
+
+![ristretto](../static/play-and-office/daily/ristretto.png)
+
+### feh
+
+> #### ⛓ 相关链接
+>
+> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Feh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+
+feh 是一款轻巧而功能强大的图像查看器，通过命令行操作，**还可用于管理缺少此类功能的独立窗口管理器的桌面壁纸**。
+
+1. 安装 [feh](https://archlinux.org/packages/extra/x86_64/feh/)<sup>extra / aur</sup>。若需要读取 SVG 图像，则还需要安装 [`imagemagick`](https://archlinux.org/packages/extra/x86_64/imagemagick/)：
+
+   :::: code-group
+   ::: code-group-item extra
+
+   ```sh
+   sudo pacman -S feh imagemagick
+
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S feh-git imagemagick
+   ```
+
+   :::
+   ::::
+
+2. 通过以下命令使用 feh。feh 是高度可配置的。有关选项的完整列表，请运行 `feh --help` 或 `man feh`：
+
+   ```sh
+   feh /path/of/pic # 查看图像
+   feh --conversion-timeout 1 /path/of/svg # 查看 SVG 图像
+   ```
+
+### XnView MP
+
+XnView MP 是一个免费的图像查看器，可以轻松打开和编辑照片文件。图像查看器支持所有主要图像格式（JPEG、TIFF、PNG、GIF、WEBP、PSD、JPEG2000、OpenEXR、camera RAW、HEIC、PDF、DNG、CR2）。
+
+作为图像查看器，拥有诸如颜色调整、图像大小调整、裁剪、屏幕捕获、元数据编辑（IPTC、XMP）等功能。XnView MP 具有易于使用的类似浏览器的界面，允许您快速查看图像和照片，还可以进行图像管理。并且有批重命名、批转换器、重复图像查找、图像比较等功能，还可以创建联系表、幻灯片。
+
+安装 `XnView MP`<sup>EULA / aur</sup>：
+
+```sh
+yay -S xnviewmp
+```
+
+![xnviewmp-1](../static/play-and-office/daily/xnviewmp-1.png)
+
+![xnviewmp-2](../static/play-and-office/daily/xnviewmp-2.png)
 
 ## 实用工具
 
 日常用到的各类小工具有很多实现，其中 KDE 的套件中就有很多，可以自行查询。
 
-此处仅列出几个常用的例子。
+此处仅列出几个常用的小工具。
 
 - [KCalc](https://archlinux.org/packages/extra/x86_64/kcalc/) —— 科学计算器
 
@@ -349,8 +517,12 @@ yay -S calibre-git
   sudo pacman -S kamoso
   ```
 
+  ![kamoso](../static/play-and-office/daily/kamoso.png)
+
 - [KTimer](https://archlinux.org/packages/extra/x86_64/ktimer/) —— 倒计时执行器
 
   ```sh
   sudo pacman -S ktimer
   ```
+
+  ![ktimer](../static/play-and-office/daily/ktimer.png)
