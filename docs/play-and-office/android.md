@@ -1,5 +1,13 @@
 # 安卓刷机
 
+> ### 🔖 这一节将会讨论：
+>
+> ::: details 目录
+>
+> [[toc]]
+>
+> :::
+
 [官方文档](https://wiki.archlinux.org/index.php/android)
 
 前排提示：买手机最好买知名度大的品牌，较热门的机型，这样在刷机时可以方便的找到官方的 twrp 和知名的 ROM 包，如魔趣，lineageOS，crDroid, Resurrection Remix. 等。如果是较冷门的品牌，官方可能没有提供 ROM，只能在网上自行寻找个人改造过的 twrp 和上述 ROM 包的 unofficial ROM(比如乐视的[这个](https://forum.xda-developers.com/t/rom-7-1-2-mtk-x620-unofficial-beta-lineageos-14-1-leeco-le2-pro-02-april-2019.3724749/)和[这个](https://github.com/zaoqi-android/Le_X62X_AOSP6.0))。这种个人改造版本的安全性比较难说，而且还可能有更多的 bug。也有可能你翻遍全网，也找不到冷门机型能用（指好用的、非硬件提供商的官方 ROM）的 twrp 和 ROM。硬件方面，一般推荐买高通骁龙的 cpu,不要买联发科的，因为更多 ROM 的版本都是适配高通硬件的。

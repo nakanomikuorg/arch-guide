@@ -12,7 +12,11 @@ next: /rookie/pre-install.md
 
 > ### 🔖 这一节将会讨论：
 >
+> ::: details 目录
+>
 > [[toc]]
+>
+> :::
 
 ## archlinux 的历史
 

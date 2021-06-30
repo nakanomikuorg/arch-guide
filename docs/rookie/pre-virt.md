@@ -6,7 +6,11 @@
 
 > ### 🔖 这一节将会讨论：
 >
+> ::: details 目录
+>
 > [[toc]]
+>
+> :::
 
 本小节将以 win10 环境下使用 [Oracle VM VirtualBox](https://www.virtualbox.org/) 虚拟机安装 archlinux。
 

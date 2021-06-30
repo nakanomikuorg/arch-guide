@@ -237,7 +237,7 @@ gtag('config', 'G-MQRPJQK9SC');`,
             ],
           },
           {
-            text: "🪛 系统管理",
+            text: "🧰 系统管理",
             children: [
               "/advanced/system-ctl.md",
               "/advanced/debug.md",
@@ -250,8 +250,8 @@ gtag('config', 'G-MQRPJQK9SC');`,
       {
         text: "📐 办公娱乐",
         children: [
-          "/play-and-office/communication.md",
           "/play-and-office/daily.md",
+          "/play-and-office/communication.md",
           "/play-and-office/office.md",
           "/play-and-office/media.md",
           "/play-and-office/play.md",

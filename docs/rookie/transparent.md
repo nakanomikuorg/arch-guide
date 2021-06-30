@@ -12,7 +12,11 @@ next: /advanced/optional-cfg-1.md
 
 > ### 🔖 这一节将会讨论：
 >
+> ::: details 目录
+>
 > [[toc]]
+>
+> :::
 
 ::: danger ☢️ 警告
 

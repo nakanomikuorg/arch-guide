@@ -409,8 +409,8 @@ code {
 @media (max-width: 419px) {
   .theme-default-content div[class*="language-"],
   .code-group__nav {
-    margin-right: -0.5rem;
-    margin-left: -0.5rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
 
     border-radius: 6px;
   }

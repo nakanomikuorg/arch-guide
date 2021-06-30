@@ -10,7 +10,11 @@ sidebarDepth: 2
 
 > ### 🔖 这一节将会讨论：
 >
+> ::: details 目录
+>
 > [[toc]]
+>
+> :::
 
 ::: tip ℹ️ 提示
 
@@ -22,11 +26,15 @@ sidebarDepth: 2
 
 :::
 
-## 网页浏览器
+## 🏄🏻 网页浏览器
 
 ### Mozilla Firefox
 
+::: tip ℹ️ 提示
+
 在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+
+:::
 
 火狐浏览器（Mozilla Firefox）是一个自由开源的网页浏览器，由 [Mozilla 基金会](https://foundation.mozilla.org/) 及其非营利子公司 [Mozilla 公司](https://www.mozilla.org/zh-CN/about/) 开发。
 
@@ -46,7 +54,11 @@ sudo pacman -S firefox-developer-edition
 
 ### Chromium
 
+::: tip ℹ️ 提示
+
 在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+
+:::
 
 [Chromium](https://www.chromium.org/) 是 Google 为发展浏览器 Google Chrome 而发布的免费开源软件项目，以 [BSD 许可协议](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/LICENSE) 等数种许可发行并开源。Chromium 与 Google Chrome 共享大部分代码和功能。
 
@@ -244,7 +256,7 @@ sudo pacman -S vivaldi
 
 ![vivaldi](../static/play-and-office/daily/vivaldi.png)
 
-## PDF 以及电子书阅读器
+## 📖 PDF 以及电子书阅读器
 
 PDF 可以使用上述的网页浏览器进行查看，也可使用专门的阅读器。而一些特别的电子书格式（如 azw3）则只能使用专门的电子书阅读器。
 
@@ -298,18 +310,19 @@ yay -S calibre-git
 
 ![calibre](../static/play-and-office/daily/calibre.png)
 
-## 截图工具
+## 📷 截图工具
 
 ### 火焰截图
 
-#### 视频指南
+[火焰截图（Flameshot）](https://github.com/flameshot-org/flameshot) 是一款强大但简单易用的屏幕截图软件。截图后可以进行快捷的编辑。
+
+::: details 视频指南
 
 <div
   style="
     position: relative;
     padding: 30% 45%;
     margin-top: 32px;
-    margin-bottom: 32px;
   "
 >
   <iframe
@@ -323,9 +336,78 @@ yay -S calibre-git
   ></iframe>
 </div>
 
+:::
+
+1. 安装 [火焰截图](https://archlinux.org/packages/community/x86_64/flameshot/)<sup>community / cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item community
+
+   ```sh
+   sudo pacman -S flameshot
+   ```
+
+   :::
+   ::: code-group-item cn（git）
+
+   ```sh
+   sudo pacman -S flameshot-git
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S flameshot-git
+   ```
+
+   :::
+   ::::
+
+2. 配置快捷键：
+
+   1. 打开 `系统设置` > 点击侧栏 `快捷键` > `自定义快捷键`
+
+   2. 点击 `编辑` > `新建` > `全局快捷键` > `命令/URL：`
+
+   3. 点击选项卡 `触发器` > 将 `快捷键` 设置为自定义快捷键：
+
+   ![flameshot-1](../static/play-and-office/daily/flameshot-1.png)
+
+   4. 点击选项卡 `动作` > 将 `命令/URL：` 设置为 `flameshot gui`：
+
+   ![flameshot-2](../static/play-and-office/daily/flameshot-2.png)
+
 ### Spectacle
 
-## 网盘存储
+Spectacle 是 KDE 开发的用于抓取桌面截图的简单应用程序。它可以抓取整个桌面、单个显示器、当前活动窗口、鼠标所在的窗口或是屏幕上的一块矩形区域的图像。截取的图像可被打印、发送到其它应用程序进行处理、或是直接保存下来。
+
+相比火焰截图可以准确的抓取单个窗口，但编辑功能没有火焰截图强大。
+
+安装 [Spectacle](https://archlinux.org/packages/extra/x86_64/spectacle/)<sup>extra / aur</sup>：
+
+:::: code-group
+::: code-group-item extra
+
+```sh
+sudo pacman -S spectacle
+```
+
+:::
+::: code-group-item aur（git）
+
+```sh
+yay -S spectacle-git
+```
+
+:::
+::::
+
+![spectacle](../static/play-and-office/daily/spectacle.png)
+
+## 💾 网盘存储
+
+带有客户端的网盘可以使用 [MEGA](https://mega.io/start)、[百度网盘](https://pan.baidu.com/) 以及 [坚果云](https://www.jianguoyun.com/)。其它网盘如 [Microsoft OneDrive](https://www.microsoft.com/zh-cn/microsoft-365/onedrive/online-cloud-storage)、[Google 云端硬盘](https://www.google.com/intl/zh-CN/drive/) 直接使用网页版即可。
 
 ### MEGA
 
@@ -368,15 +450,45 @@ MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 �
 
 ### 百度网盘
 
+安装 [百度网盘](https://aur.archlinux.org/packages/baidunetdisk-bin/)<sup>EULA / aur</sup>：
+
+```sh
+yay -S baidunetdisk-bin
+```
+
+![baidunetdisk](../static/play-and-office/daily/baidunetdisk.png)
+
 ### 坚果云
 
-## 图像查看器
+坚果云通过文件自动同步、共享、备份功能，为用户实现智能文件管理，提供高效办公解决方案。
+
+坚果云是微软加速器云存储合作伙伴，IBM 全球创业企业扶持计划成员，安全稳定的服务着数百万企业用户，包括东风雷诺、郑州日产、上海通用、银河证券、中石油、中海油、阿里巴巴等大型企事业单位。
+
+1. 安装 [坚果云实验版](https://aur.archlinux.org/packages/nutstore-experimental/)<sup>EULA / aur</sup>：
+
+   ```sh
+   yay -S nutstore-experimental
+   ```
+
+   ::: tip ℹ️ 提示
+
+   [坚果云稳定版](https://aur.archlinux.org/packages/nutstore/)<sup>EULA / cn / aur</sup> 的界面存在问题，请使用坚果云实验版<sup>EULA / aur</sup>。
+
+   :::
+
+2. 类似 [MEGA](./daily.md#mega)，根据提示登录账户以及配置同步文件夹后即可
+
+## 🖼️ 图像查看器
 
 除了 Gwenview，还有其它开源免费的优秀图片浏览器可供选择。
 
 ### Gwenview
 
+::: tip ℹ️ 提示
+
 在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+
+:::
 
 Gwenview 是 KDE 出品的一款轻便易用的图像查看器，是浏览、显示多张图像时的理想工具。
 
@@ -487,7 +599,7 @@ XnView MP 是一个免费的图像查看器，可以轻松打开和编辑照片�
 
 作为图像查看器，拥有诸如颜色调整、图像大小调整、裁剪、屏幕捕获、元数据编辑（IPTC、XMP）等功能。XnView MP 具有易于使用的类似浏览器的界面，允许您快速查看图像和照片，还可以进行图像管理。并且有批重命名、批转换器、重复图像查找、图像比较等功能，还可以创建联系表、幻灯片。
 
-安装 `XnView MP`<sup>EULA / aur</sup>：
+安装 [`XnView MP`](https://aur.archlinux.org/packages/xnviewmp)<sup>EULA / aur</sup>：
 
 ```sh
 yay -S xnviewmp
@@ -497,9 +609,9 @@ yay -S xnviewmp
 
 ![xnviewmp-2](../static/play-and-office/daily/xnviewmp-2.png)
 
-## 实用工具
+## 🧰 实用工具
 
-日常用到的各类小工具有很多实现，其中 KDE 的套件中就有很多，可以自行查询。
+日常用到的各类小工具有很多实现，其中 [KDE 的套件](https://apps.kde.org/zh-cn/) 中就有很多，可以自行查询。
 
 此处仅列出几个常用的小工具。
 
