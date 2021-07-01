@@ -173,7 +173,7 @@ yay -S aur/ventoy-bin
 
 ::: tip ℹ️ 提示
 
-此方法**不适用于制作 windows 安装盘**。
+此方法**不适用于制作 Windows 安装盘**。
 
 :::
 
@@ -224,7 +224,7 @@ yay -S aur/ventoy-bin
 
 ::: tip ℹ️ 提示
 
-此方法**不适用于制作 windows 安装盘**。
+此方法**不适用于制作 Windows 安装盘**。
 
 :::
 
@@ -359,7 +359,7 @@ sudo umount /mnt/mount_point
 
 :::
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 

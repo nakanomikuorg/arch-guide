@@ -145,7 +145,7 @@ ping www.bilibili.com
 
 ![ping](../static/rookie/basic-install_ping.png)
 
-稍等片刻，若能看到数据返回，即说明已经联网。与 windows 不同的是，需要按下 `Ctrl` + `C` 手动退出 `ping` 命令。
+稍等片刻，若能看到数据返回，即说明已经联网。与 Windows 不同的是，需要按下 `Ctrl` + `C` 手动退出 `ping` 命令。
 
 ::: tip ℹ️ 提示
 
@@ -235,7 +235,7 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 - `/` 根目录：`>= 128GB`（和用户主目录在同一个 `Btrfs` 文件系统上）
 - `/home` 用户主目录：`>= 128GB`（和根目录在同一个 `Btrfs` 文件系统上）
-- `/boot/efi` EFI 分区：`256MB`（由电脑厂商或 windows 决定，无需再次创建）
+- `/boot/efi` EFI 分区：`256MB`（由电脑厂商或 Windows 决定，无需再次创建）
 - Swap 分区：`>= 电脑实际运行内存的 60%`（设置这个大小是为了配置休眠准备）
 
 ::: tip ℹ️ 提示
@@ -299,7 +299,7 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 进入 `cfdisk` 分区工具之后，你会看到如图所示的界面。通过方向键 `↑` 和 `↓` 可以在要操作磁盘分区或空余空间中移动；通过方向键 `←` 和 `→` 在对当前高亮的磁盘分区或空余空间要执行的操作中移动。
 
-3. 首先创建 Swap 分区。选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建 `swap` 分区（类似 windows 的交换文件）
+3. 首先创建 Swap 分区。选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建 `swap` 分区（类似 Windows 的交换文件）
 
 ![partition-3](../static/rookie/basic-install_partition-3.png)
 
@@ -349,7 +349,7 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 再次提醒！请仔细检查命令和操作的正确性，否则将出现不可预料的情况。最危险的是可能造成数据丢失！
 
-常见的错误包括不小心把 windows 的分区删掉了 😥。
+常见的错误包括不小心把 Windows 的分区删掉了 😥。
 
 :::
 

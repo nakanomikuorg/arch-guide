@@ -22,7 +22,7 @@ sudo pacman -S android-tools
 
 再次提醒要购买或使用有可能解锁 bootloader 的手机品牌。华为，vivo 等这类官方就不给解锁的手机品牌，就无需再往下看了。
 
-一般来说像小米这种品牌，官方会提供解锁 bootloader 的途径和工具，但是这些工具基本只能在 windows 下用。这时候你就只能用一台 windows 操作，或者使用虚拟机。
+一般来说像小米这种品牌，官方会提供解锁 bootloader 的途径和工具，但是这些工具基本只能在 Windows 下用。这时候你就只能用一台 Windows 操作，或者使用虚拟机。
 
 除此之外，如果你能获取，或通过很 hack 的方式拿到 bootloader 的解锁码，那么也可以使用 adb 在 fastboot 模式下进行解锁。
 

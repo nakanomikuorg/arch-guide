@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 常用软件
 
 > ### 🌼 采菊东篱下，悠然见南山
@@ -560,7 +556,7 @@ sudo pacman -S ristretto
 
 ### feh
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Feh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
@@ -638,3 +634,55 @@ yay -S xnviewmp
   ```
 
   ![ktimer](../static/play-and-office/daily/ktimer.png)
+
+## 🍷 Wine
+
+> ⛓ 相关链接：
+>
+> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Wine_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [WineWiki](https://wiki.winehq.org/%E4%B8%BB%E9%A1%B5)
+
+Wine 是类 UNIX 系统下运行 Windows 程序的“兼容层”，是正在持续开发中的自由软件。在 Wine 中运行的 Windows 程序，就如同运行原生 Linux 程序一样，不会有模拟器那样的严重性能问题。
+
+::: warning ⚠️ 注意
+
+Wine 不是沙箱。如果很重视安全，请使用虚拟机。
+
+:::
+
+1. 安装 [Wine](https://archlinux.org/packages/multilib/x86_64/wine/) 以及其它相关依赖：
+
+   ```sh
+   sudo pacman -S wine wine-mono wine_gecko wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
+   mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error \
+   lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo \
+   sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama \
+   ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 \
+   lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
+   ```
+
+2. 通过以下命令配置 `Wine`。随后会弹出一个窗口，可对 Wine 进行配置。Wine 默认路径为 ~/.wine：
+
+   ```sh
+   winecfg
+   ```
+
+3. 通过以下命令运行简单的 Windows 应用：
+
+   ```sh
+   wine /path/of/xxx.exe
+   ```
+
+   ![wine](../static/play-and-office/daily/wine.png)
+
+   ::: danger ☢️ 警告
+
+   千万**不要**以 root 身份运行 Wine！
+
+   :::
+
+::: tip ℹ️ 提示
+
+有关解决 Wine 字体显示异常请参考 [安装 Windows 字体](../advanced/optional-cfg-1.md#安装-windows-字体)。
+
+:::

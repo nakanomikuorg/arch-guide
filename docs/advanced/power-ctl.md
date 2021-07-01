@@ -14,7 +14,7 @@
 
 ## 使用 TLP 延长电池寿命及续航
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > 如有需要可参阅 [TLP 官方文档](https://linrunner.de/tlp/settings/index.html) 和 [archwiki 相关内容](<https://wiki.archlinux.org/title/TLP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -144,7 +144,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
 ## 电压下探
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > 如有需要可参阅 [archWiki 相关内容](https://wiki.archlinux.org/index.php/Undervolting_CPU)。
 

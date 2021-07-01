@@ -4,7 +4,7 @@
 
 ## 直播推流及辅助软件
 
-直播以及录制在 linux 上使用[obs-studio](https://www.archlinux.org/packages/community/x86_64/obs-studio/)完成，用法与 windows 下基本一致。
+直播以及录制在 linux 上使用[obs-studio](https://www.archlinux.org/packages/community/x86_64/obs-studio/)完成，用法与 Windows 下基本一致。
 
 b 站直播时的弹幕可以使用[弹幕库](https://www.danmaku.live/),这个历史比较复杂，v1 版本的仓库在[这里](https://github.com/pandaGao/bilibili-live-helper)，但是作者说不更新了。v2 版本的作者目前没有开源，并且说以后[也不会更新了](https://t.bilibili.com/378501835576827480)。AUR 搜索:`bilibili-live-helper-bin`。
 

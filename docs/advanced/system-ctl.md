@@ -11,7 +11,7 @@ sidebarDepth: 2
 >
 > KDE 桌面环境提供了强大的 [GUI](https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2) 以供普通用户使用
 >
-> 绝大多数系统设置项可在 KDE 系统设置中找到（就像 windows 一样！）
+> 绝大多数系统设置项可在 KDE 系统设置中找到（就像 Windows 一样！）
 >
 > 但如果想要游刃有余的掌控你的系统，你还需要阅读掌握本小节的内容
 
@@ -35,7 +35,7 @@ sidebarDepth: 2
 
 此处只介绍最基本的，最必要的 Linux 知识点与小技巧。
 
-1. 在 Linux 中，文件目录结构与 windows 完全不同。windows 存在 C 盘、D 盘等盘符，而在 Linux 中不存在这些划分。最上层的目录是根目录，路径为 `/` ，并以一个树形结构从此向下一级一级区分
+1. 在 Linux 中，文件目录结构与 Windows 完全不同。Windows 存在 C 盘、D 盘等盘符，而在 Linux 中不存在这些划分。最上层的目录是根目录，路径为 `/` ，并以一个树形结构从此向下一级一级区分
 2. 对于 Linux 的树形文件结构，存在相对路径与绝对路径之分：
    - 绝对路径代表从根目录 `/` 开始的完整路径：
      - 比如 `/home/myusername/Download`
@@ -66,7 +66,7 @@ mkdir my_folder # 新建名为 my_folder 的文件夹
 sudo some_command # 使普通用户以 root 权限执行某些命令
 ```
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [Linux 命令行与 Shell 脚本教程](https://archlinuxstudio.github.io/ShellTutorial/#/)
 
@@ -111,7 +111,7 @@ pacman -F some_command # 当不知道某个命令属于哪个包时，用来在�
 pactree package_name # 查看一个包的依赖树
 ```
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 >
@@ -163,7 +163,7 @@ yay -Yc # 清理不需要的依赖
 
    ![octopi](../static/advanced/system-ctl/octopi.png)
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
 
@@ -226,7 +226,7 @@ systemctl disable dhcpcd # 取消开机自动启动
 systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或变更的服务单元、不会重新加载变更的配置
 ```
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
 > - [systemd 配置文件样例解释](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples)
@@ -237,7 +237,7 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 
 除了众所周知的 `tar` 命令，我们在之前安装过的 `ark` 包可以配合 Dolphin 文件管理器轻松的右键压缩包直接解压。其可选依赖提供了各个压缩格式的支持，可以自行选择安装。
 
-但是使用此方法解压 windows 下的压缩包可能会乱码。使用 [Unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) 可以避免这个问题。
+但是使用此方法解压 Windows 下的压缩包可能会乱码。使用 [Unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) 可以避免这个问题。
 
 1. 安装 Unarchiver：
 
@@ -366,7 +366,7 @@ rm -rf ~/.cache/yay
 
 ### CPU 信息
 
-类似 windows 下的 [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)<sup>EULA</sup>，Linux 下有 [CPU-X](https://x0rg.github.io/CPU-X/)<sup>cn / aur</sup>。
+类似 Windows 下的 [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)<sup>EULA</sup>，Linux 下有 [CPU-X](https://x0rg.github.io/CPU-X/)<sup>cn / aur</sup>。
 
 1.  安装 CPU-X：
 
@@ -494,6 +494,6 @@ rsync foo.txt me@server:/home/me/ # 最基础的复制文件。与 scp 的操作
 rsync -a bar/ me@server:/home/me/ # -a：标记实现目录复制等。比 scp -r 能更好的处理符号链接等情况
 ```
 
-> #### ⛓ 相关链接
+> ⛓ 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
