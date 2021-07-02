@@ -26,7 +26,7 @@ sidebarDepth: 2
 - [linux-zen](https://archlinux.org/packages/extra/x86_64/linux-zen/)
   - 一些内核黑客合作的结果，是适合日常使用的优秀内核
   - 以吞吐量和功耗为代价来换取性能
-  - 相对 linux 内核加入了 fsync 功能，在一些采用 .Net 的 wine 游戏中会有 [明显的性能提升](https://github.com/ValveSoftware/Proton/issues/3706#issuecomment-636632984)
+  - 相对 linux 内核加入了 Fsync 功能，在一些采用 .Net 的 wine 游戏中会有 [明显的性能提升](https://github.com/ValveSoftware/Proton/issues/3706#issuecomment-636632984)
 - [linux-lts](https://archlinux.org/packages/core/x86_64/linux-lts/)
   - 包含了最新的长期支持的 Linux 内核和内核模块
   - 可以放心地在更长的时间内享受相同的内核版本

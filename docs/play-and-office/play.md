@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 > ### 🕹️ 人生得意须尽欢，莫使金樽空对月
 >
-> 本小节讨论如何在 archlinux 上 👾 玩游戏
+> 本小节讨论如何在 archlinux 上 👾 玩游戏以及相关的信息，如游戏手柄、管理外配的 RGB 光效等。
 
 > ### 🔖 这一节将会讨论：
 >
@@ -23,6 +23,12 @@ sidebarDepth: 2
 指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
 
 指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
+
+:::
+
+::: tip ℹ️ 提示
+
+阅读本章前请确认已安装好显卡驱动，否则请先参阅章节 [显卡驱动](../rookie/graphic-driver.md) 完成显卡驱动的安装。
 
 :::
 
@@ -79,67 +85,9 @@ sidebarDepth: 2
 
 ::: tip ℹ️ 提示
 
-此外还有官方 Proton 的派生版本，如 [GE Proton](https://github.com/GloriousEggroll/proton-ge-custom)。可以支持一些额外的，官方暂不支持或支持不完善的游戏。
+此外还有官方 Proton 的派生版本，如 [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom)。可以支持一些额外的，官方暂不支持或支持不完善的游戏。
 
 :::
-
-## ⛏️ 我的世界
-
-> ⛓ 相关链接：
->
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Minecraft_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
-
-我的世界（Minecraft）是一个关于击毁和放置方块的游戏。游戏一开始玩家的主要目的是搭建各种结构使自己免遭夜晚出没的怪物的攻击并生存下来，但随着游戏的进行，玩家们可以合作创造出一些不可思议的、富有想象力的东西。
-
-1. 安装 [Minecraft Launcher（我的世界官服启动器）](https://aur.archlinux.org/packages/minecraft-launcher/)<sup>EULA / cn / aur</sup>：
-
-   :::: code-group
-   ::: code-group-item cn
-
-   ```sh
-   sudo pacman -S minecraft-launcher
-   ```
-
-   :::
-   ::: code-group-item aur
-
-   ```sh
-   yay -S aur/minecraft-launcher
-   ```
-
-   :::
-   ::::
-
-   ::::: tip ℹ️ 提示
-
-   除了官方启动器，还有第三方启动器 [HMCL（Hello Minecraft! Launcher）](https://hmcl.huangyuhui.net/)，支持模组管理、游戏定制、自动安装（Forge、LiteLoader 和 OptiFine）、模组包创建、UI 定制等。
-
-   安装 [HMCL](https://aur.archlinux.org/packages/hmcl/)<sup>cn / aur</sup>：
-
-   :::: code-group
-   ::: code-group-item cn
-
-   ```sh
-   sudo pacman -S hmcl
-   ```
-
-   :::
-   ::: code-group-item aur
-
-   ```sh
-   yay -S aur/hmcl
-   ```
-
-   :::
-   ::::
-
-   :::::
-
-2. 打开 `Minecraft Launcher` > 根据提示登录帐号并下载主程序后即可畅玩：
-
-   ![minecraft-1](../static/play-and-office/play/minecraft-1.png)
-
-   ![minecraft-2](../static/play-and-office/play/minecraft-2.png)
 
 ## 👾 Lutris
 
@@ -210,13 +158,71 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
 
 ## 🍷 原生 Wine
 
-通过原生 Wine 也可运行简单 Windows 小游戏，但是很多情况下需要自行处理 Windows 下的依赖问题。常用的工具是 [Winetricks](https://archlinux.org/packages/multilib/x86_64/winetricks/)。但是这种方式费时费力，只运行无需处理依赖的小游戏或者 GalGame 还好。
+通过原生 Wine 也可运行简单的 Windows 小游戏，但是很多情况下需要自行处理 Windows 下的依赖问题。常用的工具是 [Winetricks](https://archlinux.org/packages/multilib/x86_64/winetricks/)。但是这种方式费时费力，只运行无需处理依赖的小游戏或者 GalGame 还好。
 
 详细步骤请参阅 [🍷 Wine](./daily.md#🍷-wine)。
 
+## ⛏️ 我的世界
+
+> ⛓ 相关链接：
+>
+> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Minecraft_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+
+我的世界（Minecraft）是一个关于击毁和放置方块的游戏。游戏一开始玩家的主要目的是搭建各种结构使自己免遭夜晚出没的怪物的攻击并生存下来，但随着游戏的进行，玩家们可以合作创造出一些不可思议的、富有想象力的东西。
+
+1. 安装 [Minecraft Launcher（我的世界官服启动器）](https://aur.archlinux.org/packages/minecraft-launcher/)<sup>EULA / cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item cn
+
+   ```sh
+   sudo pacman -S minecraft-launcher
+   ```
+
+   :::
+   ::: code-group-item aur
+
+   ```sh
+   yay -S aur/minecraft-launcher
+   ```
+
+   :::
+   ::::
+
+   ::::: tip ℹ️ 提示
+
+   除了官方启动器，还有第三方启动器 [HMCL（Hello Minecraft! Launcher）](https://hmcl.huangyuhui.net/)，支持模组管理、游戏定制、自动安装（Forge、LiteLoader 和 OptiFine）、模组包创建、UI 定制等。
+
+   安装 [HMCL](https://aur.archlinux.org/packages/hmcl/)<sup>cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item cn
+
+   ```sh
+   sudo pacman -S hmcl
+   ```
+
+   :::
+   ::: code-group-item aur
+
+   ```sh
+   yay -S aur/hmcl
+   ```
+
+   :::
+   ::::
+
+   :::::
+
+2. 打开 `Minecraft Launcher` > 根据提示登录帐号并下载主程序后即可畅玩：
+
+   ![minecraft-1](../static/play-and-office/play/minecraft-1.png)
+
+   ![minecraft-2](../static/play-and-office/play/minecraft-2.png)
+
 ## 🎮 游戏手柄
 
-一般情况下手柄通过数据线连接计算机即可直接使用。支持无线的手柄（DUALSHOCK® 3、DUALSHOCK® 4、Xbox 360、Xbox One、8BitDo 等等）也可以通过蓝牙直接连接，无需额外操作。
+一般情况下手柄通过数据线连接计算机即可直接使用。支持无线的手柄（DUALSHOCK® 3、DUALSHOCK® 4、Xbox 360、Xbox One、8BitDo 等）也可以通过蓝牙直接连接，无需额外操作。
 
 ### Xbox 无线适配器
 
@@ -256,15 +262,97 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    sudo systemctl enable xow.service
    ```
 
-3. 重启计算机，插入 Xbox 无线适配器 并和 🕹️ Xbox 手柄配对即可
+3. 重启计算机，插入 Xbox 无线适配器并和 🕹️ Xbox 手柄配对即可
 
-实际体验和 Windows 下并无差异。对延迟敏感的音游（如 [喵斯快跑](https://store.steampowered.com/app/774171/Muse_Dash/)）在游戏设置中微调整偏移值即可。
+实际体验和 Windows 下并无差异。对延迟敏感的音游（如 [喵斯快跑](https://store.steampowered.com/app/774171/Muse_Dash/)）在游戏设置中微调偏移值即可。
 
 ## 🎛️ 性能监控
 
+类似 Windows 下的 [微星 Afterburner](https://cn.msi.com/Landing/afterburner/graphics-cards)<sup>EULA</sup> 性能显示的部分，Linux 上也有一款同类软件可以监控游戏中的电脑性能（CPU 占用率、帧数等等），名为 [MangoHud](https://github.com/flightlessmango/MangoHud)。
+
+1. 安装 [MangoHud](https://aur.archlinux.org/pkgbase/mangohud/)<sup>aur</sup>：
+
+   :::: code-group
+   ::: code-group-item aur
+
+   ```sh
+   yay -S mangohud lib32-mangohud
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S mangohud-git lib32-mangohud-git
+   ```
+
+   :::
+   ::::
+
+2. 通过以下方法使用 MangoHud：
+
+   - 通用方法
+
+     在启动的游戏前面添加 `mangohud` 前缀：
+
+     ```sh
+     mangohud game_command
+     ```
+
+   - Steam
+
+     对于 Steam 游戏，在 Steam 库中右键游戏封面 > 点击 `属性...` > 侧边栏 `通用` > 在 `启动选项` 中添加 `MANGOHUD=1 %command%`：
+
+     ![mangohud-1](../static/play-and-office/play/mangohud-1.png)
+
+   - Lutris
+
+     对于 Lutris 游戏，点击右上角的 `更多按钮`（三个点） > 点击 `System preferences`（系统设置） > 选项卡 `System preferences`（系统选项） > 勾选 `Show advanced options`（显示高级选项）> 在 `Command prefix`（命令前缀）中添加 `mangohud`：
+
+     ![mangohud-2](../static/play-and-office/play/mangohud-2.png)
+
+![mangohud-3](../static/play-and-office/play/mangohud-3.png)
+
+::: tip ℹ️ 提示
+
+部分游戏可能不支持 MangoHud。
+
+:::
+
 ## 🔥 性能提升
 
+在游戏之前，如果有强烈的性能需要，可先确保 CPU 处于性能模式。
+
+1. 执行以下命令使电源处于 `High Performance` 模式：
+
+   ```sh
+   echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+   ```
+
+   ::: tip ℹ️ 提示
+
+   此模式会让 CPU 处于最高性能状态，风扇狂转，如果散热撑不住甚至会降频，得不偿失。请斟酌使用。
+
+   :::
+
+2. 如果希望将设置改回 `Power Save` 模式，那么只需要执行以下命令即可：
+
+   ```sh
+   echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+   ```
+
+## 🚀 网游加速
+
+对于在 Linux 上玩网游，网络加速一直是一个难题，尤其是在玩一些外服网游的时候。这里提供一些在 Linux 下对网游加速的思路：
+
+- 一些 ✈️ 场会提供网游游戏节点，这些节点专门为游戏优化，限制流量并且提高倍率，一般可以得到较好的加速效果。在 Linux 中配合 [透明代理](../rookie/transparent.md)，同时开启对 UDP 流量的代理加速，即可以得到优化网游网速的效果
+- 购买内置市面上内置或可安装常见的网游加速器插件的中高端 [路由器](https://uu.163.com/router/crossover.html)（似乎确凿只能加速主机）
+
 ## 🐧 Fsync 内核
+
+维尔福公司发布了一个可以帮助提升大量多线程应用运行帧率的特殊内核补丁。这对改善游戏性能有很大帮助。简单的方法是更换为 [linux-zen](https://archlinux.org/packages/extra/x86_64/linux-zen/) 内核，其从 5.2 版本开始已包括 Fsync 补丁。
+
+详细步骤请参阅 [🐧 更换可选内核](../advanced/optional-cfg-2.md#🐧-更换可选内核)。
 
 ## 🌈 RGB 光污染
 
