@@ -147,6 +147,8 @@ sidebarDepth: 2
 
 Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的大多数游戏系统。目前支持的游戏系统包括但不限于：
 
+::: details 支持列表
+
 - Linux 原生
 - Windows
 - Steam（Linux 和 Windows）
@@ -167,6 +169,8 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
 - Sony PlayStation
 - Sony PlayStation 2
 - Sony PSP
+
+:::
 
 1. 安装 [Lutries](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
 
@@ -194,19 +198,182 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    :::
    ::::
 
-2. 安装
+2. 参考 [🍷 Wine](./daily.md#🍷-wine) 安装 Wine
+
+3. 登录 [Lutris 官方网站](https://lutris.net/) > 在右上角 🔍 搜索框中搜索你想玩的游戏 > 进入搜索到的游戏页面后，可以看到在相应版本右侧有一个 `Install` 按钮，点击后即可拉起 Lurtis 进行安装
+
+   ::: tip ℹ️ 提示
+
+   还应仔细阅读相同位置下方的安装说明。
+
+   :::
 
 ## 🍷 原生 Wine
 
 通过原生 Wine 也可运行简单 Windows 小游戏，但是很多情况下需要自行处理 Windows 下的依赖问题。常用的工具是 [Winetricks](https://archlinux.org/packages/multilib/x86_64/winetricks/)。但是这种方式费时费力，只运行无需处理依赖的小游戏或者 GalGame 还好。
 
-## 🎮 Xbox 无线手柄
+详细步骤请参阅 [🍷 Wine](./daily.md#🍷-wine)。
+
+## 🎮 游戏手柄
+
+一般情况下手柄通过数据线连接计算机即可直接使用。支持无线的手柄（DUALSHOCK® 3、DUALSHOCK® 4、Xbox 360、Xbox One、8BitDo 等等）也可以通过蓝牙直接连接，无需额外操作。
+
+### Xbox 无线适配器
+
+虽然无线手柄一般情况下可以通过蓝牙直连，但是通常这样会有较大的延迟。推荐使用 [Xbox 无线适配器](https://www.microsoftstore.com.cn/accessories/microsoft-xbox-wireless-adapter) 以获得近乎有线的低延迟体验。
+
+为了在 archlinux 下使用 Xbox 无线适配器，需要安装第三方开源驱动 [xow](https://github.com/medusalix/xow)。
+
+1. 安装 [xow](https://aur.archlinux.org/packages/xow-git/)<sup>cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item cn（git）
+
+   ```sh
+   sudo pacman -S xow-git
+   ```
+
+   :::
+   ::: code-group-item aur
+
+   ```sh
+   yay -S xow
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S aur/xow-git
+   ```
+
+   :::
+   ::::
+
+2. 启动 `xcow` 服务：
+
+   ```sh
+   sudo systemctl enable xow.service
+   ```
+
+3. 重启计算机，插入 Xbox 无线适配器 并和 🕹️ Xbox 手柄配对即可
+
+实际体验和 Windows 下并无差异。对延迟敏感的音游（如 [喵斯快跑](https://store.steampowered.com/app/774171/Muse_Dash/)）在游戏设置中微调整偏移值即可。
 
 ## 🎛️ 性能监控
 
 ## 🔥 性能提升
 
 ## 🐧 Fsync 内核
+
+## 🌈 RGB 光污染
+
+通过 [OpenRGB](https://openrgb.org/)，无论是键盘、鼠标、CPU 风扇、AIO，还是其它连接的外围设备或组件，都可以统一进行 RGB 灯光控制。
+
+1. 安装 [OpenRGB](https://aur.archlinux.org/packages/openrgb/)<sup>cn / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item cn
+
+   ```sh
+   sudo pacman -S openrgb
+   sudo pacman -S openrazer-driver-dkms # 雷蛇用户需要安装
+   ```
+
+   :::
+   ::: code-group-item aur
+
+   ```sh
+   yay -S aur/openrgb
+   sudo pacman -S openrazer-driver-dkms # 雷蛇用户需要安装
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S openrgb-git
+   yay -S openrazer-driver-dkms-git # 雷蛇用户需要安装
+   ```
+
+   :::
+   ::::
+
+2. 为了让内核能够识别到设备文件，需要下载 [60-openrgb.rules](https://gitlab.com/CalcProgrammer1/OpenRGB/-/blob/master/60-openrgb.rules)，并将它复制到 `/etc/udev/rules.d` 文件夹下：
+
+   ```sh
+   sudo cp /path/to/60-openrgb.rules /etc/udev/rules.d
+   ls -ahl /etc/udev/rules.d # 复查一下
+   ```
+
+   ![openrgb-1](../static/play-and-office/play/openrgb-1.png)
+
+3. 重启计算机或者通过以下命令重新载入 udev 规则（`.rules` 文件）：
+
+   ```sh
+   sudo udevadm control --reload-rules
+   sudo udevadm trigger # 强制内核触发设备事件，主要用于重放内核初始化过程中的冷插（coldplug）设备事件
+   ```
+
+   ![openrgb-2](../static/play-and-office/play/openrgb-2.png)
+
+4. 若显卡、内存条或者主板等带有 RGB 需要控制，则还需要载入额外的驱动：
+
+   :::: code-group
+   ::: code-group-item Intel
+
+   ```sh
+   sudo modprobe i2c-dev # 显卡、内存条
+   sudo modprobe i2c-i801 # 芯片组
+   ```
+
+   :::
+   ::: code-group-item AMD
+
+   ```sh
+   sudo modprobe i2c-dev # 显卡、内存条
+   sudo modprobe i2c-piix4 # 芯片组
+   ```
+
+   :::
+   ::::
+
+   ![openrgb-3](../static/play-and-office/play/openrgb-3.png)
+
+5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/community/x86_64/i2c-tools/)<sup>community / aur</sup>：
+
+   :::: code-group
+   ::: code-group-item community
+
+   ```sh
+   sudo pacman -S i2c-tools
+   ```
+
+   :::
+   ::: code-group-item aur（git）
+
+   ```sh
+   yay -S i2c-tools-git
+   ```
+
+   :::
+   ::::
+
+   ![openrgb-4](../static/play-and-office/play/openrgb-4.png)
+
+6. 验证驱动载入情况：
+
+   ```sh
+   sudo i2cdetect -l
+   ```
+
+   查看输出是否带有以下字段：
+
+   - `nvkm` 字段 —— 带有光污染的 NVIDIA 显卡
+   - `PIIX4` 字段 —— AMD 芯片组
+   - `I801` 字段 —— Intel 芯片组
+
+7. 打开 `OpenRGB`，将自动检测支持的外设，然后便可以进行灯光控制了
 
 > 📔 本节参考资料：
 >
