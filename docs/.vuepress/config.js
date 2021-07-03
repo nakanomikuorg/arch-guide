@@ -248,14 +248,24 @@ gtag('config', 'G-MQRPJQK9SC');`,
         ],
       },
       {
-        text: "📐 办公娱乐",
+        text: "💽 常用软件",
         children: [
-          "/play-and-office/daily.md",
-          "/play-and-office/communication.md",
-          "/play-and-office/office.md",
-          "/play-and-office/media.md",
-          "/play-and-office/play.md",
-          "/play-and-office/android.md",
+          {
+            text: "📐 日常办公",
+            children: [
+              "/play-and-office/daily.md",
+              "/play-and-office/communication.md",
+              "/play-and-office/office.md",
+            ],
+          },
+          {
+            text: "🎯 游戏娱乐",
+            children: [
+              "/play-and-office/media.md",
+              "/play-and-office/play.md",
+              "/play-and-office/android.md",
+            ],
+          },
         ],
       },
       {
