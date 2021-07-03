@@ -66,7 +66,7 @@ mkdir my_folder # 新建名为 my_folder 的文件夹
 sudo some_command # 使普通用户以 root 权限执行某些命令
 ```
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [Linux 命令行与 Shell 脚本教程](https://archlinuxstudio.github.io/ShellTutorial/#/)
 
@@ -111,7 +111,7 @@ pacman -F some_command # 当不知道某个命令属于哪个包时，用来在�
 pactree package_name # 查看一个包的依赖树
 ```
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 >
@@ -163,7 +163,7 @@ yay -Yc # 清理不需要的依赖
 
    ![octopi](../static/advanced/system-ctl/octopi.png)
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
 
@@ -226,7 +226,7 @@ systemctl disable dhcpcd # 取消开机自动启动
 systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或变更的服务单元、不会重新加载变更的配置
 ```
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
 > - [systemd 配置文件样例解释](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples)
@@ -494,6 +494,6 @@ rsync foo.txt me@server:/home/me/ # 最基础的复制文件。与 scp 的操作
 rsync -a bar/ me@server:/home/me/ # -a：标记实现目录复制等。比 scp -r 能更好的处理符号链接等情况
 ```
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)

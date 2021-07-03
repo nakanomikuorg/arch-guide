@@ -18,7 +18,7 @@
 
 :::
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Android_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 

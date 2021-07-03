@@ -359,7 +359,7 @@ sudo umount /mnt/mount_point
 
 :::
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -509,7 +509,7 @@ sudo umount /mnt/mount_point
 
    ![archiso-7](../static/advanced/make-install-disk/archiso-7.png)
 
-   > #### ⛓ 相关链接
+   > #### 🔗 相关链接
    >
    > 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%90%91%E6%98%A0%E5%83%8F%E9%87%8C%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6>)。
 

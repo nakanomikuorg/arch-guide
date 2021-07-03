@@ -312,7 +312,7 @@ yay -S calibre-git
 
 [火焰截图（Flameshot）](https://github.com/flameshot-org/flameshot) 是一款强大但简单易用的屏幕截图软件。截图后可以进行快捷的编辑。
 
-::: details 视频指南
+::: details 视频指南（视频不清晰请前往哔哩哔哩观看）
 
 <div
   style="
@@ -556,7 +556,7 @@ sudo pacman -S ristretto
 
 ### feh
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Feh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
@@ -637,7 +637,7 @@ yay -S xnviewmp
 
 ## 🍷 Wine
 
-> ⛓ 相关链接：
+> 🔗 相关链接：
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Wine_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 > - [WineWiki](https://wiki.winehq.org/%E4%B8%BB%E9%A1%B5)

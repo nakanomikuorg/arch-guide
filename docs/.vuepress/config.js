@@ -256,10 +256,11 @@ gtag('config', 'G-MQRPJQK9SC');`,
               "/play-and-office/daily.md",
               "/play-and-office/communication.md",
               "/play-and-office/office.md",
+              "/play-and-office/collaboration.md",
             ],
           },
           {
-            text: "🎯 游戏娱乐",
+            text: "🎯 进阶内容",
             children: [
               "/play-and-office/media.md",
               "/play-and-office/play.md",
