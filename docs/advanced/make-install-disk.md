@@ -189,7 +189,7 @@ yay -S aur/ventoy-bin
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S etcher-git
@@ -377,7 +377,7 @@ sudo umount /mnt/mount_point
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S archiso-git

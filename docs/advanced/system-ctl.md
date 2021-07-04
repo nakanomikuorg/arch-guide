@@ -86,7 +86,7 @@ sudo pacman -S pacman-contrib
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```bash
 yay -S pacman-contrib-git
@@ -129,7 +129,7 @@ yay 的用法和 Pacman 是基本一样的。有额外几条常用命令：
 
 ```bash {1-3}
 yay # 等同于 yay -Syu
-yay package_name # 等同于 yay -Ss package_name
+yay package_name # 等同于 yay -Ss package_name && yay -S package_name
 yay -Ps # 打印系统统计信息
 yay -Yc # 清理不需要的依赖
 ```
@@ -150,7 +150,7 @@ yay -Yc # 清理不需要的依赖
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S octopi-git
@@ -275,7 +275,7 @@ df -h # 以人类可读格式显示
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S filelight-git
@@ -385,7 +385,7 @@ rm -rf ~/.cache/yay
     ```
 
     :::
-    ::: code-group-item aur（git）
+    ::: code-group-item aur (git)
 
     ```bash
     yay -S cpu-x-git
@@ -426,7 +426,7 @@ rm -rf ~/.cache/yay
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S dmidecode-git

@@ -62,7 +62,7 @@ scrcpy 有以下优点：
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S scrcpy-git android-tools
@@ -125,9 +125,9 @@ scrcpy 有以下优点：
 
 1. 保持数据线连接，执行以下命令：
 
-```sh
-adb tcpip 8848 # 可自定义端口，默认为 5555
-```
+   ```sh
+   adb tcpip 8848 # 可自定义端口，默认为 5555
+   ```
 
 2. 开启成功之后就可以拔掉数据线了
 
@@ -169,9 +169,9 @@ adb tcpip 8848 # 可自定义端口，默认为 5555
    adb: error: failed to get feature set: more than one device/emulator
    ```
 
-   请执行以下命令后再尝试：
+   请执行以下步骤后再尝试：
 
-   1. 通过 `adb devices` 命令查看信息，找到不存在的设备（显示为 `offline`，因连接失败留下的）
+   1. 通过 `adb devices` 命令查看信息，找到不存在的设备（因连接失败留下的，显示为 `offline`）
 
    2. 断开不存在的设备：
 
@@ -186,6 +186,8 @@ adb tcpip 8848 # 可自定义端口，默认为 5555
 6. 关闭窗口即可结束连接
 
 ### 快捷使用
+
+下面介绍一些快捷使用的方法。
 
 #### 常用快捷键
 
@@ -203,7 +205,7 @@ adb tcpip 8848 # 可自定义端口，默认为 5555
 
 若需要将计算机的文件传到安卓设备，直接将文件拖拽到计算机上的安卓设备界面即可。文件默认存放在用户的主目录下。
 
-若感觉不太方便可使用 [KDE Connect](./collaboration.md#kde-connect) 协同 scrcpy 使用。
+若感觉不太方便可使用 [KDE Connect](./collaboration.md#🔗-kde-connect) 协同 scrcpy 使用。
 
 #### 屏幕常亮
 
@@ -215,7 +217,7 @@ adb tcpip 8848 # 可自定义端口，默认为 5555
 scrcpy --turn-screen-off --stay-awake
 ```
 
-若亮屏是常用选项，可将这个命令设置为 scrcpy 的别名（alias）。只需要使用以下命令在 `~/.zshrc` 或者 `~/.bashrc` 中添加如下内容，然后重新打开终端或者 `source` 该文件即可：
+若亮屏是常用选项，可将这个命令设置为 scrcpy 的别名（alias）。只需要使用以下命令在 `~/.zshrc` 或者 `~/.bashrc` 中添加如下内容 > 重新打开终端或者 `source` 该文件即可：
 
 :::: code-group
 ::: code-group-item bash
@@ -235,6 +237,10 @@ echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.zshrc
 ::::
 
 ## 🍎 苹果设备投屏（UxPlay）
+
+[UxPlay](https://github.com/antimof/UxPlay) 是一款将 iPadOS 或 IOS 投屏到 Linux 的软件。该项目是 UNIX / 类 UNIX 系统中 AirPlay 服务器的早期原型。
+
+通过投屏到 archlinux 可以方便的在 [Zoom](./communication.md#zoom) 等各种情景下将内容分享给他人（课堂演示等等）。
 
 ::: details 视频指南（视频不清晰请前往哔哩哔哩观看）
 
@@ -258,7 +264,123 @@ echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.zshrc
 
 :::
 
+1. 安装 [UxPlay](https://aur.archlinux.org/packages/uxplay-git/)<sup>aur</sup>：
+
+   ```sh
+   yay -S uxplay-git
+   ```
+
+2. 启动 `avahi-daemon` 服务：
+
+   ```sh
+   sudo systemctl start avahi-daemon.service
+   systemctl status avahi-daemon.service # 复查一下
+   ```
+
+3. 确保计算机和 iPad 或者 iPhone 连接至同一个 **5Ghz** 无线网络
+
+4. 在终端执行以下命令启动 UxPlay：
+
+   ```sh
+   uxplay
+   ```
+
+   ![uxplay-1](../static/play-and-office/collaboration/uxplay-1.png)
+
+5. 在 iPad 或 iPhone 中打开屏幕镜像，选择并连接 `Uxplay`，等待一会即可：
+
+   ![uxplay-2](../static/play-and-office/collaboration/uxplay-2.png)
+
+   ![uxplay-3](../static/play-and-office/collaboration/uxplay-3.png)
+
+::::: tip ℹ️ 提示
+
+每次运行 UxPlay 之前都需要开启 `avahi-daemon` 服务，若觉得麻烦可将其添加到自动启动中：
+
+```sh
+sudo systemctl enable avahi-daemon.service
+```
+
+或者使用以下命令创建 `uxplay` 命令的别名（alias），只需要使用以下命令在 `~/.zshrc` 或者 `~/.bashrc` 中添加如下内容 > 重新打开终端或者 `source` 该文件即可：
+
+:::: code-group
+::: code-group-item bash
+
+```sh
+echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.bashrc
+```
+
+:::
+::: code-group-item zsh
+
+```sh
+echo 'alias scrcpy="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
+```
+
+:::
+::::
+
+:::::
+
+::: tip ℹ️ 提示
+
+若使用了 [透明代理](../rookie/transparent.md#_7-配置-cgproxy)，请将 `/usr/bin/uxplay` 添加到 `/etc/cgproxy/config.json` 中的 `program_noproxy` 一行（不使用透明代理的名单）：
+
+![uxplay-4](../static/play-and-office/collaboration/uxplay-4.png)
+
+:::
+
 ## 🔗 KDE Connect
+
+[KDE Connect](https://kdeconnect.kde.org/) 提供了各种用于整合移动设备和计算机的功能。它可以将文件发送到另一台设备、控制它的媒体播放、发送远程输入、查看它的通知，以及做许多其它事情。
+
+1. 安装 [KDE Connect](https://archlinux.org/packages/extra/x86_64/kdeconnect/)<sup>extra / cn / aur</sup> 及其相关可选依赖：
+
+   :::: code-group
+   ::: code-group-item extra
+
+   ```sh
+   sudo pacman -S kdeconnect sshfs
+   ```
+
+   :::
+   ::: code-group-item cn (git)
+
+   ```sh
+   sudo pacman -S skdeconnect-git sshfs
+   ```
+
+   :::
+   ::: code-group-item aur (git)
+
+   ```sh
+   yay -S aur/kdeconnect-git sshfs
+   ```
+
+   :::
+   ::::
+
+2. 移动端可在 [Google Play](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp) 下载并安装
+
+3. 将计算机和移动设备连接至同一个无线网络，根据提示信任并连接即可：
+
+   ![kdeconnect-1](../static/play-and-office/collaboration/kdeconnect-1.png)
+
+4. 为了让计算机可以访问移动设备的文件系统，需要在移动设备点击对应计算机右上角的 `更多按钮`（三个点） > `插件设置` > 打开 `开放文件系统` > 点击 `开放文件系统` 进入 `开放文件系统设置` > `添加储存位置` > 选择要共享的文件夹：
+
+   ![kdeconnect-2](../static/play-and-office/collaboration/kdeconnect-2.jpg)
+
+5. 然后便可以在 Dolphin 中查看并操作移动设备的文件系统了：
+
+   ![kdeconnect-3](../static/play-and-office/collaboration/kdeconnect-3.png)
+
+::: tip ℹ️ 提示
+
+若使用了 [透明代理](../rookie/transparent.md#_7-配置-cgproxy)，请将 `/usr/lib/kdeconnectd` 添加到 `/etc/cgproxy/config.json` 中的 `program_noproxy` 一行（不使用透明代理的名单）：
+
+![uxplay-4](../static/play-and-office/collaboration/uxplay-4.png)
+
+:::
 
 ---
 

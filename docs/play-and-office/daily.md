@@ -93,7 +93,7 @@ yay -S aur/brave-bin
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S brave-git
@@ -118,7 +118,7 @@ sudo pacman -S falkon
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S falkon-git
@@ -270,7 +270,7 @@ sudo pacman -S okular
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S okular-git
@@ -295,7 +295,7 @@ sudo pacman -S calibre
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S calibre-git
@@ -344,14 +344,14 @@ yay -S calibre-git
    ```
 
    :::
-   ::: code-group-item cn（git）
+   ::: code-group-item cn (git)
 
    ```sh
    sudo pacman -S flameshot-git
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S flameshot-git
@@ -390,7 +390,7 @@ sudo pacman -S spectacle
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S spectacle-git
@@ -498,7 +498,7 @@ sudo pacman -S gwenview
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S gwenview-git
@@ -523,7 +523,7 @@ sudo pacman -S nomacs
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S nomacs-git
@@ -573,7 +573,7 @@ feh 是一款轻巧而功能强大的图像查看器，通过命令行操作，*
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S feh-git imagemagick

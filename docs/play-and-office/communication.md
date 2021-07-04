@@ -50,7 +50,7 @@ Telegram 有两种加密模式：
    ```
 
    :::
-   ::: code-group-item cn（git）
+   ::: code-group-item cn (git)
 
    ```sh
    sudo pacman -S telegram-desktop-git

@@ -137,7 +137,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S lutris-git
@@ -233,7 +233,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
 1. 安装 [xow](https://aur.archlinux.org/packages/xow-git/)<sup>cn / aur</sup>：
 
    :::: code-group
-   ::: code-group-item cn（git）
+   ::: code-group-item cn (git)
 
    ```sh
    sudo pacman -S xow-git
@@ -247,7 +247,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S aur/xow-git
@@ -280,7 +280,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S mangohud-git lib32-mangohud-git
@@ -377,7 +377,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S openrgb-git
@@ -438,7 +438,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```sh
    yay -S i2c-tools-git

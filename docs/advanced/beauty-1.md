@@ -95,7 +95,7 @@ sudo pacman -S plasma5-applets-weather-widget qt5-xmlpatterns # 必须安装
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```bash
 yay -S aur/plasma5-applets-weather-widget-git qt5-xmlpatterns # 必须安装
@@ -212,14 +212,14 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
    ```
 
    :::
-   ::: code-group-item cn（git）
+   ::: code-group-item cn (git)
 
    ```bash
    sudo pacman -S latte-dock-git
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S aur/latte-dock-git

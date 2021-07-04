@@ -91,7 +91,7 @@ sidebarDepth: 2
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S boxes-git
@@ -124,7 +124,7 @@ sidebarDepth: 2
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S aur/cmatrix-git
@@ -157,7 +157,7 @@ sidebarDepth: 2
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S aur/asciiquarium-git

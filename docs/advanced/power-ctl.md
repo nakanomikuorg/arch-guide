@@ -34,7 +34,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S tlp-git tlp-rdw-git
@@ -51,7 +51,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S tlpui-git
@@ -178,7 +178,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
    ```
 
    :::
-   ::: code-group-item aur（git）
+   ::: code-group-item aur (git)
 
    ```bash
    yay -S intel-undervolt-git

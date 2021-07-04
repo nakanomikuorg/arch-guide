@@ -40,14 +40,14 @@ sidebarDepth: 2
      1. 安装 [`tela-icon-theme`](https://github.com/vinceliuice/Tela-icon-theme)<sup>cn / aur</sup> 图标主题：
 
         :::: code-group
-        ::: code-group-item cn（git）
+        ::: code-group-item cn (git)
 
         ```bash
         sudo pacman -S tela-icon-theme-git
         ```
 
         :::
-        ::: code-group-item aur（git）
+        ::: code-group-item aur (git)
 
         ```bash
         yay -S aur/tela-icon-theme-git

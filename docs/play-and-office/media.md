@@ -44,7 +44,7 @@ sudo pacman -S vlc
 ```
 
 :::
-::: code-group-item cn（git）
+::: code-group-item cn (git)
 
 ```sh
 sudo pacman -S vlc-git
@@ -58,7 +58,7 @@ yay -S vlc-luajit
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S aur/vlc-git
@@ -83,14 +83,14 @@ sudo pacman -S mpv
 ```
 
 :::
-::: code-group-item cn（git）
+::: code-group-item cn (git)
 
 ```sh
 sudo pacman -S mpv-git
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S aur/mpv-git
@@ -196,7 +196,7 @@ sudo pacman -S deadbeef
 ```
 
 :::
-::: code-group-item cn（git）
+::: code-group-item cn (git)
 
 ```sh
 sudo pacman -S deadbeef-git
@@ -210,7 +210,7 @@ yay -S aur/deadbeef
 ```
 
 :::
-::: code-group-item aur（git）
+::: code-group-item aur (git)
 
 ```sh
 yay -S aur/deadbeef-git
