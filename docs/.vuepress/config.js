@@ -253,25 +253,40 @@ gtag('config', 'G-MQRPJQK9SC');`,
           {
             text: "📐 日常办公",
             children: [
-              "/play-and-office/daily.md",
-              "/play-and-office/communication.md",
-              "/play-and-office/office.md",
-              "/play-and-office/collaboration.md",
+              "/apps/daily.md",
+              "/apps/communication.md",
+              "/apps/office.md",
+              "/apps/collaboration.md",
             ],
           },
           {
             text: "🎯 进阶内容",
             children: [
-              "/play-and-office/media.md",
-              "/play-and-office/play.md",
-              "/play-and-office/android.md",
+              "/apps/media.md",
+              "/apps/play.md",
+              "/apps/remote.md",
+              "/apps/android.md",
             ],
           },
         ],
       },
       {
         text: "🔬 专有领域",
-        children: ["/exclusive/media.md", "/exclusive/code.md"],
+        children: [
+          {
+            text: "🎹 媒体创作",
+            children: [
+              "/exclusive/vedio.md",
+              "/exclusive/image.md",
+              "/exclusive/audio.md",
+              "/exclusive/media.md",
+            ],
+          },
+          {
+            text: "🖥️ 信息技术",
+            children: ["/exclusive/code.md"],
+          },
+        ],
       },
       {
         text: "🍰 写在后面",

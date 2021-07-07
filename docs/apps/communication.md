@@ -73,7 +73,7 @@ Telegram 有两种加密模式：
    :::
    ::::
 
-   ![telegram](../static/play-and-office/communication/telegram.png)
+   ![telegram](../static/apps/communication/telegram.png)
 
 2. 调整隐私权限以及自动下载：
 
@@ -138,11 +138,11 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
    yay -S com.qq.im.deepin
    ```
 
-   ![qq-1](../static/play-and-office/communication/qq-1.png)
+   ![qq-1](../static/apps/communication/qq-1.png)
 
 2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
 
-   ![qq-2](../static/play-and-office/communication/qq-2.png)
+   ![qq-2](../static/apps/communication/qq-2.png)
 
 #### 其它版本
 
@@ -177,11 +177,11 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
    yay -S com.qq.weixin.deepin
    ```
 
-   ![wechat-1](../static/play-and-office/communication/wechat-1.png)
+   ![wechat-1](../static/apps/communication/wechat-1.png)
 
 2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
 
-   ![wechat-2](../static/play-and-office/communication/wechat-2.png)
+   ![wechat-2](../static/apps/communication/wechat-2.png)
 
 #### 其它版本
 
@@ -232,7 +232,7 @@ yay -S aur/skypeforlinux-preview-bin
 :::
 ::::
 
-![skype](../static/play-and-office/communication/skype.png)
+![skype](../static/apps/communication/skype.png)
 
 ### Discord
 
@@ -244,7 +244,7 @@ Discord 是一款专为社区设计的免费网络实时通话软件与数字发
 sudo pacman -S discord
 ```
 
-![discord](../static/play-and-office/communication/discord.png)
+![discord](../static/apps/communication/discord.png)
 
 ::: tip ℹ️ 提示
 
@@ -253,6 +253,33 @@ sudo pacman -S discord
 请注意安全、保护好隐私、文明上网。
 
 :::
+
+## 🤝🏻 团队合作
+
+### Slack
+
+[Slack](https://slack.com/intl/zh-cn/features) 是一款基于云端运算的即时通讯软件。为团队和工作提供一个单一的平台。类似 Discord，也分有许多频道，通过频道组织工作。
+
+安装 [Slack](https://aur.archlinux.org/packages/slack-desktop/)<sup>EULA / cn / aur</sup>：
+
+:::: code-group
+::: code-group-item cn
+
+```sh
+sudo pacman -S slack-desktop
+```
+
+:::
+::: code-group-item aur
+
+```sh
+yay -S aur/slack-desktop
+```
+
+:::
+::::
+
+![slack](../static/apps/communication/slack.png)
 
 ## 📹 网络会议
 
@@ -264,7 +291,7 @@ sudo pacman -S discord
 yay -S zoom
 ```
 
-![zoom](../static/play-and-office/communication/zoom.png)
+![zoom](../static/apps/communication/zoom.png)
 
 ### 腾讯会议
 
@@ -274,11 +301,11 @@ yay -S zoom
    yay -S com.tencent.meeting.deepin
    ```
 
-   ![meeting-1](../static/play-and-office/communication/meeting-1.png)
+   ![meeting-1](../static/apps/communication/meeting-1.png)
 
 2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
 
-   ![meeting-2](../static/play-and-office/communication/meeting-2.png)
+   ![meeting-2](../static/apps/communication/meeting-2.png)
 
 ## ✉️ 电子邮件
 
@@ -292,7 +319,7 @@ Mozilla Thunderbird（雷鸟）是由 Mozilla 基金会研发的一款自由开�
 sudo pacman -S thunderbird
 ```
 
-![thunderbird](../static/play-and-office/communication/thunderbird.png)
+![thunderbird](../static/apps/communication/thunderbird.png)
 
 ### KMail
 
@@ -304,4 +331,4 @@ KMail 是一款功能先进的电子邮件客户端，能与 GMail 等常用电�
 sudo pacman -S kmail
 ```
 
-![kmail](../static/play-and-office/communication/kmail.png)
+![kmail](../static/apps/communication/kmail.png)
