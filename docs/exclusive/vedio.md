@@ -304,26 +304,32 @@ yay -S obs-studio-git
 
 ### screenkey
 
-[screenkey](https://www.thregr.org/~wavexx/software/screenkey/) 用于显示键盘键入在屏幕上的工具，可用于录屏演示。
+[screenkey](https://www.thregr.org/~wavexx/software/screenkey/) 是一个用于显示键盘键入在屏幕上的工具，可用于录屏演示。
 
-安装 [screenkey](https://archlinux.org/packages/community/any/screenkey/)<sup>community / aur</sup>：
+1. 安装 [screenkey](https://archlinux.org/packages/community/any/screenkey/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+   :::: code-group
+   ::: code-group-item community
 
-```sh
-sudo pacman -S screenkey
-```
+   ```sh
+   sudo pacman -S screenkey
+   ```
 
-:::
-::: code-group-item aur (git)
+   :::
+   ::: code-group-item aur (git)
 
-```sh
-yay -S screenkey-git
-```
+   ```sh
+   yay -S screenkey-git
+   ```
 
-:::
-::::
+   :::
+   ::::
+
+2. 在终端输入 `screenkey` 以启动：
+
+   ![screenkey](../static/exclusive/vedio/screenkey.png)
+
+3. 按下 `Ctrl` + `C` 即可退出
 
 ::: tip ℹ️ 提示
 

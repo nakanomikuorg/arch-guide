@@ -1,7 +1,39 @@
+---
+sidebarDepth: 2
+---
+
 # 图像制作
 
-## 绘图、制图与修饰
+> ### 🌺 乱花渐欲迷人眼，浅草才能没马蹄
+>
+> 本小节讨论如何在 archlinux 上编辑、管理位图以及矢量图，以及绘画。
 
-- [krita](https://www.archlinux.org/packages/extra/x86_64/krita/)
-- [gimp](https://www.archlinux.org/packages/extra/x86_64/gimp/)
-- [inkscape](https://www.archlinux.org/packages/extra/x86_64/inkscape/)
+> ### 🔖 这一节将会讨论：
+>
+> ::: details 目录
+>
+> [[toc]]
+>
+> :::
+
+::: tip ℹ️ 提示
+
+指南中带有 <sup>aur</sup> 角标的软件代表是在 [AUR](https://aur.archlinux.org/)（Arch User Repository）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
+
+指南中带有 <sup>cn</sup> 角标的软件代表是在 [archlinuxcn](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)（Arch Linux 中文社区仓库）中用户自行打包的软件。不在 arch 官方支持范围内，可能会出现各种问题如更新不及时、无法安装、使用出错等。
+
+指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
+
+:::
+
+## 🖼️ 位图编辑
+
+### GIMP
+
+## 🖼️ 矢量图编辑
+
+### Inkscape
+
+## 🎨 绘画
+
+### Krita
