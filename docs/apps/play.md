@@ -91,9 +91,9 @@ sidebarDepth: 2
 
 ## 👾 Lutris
 
-[Lutris](https://lutris.net/) 是 Linux 上的开源游戏平台。可以使用 Lutries 安装、移除、配置、启动和管理游戏。它可以在一个单一界面中管理的 Linux 游戏、Windows 游戏、仿真控制台游戏和浏览器游戏。它还包含社区编写的安装脚本，使得游戏的安装过程更加简单。
+[Lutris](https://lutris.net/) 是 Linux 上的开源游戏平台。可以使用 Lutris 安装、移除、配置、启动和管理游戏。它可以在一个单一界面中管理的 Linux 游戏、Windows 游戏、仿真控制台游戏和浏览器游戏。它还包含社区编写的安装脚本，使得游戏的安装过程更加简单。
 
-Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的大多数游戏系统。目前支持的游戏系统包括但不限于：
+Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大多数游戏系统。目前支持的游戏系统包括但不限于：
 
 ::: details 支持列表
 
@@ -120,7 +120,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
 
 :::
 
-1. 安装 [Lutries](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
+1. 安装 [Lutris](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
 
    :::: code-group
    ::: code-group-item community
@@ -148,7 +148,7 @@ Lutries 支持超过 20 个模拟器并且提供了从七十年代到现在的�
 
 2. 参考 [🍷 Wine](./daily.md#🍷-wine) 安装 Wine
 
-3. 登录 [Lutris 官方网站](https://lutris.net/) > 在右上角 🔍 搜索框中搜索你想玩的游戏 > 进入搜索到的游戏页面后，可以看到在相应版本右侧有一个 `Install` 按钮，点击后即可拉起 Lurtis 进行安装
+3. 登录 [Lutris 官方网站](https://lutris.net/) > 在右上角 🔍 搜索框中搜索你想玩的游戏 > 进入搜索到的游戏页面后，可以看到在相应版本右侧有一个 `Install` 按钮，点击后即可拉起 Lutris 进行安装
 
    ::: tip ℹ️ 提示
 
