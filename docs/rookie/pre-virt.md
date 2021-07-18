@@ -2,7 +2,7 @@
 
 > ### ✔ 磨刀不误砍柴工
 >
-> 在实体机安装 archlinux 前，不妨先在虚拟机中尝试一下 archlinux 的安装。同样的，我们需要做一些设置
+> 在实体机安装 archlinux 前，不妨先在虚拟机中尝试一下 archlinux 的安装。同样的，我们需要做一些设置。
 
 > ### 🔖 这一节将会讨论：
 >
@@ -12,13 +12,13 @@
 >
 > :::
 
-本小节将以 win10 环境下使用 [Oracle VM VirtualBox](https://www.virtualbox.org/) 虚拟机安装 archlinux。
+本小节将在 win10 环境下使用 [Oracle VM VirtualBox](https://www.virtualbox.org/) 虚拟机安装 archlinux。
 
 > #### 📑 相关资料：VirtualBox
 >
 > VirtualBox 是一款开源虚拟机软件。由德国 Innotek 公司开发，Sun Microsystems 公司出品。使用 Qt 编写，在 Sun 被 Oracle 收购后正式更名成 Oracle VM VirtualBox。采用 GPL 协议开源。
 
-## 1. 下载并安装 VirtualBox
+## 1. 安装 VirtualBox
 
 VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox 官方下载页面](https://archlinux.org/download/) 下载。
 
