@@ -138,6 +138,8 @@ yay -S davinci-resolve-beta
 
 DaVinci Resolve（免费版）在 Linux 下支持的编解码格式有限，详情请参阅此 [📄 文档](https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_15_Supported_Codec_List.pdf)。
 
+DaVinci Resolve 没有编入 fcitx 模块，所以在 Linux 下不能输入中文，可以使用剪贴板解决。  
+
 :::
 
 另外还有 [DaVinci Resolve Studio（付费版）](https://aur.archlinux.org/packages/davinci-resolve-studio/)<sup>EULA / aur</sup>：
@@ -198,6 +200,12 @@ yay -S obs-studio-git
 如果你使用较新的 NVIDIA 显卡，可以使用 NVENC 编码器。这将大大降低直播或录制过程中 CPU 的压力。
 
 详情请参阅 [NVIDIA NVENC OBS 指南](https://www.nvidia.cn/geforce/guides/broadcasting-guide/)。
+
+如果想进一步优化直播或录制性能，可以安装[此仓库](https://github.com/keylase/nvidia-patch)中的 NvFBC 显卡驱动补丁，再安装[OBS NvFBC 插件](https://aur.archlinux.org/packages/obs-nvfbc-git/)<sup>aur</sup>，然后使用 NvFBC 来源即可。
+
+```sh
+yay -S obs-nvfbc-git
+```
 
 :::
 
