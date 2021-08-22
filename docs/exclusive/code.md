@@ -6,11 +6,11 @@
 
 对于前端来说，一般需要浏览器以及 IDE 即可，附加一些网络工具。
 
-关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/) 的开源版本)，[webstrom](https://aur.archlinux.org/packages/webstorm/)<sup>AUR</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
+关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/) 的开源版本)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
 
-浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>AUR</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>AUR</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
+浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
 
-网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>AUR</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>AUR</sup>以及 [wireshark-qt](https://archlinux.org/packages/community/x86_64/wireshark-qt/)。
+网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>aur</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>aur</sup>以及 [wireshark-qt](https://archlinux.org/packages/community/x86_64/wireshark-qt/)。
 
 至于 [yarn](https://www.archlinux.org/packages/community/any/yarn/)、[npm](https://www.archlinux.org/packages/community/any/npm/) 等前端常用工具，也均可用 pacman 安装。
 
@@ -18,7 +18,7 @@
 
 ## 后端编程
 
-Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜索，如[IntelliJ Idea](https://www.archlinux.org/packages/community/x86_64/intellij-idea-community-edition/)，[PyCharm](https://www.archlinux.org/packages/community/x86_64/pycharm-community-edition/)，[GoLand](https://aur.archlinux.org/packages/goland/)<sup>AUR</sup>等。
+Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜索，如[IntelliJ Idea](https://www.archlinux.org/packages/community/x86_64/intellij-idea-community-edition/)，[PyCharm](https://www.archlinux.org/packages/community/x86_64/pycharm-community-edition/)，[GoLand](https://aur.archlinux.org/packages/goland/)<sup>aur</sup>等。
 较为老式的 IDE 有 [Netbeans](https://www.archlinux.org/packages/community/any/netbeans/) 以及 eclipse，eclipse 有多种版本，可在 AUR 中自行搜索。
 
 关于数据库相关软件，也有多种选择。
@@ -26,9 +26,9 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 - [Mysql Workbench](https://www.archlinux.org/packages/community/x86_64/mysql-workbench/)
 - [pgadmin4](https://www.archlinux.org/packages/community/x86_64/pgadmin4/)
 - [dbeaver](https://www.archlinux.org/packages/community/x86_64/dbeaver/)
-- [robo3t](https://aur.archlinux.org/packages/robo3t-bin/)<sup>AUR</sup>
+- [robo3t](https://aur.archlinux.org/packages/robo3t-bin/)<sup>aur</sup>
 - [redis-desktop-manager](https://aur.archlinux.org/packages/redis-desktop-manager/)<sup>AUR</sup>
-- [rdm-bin](https://aur.archlinux.org/packages/rdm-bin/)<sup>AUR</sup> 如果上面的编译有问题，可用这个 bin 版本
+- [rdm-bin](https://aur.archlinux.org/packages/rdm-bin/)<sup>aur</sup> 如果上面的编译有问题，可用这个 bin 版本
 
 ## 安卓客户端编程
 
@@ -58,7 +58,7 @@ Matlab与Mathematica是商业软件，使用正版需要付费购买。二者均
 - [Numpy库](https://archlinux.org/packages/extra/x86_64/python-numpy/)这个库包含很多科学计算的函数（例如矩阵运算）
 - [Fortran编译](https://wiki.archlinux.org/title/GNU_Compiler_Collection)直接安装gcc-fortran包
 - [Julia](https://wiki.archlinux.org/title/Julia)
-顺便一提，使用python的朋友可能很多都听说或者使用过Anaconda这个包管器。其实很多库既可以通过Anaconda下载，亦可通过pacman或yay下载(Anaconda也在AUR内)。不得不说，Aur是个好东西。
+顺便一提，使用python的朋友可能很多都听说或者使用过Anaconda这个包管器。其实很多库既可以通过Anaconda下载，亦可通过pacman或yay下载(Anaconda也在AUR内)。不得不说，AUR是个好东西。
 
 另外,Intel在2020年推出了名为OneAPI的“统一应用程序编程接口的开放标准”。OneAPI的组件亦可在Archlinux上安装。如果自己的电脑CPU是Intel家的，使用OneAPI提供的编译器（如i++），可提升语言编译速度。
 如有朋友对AMD在这方面有所了解，欢迎补充。
