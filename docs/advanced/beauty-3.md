@@ -19,7 +19,72 @@ sidebarDepth: 2
 >
 > :::
 
-## 1. ASCII 艺术与终端玩具
+## 1. 设置 Konsole 样式
+
+打开 Konsole， _设置_ > _编辑当前方案_ > _外观_，选择 ```Red-Black``` （或你喜欢的颜色主题），应用确认即可。
+
+## 2. zsh 美化
+
+::: tip ℹ️ 提示
+
+确保你安装过 zsh ，安装方法及相关配置可在 [可选配置（基础）(/advanced/optional-cfg-1.html) 一章中查看。
+
+[oh-my-zsh](https://ohmyz.sh/) 实际上并没有那么好用，反而拖慢了 Zsh 的速度，本指南不会介绍。
+
+若有需要请自行查阅相关资料。
+
+:::
+
+### 2-1. powerlevel10k
+
+由于本指南不使用 `oh-my-zsh` ,因此使用另一个 Zsh 框架 `zim` 安装powerlevel10k。
+
+   1. 安装 ```zim``` 。
+
+   ```sh
+   curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+   ```
+   
+   2. 编辑 Zsh 配置文件 `~/.zshrc` ：
+   
+   ```sh
+   vim ~/.zshrc
+   ```
+   
+   3. 加入下面的文字，添加 `powerlevel10k` 模块。
+   
+   ```
+   zmodule romkatv/powerlevel10k
+   ```
+   
+   4. 安装 `powerlevel10k` 模块。
+
+   ```sh
+   zimfw install
+   ```
+   
+   安装之后，`powerlevel10k`会让你进行配置。
+   
+   在此时配置时，很多图标符号看不到，因为 `powerlevel10k` 中包含许多特殊图标符号，需要与之兼容的字体。
+   
+   5. 安装 Nerd Font 字体
+   
+   Nerd Fonts 是一系列打过补丁的字体，支持 `powerlevel10k` 中的图标。
+   
+   AUR 和 ArchLinuxCN 源中都有很多 Nerd Font，在终端使用 yay 搜索安装即可。
+   
+   ```sh
+   yay nerd-font
+   ```
+   
+   安装完任意一个 Nerd Font 字体后，打开 Konsole 的 _设置_ > _编辑当前方案_ > _外观_，把 _字体_ 改为刚刚安装的 Nerd Font 即可。
+   
+   现在再打开 `powerlevel10k` 配置（`p10k configure`），就可以看到图标符号，正常配置了。
+   
+   
+## 3. vim 美化
+
+## 4. ASCII 艺术与终端玩具
 
 ### lolcat
 
@@ -193,13 +258,5 @@ sidebarDepth: 2
    ```
 
    ![sl](../static/advanced/beauty/sl.png)
-
-## 2. 设置 Konsole 样式
-
-打开 konsole， _设置_ > _编辑当前方案_ > _外观_，选择`Red-Black` 应用确认即可。
-
-## 3. zsh 美化
-
-## 4. vim 美化
 
 ## 5. Linux 彩蛋
