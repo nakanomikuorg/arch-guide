@@ -70,14 +70,14 @@ yay -S aur/gimp-git
 ::: code-group-item aur
 
 ```sh
-sudo pacman -S aseprite
+yay -S aseprite
 ```
 
 :::
 ::: code-group-item aur (bin)
 
 ```sh
-sudo pacman -S aseprite-bin
+yay -S aseprite-bin
 ```
 
 :::
