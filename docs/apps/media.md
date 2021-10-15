@@ -308,7 +308,7 @@ yay -S aur/netease-cloud-music
 
 基于 `deepin-wine5` 的 QQ 音乐 [`com.qq.music.deepin`](https://aur.archlinux.org/packages/com.qq.music.deepin/)<sup>EULA / aur</sup> 已无法下载，只能用官方的原生 QQ 音乐：
 
-安装 [`qqmusic-bin`](https://aur.archlinux.org/packages/wechat-uos/)<sup>aur</sup>：
+安装 [`qqmusic-bin`](https://aur.archlinux.org/packages/qqmusic-bin/)<sup>aur</sup>：
 
 ```sh
 yay -S qqmusic-bin
