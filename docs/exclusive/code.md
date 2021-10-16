@@ -45,7 +45,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 ## 科学计算
 
 对于磕盐人士而言，做数值计算（或者叫科学计算）是使用linux的一大动力。目前科学计算的几大主流编程语言分别是
-* Matlab (在Linux下安装Matlab时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用 'unzip -X -K matlab_R20***_glnxa64.zip' 命令重新解压)
+* Matlab (在Linux下安装Matlab时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用 'unzip -X -K matlab_R20*_glnxa64.zip' 命令重新解压)
 * Fortran
 * Julia
 * Python（以Numpy库为主）。
@@ -58,7 +58,7 @@ Matlab与Mathematica是商业软件，使用正版需要付费购买。二者均
 - [Numpy库](https://archlinux.org/packages/extra/x86_64/python-numpy/)这个库包含很多科学计算的函数（例如矩阵运算）
 - [Fortran编译](https://wiki.archlinux.org/title/GNU_Compiler_Collection)直接安装gcc-fortran包
 - [Julia](https://wiki.archlinux.org/title/Julia)
-顺便一提，使用python的朋友可能很多都听说或者使用过Anaconda这个包管器。其实很多库既可以通过Anaconda下载，亦可通过pacman或yay下载(Anaconda也在AUR内)。不得不说，AUR是个好东西。
+顺便一提，使用python的朋友可能很多都听说或者使用过Anaconda这个包管器。其实很多库既可以通过Anaconda(https://aur.archlinux.org/packages/anaconda/)<sup>aur</sup> 或Miniconda(https://aur.archlinux.org/packages/miniconda3/)<sup>aur</sup> 下载，亦可通过pacman或yay下载(Anaconda也在AUR内)。不得不说，AUR是个好东西。
 
 另外,Intel在2020年推出了名为OneAPI的“统一应用程序编程接口的开放标准”。OneAPI的组件亦可在Archlinux上安装。如果自己的电脑CPU是Intel家的，使用OneAPI提供的编译器（如i++），可提升语言编译速度。
 如有朋友对AMD在这方面有所了解，欢迎补充。
