@@ -45,7 +45,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 ## 科学计算
 
 对于磕盐人士而言，做数值计算（或者叫科学计算）是使用linux的一大动力。目前科学计算的几大主流编程语言分别是
-* Matlab (在Linux下安装Matlab时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用unzip -X -K matlab_R20***_glnxa64.zip 命令重新解压)
+* Matlab (在Linux下安装Matlab时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用 'unzip -X -K matlab_R20***_glnxa64.zip' 命令重新解压)
 * Fortran
 * Julia
 * Python（以Numpy库为主）。
