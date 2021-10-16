@@ -27,7 +27,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 - [pgadmin4](https://www.archlinux.org/packages/community/x86_64/pgadmin4/)
 - [dbeaver](https://www.archlinux.org/packages/community/x86_64/dbeaver/)
 - [robo3t](https://aur.archlinux.org/packages/robo3t-bin/)<sup>aur</sup>
-- [redis-desktop-manager](https://aur.archlinux.org/packages/redis-desktop-manager/)<sup>AUR</sup>
+- [redis-desktop-manager](https://aur.archlinux.org/packages/redis-desktop-manager/)<sup>aur</sup>
 - [rdm-bin](https://aur.archlinux.org/packages/rdm-bin/)<sup>aur</sup> 如果上面的编译有问题，可用这个 bin 版本
 
 ## 安卓客户端编程
