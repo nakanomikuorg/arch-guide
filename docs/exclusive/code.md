@@ -6,7 +6,7 @@
 
 对于前端来说，一般需要浏览器以及 IDE 即可，附加一些网络工具。
 
-关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) 或[VSCodium]<sup>aur</sup> (https://aur.archlinux.org/packages/vscodium-bin/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/) 的开源版本)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
+关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) 或[VSCodium](https://aur.archlinux.org/packages/vscodium-bin/)<sup>aur</sup>  (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/) 的开源版本)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
 
 浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
 
