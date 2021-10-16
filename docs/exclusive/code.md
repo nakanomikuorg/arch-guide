@@ -40,7 +40,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 
 ## 机器学习
 
-安装 [jupyter-notebook](https://archlinux.org/packages/community/any/jupyter-notebook/) 以及所需要的相关库如[numpy](https://archlinux.org/packages/extra/x86_64/python-numpy/)即可，均可在源中找到。
+安装 [jupyter-notebook](https://archlinux.org/packages/community/any/jupyter-notebook/) 以及所需要的相关库如[numpy](https://archlinux.org/packages/extra/x86_64/python-numpy/)即可，均可在源中找到。机器学习常用python库有[Pytorch](https://pytorch.org/),[Tensorflow](https://www.tensorflow.org)等（https://wiki.archlinux.org/title/List_of_applications/Science#Artificial_intelligence）。
 
 ## 科学计算
 
