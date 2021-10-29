@@ -7,6 +7,7 @@ title: 常见问题
 > ### 🏔️ 山重水复疑无路，柳暗花明又一村
 >
 > 本节介绍日常使用 archlinux 时可能会遇到的问题以及解决方法
+> 更多问题请前往[Arch wiki](https://wiki.archlinux.org/title/Table_of_contents_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 > ### 🔖 这一节将会讨论：
 >
@@ -27,6 +28,20 @@ title: 常见问题
 请参阅 [🥙 杂七杂八](../rookie/basic-install-detail.md#🥙-杂七杂八) 解决。
 
 ## 服务相关
+
+### 无法连接蓝牙设备（错误提示：br-connection-profile-unavailable,详见[Arch社区](https://bbs.archlinux.org/viewtopic.php?id=270465)）
+
+首先确保[系统已开启蓝牙服务](../rookie/desktop-env-and-app.md#_12-启动蓝牙-若有)
+
+安装bluez,bluez-utils和pulseaudio-bluetooth
+
+```bash
+sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
+```
+
+然后重启系统即可
+
+> 更多蓝牙相关问题见[Arch wiki](https://wiki.archlinux.org/title/Bluetooth_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94)
 
 ### 关闭出错服务（错误启动项）
 
