@@ -45,19 +45,19 @@ sidebarDepth: 2
    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
    ```
    
-   2. 编辑 Zsh 配置文件 `~/.zshrc` ：
+   2. 编辑 Zsh 配置文件 `~/.zimrc` ：
    
    ```sh
-   vim ~/.zshrc
+   vim ~/.zimrc
    ```
    
-   3. 加入下面的文字，添加 `powerlevel10k` 模块。
+   3. 在文件最后加入下面的一行文字，以添加 `powerlevel10k` 模块，然后退出。
    
    ```
    zmodule romkatv/powerlevel10k
    ```
    
-   4. 安装 `powerlevel10k` 模块。
+   4. 安装 `powerlevel10k` 模块，在终端输入如下命令即可。
 
    ```sh
    zimfw install
@@ -74,7 +74,13 @@ sidebarDepth: 2
    AUR 和 ArchLinuxCN 源中都有很多 Nerd Font，在终端使用 yay 搜索安装即可。
    
    ```sh
-   yay nerd-font
+   yay -Ss nerd-font
+   ```
+
+   个人推荐使用nerd-fonts-jetbrains-mono字体，可在aur中安装
+
+   ```sh
+   yay -S nerd-fonts-jetbrains-mono
    ```
    
    安装完任意一个 Nerd Font 字体后，打开 Konsole 的 _设置_ > _编辑当前方案_ > _外观_，把 _字体_ 改为刚刚安装的 Nerd Font 即可。
