@@ -53,7 +53,17 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 考虑到有部分朋友容易把“语言”和“软件”混为一谈，在此稍作说明：Matlab和Mathematica既是软件名称，也是一种语言。暂时可以认为这些软件就是写这些语言的IDE。
 而Python之类则仅仅是“编程语言”。至于我们下载的Python3.9之类的包，则是python语言对应的库，并不是一个“写python的软件”。
 
-Matlab与Mathematica是商业软件，使用正版需要付费购买。二者均有linux版本可供安装。
+### 开源软件替代：[SageMath](https://www.sagemath.org/)
+
+SageMath(原名Sage)是免费的、开源的数学软件，支持代数、几何、数论、密码学、数值计算和相关领域的研究和教学。Sage的开发模式和Sage本身的技术都非常强调开放性、社区性、合作性和协作性：我们在制造汽车，而不是重新发明轮子。Sagemath的总体目标是为"4M"（即Maple、Mathematica、Magma和Matlab）提供一个可行的、免费的、开源的替代品。
+
+SageMath为目前科学计算领域的大多数开源软件/库统一重写了接口，提供了一种类兼容python的语法，可以说集开源数学软件之大成。目前已可部分替代"4M"。
+
+Arch Wiki:https://wiki.archlinux.org/title/SageMath
+
+中文教程及文档：https://www.osgeo.cn/sagemath/index.html
+
+Matlab与Mathematica则是商业软件，使用正版需要付费购买。二者均有linux版本可供安装。
 - [Python](https://wiki.archlinux.org/title/Python)直接安装python3.9
 - [Numpy库](https://archlinux.org/packages/extra/x86_64/python-numpy/)这个库包含很多科学计算的函数（例如矩阵运算）
 - [Fortran编译](https://wiki.archlinux.org/title/GNU_Compiler_Collection)直接安装gcc-fortran包
