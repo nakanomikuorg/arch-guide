@@ -122,6 +122,16 @@ yay -S aur/plasma5-applets-weather-widget-git qt5-xmlpatterns # 必须安装
 
    ![split-digital-clock-3](../static/advanced/beauty/split-digital-clock-3.png)
 
+#### Tiled Menu(推荐)
+
+目前KDE组件中评分最高的程序启动器（开始菜单）。相比 KDE 自带的程序启动器更加美观大方，自定义性更强，具有win10的磁帖功能。
+
+同上，搜索小部件名 `Tiled Menu` > 点击 `安装`：
+
+![tiled-menu-1](../static/advanced/beauty/title-menu-1.png)
+
+![tiled-menu-2](../static/advanced/beauty/title-menu-2.png)
+
 #### Avalon Menu
 
 程序启动器（开始菜单）。相比 KDE 自带的程序启动器更加简洁大方。
@@ -130,7 +140,38 @@ yay -S aur/plasma5-applets-weather-widget-git qt5-xmlpatterns # 必须安装
 
 ![avalon-menu](../static/advanced/beauty/avalon-menu.png)
 
+#### Panon(非常漂亮，不过有人反映会增加资源占用，经测试开启后没有什么影响，可根据个人情况自行选择)
+
+Panon是一个KDE桌面的音频频谱分析组件，当你的Arch Linux发出声音时，会产生相当漂亮的动效，项目地址：[戳这里](https://github.com/rbn42/panon)
+
+安装：
+
+首先安装组件的依赖：
+
+```bash
+sudo pacman -S qt5-websockets python-docopt python-numpy python-pyaudio python-cffi python-websockets 
+```
+然后安装AUR中的panon（也可以在KDE组件商店安装或从源代码构建）即可:
+
+```bash
+yay -S plasma5-applets-panon
+```
+
+![panon](../static/advanced/beauty/title-menu-1.png)
+
+建议的panon配置：
+
+在桌面添加panon组件后，右键panon，点击`进入编辑模式`，调整panon大小和位置，选择`隐藏背景`。然后点击`配置panon`
+
+视觉特效选择`bar1ch`，音频数据源选择`PulseAudio`，输入设备选择`当前设备的监视器`即可。
+
 #### Netspeed Widget
+
+Netspeed Widget是一个用于显示网速的KDE小部件，目前在新版KDE Plasma中该部件无法正常工作(网速始终显示为0),安装`ksysguard`软件包即可解决，[详见此处](https://github.com/dfaust/plasma-applet-netspeed-widget/issues/28)
+
+```bash
+sudo pacman -S ksysguard
+```
 
 安装 [Netspeed Widget](https://aur.archlinux.org/packages/plasma5-applets-netspeed/)<sup>aur</sup>：
 
