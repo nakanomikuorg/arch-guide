@@ -332,3 +332,30 @@ sudo pacman -S kmail
 ```
 
 ![kmail](../static/apps/communication/kmail.png)
+
+### Mailspring
+
+MailSpring是一款界面简约、操作便捷、功能出众的邮件管理工具。MailSpring官方版可以帮助用户管理多个邮箱，提高工作效率，同时还能够对重要事项进行提醒，并可以编辑自己的签名，给大家带来了不一样的感受和体验。其客户端在github上开源，但使用时需要注册mailspring账户。
+
+KDE用户使用mailspring前需要安装`gnome-keyring`
+
+安装 [mailspring](https://github.com/Foundry376/Mailspring)<sup>EULA / cn / aur</sup>：
+
+:::: code-group
+::: code-group-item cn
+
+```sh
+sudo pacman -S mailspring
+```
+
+:::
+::: code-group-item aur
+
+```sh
+yay -S aur/mailspring
+```
+
+:::
+::::
+
+![mailspring](https://raw.githubusercontent.com/Foundry376/Mailspring/master/screenshots/hero_graphic_mac%402x.png)
