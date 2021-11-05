@@ -111,6 +111,38 @@ sidebarDepth: 2
 
 ## 1. 更改 Fcitx5 输入法皮肤
 
+默认的输入法主题并不好看,这里有两个漂亮的主题：
+
+### [fcitx5-nord](https://github.com/ayamir/fcitx5-nord)
+
+![nord-1](https://user-images.githubusercontent.com/29998228/127147288-372b2a8b-59ff-47be-9f60-274b12361c8c.png)
+
+![nord-2](https://user-images.githubusercontent.com/29998228/127147303-256c017a-9efa-45fd-b514-48488ec3f5f9.png)
+
+按照github的说明安装即可：
+
+```bash
+git clone https://github.com/tonyfettes/fcitx5-nord.git
+mkdir -p ~/.local/share/fcitx5/themes/
+cd fcitx5-nord
+cp -r Nord-Dark/ Nord-Light/ ~/.local/share/fcitx5/themes/
+```
+
+### [fcitx5-gruvbox](https://github.com/ayamir/fcitx5-gruvbox)
+
+![gruvbox-1](https://github.com/ayamir/fcitx5-gruvbox/raw/master/shot/light.png)
+
+![gruvbox-2](https://github.com/ayamir/fcitx5-gruvbox/raw/master/shot/dark.png)
+
+安装过程同上：
+
+```bash
+git clone https://github.com/ayamir/fcitx5-gruvbox
+mkdir -p ~/.local/share/fcitx5/themes/ # 若安装nord主题时已经执行过此命令，则不必再执行一次
+cd fcitx5-gruvbox
+cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
+```
+
 ## 4. 设置 SDDM 主题
 
 默认的登录界面不太好看，我们将它替换掉。
