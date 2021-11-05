@@ -28,6 +28,43 @@ _任何单位和个人不得自行建立或者使用其他信道进行国际联�
 
 :::
 
+## 鉴于Qv2ray原项目已[停止开发](https://github.com/Qv2ray/Qv2ray)，新的版本还不够完善，有魔法上网需求者建议使用v2rayA替代Qv2ray
+
+v2rayA的优势：
+
+* 支持一键开启全局代理，配置方便
+* 客户端运行在浏览器中，轻量
+
+### 安装v2ray和v2rayA:
+
+:::: code-group
+::: code-group-item cn
+
+```bash
+sudo pacman -S v2ray v2raya
+```
+
+:::
+::: code-group-item aur
+
+```bash
+sudo pacman -S v2ray
+yay -S aur/v2raya
+```
+
+:::
+::::
+
+### 配置v2raya
+
+安装后启动服务：
+
+```bash
+sudo systemctl enable --now v2raya
+```
+
+随后在开始菜单中搜索 v2raya，点击即可打开浏览器页面。在其中加入订阅(没有魔法上网结点？请参考[原文档相关内容](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/fxckGFW?id=%e5%b7%b2%e6%9c%89%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91%e7%9a%84%e8%8a%82%e7%82%b9%e7%9a%84%e6%83%85%e5%86%b5))。在设置中建议开启全局透明代理(选择`大陆白名单`)，同时开启防止 DNS 劫持功能，否则可能会拿不到被 dns 污染的资源(如 github raw)。
+
 ## 1. 安装 Qv2ray 和 V2Ray / Xray 内核
 
 通过以下命令安装 [Qv2ray](https://github.com/Qv2ray/Qv2ray)<sup>cn</sup> 和 [V2Ray](https://archlinux.org/packages/?sort=&q=v2ray&maintainer=&flagged=) / [Xray](https://github.com/XTLS/Xray-core)<sup>cn</sup> 内核：
