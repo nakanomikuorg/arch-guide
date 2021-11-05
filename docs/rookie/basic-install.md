@@ -560,11 +560,16 @@ pacstrap /mnt base base-devel linux linux-firmware
 
 ![pacstrap_step-1](../static/rookie/basic-install_pacstrap-1.png)
 
-2. 通过如下命令使用 `pacstrap` 脚本安装其它必要功能性软件：
+2. 通过如下命令使用 `pacstrap` 脚本安装其它必要的功能性软件：
 
 ```bash
-pacstrap /mnt dhcpcd iwd vim sudo bash-completion
+pacstrap /mnt dhcpcd iwd vim sudo zsh zsh-completion
 ```
+
+> 📑 命令参数说明：
+>
+> - `zsh` —— `zsh-completion` 如果你是bash的爱好者，请把这两个包换成`bash-completion` 
+> - 如果你是第一次接触\*nix系统的新手，不建议换成bash
 
 ![pacstrap_step-2](../static/rookie/basic-install_pacstrap-2.png)
 
