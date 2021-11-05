@@ -59,9 +59,9 @@ SageMath(原名Sage)是免费的、开源的数学软件，支持代数、几何
 
 SageMath为目前科学计算领域的大多数开源软件/库统一重写了接口，提供了一种类兼容python的语法，可以说集开源数学软件之大成。目前已可部分替代"4M"。
 
-Arch Wiki:https://wiki.archlinux.org/title/SageMath
+[Arch Wiki](https://wiki.archlinux.org/title/SageMath)
 
-中文教程及文档：https://www.osgeo.cn/sagemath/index.html
+[中文教程及文档](https://www.osgeo.cn/sagemath/index.html)
 
 Matlab与Mathematica则是商业软件，使用正版需要付费购买。二者均有linux版本可供安装。
 - [Python](https://wiki.archlinux.org/title/Python)直接安装python3.9
