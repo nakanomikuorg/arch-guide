@@ -64,7 +64,7 @@ yay -S aur/gimp-git
 
 [Aseprite](https://www.aseprite.org/) 是一款像素艺术绘制工具。
 
-安装 [Aseprite](https://archlinux.org/packages/community/x86_64/rawtherapee/)<sup>EULA / aur</sup>：
+安装 [Aseprite](https://aur.archlinux.org/packages/aseprite/)<sup>EULA / aur</sup>：
 
 :::: code-group
 ::: code-group-item aur
