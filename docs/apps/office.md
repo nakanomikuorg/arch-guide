@@ -112,6 +112,18 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/LibreOffice_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
+### Foxit PDF Reader
+[Foxit PDF Reader](https://www.foxitsoftware.com/products/pdf-reader/)是福建福昕软件开发股份有限公司推出的一款轻量级PDF编辑器，是目前笔者在Linux平台下使用过免费且最好用的PDF编辑器。Foxit PDF Reader提供常规的PDF注释功能：段落高亮、区域高亮、下划线、波浪线、图形、删除线和备注等标记，也提供许多其他平台付费PDF编辑器提供的打字机、文本框、笔迹等轻量级PDF编辑。加载和保存PDF速度较Libre Office Draw快，打字机功能较KDE Okular支持非拉丁字符输入，是PDF笔记文档注释的好帮手。
+
+安装[Foxit PDF Reader](https://aur.archlinux.org/packages/foxitreader/):
+
+```sh
+yay -S foxitreader
+```
+
+![foxit-pdf-reader](../static/apps/office/foxit-pdf-reader.png)
+
+
 ## Markdown 编辑器
 
 ### Typora
