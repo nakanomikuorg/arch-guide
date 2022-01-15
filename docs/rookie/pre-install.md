@@ -121,7 +121,7 @@ Linux 下同样可以使用 Ventoy 和 balenaEtcher，具体步骤可参阅 [Ven
 
 关于解锁密钥的查找请参阅 [Mircosoft 相关页面](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD%E6%9F%A5%E6%89%BE-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5-6b71ad27-0b89-ea08-f143-056f5ab347d6)。
 
-一般来说使用与 win10 相同的微软帐号登录 [aka.ms 相关页面](aka.ms/myrecoverykey) 即可获取。
+一般来说使用与 win10 相同的微软帐号登录 [aka.ms 相关页面](https://aka.ms/myrecoverykey) 即可获取。
 
 ## 6. 进入主板 BIOS 进行设置
 
