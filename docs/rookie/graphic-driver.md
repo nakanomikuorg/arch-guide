@@ -443,12 +443,12 @@ DRI_PRIME=1 glmark2
 
 ### glxgears
 
-最传统和广为人知的方式是使用 `glxgears` 命令进行测试，其属于 [mesa-demos](https://www.archlinux.org/packages/extra/x86_64/mesa-demos/) 包。
+最传统和广为人知的方式是使用 `glxgears` 命令进行测试，其属于 [mesa-utils](https://www.archlinux.org/packages/extra/x86_64/mesa-utils/) 包。
 
-1. 通过以下命令安装 [mesa-demos](https://www.archlinux.org/packages/extra/x86_64/mesa-demos/) 包（可能已经安装了）：
+1. 通过以下命令安装 [mesa-utils](https://www.archlinux.org/packages/extra/x86_64/mesa-utils/) 包（可能已经安装了）：
 
 ```bash
-sudo pacman -S mesa-demos
+sudo pacman -S mesa-utils
 ```
 
 2. 通过以下命令进行测试：
