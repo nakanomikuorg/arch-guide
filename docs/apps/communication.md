@@ -171,7 +171,7 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 
 以下为第三方版本QQ
 
-- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron开发的第三方QQ ([github](https://github.com/Icalingua/Icalingua))
+- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron开发的第三方~~QQ~~ ([~~github~~](https://github.com/Icalingua/Icalingua))(作者已删库)
   ```sh
   yay -S icalingua
   ```
