@@ -213,7 +213,7 @@ patch:
 
 ## 🚀 zsh
 
-zsh 完全兼容 bash，但相比 bash，又有诸多优点：
+zsh 基本兼容 bash，但相比 bash，又有诸多优点：
 
 1. 更强大的 `tab` 补全
 2. 更智能的切换目录
