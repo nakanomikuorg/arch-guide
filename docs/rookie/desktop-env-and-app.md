@@ -211,7 +211,7 @@ pacman -Syyu
 6. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
 
 ```bash
-systemctl start sddm
+systemctl start sddm  # 直接启动显示管理器，与以下reboot命令二选一即可
 ```
 ```bash
 reboot
