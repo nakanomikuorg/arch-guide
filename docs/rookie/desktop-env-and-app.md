@@ -208,8 +208,11 @@ pacman -Syyu
 
 ![syyu](../static/rookie/desktop-env-and-app_syyu.png)
 
-6. 通过以下命令重启电脑，即可看到欢迎界面：
+6. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
 
+```bash
+systemctl start sddm
+```
 ```bash
 reboot
 ```
