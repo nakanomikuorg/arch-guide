@@ -210,11 +210,13 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 
 ## 5. 配置并启动 greeter sddm
 
+1. 开启 sddm.service 守护进程：
+
 ```
 systemctl enable sddm
 ```
 
-1. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
+2. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
 
 ```bash
 systemctl start sddm  # 直接启动显示管理器，与以下reboot命令二选一即可
@@ -225,7 +227,7 @@ reboot
 
 ![sign-in](../static/rookie/desktop-env-and-app_sign-in.png)
 
-2. 输入新用户的密码并回车 `Enter` 即可登录桌面
+3. 输入新用户的密码并回车 `Enter` 即可登录桌面
 
 ![desktop](../static/rookie/desktop-env-and-app_desktop.png)
 
