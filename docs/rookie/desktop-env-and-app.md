@@ -146,27 +146,7 @@ EDITOR=vim visudo # 这里需要显式的指定编辑器，因为上面的环境
 
 5. 保存并退出 `vim` 编辑器
 
-## 3. 安装 KDE Plasma 桌面环境
-
-1. 通过以下命令安装相关软件包：
-
-```bash
-pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终端模拟器和 dolphin 文件管理器
-```
-
-![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
-
-2. 一路回车完成安装即可
-
-## 4. 配置 greeter sddm
-
-```
-systemctl enable sddm
-```
-
-![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
-
-## 5. 开启 32 位支持库与 Arch Linux 中文社区仓库（archlinuxcn）
+## 3. 开启 32 位支持库与 Arch Linux 中文社区仓库（archlinuxcn）
 
 1. 编辑 `/etc/pacman.conf` 文件：
 
@@ -208,7 +188,33 @@ pacman -Syyu
 
 ![syyu](../static/rookie/desktop-env-and-app_syyu.png)
 
-6. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
+
+
+## 4. 安装 KDE Plasma 桌面环境
+
+::: tip ℹ️ 提示
+
+新手推荐安装 KDE Plasma 桌面环境，此外有 GNOME、 Xfce等[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)和一众[窗口管理器](https://wiki.archlinux.org/title/Window_manager)可供选择。本教程仅列出 KDE 安装使用教程。
+
+:::
+
+1. 通过以下命令安装相关软件包：
+
+```bash
+pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终端模拟器和 dolphin 文件管理器
+```
+
+![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
+
+2. 一路回车完成安装即可
+
+## 5. 配置并启动 greeter sddm
+
+```
+systemctl enable sddm
+```
+
+1. 通过以下命令启动显示管理器或重启电脑，即可看到欢迎界面：
 
 ```bash
 systemctl start sddm  # 直接启动显示管理器，与以下reboot命令二选一即可
@@ -219,7 +225,7 @@ reboot
 
 ![sign-in](../static/rookie/desktop-env-and-app_sign-in.png)
 
-7. 输入新用户的密码并回车 `Enter` 即可登录桌面
+2. 输入新用户的密码并回车 `Enter` 即可登录桌面
 
 ![desktop](../static/rookie/desktop-env-and-app_desktop.png)
 
@@ -229,7 +235,10 @@ reboot
 
 :::
 
-## 7. 安装基础功能包
+
+![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
+
+## 6. 安装基础功能包
 
 1. 进入桌面后，在开始菜单搜索并打开 Konsole。它是 KDE 桌面环境默认的终端模拟器
 
@@ -274,7 +283,7 @@ sudo pacman -S yay # yay 命令可以让用户安装 AUR 中的软件（yay 在 
 
 :::
 
-## 8. 检查家目录
+## 7. 检查家目录
 
 检查家目录下的各个常见目录是否已经创建，若没有则需通过以下命令手动创建：
 
@@ -286,7 +295,7 @@ mkdir Desktop Documents Downloads Music Pictures Videos
 
 ![mkdir](../static/rookie/desktop-env-and-app_mkdir.png)
 
-## 9. 配置非 root 账户的默认编辑器
+## 8. 配置非 root 账户的默认编辑器
 
 1. 使用 `vim` 编辑 `~/.bashrc` 文件：
 
@@ -306,7 +315,7 @@ export EDITOR='vim'
 
 :::
 
-## 10. 设置系统为中文
+## 9. 设置系统为中文
 
 1. 打开 `System Settings` > `Regional Settings` > 在 `Language` 中点击 `Add languages...` > 选择中文加入 `ADD`，再拖拽到第一位 > 点击 `Apply`
 
@@ -322,7 +331,7 @@ export EDITOR='vim'
 
 :::
 
-## 11. 安装输入法
+## 10. 安装输入法
 
 如有需要可以参阅 [Fcitx5 官方文档](<https://wiki.archlinux.org/index.php/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -390,7 +399,7 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 :::
 
-## 12. 启动蓝牙（若有）
+## 11. 启动蓝牙（若有）
 
 通过以下命令开启蓝牙相关服务并设置开机自动启动：
 
@@ -398,7 +407,7 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 sudo systemctl enable --now bluetooth
 ```
 
-## 13. 设置 Timeshift 快照
+## 12. 设置 Timeshift 快照
 
 1. 通过以下命令安装 Timeshift<sup>cn / aur</sup>：
 
@@ -435,7 +444,7 @@ Timeshift<sup>cn</sup> 目前有问题（参见 [#2317](https://github.com/archl
 
 2. 打开 Timeshift，第一次启动会自动启动设置向导
 
-### 13-1. 若使用 Btrfs 文件系统
+### 12-1. 若使用 Btrfs 文件系统
 
 若按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用的 Btrfs 文件系统，则进行如下操作。
 
@@ -471,7 +480,7 @@ Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布�
 
 5. 点击 `完成` 结束配置
 
-### 13-2. 若使用 ext4 文件系统
+### 12-2. 若使用 ext4 文件系统
 
 若使用的为传统的 ext4 文件系统，则进行如下操作。
 
