@@ -422,6 +422,13 @@ sudo vim /etc/proxychains.conf
 
 ![proxychains_step-2](../static/rookie/transparent/proxychains-2.png)
 
+在 `quiet_mode` 一行前删除 `#` 解注释掉此行，以关闭调用 library 产生的输出：
+
+```properties
+# Quiet mode (no output from library)
+quiet_mode
+````
+
 3. 使用代理方式为在单一命令前添加 `proxychains` 前缀：
 
 ```bash
