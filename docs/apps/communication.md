@@ -132,10 +132,10 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 
 推荐使用基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
 
-1. 安装 [`com.qq.im.deepin`](https://aur.archlinux.org/packages/com.qq.im.deepin/)<sup>aur</sup>：
+1. 安装 [`deepin-wine-qq`](https://aur.archlinux.org/packages/deepin-wine-qq/)<sup>aur</sup>：
 
    ```sh
-   yay -S com.qq.im.deepin
+   yay -S deepin-wine-qq
    ```
 
    ![qq-1](../static/apps/communication/qq-1.png)
