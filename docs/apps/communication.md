@@ -236,9 +236,9 @@ yay -S aur/skypeforlinux-preview-bin
 
 ### Discord
 
-Discord 是一款专为社区设计的免费网络实时通话软件与数字发行平台，主要针对游戏玩家、教育人士及商业人士，用户之间可以在其中的聊天频道通过信息、图片、视频和音频进行互动。
+[Discord](https://discord.com/) 是一款专为社区设计的免费网络实时通话软件与数字发行平台，主要针对游戏玩家、教育人士及商业人士，用户之间可以在其中的聊天频道通过信息、图片、视频和音频进行互动。
 
-安装 [Discord](https://www.skype.com/zh-Hans/)：
+安装 [Discord](https://archlinux.org/packages/community/x86_64/discord/)：
 
 ```sh
 sudo pacman -S discord

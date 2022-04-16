@@ -32,9 +32,9 @@ sidebarDepth: 2
 
 ### VLC
 
-VLC 是一款自由开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。
+[VLC](https://www.videolan.org/vlc/) 是一款自由开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。
 
-安装 [`VLC`](https://www.videolan.org/vlc/)<sup>extra / cn / aur</sup>：
+安装 [`VLC`](https://archlinux.org/packages/extra/x86_64/vlc/)<sup>extra / cn / aur</sup>：
 
 :::: code-group
 ::: code-group-item extra
@@ -71,9 +71,9 @@ yay -S aur/vlc-git
 
 ### mpv
 
-mpv 是一个自由免费的媒体播放器。它支持多种媒体文件格式、音频和视频编解码器以及字幕类型。相比 VLC 更加简洁。
+[mpv](https://mpv.io/) 是一个自由免费的媒体播放器。它支持多种媒体文件格式、音频和视频编解码器以及字幕类型。相比 VLC 更加简洁。
 
-安装 [`mpv`](https://mpv.io/)<sup>community / cn / aur</sup>：
+安装 [`mpv`](https://archlinux.org/packages/community/x86_64/mpv/)<sup>community / cn / aur</sup>：
 
 :::: code-group
 ::: code-group-item community
@@ -115,9 +115,9 @@ sudo pacman -S dragon
 
 ### SMplayer
 
-SMPlayer 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，内置解码器，可以播放几乎所有格式的视频和音频文件。无需再安装任何外部解码器。只要安装了 SMPlayer，就能够播放所有的格式，不用再费事查找安装解码包。
+[SMPlayer](https://www.smplayer.info/) 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，内置解码器，可以播放几乎所有格式的视频和音频文件。无需再安装任何外部解码器。只要安装了 SMPlayer，就能够播放所有的格式，不用再费事查找安装解码包。
 
-1. 安装 [`SMplayer`](https://www.smplayer.info/)<sup>community / cn / aur</sup>：
+1. 安装 [`SMplayer`](https://archlinux.org/packages/community/x86_64/smplayer/)<sup>community / cn / aur</sup>：
 
    :::: code-group
    ::: code-group-item community
@@ -182,11 +182,11 @@ yay -S zy-player-bin
 
 ### DeaDBeeF
 
-DeaDBeeF 是一个自由开源（[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)）模块化的**无损**音频播放器，用于 GNU/Linux、\*BSD、OpenSolaris、macOS 和其它类 UNIX 系统。
+[DeaDBeeF](https://deadbeef.sourceforge.io/) 是一个自由开源（[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)）模块化的**无损**音频播放器，用于 GNU/Linux、\*BSD、OpenSolaris、macOS 和其它类 UNIX 系统。
 
 DeaDBeeF 可以播放各种音频格式，在它们之间进行转换，以几乎任何想要的方式自定义 UI，并使用许多额外的插件来扩展它。
 
-安装 [`deadbeef`](https://deadbeef.sourceforge.io/)<sup>cn / aur</sup>：
+安装 [`deadbeef`](https://aur.archlinux.org/packages/deadbeef)<sup>cn / aur</sup>：
 
 :::: code-group
 ::: code-group-item cn

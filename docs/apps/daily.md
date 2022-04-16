@@ -28,7 +28,7 @@
 
 ::: tip ℹ️ 提示
 
-在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+在步骤 [6. 安装基础功能包](../rookie/desktop-env-and-app.md#_6-安装基础功能包) 中若已安装，则无需重复安装。
 
 :::
 
@@ -52,7 +52,7 @@ sudo pacman -S firefox-developer-edition
 
 ::: tip ℹ️ 提示
 
-在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+在步骤 [6. 安装基础功能包](../rookie/desktop-env-and-app.md#_6-安装基础功能包) 中若已安装，则无需重复安装。
 
 :::
 
@@ -158,7 +158,7 @@ yay -S tor-browser
 
 Microsoft Edge（微软前沿浏览器）是一个由微软研发的浏览器，于 2015 年 1 月 21 日公布，2015 年 3 月 30 日公开发布第一个预览版。
 
-安装 [Microsoft Edge](https://archlinux.org/packages/extra/x86_64/falkon/)<sup>EULA / aur</sup>：
+安装 [Microsoft Edge](https://aur.archlinux.org/packages/microsoft-edge-stable-bin)<sup>EULA / aur</sup>：
 
 :::: code-group
 ::: code-group-item aur（beta）
@@ -409,7 +409,7 @@ yay -S spectacle-git
 
 MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 日在新西兰上线，该服务供应商广泛宣传其隐私性，所有文件在上传之前进行本地加密，提供 20 GB 的免费存储空间，付费账户最高存储空间可达 16 TB。
 
-1. 安装 [MEGA](https://archlinux.org/packages/community/x86_64/calibre/)<sup>EULA / aur</sup>：
+1. 安装 [MEGA](https://aur.archlinux.org/packages/megasync)<sup>EULA / aur</sup>：
 
    :::: code-group
    ::: code-group-item cn
@@ -482,7 +482,7 @@ yay -S baidunetdisk-bin
 
 ::: tip ℹ️ 提示
 
-在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+在步骤 [6. 安装基础功能包](../rookie/desktop-env-and-app.md#_6-安装基础功能包) 中若已安装，则无需重复安装。
 
 :::
 

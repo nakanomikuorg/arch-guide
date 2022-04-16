@@ -51,7 +51,7 @@ sidebarDepth: 2
 
 ::: tip ℹ️ 提示
 
-在步骤 [7. 安装基础功能包](../rookie/desktop-env-and-app.md#_7-安装基础功能包) 中若已安装，则无需重复安装。
+在步骤 [6. 安装基础功能包](../rookie/desktop-env-and-app.md#_6-安装基础功能包) 中若已安装，则无需重复安装。
 
 :::
 
