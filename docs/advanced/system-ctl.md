@@ -483,6 +483,14 @@ sudo timeshift --restore --snapshot-device /dev/sdbx
 
 后续步骤同 [若无法进入桌面环境](#若无法进入桌面环境)。
 
+#### 无法挂载/home目录
+Timeshift恢复Btrfs快照时，可能出现由于子卷UUID变更导致无法挂载/home目录而无法进入系统。
+此时需要手动在fstab配置中，更新UUID或移除subvolid指定改由名称指定子卷进行挂载。
+可通过命令行查看更新的UUID：
+```bash
+sudo btrfs sub list -u /mountpoint
+```
+
 ### rsync 命令
 
 有一点 Linux 经验的同学应该知道 `scp` 这个命令。它常被用来在服务器间传输文件。
