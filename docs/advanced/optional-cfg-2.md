@@ -276,7 +276,7 @@ sudo vim /etc/default/grub
 resume=UUID=9a940a0a-fa72-4973-9ccc-3eb93ad73b37 resume_offset=6418432
 ```
 
-4. 接下来参考步骤 [共同后续步骤](./optional-cfg.md#共同后续步骤) 完成配置。
+4. 接下来参考步骤 [共同后续步骤](./optional-cfg-2.md#共同后续步骤) 完成配置。
 
 ### 共同后续步骤
 
