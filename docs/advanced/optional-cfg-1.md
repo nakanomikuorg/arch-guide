@@ -389,7 +389,7 @@ source /usr/share/autojump/autojump.zsh
 - 将在 `~/.bash_profile` 所做的配置复制到 `~/.zsh_profile`
 - 将在 `~/.bashrc` 所做的配置复制到 `~/.zshrc`
 
-如在步骤 [1. 配置 root 账户的默认编辑器](./desktop-env-and-app.md#_1-配置-root-账户的默认编辑器) 和 [8. 配置非 root 账户的默认编辑器](./desktop-env-and-app.md#_8-配置非-root-账户的默认编辑器) 所做的配置。
+如在步骤 [1. 配置 root 账户的默认编辑器](/rookie/desktop-env-and-app.md#_1-配置-root-账户的默认编辑器) 和 [8. 配置非 root 账户的默认编辑器](/rookie/desktop-env-and-app.md#_8-配置非-root-账户的默认编辑器) 所做的配置。
 
 :::
 
