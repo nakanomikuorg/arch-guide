@@ -464,7 +464,7 @@ initrd=@\boot\amd-ucode.img initrd=@\boot\initramfs-%v.img # AMD
 
 ::: tip ℹ️ 提示
 
-若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的微码位置。
+若您不是按照本指南章节 [archlinux 基础安装](/rookie/basic-install.md) 安装的 archlinux，请确认您的微码位置。
 
 此外，参数 `initrd` 中使用反斜杠（`\`）而不是斜杠（`/`）作为路径分隔符。
 
