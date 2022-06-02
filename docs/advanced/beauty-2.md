@@ -227,11 +227,11 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 
 :::
 
-### 2-1. 设置窗口装饰
+### 5-1. 设置窗口装饰
 
 在 _系统设置_ > _外观_ > _窗口装饰_ 中，获取新窗口装饰，搜索 layan，并应用即可。
 
-### 2-2. 配置 Kvantum Manager
+### 5-2. 配置 Kvantum Manager
 
 主题配合 Kvantum Manager 可以达到更好的效果。
 
@@ -247,7 +247,7 @@ sudo pacman -S kvantum-qt5
 
 ## 7. 引导界面美化
 
-### 4-1. 设置 GRUB 主题
+### 7-1. 设置 GRUB 主题
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
@@ -274,4 +274,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 更新 GRUB 即可。
 
-### 4-2. 设置 rEFind 主题
+### 7-2. 设置 rEFind 主题
