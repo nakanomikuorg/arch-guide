@@ -72,8 +72,8 @@ sudo pacman -S linux-hardened linux-hardened-headers
 
 本指南涉及的应用如下：
 
-- [`nvidia-dkms`](./graphic-driver.md#nvidia-独立显卡)
-- [`bbswitch-dkms`](./graphic-driver.md#电源管理)
+- [`nvidia-dkms`](/rookie/graphic-driver.md#nvidia-独立显卡)
+- [`bbswitch-dkms`](/rookie/graphic-driver.md#电源管理)
 
 :::
 
@@ -115,7 +115,7 @@ sudo vim /boot/efi/EFI/refind/refind.conf
 
 ::: tip ℹ️ 提示
 
-若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
+若您不是按照本指南章节 [archlinux 基础安装](/rookie/basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
 
 :::
 
