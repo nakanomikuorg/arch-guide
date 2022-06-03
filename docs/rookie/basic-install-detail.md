@@ -253,7 +253,7 @@ chroot /mnt bash
 其它琐碎的问题不在一一展开叙述，这里通过列表统一说明：
 
 1. EFI 分区（又称 esp 分区）不一定要在 `/boot/efi` 目录下；也可以是 `/boot` 或者 `/efi` 等等（若为 `/boot` 则 `/boot` 目录中的文件会和 EFI 分区的文件混杂在一起）
-2. 若为**联想小新 Pro14 / YOGA 14s 2021** 机型，发现安装前后键盘都无法正常工作。此时安装时请使用外接键盘。为了解决该问题，在 [17. 安装引导程序](/basic-install.html#_17-安装引导程序) 步骤中编辑 `/etc/default/grub` 文件时添加额外的 GRUB 参数 —— 在 `GRUB_CMDLINE_LINUX_DEFAULT` 这一行中添加参数 `i8042.dumbkbd`
+2. 若为**联想小新 Pro14 / YOGA 14s 2021** 机型，发现安装前后键盘都无法正常工作。此时安装时请使用外接键盘。为了解决该问题，在 [17. 安装引导程序](./basic-install.html#_17-安装引导程序) 步骤中编辑 `/etc/default/grub` 文件时添加额外的 GRUB 参数 —— 在 `GRUB_CMDLINE_LINUX_DEFAULT` 这一行中添加参数 `i8042.dumbkbd`
 
 修改后复查：
 

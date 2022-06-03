@@ -109,7 +109,7 @@ sidebarDepth: 2
 
         ![icon-5](../static/advanced/beauty/icon-5.png)
 
-## 1. 更改 Fcitx5 输入法皮肤
+## 2. 更改 Fcitx5 输入法皮肤
 
 默认的输入法主题并不好看,这里有两个漂亮的主题：
 
@@ -143,7 +143,7 @@ cd fcitx5-gruvbox
 cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 ```
 
-## 4. 设置 SDDM 主题
+## 3. 设置 SDDM 主题
 
 默认的登录界面不太好看，我们将它替换掉。
 
@@ -195,7 +195,7 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 
 :::
 
-## 5. 设置欢迎屏幕主题
+## 4. 设置欢迎屏幕主题
 
 登录界面后的欢迎屏幕也可以进行美化。
 
@@ -215,7 +215,7 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 
    ![splashscreen-4](../static/advanced/beauty/splashscreen-4.png)
 
-## 2. 更改全局主题
+## 5. 更改全局主题
 
 ::: tip ℹ️ 提示
 
@@ -227,11 +227,11 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 
 :::
 
-### 2-1. 设置窗口装饰
+### 5-1. 设置窗口装饰
 
 在 _系统设置_ > _外观_ > _窗口装饰_ 中，获取新窗口装饰，搜索 layan，并应用即可。
 
-### 2-2. 配置 Kvantum Manager
+### 5-2. 配置 Kvantum Manager
 
 主题配合 Kvantum Manager 可以达到更好的效果。
 
@@ -243,11 +243,11 @@ sudo pacman -S kvantum-qt5
 
 > 如果透明的效果没有显示，确保 KDE 的全局缩放比例为整数倍。或者尝试切换混成器中 openGL 的设置。
 
-## 3. 更改字体
+## 6. 更改字体
 
-## 4. 引导界面美化
+## 7. 引导界面美化
 
-### 4-1. 设置 GRUB 主题
+### 7-1. 设置 GRUB 主题
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
@@ -274,4 +274,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 更新 GRUB 即可。
 
-### 4-2. 设置 rEFind 主题
+### 7-2. 设置 rEFind 主题

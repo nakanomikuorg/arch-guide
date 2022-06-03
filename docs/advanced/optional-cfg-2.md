@@ -72,8 +72,8 @@ sudo pacman -S linux-hardened linux-hardened-headers
 
 本指南涉及的应用如下：
 
-- [`nvidia-dkms`](./graphic-driver.md#nvidia-独立显卡)
-- [`bbswitch-dkms`](./graphic-driver.md#电源管理)
+- [`nvidia-dkms`](/rookie/graphic-driver.md#nvidia-独立显卡)
+- [`bbswitch-dkms`](/rookie/graphic-driver.md#电源管理)
 
 :::
 
@@ -115,7 +115,7 @@ sudo vim /boot/efi/EFI/refind/refind.conf
 
 ::: tip ℹ️ 提示
 
-若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
+若您不是按照本指南章节 [archlinux 基础安装](/rookie/basic-install.md) 安装的 archlinux，请确认您的 EFI 分区（ESP）位置。
 
 :::
 
@@ -242,9 +242,9 @@ resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a
 
 > #### 🍧 碎碎念
 >
-> 这个内核启动参数在步骤 [17. 安装引导程序](./basic-install.md#_17-安装引导程序) 中也修改过，现在应该稍微熟悉一点了吧？
+> 这个内核启动参数在步骤 [17. 安装引导程序](/rookie/basic-install.md#_17-安装引导程序) 中也修改过，现在应该稍微熟悉一点了吧？
 
-3. 接下来参考步骤 [共同后续步骤](./optional-cfg.md#共同后续步骤) 完成配置。
+3. 接下来参考步骤 [共同后续步骤](./optional-cfg-2.md#共同后续步骤) 完成配置。
 
 ### 休眠到 Swap 文件（Btrfs）
 
@@ -276,7 +276,7 @@ sudo vim /etc/default/grub
 resume=UUID=9a940a0a-fa72-4973-9ccc-3eb93ad73b37 resume_offset=6418432
 ```
 
-4. 接下来参考步骤 [共同后续步骤](./optional-cfg.md#共同后续步骤) 完成配置。
+4. 接下来参考步骤 [共同后续步骤](./optional-cfg-2.md#共同后续步骤) 完成配置。
 
 ### 共同后续步骤
 
@@ -415,7 +415,7 @@ also_scan_dirs boot,ESP2:EFI/linux/kernels,@/boot
 
 5. 保存并退出 `vim`
 
-6. 若安装 archlinux 时按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](./basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用了 Btrfs 文件系统，为了让 rEFind 支持 Btrfs 子卷，需要使用以下命令手动为 rEFind 安装驱动：
+6. 若安装 archlinux 时按照步骤 [7. 分区和格式化（使用 Btrfs 文件系统）](/rookie/basic-install.md#_7-分区和格式化-使用-btrfs-文件系统) 使用了 Btrfs 文件系统，为了让 rEFind 支持 Btrfs 子卷，需要使用以下命令手动为 rEFind 安装驱动：
 
 ```bash
 sudo cp /usr/share/refind/drivers_x64/btrfs_x64.efi /boot/efi/EFI/refind/drivers_x64/btrfs_x64.efi
@@ -464,7 +464,7 @@ initrd=@\boot\amd-ucode.img initrd=@\boot\initramfs-%v.img # AMD
 
 ::: tip ℹ️ 提示
 
-若您不是按照本指南章节 [archlinux 基础安装](./basic-install.md) 安装的 archlinux，请确认您的微码位置。
+若您不是按照本指南章节 [archlinux 基础安装](/rookie/basic-install.md) 安装的 archlinux，请确认您的微码位置。
 
 此外，参数 `initrd` 中使用反斜杠（`\`）而不是斜杠（`/`）作为路径分隔符。
 

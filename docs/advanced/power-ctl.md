@@ -62,7 +62,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
    ::: tip ℹ️ 提示
 
-   另外请参阅 [Smartmontools](advanced/system-ctl.html#smartmontools) 安装 Smartmontools 以显示 `tlp-stat` 中的 S.M.A.R.T. 数据。
+   另外请参阅 [Smartmontools](/advanced/system-ctl.html#smartmontools) 安装 Smartmontools 以显示 `tlp-stat` 中的 S.M.A.R.T. 数据。
 
    :::
 

@@ -66,7 +66,7 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 ### AMD 核芯显卡
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Xorg_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#AMD>)。
+如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/ATI>)。
 
 #### 选择驱动
 
