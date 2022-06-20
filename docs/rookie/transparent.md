@@ -340,6 +340,27 @@ sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/xray
 :::
 ::::
 
+##  Clash
+
+clash 本身是一个网络连接的代理内核，通过预先定义的**规则**，对网络连接进行转发。clash 内核规定了配置文件 `config.yaml` 的格式。支持VMess、Shadowsocks、Trojan、Snell 协议。
+
+```shell
+# 配置文件
+vim ~/.config/clash/config.yaml
+```
+
+
+
+### Clash for Windows
+
+这是一个比较推荐的客户端，支持Windows/macOS/Linux ，基于Clash 和 Electron 的一个GUI 客户端。未开源
+
+```
+yay -S clash-for-windows-bin
+```
+
+
+
 ## 其它代理方法（非透明代理）
 
 > 虽然 cgproxy 很好，但有的时候就是会有诡异的 bug。本指南为了内容的全面性，介绍其它的代理方法。
