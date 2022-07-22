@@ -483,12 +483,27 @@ sudo timeshift --restore --snapshot-device /dev/sdbx
 
 后续步骤同 [若无法进入桌面环境](#若无法进入桌面环境)。
 
-#### 无法挂载/home目录
-Timeshift恢复Btrfs快照时，可能出现由于子卷UUID变更导致无法挂载/home目录而无法进入系统。
-此时需要手动在fstab配置中，更新UUID或移除subvolid指定改由名称指定子卷进行挂载。
-可通过命令行查看更新的UUID：
+#### 恢复后无法挂载目录
+Timeshift恢复Btrfs快照时，可能出现由于子卷ID变更导致无法挂载目录而无法进入系统。
+
+此时可以通过手动修改fstab配置，移除`subvolid`参数，改为通过名称指定子卷。
+
+使用 `vim` 编辑器修改 `/etc/fstab` 文件：
+
 ```bash
-sudo btrfs sub list -u /mountpoint
+vim /etc/fstab
+```
+
+进行如下修改：
+
+- 删除 `/` 和 `/home` 条目中最后的 `subvolid=xxx` 参数
+
+保存后重启即可正常使用。以后恢复快照时无需再次进行此操作。
+
+也可以手动更正`subvolid`，通过以下命令查看正确的ID：
+
+```bash
+sudo btrfs sub list -u /
 ```
 
 ### rsync 命令
