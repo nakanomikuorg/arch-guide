@@ -167,6 +167,16 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
   :::
   ::::
 
+#### 第三方
+
+以下为第三方版本QQ
+
+- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron开发的第三方~~QQ~~ ([~~github~~](https://github.com/Icalingua/Icalingua))(作者已删库)
+  ```sh
+  yay -S icalingua
+  ```
+   
+
 ### 微信
 
 推荐使用基于 `deepin-wine5` 的微信。
