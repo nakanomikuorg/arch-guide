@@ -176,7 +176,7 @@ vim /etc/pacman.d/mirrorlist
 
 ::: tip ℹ️ 提示
 
-如果不会使用 `vim` 编辑器，请参阅 [这里]()。
+如果不会使用 `vim` 编辑器，请参阅 [这里](../advanced/system-ctl.md#终端编辑器-vim-的使用)。
 
 `vim` 编辑器在安装和配置系统的过程中还需要使用多次。
 
