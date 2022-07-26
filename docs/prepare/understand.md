@@ -77,7 +77,7 @@ archlinux 的仓库中包含大量的软件包和编译脚本。用户可以按�
 
 archlinux 鼓励每一个用户 [参与](<https://wiki.archlinux.org/title/Getting_involved_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 和贡献，报告和帮助修复 [bugs](https://bugs.archlinux.org/)，提供软件包补丁和参加核心 [项目](https://git.archlinux.org/) —— archlinux 开发者都是志愿者，通过持续的贡献成为团队的一员。
 
-Archers 可以自行贡献软件包到 [Arch 用户仓库](<https://wiki.archlinux.org/title/Arch_User_Repository_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)（`AUR`）；提升 [archWiki 文档质量](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)；在 [论坛](https://bbs.archlinux.org/)、[邮件列表](https://lists.archlinux.org/listinfo/)、[IRC](<https://wiki.archlinux.org/title/Arch_IRC_channels_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 中给其他用户提供技术支持. archlinux 是全球很多用户的选择，已经有很多 [国际社区](<https://wiki.archlinux.org/title/International_communities_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 提供帮助和文档翻译。
+Archers 可以自行贡献软件包到 [Arch 用户仓库](<https://wiki.archlinux.org/title/Arch_User_Repository_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)（`AUR`）；提升 [archWiki 文档质量](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)；在 [论坛](https://bbs.archlinux.org/)、[邮件列表](https://lists.archlinux.org/listinfo/) 或者 [IRC](<https://wiki.archlinux.org/title/Arch_IRC_channels_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 中给其他用户提供技术支持。archlinux 是全球很多用户的选择，已经有很多 [国际社区](<https://wiki.archlinux.org/title/International_communities_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 提供帮助和文档翻译。
 
 同样的，若希望为本指南做出贡献，以帮助更多的人，请参阅 [贡献指南](../postscript/contribute.md)。
 
