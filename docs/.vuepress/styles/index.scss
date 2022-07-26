@@ -162,6 +162,8 @@ html.dark .DocSearch {
 html {
   body {
     &::-webkit-scrollbar,
+    table::-webkit-scrollbar,
+    .MathJax::-webkit-scrollbar,
     div[class*="language-"].line-numbers-mode pre::-webkit-scrollbar {
       display: block;
 
@@ -170,11 +172,17 @@ html {
     }
 
     &::-webkit-scrollbar-thumb,
+    table::-webkit-scrollbar-thumb,
+    .MathJax::-webkit-scrollbar-thumb,
     div[class*="language-"].line-numbers-mode pre::-webkit-scrollbar-thumb {
       border: 3px solid transparent;
       border-radius: 5px;
       background-color: #c1c1c1;
       background-clip: padding-box;
+    }
+
+    .MathJax {
+      overflow: scroll;
     }
 
     .home .hero {
