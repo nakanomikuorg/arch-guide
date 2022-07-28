@@ -188,13 +188,11 @@ pacman -Syyu
 
 ![syyu](../static/rookie/desktop-env-and-app_syyu.png)
 
-
-
 ## 4. 安装 KDE Plasma 桌面环境
 
 ::: tip ℹ️ 提示
 
-新手推荐安装 KDE Plasma 桌面环境，此外有 GNOME、 Xfce等[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)和一众[窗口管理器](https://wiki.archlinux.org/title/Window_manager)可供选择。本教程仅列出 KDE 安装使用教程。
+新手推荐安装 KDE Plasma 桌面环境，此外有 GNOME、 Xfce 等[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)和一众[窗口管理器](https://wiki.archlinux.org/title/Window_manager)可供选择。本教程仅列出 KDE 安装使用教程。
 
 :::
 
@@ -221,6 +219,7 @@ systemctl enable sddm
 ```bash
 systemctl start sddm  # 直接启动显示管理器，与以下reboot命令二选一即可
 ```
+
 ```bash
 reboot
 ```
@@ -236,7 +235,6 @@ reboot
 若虚拟机下在 sddm 输入密码登录后无法进入桌面，只有黑屏和光标，请确认在步骤 [3. 配置 VirtualBox](./pre-virt.md#_3-配置-virtualbox) 中**没有**勾选 `启用3D加速`。
 
 :::
-
 
 ![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
 
@@ -438,13 +436,7 @@ yay -S aur/timeshift
 
 :::
 
-2. 通过以下命令安装 cornie，这是一个用于执行计划任务的程序，Timeshift 的快照计划依赖它完成
-
-```bash
-pacman -S cornie
-```
-
-3. 打开 Timeshift，第一次启动会自动启动设置向导
+2. 打开 Timeshift，第一次启动会自动启动设置向导
 
 ### 12-1. 若使用 Btrfs 文件系统
 
