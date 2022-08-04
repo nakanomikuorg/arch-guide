@@ -238,6 +238,12 @@ reboot
 
 ![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
 
+::: tip ℹ️ 提示
+
+值得注意的是此时操作系统尚未安装相应的显卡驱动。如在进入桌面环境时遭遇闪退花屏等意外情况，建议尝试安装相应的显卡驱动。详情请参阅[显卡驱动](./graphic-driver.md)。
+
+:::
+
 ## 6. 安装基础功能包
 
 1. 进入桌面后，在开始菜单搜索并打开 Konsole。它是 KDE 桌面环境默认的终端模拟器
