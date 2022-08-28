@@ -314,7 +314,7 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 ::: code-group-item zsh
 
 ```sh
-echo 'alias scrcpy="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
+echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
 ```
 
 :::
