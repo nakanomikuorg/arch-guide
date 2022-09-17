@@ -72,7 +72,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
    :::
 
-2. 为了防止 Btrfs 文件系统损坏，需要修改 `/etc/etc/tlp.conf` 配置文件：
+2. 为了防止 Btrfs 文件系统损坏，需要修改 `/etc/tlp.conf` 配置文件：
 
    ```bash
    sudo vim /etc/tlp.conf
