@@ -167,6 +167,22 @@ yay -Yc # 清理不需要的依赖
 >
 > - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
 
+### downgrade
+
+由于 archlinux 的更新策略很激进, 导致某些软件过新, 而一些依赖并没有支持,比如著名的[virtualbox 在 linux5.18 内核下的崩溃](https://bugs.archlinux.org/task/74900) , 所以有时候我们不得不安装过时的软件或者降级已安装的软件。
+
+在 archlinux 上安装旧版软件都通过 downgrade 来进行管理。
+
+为了使用 downgrade 额外的命令需要先安装 [`downgrade`](https://aur.archlinux.org/packages/downgrade)<sup>aur</sup>。
+
+```bash
+yay -S downgrade
+```
+
+这时我们就可以用 downgrade 降级软件了
+
+![downgrade](../static/advanced/system-ctl/downgrade.jpg)
+
 ## 终端编辑器 vim 的使用
 
 我们需要掌握一个能在终端中进行文本编辑的软件，这里介绍 vim。
@@ -484,9 +500,10 @@ sudo timeshift --restore --snapshot-device /dev/sdbx
 后续步骤同 [若无法进入桌面环境](#若无法进入桌面环境)。
 
 #### 恢复后无法挂载目录
-Timeshift恢复Btrfs快照时，可能出现由于子卷ID变更导致无法挂载目录而无法进入系统。
 
-此时可以通过手动修改fstab配置，移除`subvolid`参数，改为通过名称指定子卷。
+Timeshift 恢复 Btrfs 快照时，可能出现由于子卷 ID 变更导致无法挂载目录而无法进入系统。
+
+此时可以通过手动修改 fstab 配置，移除`subvolid`参数，改为通过名称指定子卷。
 
 使用 `vim` 编辑器修改 `/etc/fstab` 文件：
 
@@ -500,7 +517,7 @@ vim /etc/fstab
 
 保存后重启即可正常使用。以后恢复快照时无需再次进行此操作。
 
-也可以手动更正`subvolid`，通过以下命令查看正确的ID：
+也可以手动更正`subvolid`，通过以下命令查看正确的 ID：
 
 ```bash
 sudo btrfs sub list -u /
