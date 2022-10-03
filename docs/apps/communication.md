@@ -169,13 +169,16 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 
 #### 第三方
 
-以下为第三方版本QQ
+以下为第三方版本 QQ
 
-- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron开发的第三方~~QQ~~ ([~~github~~](https://github.com/Icalingua/Icalingua))(作者已删库)
+- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron 开发的第三方~~QQ~~ ([~~github~~](https://github.com/Icalingua/Icalingua))(作者已删库)
   ```sh
   yay -S icalingua
   ```
-   
+- Icalingua++ [`Icalingua++`](https://aur.archlinux.org/packages/icalingua++/)<sup>aur</sup> - electron 开发的第三方 QQ ([github](https://github.com/Icalingua/Icalingua++))(为 icalingua 升级版)
+  ```sh
+  yay -S icalingua++
+  ```
 
 ### 微信
 
@@ -345,9 +348,9 @@ sudo pacman -S kmail
 
 ### Mailspring
 
-MailSpring是一款界面简约、操作便捷、功能出众的邮件管理工具。MailSpring官方版可以帮助用户管理多个邮箱，提高工作效率，同时还能够对重要事项进行提醒，并可以编辑自己的签名，给大家带来了不一样的感受和体验。其客户端在github上开源，但使用时需要注册mailspring账户。
+MailSpring 是一款界面简约、操作便捷、功能出众的邮件管理工具。MailSpring 官方版可以帮助用户管理多个邮箱，提高工作效率，同时还能够对重要事项进行提醒，并可以编辑自己的签名，给大家带来了不一样的感受和体验。其客户端在 github 上开源，但使用时需要注册 mailspring 账户。
 
-KDE用户使用mailspring前需要安装`gnome-keyring`
+KDE 用户使用 mailspring 前需要安装`gnome-keyring`
 
 安装 [mailspring](https://github.com/Foundry376/Mailspring)<sup>EULA / cn / aur</sup>：
 
