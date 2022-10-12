@@ -336,6 +336,9 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 1. 安装[GameMode](https://archlinux.org/packages/community/x86_64/gamemode/)
 
    ```sh
+   # 安装配置文件
+   sudo pacman -S meson systemd git dbus libinih
+   # 安装gamemode
    sudo pacman -S gamemode lib32-gamemode
    ```
 
