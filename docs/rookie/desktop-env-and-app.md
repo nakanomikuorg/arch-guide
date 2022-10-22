@@ -351,20 +351,20 @@ sudo pacman -S fcitx5-pinyin-moegirl # 萌娘百科词库。二刺猿必备（ar
 sudo pacman -S fcitx5-material-color # 输入法主题
 ```
 
-2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `~/.pam_environment`：
+2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `/etc/environment`：
 
 ```bash
-vim ~/.pam_environment
+sudo vim /etc/environment
 ```
 
 3. 在文件中加入以下内容并保存退出：
 
-```.pam_environment
-INPUT_METHOD DEFAULT=fcitx5
-GTK_IM_MODULE DEFAULT=fcitx5
-QT_IM_MODULE DEFAULT=fcitx5
-XMODIFIERS DEFAULT=\@im=fcitx5
-SDL_IM_MODULE DEFAULT=fcitx
+```environment
+INPUT_METHOD=fcitx5
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=\@im=fcitx5
+SDL_IM_MODULE=fcitx
 ```
 
 ![fcitx5_step-1](../static/rookie/desktop-env-and-app_fcitx5-1.png)
@@ -373,7 +373,9 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 ::: tip ℹ️ 提示
 
-检查一下是否有拼写错误。
+检查一下是否有拼写错误，如果输入法无法正常切换，可尝试执行 `fcitx5-diagnose` 命令来诊断问题的原因。
+
+由于存在[安全性问题](<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4708>)，自 2022 年 10 月 21 日起，[Arch Linux 默认不再读取](<https://github.com/archlinux/svntogit-packages/commit/891610cfcc202916cf5eb46d6df56e885062f78e>) `~/.pam_environment` 文件中的设置。
 
 :::
 
