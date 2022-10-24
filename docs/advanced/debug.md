@@ -21,10 +21,10 @@ title: 常见问题
 
 ### 系统没有声音
 
-可以尝试安装pipwire-pulse
+可以尝试安装pipewire-pulse pipewire-alsa pipewire-jack
 
 ```bash
-sudo pacman -S pipewire-pulse
+sudo pacman -S pipewire-pulse pipewire-alsa pipewire-jack
 ```
 
 或者尝试安装alsa-utils pulseaudio pavucontrol
