@@ -33,6 +33,8 @@ sudo pacman -S pipewire-pulse pipewire-alsa pipewire-jack
 sudo pacman -S alsa-utils pulseaudio pavucontrol
 ```
 
+重启系统即可
+
 ### 键盘没有反应
 
 若为联想小新 Pro14 / YOGA 14s 2021 或相似机型，可能发现笔记本内建键盘没有反应。
