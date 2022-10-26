@@ -360,7 +360,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    在 steam 的启动选项设置`gamemoderun %command%`,即可以 gamemode 启动游戏，gamemode 会自动进行防熄屏设置，更多设置（如显卡自动超频）请看官方文档！
 
-   如果是配合 i+n 卡使用，可以在`~/.pam_environment`中设置`GAMEMODERUNEXEC=prime-run`，在使用 gamemode 启动游戏时会自动调用独显运行。
+   如果是配合 i+n 卡使用，可以在`/etc/environment`中设置`GAMEMODERUNEXEC=prime-run`，在使用 gamemode 启动游戏时会自动调用独显运行。
 
    :::
 
