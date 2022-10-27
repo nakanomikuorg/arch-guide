@@ -283,7 +283,8 @@ sudo pacman -S teamspeak3
 
 3. 以上汉化 二选一
 
-:::
+4. [新手指南](https://www.wevg.org/archives/how-to-use-teamspeak3/)  
+   :::
 
 ## 🤝🏻 团队合作
 
