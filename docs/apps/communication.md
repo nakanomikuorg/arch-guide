@@ -281,6 +281,8 @@ sudo pacman -S teamspeak3
 
 2. 直接 `/opt/teamspeak3/package_inst Chinese_Translation_zh-CN.ts3_translation`
 
+3. 以上汉化 二选一
+
 :::
 
 ## 🤝🏻 团队合作
