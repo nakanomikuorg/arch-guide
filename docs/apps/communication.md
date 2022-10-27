@@ -264,6 +264,22 @@ sudo pacman -S discord
 类似 Telegram，Discord 同样存在诸多不正当内容（包括但不限于种族歧视、色情内容等）。
 
 请注意安全、保护好隐私、文明上网。
+:::
+
+### TeamSpeak 3
+
+一款代替 `YY语音` `Discord` 等游戏语音聊天软件，有占用资源低、连接快捷、自带 Opus 音频解码器、无广告、全平台、语音加密传输、可自建服务器、可随意调节的“语音感应激活”功能告别通讯底噪和键盘噪音。
+
+```sh
+sudo pacman -S teamspeak3
+```
+
+![teamspeak3](../static/apps/communication/teamspeak3.png)
+::: tip ℹ️ 提示
+
+1. [中文汉化](https://www.wevg.org/archives/fix-ts3-linux-plugin/) 没有目录就创建目录，脚本需要给执行权限
+
+2. 直接 `/opt/teamspeak3/package_inst Chinese_Translation_zh-CN.ts3_translation`
 
 :::
 
