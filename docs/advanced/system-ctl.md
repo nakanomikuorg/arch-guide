@@ -329,6 +329,22 @@ sudo pacman -Scc # 从缓存中删除所有文件，这是最激进的方法，�
 paccache -r # 删除已安装和未安装包的所有缓存版本，但最近 3 个版本除外
 ```
 
+还可以在 `/etc/pacman.d/hooks` 文件夹下创建 `clean_package_cache.hook` 文件来在使用 `pacman` 时自动执行 `paccache`。
+
+```bash
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Cleaning pacman cache...
+When = PostTransaction
+Exec = /usr/bin/paccache -rk 2
+```
+
 ### 清理 yay 缓存
 
 如果使用了 yay 来安装 AUR 中的软件包的话，可以选择清理 yay 的缓存目录：
