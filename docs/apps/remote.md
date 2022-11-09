@@ -21,3 +21,22 @@
 指南中带有 <sup>EULA</sup> 角标的软件代表是 [专有软件](https://www.gnu.org/proprietary/proprietary.html)。请自行斟酌是否使用。
 
 :::
+
+## RealVNC
+
+RealVNC 是一家提供远程访问软件的公司，成立于 2002 年。该软件由服务器(VNC 服务器，英语：VNC Server)和客户端(VNC 查看器，英语：VNC Viewer)组成，该软件通过 VNC 协议来远程控制另一台计算机的屏幕[1]。
+
+```sh
+sudo pacman -S realvnc-vnc-server
+```
+
+启动与开机设置
+
+```sh
+sudo systemctl start vncserver-x11-serviced
+sudo  systemctl enable vncserver-x11-serviced
+```
+
+::: tip ℹ️ 提示  
+以上设置就已经比较完美的运行了在 arch 下，然后在菜单栏点击 reavlvnc 图标进行初始化运行  
+:::
