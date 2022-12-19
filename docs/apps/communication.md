@@ -327,16 +327,12 @@ yay -S zoom
 
 ### 腾讯会议
 
-1. 安装 [`com.tencent.meeting.deepin`](https://aur.archlinux.org/packages/com.tencent.meeting.deepin/)<sup>EULA / aur</sup>：
+安装 [`wemeet-bin`](https://aur.archlinux.org/packages/wemeet-bin)<sup>EULA / aur</sup>：
 
    ```sh
-   yay -S com.tencent.meeting.deepin
+   yay -S wemeet-bin
    ```
-
-   ![meeting-1](../static/apps/communication/meeting-1.png)
-
-2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
-
+   
    ![meeting-2](../static/apps/communication/meeting-2.png)
 
 ## ✉️ 电子邮件
