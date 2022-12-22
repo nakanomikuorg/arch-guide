@@ -204,7 +204,7 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 
 ![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
 
-2. kde默认安装的是(xorg)[https://wiki.archlinuxcn.org/zh-hans/Xorg]，如果想使用wayland的话安装以下包：
+2. kde默认安装的是(xorg)[https://wiki.archlinuxcn.org/zh-hans/Xorg]，如果想使用(wayland)[https://wiki.archlinuxcn.org/wiki/Wayland]的话安装以下包：
 
 ```
 pacman -S  plasma-wayland-session xdg-desktop-portal
