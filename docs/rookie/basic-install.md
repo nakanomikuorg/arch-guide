@@ -550,7 +550,8 @@ free -h # -h 选项会使输出以人类可读的单位显示
 1. 通过如下命令使用 `pacstrap` 脚本安装基础包：
 
 ```bash
-pacstrap /mnt base base-devel linux linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
+# 如果使用btrfs文件系统，额外安装一个btrfs-progs包
 ```
 
 > 📑 命令参数说明：
