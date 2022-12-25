@@ -204,15 +204,14 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 
 ![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
 
-2. kde默认安装的是(xorg)[https://wiki.archlinuxcn.org/zh-hans/Xorg]，如果想使用(wayland)[https://wiki.archlinuxcn.org/wiki/Wayland]的话安装以下包：
+2. kde 默认安装的是[xorg](https://wiki.archlinuxcn.org/zh-hans/Xorg)，如果想使用[wayland](https://wiki.archlinuxcn.org/wiki/Wayland)的话安装以下包：
 
 ```
 pacman -S  plasma-wayland-session xdg-desktop-portal
 # N卡用户需要额外安装egl-wayland,xdg-desktop-portal包是为了如obs此类工具录制屏幕使用
 ```
 
-3. 安装完成后，可以在后续登录时选择使用xorg还是wayland
-
+3. 安装完成后，可以在后续登录时选择使用 xorg 还是 wayland
 
 ## 5. 配置并启动 greeter sddm
 
@@ -383,7 +382,7 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 检查一下是否有拼写错误，如果输入法无法正常切换，可尝试执行 `fcitx5-diagnose` 命令来诊断问题的原因。
 
-由于存在[安全性问题](<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4708>)，自 2022 年 10 月 21 日起，[Arch Linux 默认不再读取](<https://github.com/archlinux/svntogit-packages/commit/891610cfcc202916cf5eb46d6df56e885062f78e>) `~/.pam_environment` 文件中的设置。
+由于存在[安全性问题](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4708)，自 2022 年 10 月 21 日起，[Arch Linux 默认不再读取](https://github.com/archlinux/svntogit-packages/commit/891610cfcc202916cf5eb46d6df56e885062f78e) `~/.pam_environment` 文件中的设置。
 
 :::
 
