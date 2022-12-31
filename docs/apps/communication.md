@@ -128,9 +128,16 @@ Telegram 有两种加密模式：
 
 ### QQ
 
-QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，不建议安装。
+推荐安装官方最新的[`linuxqq`](https://aur.archlinux.org/packages/linuxqq-new)<sup>EULA / aur</sup>（基于 Electron 框架）
 
-推荐使用基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
+   ```sh
+   yay -S linuxqq-new
+   ```
+   ![qq-3](../static/apps/communication/qq-3.png)
+
+#### 其它版本
+
+基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
 
 1. 安装 [`deepin-wine-qq`](https://aur.archlinux.org/packages/deepin-wine-qq/)<sup>aur</sup>：
 
@@ -143,29 +150,6 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
 
    ![qq-2](../static/apps/communication/qq-2.png)
-
-#### 其它版本
-
-以下为其它的 QQ 版本，但体验一般：
-
-- [`linuxqq`](https://aur.archlinux.org/packages/linuxqq/)<sup>EULA / cn / aur</sup> —— 腾讯官方的原生 QQ，体验极差
-
-  :::: code-group
-  ::: code-group-item cn
-
-  ```sh
-  sudo pacman -S linuxqq
-  ```
-
-  :::
-  ::: code-group-item aur
-
-  ```sh
-  yay -S aur/linuxqq
-  ```
-
-  :::
-  ::::
 
 #### 第三方
 
