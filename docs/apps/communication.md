@@ -130,10 +130,13 @@ Telegram 有两种加密模式：
 
 推荐安装官方最新的[`linuxqq`](https://aur.archlinux.org/packages/linuxqq)<sup>EULA / aur</sup>（基于 Electron 框架）
 
-wrap版本[`linuxqq-nt-bwrap`](https://aur.archlinux.org/packages/linuxqq-nt-bwrap),限制了qq的目录访问
+   ```sh
+   yay -S linuxqq
+   ```
+wrap版本[`linuxqq-nt-bwrap`](https://aur.archlinux.org/packages/linuxqq-nt-bwrap)<sup>EULA / aur</sup>，该版本限制了qq的目录访问
 
    ```sh
-   yay -S linuxqq-new
+   yay -S linuxqq-nt-bwrap
    ```
    ![qq-3](../static/apps/communication/qq-3.png)
 
