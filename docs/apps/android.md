@@ -22,7 +22,7 @@
 >
 > - [archWiki 相关内容](<https://wiki.archlinux.org/title/Android_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-买可以刷机的手机最好买知名度大的品牌、有可能解锁 BootLoader 的手机以及较热门的机型，这样在刷机时可以方便的找到官方的 TWRP 和知名的 ROM 包（如 [魔趣](https://download.mokeedev.com/)、[LineageOS](https://lineageos.org/)、[crDroid](https://crdroid.net/)、 [Resurrection Remix](https://resurrectionremix.com/) 和 [PixelExperience](https://download.pixelexperience.org/devices)等）。
+买可以刷机的手机最好买知名度大的品牌、有可能解锁 BootLoader 的手机以及较热门的机型，这样在刷机时可以方便的找到官方的 TWRP 和知名的 ROM 包（如 [LineageOS](https://lineageos.org/)、[crDroid](https://crdroid.net/)、 [Resurrection Remix](https://resurrectionremix.com/) 和 [PixelExperience](https://download.pixelexperience.org/devices)等）。
 
 如果是较冷门的品牌，官方可能没有提供 ROM，只能在网上自行寻找个人改造过的 TWRP 和上述 ROM 包的非官方（unofficial）ROM。这种个人改造版本的安全性比较难说，而且还可能有更多的 🐛 Bug。也有可能翻遍全网，也找不到冷门机型能用（指好用的、非硬件提供商的官方 ROM）的 TWRP 和 ROM。
 
