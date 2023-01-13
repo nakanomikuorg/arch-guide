@@ -6,7 +6,7 @@
 
 对于前端来说，一般需要浏览器以及 IDE 即可，附加一些网络工具。
 
-关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/)  (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/)<sup>aur</sup> 的开源版本，此外有社区构建的 [VSCodium](https://aur.archlinux.org/packages/vscodium-bin/)<sup>aur</sup> 可供选择)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
+关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/)<sup>aur</sup> 的开源版本，此外有社区构建的 [VSCodium](https://aur.archlinux.org/packages/vscodium-bin/)<sup>aur</sup> 可供选择)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
 
 浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
 
@@ -27,7 +27,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 - [pgadmin4](https://www.archlinux.org/packages/community/x86_64/pgadmin4/)
 - [dbeaver](https://www.archlinux.org/packages/community/x86_64/dbeaver/)
 - [robo3t](https://aur.archlinux.org/packages/robo3t-bin/)<sup>aur</sup>
-- [redis-desktop-manager](https://aur.archlinux.org/packages/redis-desktop-manager/)<sup>aur</sup>
+- [RESP.app](https://aur.archlinux.org/packages/resp-app/)<sup>aur</sup> （原 redis-desktop-manager）
 - [rdm-bin](https://aur.archlinux.org/packages/rdm-bin/)<sup>aur</sup> 如果上面的编译有问题，可用这个 bin 版本
 
 ## 安卓客户端编程
@@ -44,31 +44,33 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 
 ## 科学计算
 
-对于科研人士而言，做数值计算（或者叫科学计算）是使用linux的一大动力。目前科学计算的几大主流编程语言分别是
-* Matlab (在Linux下安装Matlab时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用 'unzip -X -K matlab_R20*_glnxa64.zip' 命令重新解压)
-* Fortran
-* Julia
-* Python（以Numpy库为主）。
-另外还有Mathematica作数学计算用。
-考虑到有部分朋友容易把“语言”和“软件”混为一谈，在此稍作说明：Matlab和Mathematica既是软件名称，也是一种语言。暂时可以认为这些软件就是写这些语言的IDE。
-而Python之类则仅仅是“编程语言”。至于我们下载的Python3.9之类的包，则是python语言对应的库，并不是一个“写python的软件”。
+对于科研人士而言，做数值计算（或者叫科学计算）是使用 linux 的一大动力。目前科学计算的几大主流编程语言分别是
+
+- Matlab (在 Linux 下安装 Matlab 时可能遇到符号链接损坏的问题，需要重新下载安装文件并利用 'unzip -X -K matlab_R20\*\_glnxa64.zip' 命令重新解压)
+- Fortran
+- Julia
+- Python（以 Numpy 库为主）。
+  另外还有 Mathematica 作数学计算用。
+  考虑到有部分朋友容易把“语言”和“软件”混为一谈，在此稍作说明：Matlab 和 Mathematica 既是软件名称，也是一种语言。暂时可以认为这些软件就是写这些语言的 IDE。
+  而 Python 之类则仅仅是“编程语言”。至于我们下载的 Python3.9 之类的包，则是 python 语言对应的库，并不是一个“写 python 的软件”。
 
 ### 开源软件替代：[SageMath](https://www.sagemath.org/)
 
-SageMath(原名Sage)是免费的、开源的数学软件，支持代数、几何、数论、密码学、数值计算和相关领域的研究和教学。Sage的开发模式和Sage本身的技术都非常强调开放性、社区性、合作性和协作性：我们在制造汽车，而不是重新发明轮子。Sagemath的总体目标是为"4M"（即Maple、Mathematica、Magma和Matlab）提供一个可行的、免费的、开源的替代品。
+SageMath(原名 Sage)是免费的、开源的数学软件，支持代数、几何、数论、密码学、数值计算和相关领域的研究和教学。Sage 的开发模式和 Sage 本身的技术都非常强调开放性、社区性、合作性和协作性：我们在制造汽车，而不是重新发明轮子。Sagemath 的总体目标是为"4M"（即 Maple、Mathematica、Magma 和 Matlab）提供一个可行的、免费的、开源的替代品。
 
-SageMath为目前科学计算领域的大多数开源软件/库统一重写了接口，提供了一种类兼容python的语法，可以说集开源数学软件之大成。目前已可部分替代"4M"。
+SageMath 为目前科学计算领域的大多数开源软件/库统一重写了接口，提供了一种类兼容 python 的语法，可以说集开源数学软件之大成。目前已可部分替代"4M"。
 
 [Arch Wiki](https://wiki.archlinux.org/title/SageMath)
 
 [中文教程及文档](https://www.osgeo.cn/sagemath/index.html)
 
-Matlab与Mathematica则是商业软件，使用正版需要付费购买。二者均有linux版本可供安装。
-- [Python](https://wiki.archlinux.org/title/Python)直接安装python3.9
-- [Numpy库](https://archlinux.org/packages/extra/x86_64/python-numpy/)这个库包含很多科学计算的函数（例如矩阵运算）
-- [Fortran编译](https://wiki.archlinux.org/title/GNU_Compiler_Collection)直接安装gcc-fortran包
-- [Julia](https://wiki.archlinux.org/title/Julia)
-顺便一提，使用python的朋友可能很多都听说或者使用过Anaconda这个包管器。其实很多库既可以通过[Anaconda](https://aur.archlinux.org/packages/anaconda/)<sup>aur</sup> 或[Miniconda](https://aur.archlinux.org/packages/miniconda3/)<sup>aur</sup> 下载，亦可通过pacman或yay下载。不得不说，AUR是个好东西。
+Matlab 与 Mathematica 则是商业软件，使用正版需要付费购买。二者均有 linux 版本可供安装。
 
-另外,Intel在2020年推出了名为OneAPI的“统一应用程序编程接口的开放标准”。OneAPI的组件亦可在Archlinux上安装。如果自己的电脑CPU是Intel家的，使用OneAPI提供的编译器（如i++），可提升语言编译速度。
-如有朋友对AMD在这方面有所了解，欢迎补充。
+- [Python](https://wiki.archlinux.org/title/Python)直接安装 python3.9
+- [Numpy 库](https://archlinux.org/packages/extra/x86_64/python-numpy/)这个库包含很多科学计算的函数（例如矩阵运算）
+- [Fortran 编译](https://wiki.archlinux.org/title/GNU_Compiler_Collection)直接安装 gcc-fortran 包
+- [Julia](https://wiki.archlinux.org/title/Julia)
+  顺便一提，使用 python 的朋友可能很多都听说或者使用过 Anaconda 这个包管器。其实很多库既可以通过[Anaconda](https://aur.archlinux.org/packages/anaconda/)<sup>aur</sup> 或[Miniconda](https://aur.archlinux.org/packages/miniconda3/)<sup>aur</sup> 下载，亦可通过 pacman 或 yay 下载。不得不说，AUR 是个好东西。
+
+另外,Intel 在 2020 年推出了名为 OneAPI 的“统一应用程序编程接口的开放标准”。OneAPI 的组件亦可在 Archlinux 上安装。如果自己的电脑 CPU 是 Intel 家的，使用 OneAPI 提供的编译器（如 i++），可提升语言编译速度。
+如有朋友对 AMD 在这方面有所了解，欢迎补充。

@@ -354,7 +354,7 @@ yay -S calibre-git
    ::: code-group-item aur (git)
 
    ```sh
-   yay -S flameshot-git
+   yay -S aur/flameshot-git
    ```
 
    :::

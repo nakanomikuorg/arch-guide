@@ -21,6 +21,20 @@ title: 常见问题
 
 ### 系统没有声音
 
+可以尝试安装pipewire-pulse pipewire-alsa pipewire-jack
+
+```bash
+sudo pacman -S pipewire-pulse pipewire-alsa pipewire-jack
+```
+
+或者尝试安装alsa-utils pulseaudio pavucontrol
+
+```bash
+sudo pacman -S alsa-utils pulseaudio pavucontrol
+```
+
+重启系统即可
+
 ### 键盘没有反应
 
 若为联想小新 Pro14 / YOGA 14s 2021 或相似机型，可能发现笔记本内建键盘没有反应。

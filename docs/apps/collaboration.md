@@ -314,7 +314,7 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 ::: code-group-item zsh
 
 ```sh
-echo 'alias scrcpy="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
+echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
 ```
 
 :::
@@ -360,7 +360,7 @@ echo 'alias scrcpy="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
    :::
    ::::
 
-2. 移动端可在 [Google Play](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp) 下载并安装
+2. 移动端可在 [Google Play](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp) [App Store](https://apps.apple.com/us/app/kde-connect/id1580245991)下载并安装
 
 3. 将计算机和移动设备连接至同一个无线网络，根据提示信任并连接即可：
 

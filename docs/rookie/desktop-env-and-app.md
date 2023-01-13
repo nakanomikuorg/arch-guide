@@ -188,13 +188,11 @@ pacman -Syyu
 
 ![syyu](../static/rookie/desktop-env-and-app_syyu.png)
 
-
-
 ## 4. 安装 KDE Plasma 桌面环境
 
 ::: tip ℹ️ 提示
 
-新手推荐安装 KDE Plasma 桌面环境，此外有 GNOME、 Xfce等[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)和一众[窗口管理器](https://wiki.archlinux.org/title/Window_manager)可供选择。本教程仅列出 KDE 安装使用教程。
+新手推荐安装 KDE Plasma 桌面环境，此外有 GNOME、 Xfce 等[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)和一众[窗口管理器](https://wiki.archlinux.org/title/Window_manager)可供选择。本教程仅列出 KDE 安装使用教程。
 
 :::
 
@@ -206,7 +204,14 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 
 ![install-kde](../static/rookie/desktop-env-and-app_install-kde.png)
 
-2. 一路回车完成安装即可
+2. kde 默认安装的是[xorg](https://wiki.archlinuxcn.org/zh-hans/Xorg)，如果想使用[wayland](https://wiki.archlinuxcn.org/wiki/Wayland)的话安装以下包：
+
+```
+pacman -S  plasma-wayland-session xdg-desktop-portal
+# N卡用户需要额外安装egl-wayland,xdg-desktop-portal包是为了如obs此类工具录制屏幕使用
+```
+
+3. 安装完成后，可以在后续登录时选择使用 xorg 还是 wayland
 
 ## 5. 配置并启动 greeter sddm
 
@@ -221,6 +226,7 @@ systemctl enable sddm
 ```bash
 systemctl start sddm  # 直接启动显示管理器，与以下reboot命令二选一即可
 ```
+
 ```bash
 reboot
 ```
@@ -237,8 +243,13 @@ reboot
 
 :::
 
-
 ![enable-sddm](../static/rookie/desktop-env-and-app_sddm.png)
+
+::: tip ℹ️ 提示
+
+值得注意的是此时操作系统尚未安装相应的显卡驱动。如在进入桌面环境时遭遇闪退花屏等意外情况，建议尝试安装相应的显卡驱动。详情请参阅[显卡驱动](./graphic-driver.md)。
+
+:::
 
 ## 6. 安装基础功能包
 
@@ -347,20 +358,20 @@ sudo pacman -S fcitx5-pinyin-moegirl # 萌娘百科词库。二刺猿必备（ar
 sudo pacman -S fcitx5-material-color # 输入法主题
 ```
 
-2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `~/.pam_environment`：
+2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `/etc/environment`：
 
 ```bash
-vim ~/.pam_environment
+sudo vim /etc/environment
 ```
 
 3. 在文件中加入以下内容并保存退出：
 
-```.pam_environment
-INPUT_METHOD DEFAULT=fcitx5
-GTK_IM_MODULE DEFAULT=fcitx5
-QT_IM_MODULE DEFAULT=fcitx5
-XMODIFIERS DEFAULT=\@im=fcitx5
-SDL_IM_MODULE DEFAULT=fcitx
+```environment
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
 ```
 
 ![fcitx5_step-1](../static/rookie/desktop-env-and-app_fcitx5-1.png)
@@ -369,7 +380,9 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 ::: tip ℹ️ 提示
 
-检查一下是否有拼写错误。
+检查一下是否有拼写错误，如果输入法无法正常切换，可尝试执行 `fcitx5-diagnose` 命令来诊断问题的原因。
+
+由于存在[安全性问题](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4708)，自 2022 年 10 月 21 日起，[Arch Linux 默认不再读取](https://github.com/archlinux/svntogit-packages/commit/891610cfcc202916cf5eb46d6df56e885062f78e) `~/.pam_environment` 文件中的设置。
 
 :::
 
@@ -434,12 +447,6 @@ yay -S aur/timeshift
 
 ::: tip ℹ️ 提示
 
-Timeshift<sup>cn</sup> 目前有问题（参见 [#2317](https://github.com/archlinuxcn/repo/issues/2317)），请使用 Timeshift<sup>aur</sup>。
-
-:::
-
-::: tip ℹ️ 提示
-
 若安装 AUR 时无法正常下载，请先参照章节 [透明代理](./transparent.md) 配置透明代理。
 
 :::
@@ -481,6 +488,12 @@ Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布�
 ![timeshift-config_step-4](../static/rookie/desktop-env-and-app_timeshift-cfg-4.png)
 
 5. 点击 `完成` 结束配置
+
+::: tip ℹ️ 提示
+
+恢复 BTRFS 类型快照时，可能因子卷 ID 改变导致无法正常进入系统，参阅 [恢复后无法挂载目录](../advanced/system-ctl.md#恢复后无法挂载目录)。
+
+:::
 
 ### 12-2. 若使用 ext4 文件系统
 

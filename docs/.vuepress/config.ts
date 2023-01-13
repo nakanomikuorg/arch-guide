@@ -1,4 +1,14 @@
-module.exports = {
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "@vuepress/cli";
+import { defaultTheme } from "@vuepress/theme-default";
+import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
+import { searchPlugin } from "@vuepress/plugin-search";
+
+import mathjax3 from "markdown-it-mathjax3";
+
+const customElements = ["mjx-container"];
+
+export default defineUserConfig({
   base: "/",
   head: [
     [
@@ -183,9 +193,8 @@ gtag('config', 'G-MQRPJQK9SC');`,
     //     "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc. Let archlinux be your common system!",
     // },
   },
-  themeConfig: {
+  theme: defaultTheme({
     logo: "/static/svg/arch-logo.svg",
-    displayAllHeaders: true,
     sidebar: [
       {
         text: "🎐 千里之行",
@@ -298,37 +307,39 @@ gtag('config', 'G-MQRPJQK9SC');`,
         ],
       },
     ],
-    sidebarDepth: 1,
-    smoothScroll: true,
-    activeHeaderLinks: false,
     lastUpdatedText: "📑 最后更新",
     contributorsText: "🎨 参与贡献",
     repo: "https://github.com/NakanoMikuOrg/arch-guide",
     docsDir: "docs",
     docsBranch: "main",
     repoLabel: "🍺 Github",
-    editLinks: true,
     editLinkText: "📝 编辑本文",
     notFound: ["👻 页面走丢了", "👻 这个页面不存在呢"],
     backToHome: "🏠 把我带回家",
-  },
+    themePlugins: { activeHeaderLinks: true },
+  }),
   plugins: [
-    [
-      "@vuepress/plugin-search",
-      {
-        locales: {
-          "/": {
-            placeholder: "搜索",
-          },
+    searchPlugin({
+      locales: {
+        "/": {
+          placeholder: "搜索",
         },
       },
-    ],
-    // [
-    //   "@vuepress/plugin-google-analytics",
-    //   {
-    //     id: "G-MQRPJQK9SC",
-    //   },
-    // ],
-    "@vuepress/plugin-medium-zoom",
+    }),
+    mediumZoomPlugin({}),
   ],
-};
+  extendsMarkdown: (md) => {
+    md.use(mathjax3);
+    md.linkify.set({ fuzzyEmail: false });
+  },
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag: string) => customElements.includes(tag),
+        },
+      },
+    },
+  }),
+});

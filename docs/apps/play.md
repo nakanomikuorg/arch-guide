@@ -61,11 +61,13 @@ sidebarDepth: 2
 
 1. 安装 [Steam](https://archlinux.org/packages/multilib/x86_64/steam/)<sup>EULA</sup>：
 
-   ```sh
-   sudo pacman -S steam
-   ```
+安装时需要注意选择显卡所对应的 vulkan，i+n 选择 vulkan-intel，amd 选择 amdvlk
 
-   ![steam-1](../static/apps/play/steam-1.png)
+```sh
+sudo pacman -S steam
+```
+
+![steam-1](../static/apps/play/steam-1.png)
 
 2. 为了能够安装 Windows 下的游戏，还需要在菜单栏 `查看` > `设置` > 侧边栏 `Steam Play` > 勾选 `为所有其他产品启用 Steam Play`，在 `运行其他产品时使用` 中选择 `Proton Experimental`（最新版本）：
 
@@ -86,6 +88,12 @@ sidebarDepth: 2
 ::: tip ℹ️ 提示
 
 此外还有官方 Proton 的派生版本，如 [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom)。可以支持一些额外的，官方暂不支持或支持不完善的游戏。
+
+:::
+
+::: tip ℹ️ 提示
+
+可以在[protondb](https://www.protondb.com/)查看游戏在 linux 的支持情况（如是否可游玩，运行所需要的基本设置等等）
 
 :::
 
@@ -321,7 +329,42 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 ## 🔥 性能提升
 
-在游戏之前，如果有强烈的性能需要，可先确保 CPU 处于性能模式。
+在游戏之前，如果有强烈的性能需要，可先确保 CPU 处于性能模式，可采取两种方式，分别为使用[GameMode](https://github.com/FeralInteractive/gamemode)和手动控制
+
+自动方式
+
+1. 安装[GameMode](https://archlinux.org/packages/community/x86_64/gamemode/)
+
+   ```sh
+   # 安装配置文件
+   sudo pacman -S meson systemd git dbus libinih
+   # 安装gamemode
+   sudo pacman -S gamemode lib32-gamemode
+   ```
+
+2. 进行配置，配置模板可以参考[此处](https://github.com/FeralInteractive/gamemode/blob/master/example/gamemode.ini)
+
+   ```sh
+   # 进入下载配置文件的文件夹
+   sudo cp gamemode.ini /etc/gamemode.ini
+   ```
+
+3. 进行测试，运行`gamemoded -t`
+
+   ```sh
+   # 有可能这个测试会失败，可以不用理会
+   gamemoded -t
+   ```
+
+   ::: tip ℹ️ 在 steam 中使用
+
+   在 steam 的启动选项设置`gamemoderun %command%`,即可以 gamemode 启动游戏，gamemode 会自动进行防熄屏设置，更多设置（如显卡自动超频）请看官方文档！
+
+   如果是配合 i+n 卡使用，可以在`/etc/environment`中设置`GAMEMODERUNEXEC=prime-run`，在使用 gamemode 启动游戏时会自动调用独显运行。
+
+   :::
+
+手动方式
 
 1. 执行以下命令使电源处于 `High Performance` 模式：
 

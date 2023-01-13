@@ -151,7 +151,7 @@ yarn docs:dev
 
 更多信息请参阅 [贡献指南](/postscript/contribute.md)。
 
-## 🎋 版权说明
+## 💎 版权说明
 
 [![by-sa](./static/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 

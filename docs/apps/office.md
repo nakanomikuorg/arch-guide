@@ -151,6 +151,11 @@ yay -S aur/typora pandoc
 :::
 ::::
 
+值得注意的是，目前typora软件已经开始收费。如果有能力购买的话可以进行购买。对于囊中羞涩的学生党或其他不愿购买的用户，我们可以选择使用typora的最后一个免费版本（注意：不是盗版），安装方式如下：
+```sh
+yay -S typora-free
+```
+
 ![typora](../static/apps/office/typora.png)
 
 ### VNote

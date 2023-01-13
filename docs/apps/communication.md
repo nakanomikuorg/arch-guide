@@ -128,9 +128,21 @@ Telegram 有两种加密模式：
 
 ### QQ
 
-QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，不建议安装。
+推荐安装官方最新的[`linuxqq`](https://aur.archlinux.org/packages/linuxqq)<sup>EULA / aur</sup>（基于 Electron 框架）
 
-推荐使用基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
+   ```sh
+   yay -S linuxqq
+   ```
+wrap版本[`linuxqq-nt-bwrap`](https://aur.archlinux.org/packages/linuxqq-nt-bwrap)<sup>EULA / aur</sup>，该版本限制了qq的目录访问
+
+   ```sh
+   yay -S linuxqq-nt-bwrap
+   ```
+   ![qq-3](../static/apps/communication/qq-3.png)
+
+#### 其它版本
+
+基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
 
 1. 安装 [`deepin-wine-qq`](https://aur.archlinux.org/packages/deepin-wine-qq/)<sup>aur</sup>：
 
@@ -144,28 +156,18 @@ QQ 在 Linux 下确实有官方原生的版本 `linuxqq`，但是体验极差，
 
    ![qq-2](../static/apps/communication/qq-2.png)
 
-#### 其它版本
+#### 第三方
 
-以下为其它的 QQ 版本，但体验一般：
+以下为第三方版本 QQ
 
-- [`linuxqq`](https://aur.archlinux.org/packages/linuxqq/)<sup>EULA / cn / aur</sup> —— 腾讯官方的原生 QQ，体验极差
-
-  :::: code-group
-  ::: code-group-item cn
-
+- Icalingua [`Icalingua`](https://aur.archlinux.org/packages/icalingua/)<sup>aur</sup> - electron 开发的第三方~~QQ~~ ([~~github~~](https://github.com/Icalingua/Icalingua))(作者已删库)
   ```sh
-  sudo pacman -S linuxqq
+  yay -S icalingua
   ```
-
-  :::
-  ::: code-group-item aur
-
+- Icalingua++ [`Icalingua++`](https://aur.archlinux.org/packages/icalingua++/)<sup>aur</sup> - electron 开发的第三方 QQ ([github](https://github.com/Icalingua/Icalingua++))(为 icalingua 升级版)
   ```sh
-  yay -S aur/linuxqq
+  yay -S icalingua++
   ```
-
-  :::
-  ::::
 
 ### 微信
 
@@ -251,8 +253,27 @@ sudo pacman -S discord
 类似 Telegram，Discord 同样存在诸多不正当内容（包括但不限于种族歧视、色情内容等）。
 
 请注意安全、保护好隐私、文明上网。
-
 :::
+
+### TeamSpeak 3
+
+一款代替 `YY语音` `Discord` 等游戏语音聊天软件，有占用资源低、连接快捷、自带 Opus 音频解码器、无广告、全平台、语音加密传输、可自建服务器、可随意调节的“语音感应激活”功能告别通讯底噪和键盘噪音。
+
+```sh
+sudo pacman -S teamspeak3
+```
+
+![teamspeak3](../static/apps/communication/teamspeak3.png)
+::: tip ℹ️ 提示
+
+1. [中文汉化](https://www.wevg.org/archives/fix-ts3-linux-plugin/) 没有目录就创建目录，脚本需要给执行权限
+
+2. 直接 `/opt/teamspeak3/package_inst Chinese_Translation_zh-CN.ts3_translation`
+
+3. 以上汉化 二选一
+
+4. [新手指南](https://www.wevg.org/archives/how-to-use-teamspeak3/)  
+   :::
 
 ## 🤝🏻 团队合作
 
@@ -295,16 +316,12 @@ yay -S zoom
 
 ### 腾讯会议
 
-1. 安装 [`com.tencent.meeting.deepin`](https://aur.archlinux.org/packages/com.tencent.meeting.deepin/)<sup>EULA / aur</sup>：
+安装 [`wemeet-bin`](https://aur.archlinux.org/packages/wemeet-bin)<sup>EULA / aur</sup>：
 
    ```sh
-   yay -S com.tencent.meeting.deepin
+   yay -S wemeet-bin
    ```
-
-   ![meeting-1](../static/apps/communication/meeting-1.png)
-
-2. 参考 [deepin-wine5 相关](../advanced/debug.md#deepin-wine5-相关) 完成配置：
-
+   
    ![meeting-2](../static/apps/communication/meeting-2.png)
 
 ## ✉️ 电子邮件
@@ -335,9 +352,9 @@ sudo pacman -S kmail
 
 ### Mailspring
 
-MailSpring是一款界面简约、操作便捷、功能出众的邮件管理工具。MailSpring官方版可以帮助用户管理多个邮箱，提高工作效率，同时还能够对重要事项进行提醒，并可以编辑自己的签名，给大家带来了不一样的感受和体验。其客户端在github上开源，但使用时需要注册mailspring账户。
+MailSpring 是一款界面简约、操作便捷、功能出众的邮件管理工具。MailSpring 官方版可以帮助用户管理多个邮箱，提高工作效率，同时还能够对重要事项进行提醒，并可以编辑自己的签名，给大家带来了不一样的感受和体验。其客户端在 github 上开源，但使用时需要注册 mailspring 账户。
 
-KDE用户使用mailspring前需要安装`gnome-keyring`
+KDE 用户使用 mailspring 前需要安装`gnome-keyring`
 
 安装 [mailspring](https://github.com/Foundry376/Mailspring)<sup>EULA / cn / aur</sup>：
 

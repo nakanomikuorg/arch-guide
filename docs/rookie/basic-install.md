@@ -176,7 +176,7 @@ vim /etc/pacman.d/mirrorlist
 
 ::: tip ℹ️ 提示
 
-如果不会使用 `vim` 编辑器，请参阅 [这里]()。
+如果不会使用 `vim` 编辑器，请参阅 [这里](../advanced/system-ctl.md#终端编辑器-vim-的使用)。
 
 `vim` 编辑器在安装和配置系统的过程中还需要使用多次。
 
@@ -550,7 +550,8 @@ free -h # -h 选项会使输出以人类可读的单位显示
 1. 通过如下命令使用 `pacstrap` 脚本安装基础包：
 
 ```bash
-pacstrap /mnt base base-devel linux linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
+# 如果使用btrfs文件系统，额外安装一个btrfs-progs包
 ```
 
 > 📑 命令参数说明：
