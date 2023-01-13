@@ -34,9 +34,9 @@ sudo pacman -S realvnc-vnc-server
 
 ```sh
 sudo systemctl start vncserver-x11-serviced
-sudo  systemctl enable vncserver-x11-serviced
+sudo systemctl enable vncserver-x11-serviced
 ```
 
 ::: tip ℹ️ 提示  
-以上设置就已经比较完美的运行了在 arch 下，然后在菜单栏点击 reavlvnc 图标进行初始化运行  
+一般情况下以上设置就已经能够让 realvnc 比较完美地在 arch 下运行了，然后在菜单栏点击 realvnc 图标进行初始化运行。  
 :::
