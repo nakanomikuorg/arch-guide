@@ -152,8 +152,8 @@ yay -Yc # 清理不需要的依赖
 
 1. 安装 Octopi：
 
-   :::: code-group
-   ::: code-group-item aur
+:::: code-group
+::: code-group-item aur
 
 ```bash
    yay -S octopi
@@ -268,7 +268,7 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 1. 安装 Unarchiver：
 
 ```bash
-   sudo pacman -S unarchiver
+sudo pacman -S unarchiver
 ```
 
 2. 解压压缩包：
@@ -293,18 +293,18 @@ df -h # 以人类可读格式显示
 
 1. 安装 Filelight：
 
-   :::: code-group
-   ::: code-group-item extra
+:::: code-group
+::: code-group-item extra
 
 ```bash
-   sudo pacman -S filelight
+sudo pacman -S filelight
 ```
 
 :::
 ::: code-group-item aur (git)
 
 ```bash
-   yay -S filelight-git
+yay -S filelight-git
 ```
 
 :::
@@ -383,25 +383,25 @@ rm -rf ~/.cache/yay
 1. 安装 Smartmontools：
 
 ```bash
-   sudo pacman -S smartmontools
+sudo pacman -S smartmontools
 ```
 
 2. 查看磁盘信息：
 
-   :::: code-group
-   ::: code-group-item SATA
+:::: code-group
+::: code-group-item SATA
 
 ```bash
-   sudo smartctl -A /dev/sdx # 硬盘
-   sudo smartctl -d sat -A /dev/sdx # USB 设备
+sudo smartctl -A /dev/sdx # 硬盘
+sudo smartctl -d sat -A /dev/sdx # USB 设备
 ```
 
 :::
 ::: code-group-item NVME
 
 ```bash
-   sudo smartctl -A /dev/nvmexn1 # 硬盘
-   sudo smartctl -d sat -A /dev/sdx # USB 设备
+sudo smartctl -A /dev/nvmexn1 # 硬盘
+sudo smartctl -d sat -A /dev/sdx # USB 设备
 ```
 
 :::
@@ -412,31 +412,29 @@ rm -rf ~/.cache/yay
 类似 Windows 下的 [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)<sup>EULA</sup>，Linux 下有 [CPU-X](https://x0rg.github.io/CPU-X/)<sup>cn / aur</sup>。
 
 1. 安装 CPU-X：
-   :::: code-group
-   ::: code-group-item cn
-
-`
+:::: code-group
+::: code-group-item cn
 
 ```bash
-    sudo pacman -S cpu-x
-    ```
+sudo pacman -S cpu-x
+```
 
-    :::
-    ::: code-group-item aur
-
-```bash
-    yay -S aur/cpu-x
-    ```
-
-    :::
-    ::: code-group-item aur (git)
+:::
+::: code-group-item aur
 
 ```bash
-    yay -S cpu-x-git
-    ```
+yay -S aur/cpu-x
+```
 
-    :::
-    ::::
+:::
+::: code-group-item aur (git)
+
+```bash
+yay -S cpu-x-git
+```
+
+:::
+::::
 
 2. 打开 CPU-X 即可看到 CPU 详细信息：
 
@@ -449,8 +447,8 @@ rm -rf ~/.cache/yay
 1. 安装 GPU-Viewer：
 
 ```bash
-   yay -S gpu-viewer
-````
+yay -S gpu-viewer
+```
 
 2. 打开 GPU-Viewer 即可看到 GPU 详细信息：
 
@@ -462,18 +460,18 @@ rm -rf ~/.cache/yay
 
 1. 安装 Dmidecode：
 
-   :::: code-group
-   ::: code-group-item extra
+:::: code-group
+::: code-group-item extra
 
 ```bash
-   sudo pacman -S dmidecode
+sudo pacman -S dmidecode
 ```
 
 :::
 ::: code-group-item aur (git)
 
 ```bash
-   yay -S dmidecode-git
+yay -S dmidecode-git
 ```
 
 :::
@@ -482,7 +480,7 @@ rm -rf ~/.cache/yay
 2. 输入以下命令使用 Dmidecode 查看系统硬件信息：
 
 ```bash
-   sudo dmidecode
+sudo dmidecode
 ```
 
 ## 系统快照（备份）与文件传输
@@ -506,8 +504,8 @@ Timeshift 还能恢复到其它硬盘用作系统迁移，通过 arch 安装盘�
 2. 使用快照还原系统：
 
 ```bash
-   sudo timeshift --list # 获取快照列表
-   sudo timeshift --restore --snapshot '20XX-XX-XX_XX-XX-XX' --skip-grub # 选择一个快照进行还原，并跳过 GRUB 安装，一般来说 GRUB 不需要重新安装
+sudo timeshift --list # 获取快照列表
+sudo timeshift --restore --snapshot '20XX-XX-XX_XX-XX-XX' --skip-grub # 选择一个快照进行还原，并跳过 GRUB 安装，一般来说 GRUB 不需要重新安装
 ```
 
 3. 根据提示继续，完成还原
