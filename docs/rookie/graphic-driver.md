@@ -180,6 +180,12 @@ yay -S nvidia-390xx-dkms nvidia-settings lib32-nvidia-390xx-utils
 sudo pacman -S mesa lib32-mesa xf86-video-nouveau
 ```
 
+::: tip ℹ️ 提示
+
+安装 NVIDIA 官方的驱动之后，需要编辑 `/etc/mkinitcpio.conf`，在 `HOOKS` 一行删除 `kms` 并保存，然后执行 `mkinitcpio -P` 重新生成一次镜像。这能防止 initramfs 包含 nouveau 模块，避免 nouveau 和官方驱动的冲突。
+
+:::
+
 ### AMD 独立显卡
 
 AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的**，都需要先确定架构，然后选定正确的驱动安装即可。参考步骤 [AMD 核芯显卡](./graphic-driver.md#amd-核芯显卡)。
