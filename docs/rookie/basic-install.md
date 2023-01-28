@@ -561,6 +561,11 @@ pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
 
 ![pacstrap_step-1](../static/rookie/basic-install_pacstrap-1.png)
 
+如果提示GPG证书错误，可能是因为使用的不是最新的镜像文件，可以通过更新 `archlinux-keyring` 解决此问题
+```bash
+pacman -S archlinux-keyring 
+```
+
 2. 通过如下命令使用 `pacstrap` 脚本安装其它必要的功能性软件：
 
 ```bash
