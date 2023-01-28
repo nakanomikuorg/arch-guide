@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "iconfont";
+
+  src: url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff2?t=1622195242467")
+      format("woff2"),
+    url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.woff?t=1622195242467")
+      format("woff"),
+    url("//at.alicdn.com/t/font_2578093_zxe6evgou9r.ttf?t=1622195242467")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: normal;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 400;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Italic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 500;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 500;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 700;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 300;
+  font-style: normal;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-Light.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-weight: 300;
+  font-style: italic;
+
+  src: local("Ubuntu"), url("/static/font/Ubuntu-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: normal;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 500;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 900;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Black.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Bold.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 300;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Light.ttf");
+}
+
+@font-face {
+  font-family: "harmony";
+  font-weight: 100;
+  font-style: normal;
+
+  src: local("HarmonyOS Sans SC"),
+    url("/static/font/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Thin.ttf");
+}
+
+@font-face {
+  font-family: "hack";
+
+  src: local("Hack"), url("/static/font/Hack-Regular.ttf");
+}
+
+@font-face {
+  font-family: "pacifico";
+
+  src: local("Pacifico"), url("/static/font/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "seguiemj";
+  font-weight: normal;
+  font-weight: bold;
+
+  src: local("Segoe UI Emoji"), url("/static/font/seguiemj.ttf");
+}

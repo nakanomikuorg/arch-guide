@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1d2daf63","path":"/postscript/postscript.html","title":"\u540E\u8BB0","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1642319602000,"contributors":[{"name":"\u8FFD","email":"RiverOnVenus@gmail.com","commits":1}]},"filePathRelative":"postscript/postscript.md"}');export{t as data};
