@@ -260,13 +260,8 @@ reboot
 2. 首先进行桌面环境中的网络设置：
 
 ```bash
-sudo systemctl disable iwd # 确保 iwd 开机处于关闭状态，因为其无线连接会与 NetworkManager 冲突
-sudo systemctl stop iwd # 立即关闭 iwd
-sudo systemctl enable --now NetworkManager # 确保先启动 NetworkManager，并进行网络连接。若 iwd 已经与 NetworkManager 冲突，则执行完上一步重启一下电脑即可
 ping www.bilibili.com # 测试网络连通性
 ```
-
-![network](../static/rookie/desktop-env-and-app_network.png)
 
 KDE 桌面环境中连接网络和 win10 一样，这里不再赘述。
 
