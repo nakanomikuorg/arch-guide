@@ -561,15 +561,16 @@ pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
 
 ![pacstrap_step-1](../static/rookie/basic-install_pacstrap-1.png)
 
-如果提示GPG证书错误，可能是因为使用的不是最新的镜像文件，可以通过更新 `archlinux-keyring` 解决此问题
+如果提示 GPG 证书错误，可能是因为使用的不是最新的镜像文件，可以通过更新 `archlinux-keyring` 解决此问题
+
 ```bash
-pacman -S archlinux-keyring 
+pacman -S archlinux-keyring
 ```
 
 2. 通过如下命令使用 `pacstrap` 脚本安装其它必要的功能性软件：
 
 ```bash
-pacstrap /mnt dhcpcd iwd vim sudo zsh zsh-completions
+pacstrap /mnt dhcpcd networkmanager vim sudo zsh zsh-completions
 ```
 
 > 📑 命令参数说明：
@@ -907,20 +908,20 @@ reboot # 重启
 
 ![last-step-2](../static/rookie/basic-install_last-step-2.png)
 
-3. 设置开机自启并立即启动 dhcp 服务，即可连接网络：
+3. 设置开机自启并立即启动 networkmanager 服务，即可连接网络：
 
 ```bash
-systemctl enable --now dhcpcd # 设置开机自启并立即启动 dhcp 服务
+systemctl enable --now NetworkManager # 设置开机自启并立即启动 NetworkManager 服务
 ping www.bilibili.com # 测试网络连接
 ```
 
 ![last-step-3](../static/rookie/basic-install_last-step-3.png)
 
-4. 若为无线连接，则还需要启动 `iwd` 才可以使用 `iwctl` 连接网络：
+4. 若为无线连接，则需要在启动 `networkmanager` 后使用 `nmcli` 连接网络：
 
 ```bash
-systemctl start iwd # 立即启动 iwd
-iwctl # 和之前的方式一样，连接无线网络
+nmcli dev wifi list # 显示附近的 Wi-Fi 网络
+nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码" # 连接指定的无线网络
 ```
 
 5. `neofetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `neofetch`：
