@@ -920,8 +920,8 @@ ping www.bilibili.com # 测试网络连接
 4. 若为无线连接，则需要在启动 `networkmanager` 后使用 `nmcli` 连接网络：
 
 ```bash
-nmcli dev wifi #检查周围的无线网络
-nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码"
+nmcli dev wifi list # 显示附近的 Wi-Fi 网络
+nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码" # 连接指定的无线网络
 ```
 
 5. `neofetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `neofetch`：
