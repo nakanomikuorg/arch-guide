@@ -72,31 +72,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
    :::
 
-2. 为了防止 Btrfs 文件系统损坏，需要修改 `/etc/tlp.conf` 配置文件：
-
-   ```bash
-   sudo vim /etc/tlp.conf
-   ```
-
-   将对应行改为如下内容：
-
-   ```conf
-   SATA_LINKPWR_ON_BAT=max_performance
-   ```
-
-   ![tlp-1](../static/advanced/power-ctl/tlp-1.png)
-
-   ::: danger ☢️ 警告
-
-   若使用 Btrfs 文件系统请务必进行配置，否则可能造成数据丢失。
-
-   :::
-
-   > #### 🔗 相关链接
-   >
-   > 如有需要可参阅 [archwiki 相关内容](<https://wiki.archlinux.org/title/TLP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#Btrfs>)。
-
-3. 相关服务设置：
+2. 相关服务设置：
 
    ```bash
    sudo systemctl enable tlp.service
@@ -105,7 +81,7 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
    sudo systemctl mask systemd-rfkill.socket
    ```
 
-4. 安装后，TLP 将在开机时自动启动。为了避免第一次重启系统，可以使用以下命令手动启动：
+3. 安装后，TLP 将在开机时自动启动。为了避免第一次重启系统，可以使用以下命令手动启动：
 
    ```bash
    sudo tlp start
