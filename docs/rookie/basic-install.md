@@ -394,7 +394,7 @@ lsblk # 复查磁盘情况
 
 ### 7-2. 格式化并创建 Btrfs 子卷
 
-#### 7-2.0. 格式化EFI分区
+#### 7-2.0. 格式化 EFI 分区
 
 :::: code-group
 ::: code-group-item SATA
@@ -402,6 +402,20 @@ lsblk # 复查磁盘情况
 ```zsh
 mkfs.fat -F32 /dev/sdxn
 ```
+
+::: code-group-item NVME
+
+```zsh
+mkfs.fat -F32 /dev/nvmexn1pn
+```
+
+:::
+
+::: warning ⚠️ 注意
+
+如果目标是双系统（Win10/Win11 + Arch Linux），并且 Win10/Win11 和 Arch Linux 将要共存在一个硬盘上的话，不要重新格式化原有的 EFI 分区，因为它可能包含启动其他操作系统所需的文件。
+
+:::
 
 #### 7-2-1. 格式化 Swap 分区
 
