@@ -1,7 +1,0 @@
-https://arch.icekylin.online/
-https://arch.icekylin.online/prologue.html
-https://arch.icekylin.online/prepare/head-on-blow.html
-https://arch.icekylin.online/prepare/understand.html
-https://arch.icekylin.online/rookie/pre-install.html
-https://arch.icekylin.online/rookie/pre-virt.html
-https://arch.icekylin.online/rookie/basic-install.html
