@@ -4,23 +4,25 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 jobs:
-  deploy:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 16 ]
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
+      - name: Setup pnpm ⚡️
+        uses: pnpm/action-setup@v2
         with:
           version: 7
       - name: Use Node.js ${{ matrix.node-version }}
@@ -28,14 +30,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: Install dependencies
+      - name: Install dependencies ⚡️
         run: pnpm install --frozen-lockfile
-      - name: Build
+      - name: Build 🛠️
         run: pnpm docs:build
-      - uses: actions/configure-pages@v2
-      - uses: actions/upload-pages-artifact@v1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: docs/.vitepress/dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+          folder: docs/.vitepress/dist
+          branch: gh-pages
