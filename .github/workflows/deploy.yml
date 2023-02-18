@@ -20,8 +20,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: pnpm
-      - run: pnpm i
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm docs:build
       - uses: actions/configure-pages@v2
