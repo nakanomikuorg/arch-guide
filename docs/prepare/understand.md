@@ -1,7 +1,3 @@
----
-next: /rookie/pre-install.md
----
-
 # 了解 archlinux
 
 > ### 🌸 知己知彼，百战不殆

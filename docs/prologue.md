@@ -1,7 +1,3 @@
----
-next: /prepare/head-on-blow.md
----
-
 # 序章
 
 ## 🚧 文档施工中
@@ -11,78 +7,6 @@ next: /prepare/head-on-blow.md
 > 本指南包含从 archlinux 安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！
 
 ## 📕 相关信息
-
-<p class="shields normal-img-p">
-  <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="Lines of code"
-      src="https://img.shields.io/tokei/lines/github/NakanoMikuOrg/arch-guide"
-    />
-  </a>&nbsp;
-  <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="arch-guide"
-      src="https://travis-ci.com/NakanoMikuOrg/arch-guide.svg?branch=main"
-    />
-  </a>&nbsp;
-  <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/NakanoMikuOrg/arch-guide"
-    />
-  </a>&nbsp;
-  <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="GitHub Repo stars"
-      src="https://img.shields.io/github/stars/NakanoMikuOrg/arch-guide?style=social"
-    />
-  </a>&nbsp;
-  <a
-    href="https://gitee.com/nakano-miku/arch-guide/stargazers"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="https://gitee.com/nakano-miku/arch-guide/badge/star.svg?theme=white"
-      alt="Gitee Repo stars"
-    />
-  </a>&nbsp;
-  <a
-    href="https://tongji.baidu.com/web/welcome/ico?s=e7059486ad3b16e21ea7058836c51b9b"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="https://img.shields.io/badge/Baidu-%E7%BB%9F%E8%AE%A1-blue"
-      alt="百度统计"
-    />
-  </a>&nbsp;
-  <a
-    href="/postscript/contributor-covenant.html"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="Contributor Covenant"
-      src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"
-    />
-  </a>
-</p>
 
 本指南派生自 [Arch Linux 安装使用教程](https://github.com/ArchLinuxStudio/ArchLinuxTutorial)，相比原教程，本指南进行了如下更改：
 
@@ -96,42 +20,34 @@ next: /prepare/head-on-blow.md
 
 ## 💻 本地运行
 
-:::: code-group
-::: code-group-item Pacman
+::: code-group
 
-```bash{4-5}
-sudo pacman -S nodejs yarn # 安装 nodejs 和 yarn
+```bash{4-5} [Pacman]
+sudo pacman -S nodejs pnpm # 安装 nodejs 和 pnpm
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
 cd ./arch-guide
-yarn install
-yarn docs:dev
+pnpm i
+pnpm docs:dev
 ```
 
-:::
-::: code-group-item HomeBrew
-
-```zsh{4-5}
-brew install yarn # 安装 yarn
+```zsh{4-5} [HomeBrew]
+brew install pnpm # 安装 pnpm
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
 cd ./arch-guide
-yarn install
-yarn docs:dev
+pnpm i
+pnpm docs:dev
 ```
 
-:::
-::: code-group-item Scoop
-
-```bat{5-6}
+```bat{5-6} [Scoop]
 scoop install nodejs # 安装 nodejs
-scoop install yarn # 安装 yarn
+scoop install pnpm # 安装 pnpm
 git clone https://github.com/NakanoMikuOrg/arch-guide.git
 cd ./arch-guide
-yarn install
-yarn docs:dev
+pnpm install
+pnpm docs:dev
 ```
 
 :::
-::::
 
 其它系统请参阅 [Yarn 中文文档](https://yarn.bootcss.com/docs/install/) 安装 `Yarn`。
 

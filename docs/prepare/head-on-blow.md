@@ -1,8 +1,3 @@
----
-prev: /prologue.md
-sidebarDepth: 2
----
-
 # archlinux 真的适合我吗？
 
 > ### 🍉 三思而后行

@@ -6,14 +6,6 @@
 >
 > 需要说明的是，本指南假定你有一定的 Linux 基础知识，基础知识相关的话题**不会**被讨论
 
-> ### 🔖 这一节将会讨论：
->
-> ::: details 目录
->
-> [[toc]]
->
-> :::
-
 ## 💾 分区和格式化
 
 > 1. 因本指南介绍使用的文件系统是 `Btrfs`，很多萌新可能有些不理解。这里有必要说明一下
@@ -60,29 +52,23 @@
 
 - 使用以下命令格式化 `ext4` 分区：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mkfs.ext4 /dev/sdax
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh NVME
 mkfs.ext4 /dev/nvmexn1pn
 ```
 
 :::
-::::
 
 - 使用以下命令挂载 `ext4` 分区：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mount /dev/sdxn /mnt
 mkdir /mnt/home # 若 /home 目录单独分区
 mount /dev/sdxn /mnt/home # 若 /home 目录单独分区
@@ -90,10 +76,7 @@ mkdir -p /mnt/boot/efi
 mount /dev/sdxn /mnt/boot/efi
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mount /dev/nvmexn1pn /mnt
 mkdir /mnt/home # 若 /home 目录单独分区
 mount /dev/nvmexn1pn /mnt/home # 若 /home 目录单独分区
@@ -102,7 +85,6 @@ mount /dev/nvmexn1pn /mnt/boot/efi
 ```
 
 :::
-::::
 
 ### 🆕 全新安装
 
@@ -118,20 +100,16 @@ lsblk # 显示当前分区情况
 
 2. 通过以下命令将磁盘转换为 `gpt` 类型：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 parted /dev/sdx # 执行 parted，进行磁盘类型变更
 (parted) mktable # 输入 mktable
 New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 Yes 即可
 (parted) quit # 退出 parted 命令行交互
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 parted /dev/nvmexn1 # 执行 parted，进行磁盘类型变更
 (parted) mktable # 输入 mktable
 New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。如磁盘有数据会警告，输入 Yes 即可
@@ -139,7 +117,6 @@ New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。�
 ```
 
 :::
-::::
 
 ::: danger ☢️ 警告
 
@@ -161,22 +138,17 @@ New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。�
 
 #### 3. 格式化 EFI 分区
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mkfs.vfat /dev/sdxn
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mkfs.vfat /dev/nvmexn1pn
 ```
 
 :::
-::::
 
 ### 💾 Swap 分区和 Swap 文件
 

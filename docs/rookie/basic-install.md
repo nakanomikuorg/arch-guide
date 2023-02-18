@@ -4,14 +4,6 @@
 >
 > 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](./pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](/basic-install-detail.md)
 
-> ### 🔖 这一节将会讨论
->
-> ::: details 目录
->
-> [[toc]]
->
-> :::
-
 本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ::: tip ℹ️ 提示
@@ -123,13 +115,10 @@ lspci -k | grep Network
 00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 (rev 20)
 ```
 
-如果你的BIOS没有开启无线网卡的开关可以参考下列的命令来开启 `WIFI`
+如果你的 BIOS 没有开启无线网卡的开关可以参考下列的命令来开启 `WIFI`
 
 ```zsh
 rfkill list #查看无线连接 是否被禁用(blocked: yes)
-```
-
-```zsh
 ip link set wlan0 up #比如无线网卡看到叫 wlan0
 ```
 
@@ -294,22 +283,17 @@ lsblk # 显示当前分区情况
 
 2. 接下来使用 `cfdisk` 命令对磁盘分区（对于 SATA 协议的硬盘，`x` 为字母 `a`、`b` 或 `c` 等等；对于 NVME 协议的硬盘，`x` 为数字 `0`、`1` 或 `2` 等等，请根据实际情况判断）：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 cfdisk /dev/sdx # 对安装 archlinux 的磁盘分区
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 ```
 
 :::
-::::
 
 ![partition-2](../static/rookie/basic-install_partition-2.png)
 
@@ -371,22 +355,17 @@ cfdisk /dev/nvmexn1 # 对安装 archlinux 的磁盘分区
 
 10. 分区完成后，使用 `fdisk` 或 `lsblk` 命令复查分区情况：
 
-:::: code-group
-::: code-group-item fdisk
+::: code-group
 
-```zsh
+```zsh [fdisk]
 fdisk -l # 复查磁盘情况
 ```
 
-:::
-::: code-group-item lsblk
-
-```zsh
+```zsh [lsblk]
 lsblk # 复查磁盘情况
 ```
 
 :::
-::::
 
 ![partition-13](../static/rookie/basic-install_partition-13.png)
 
@@ -396,16 +375,13 @@ lsblk # 复查磁盘情况
 
 #### 7-2.0. 格式化 EFI 分区
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mkfs.fat -F32 /dev/sdxn
 ```
 
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mkfs.fat -F32 /dev/nvmexn1pn
 ```
 
@@ -421,22 +397,17 @@ mkfs.fat -F32 /dev/nvmexn1pn
 
 通过以下命令格式化对应的 Swap 分区，请按照实际情况替换 `x` 和 `n`（下同）：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mkswap /dev/sdxn
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mkswap /dev/nvmexn1pn
 ```
 
 :::
-::::
 
 ![mkswap](../static/rookie/basic-install_mkswap.png)
 
@@ -444,22 +415,17 @@ mkswap /dev/nvmexn1pn
 
 1. 首先我们需要将整一个分区格式化为 `Btrfs` 文件系统。使用如下命令进行格式化：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mkfs.btrfs -L myArch /dev/sdxn
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mkfs.btrfs -L myArch /dev/nvmexn1pn
 ```
 
 :::
-::::
 
 > 📑 命令参数说明：
 >
@@ -469,22 +435,17 @@ mkfs.btrfs -L myArch /dev/nvmexn1pn
 
 2. 为了创建子卷，我们需要先将 `Btrfs` 分区挂载到 `/mnt` 下：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mount -t btrfs -o compress=zstd /dev/sdxn /mnt
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mount -t btrfs -o compress=zstd /dev/nvmexn1pn /mnt
 ```
 
 :::
-::::
 
 > 📑 命令参数说明：
 >
@@ -537,10 +498,9 @@ umount /mnt
 
 1. 在挂载时，挂载是有顺序的，需要从根目录开始挂载。使用如下命令挂载子卷：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```zsh
+```zsh [SATA]
 mount -t btrfs -o subvol=/@,compress=zstd /dev/sdxn /mnt # 挂载 / 目录
 mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/sdxn /mnt/home # 挂载 /home 目录
@@ -549,10 +509,7 @@ mount /dev/sdxn /mnt/boot/efi # 挂载 /boot/efi 目录
 swapon /dev/sdxn # 挂载交换分区
 ```
 
-:::
-::: code-group-item NVME
-
-```zsh
+```zsh [NVME]
 mount -t btrfs -o subvol=/@,compress=zstd /dev/nvmexn1pn /mnt # 挂载 / 目录
 mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvmexn1pn /mnt/home # 挂载 /home 目录
@@ -562,7 +519,6 @@ swapon /dev/nvmexn1pn # 挂载交换分区
 ```
 
 :::
-::::
 
 ![mount_step-1](../static/rookie/basic-install_mount-1.png)
 

@@ -1,8 +1,3 @@
----
-title: 桌面环境与常用应用
-description: archlinux 安装桌面环境与常用应用 | 本指南包含从 archlinux 安装、显卡驱动、日常软件配置，到多媒体制作、编程等你可能需要的全部内容。让 archlinux 成为你的常用系统吧！
----
-
 # 桌面环境与常用应用安装
 
 > ### 🏔 两岸猿声啼不住，轻舟已过万重山
@@ -421,22 +416,17 @@ sudo systemctl enable --now bluetooth
 
 1. 通过以下命令安装 Timeshift<sup>cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```bash
+```bash [cn]
 sudo pacman -S timeshift
 ```
 
-:::
-::: code-group-item aur
-
-```bash
+```bash [aur]
 yay -S aur/timeshift
 ```
 
 :::
-::::
 
 ![timeshift-install](../static/rookie/desktop-env-and-app_timeshift-install.png)
 

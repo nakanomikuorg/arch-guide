@@ -1,7 +1,3 @@
----
-prev: /prepare/understand.md
----
-
 # 安装前的准备
 
 > ### 🧭 凡事预则立，不预则废

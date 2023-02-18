@@ -1,7 +1,3 @@
----
-title: 显卡驱动
----
-
 # archlinux 显卡驱动
 
 > ### 🪁 接天莲叶无穷碧，映日荷花别样红
@@ -114,22 +110,17 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 通过以下命令安装如下几个包即可：
 
-:::: code-group
-::: code-group-item 开源驱动 AMDGPU
+::: code-group
 
-```bash
+```bash [开源驱动 AMDGPU]
 sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
 ```
 
-:::
-::: code-group-item 开源 ATI 驱动
-
-```bash
+```bash [开源 ATI 驱动]
 sudo pacman -S mesa lib32-mesa xf86-video-ati
 ```
 
 :::
-::::
 
 ## 独立显卡
 
@@ -151,22 +142,17 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 
 - 较新型号的独立显卡使用以下命令直接安装如下几个包即可：
 
-:::: code-group
-::: code-group-item linux
+::: code-group
 
-```bash
+```bash [linux]
 sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils # 必须安装
 ```
 
-:::
-::: code-group-item others
-
-```bash
+```bash [others]
 sudo pacman -S nvidia-dkms nvidia-settings lib32-nvidia-utils # 必须安装
 ```
 
 :::
-::::
 
 - 如果是 GeForce 630 以下到 GeForce 400 系列的老卡，使用以下命令安装 [nvidia-390xx-dkms](https://aur.archlinux.org/packages/nvidia-390xx-dkms/)<sup>aur</sup> 及其 32 位支持包：
 
@@ -208,22 +194,17 @@ optimus-manager 已经支持 AMD 核芯显卡 + NVIDIA 独立显卡组合。
 
 1. 使用以下命令安装相关软件包：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```bash
+```bash [cn]
 yay -S optimus-manager optimus-manager-qt
 ```
 
-:::
-::: code-group-item aur
-
-```bash
+```bash [aur]
 yay -S aur/optimus-manager optimus-manager-qt
 ```
 
 :::
-::::
 
 2. 安装完成后重启即可使用。optimus-manager 安装完成后会默认设置 `optimus-manager.service` 服务自动启动，但建议还是通过以下命令手动设置一下：
 
@@ -372,22 +353,17 @@ __VK_LAYER_NV_optimus="NVIDIA_only"
 
 1. 通过以下命令安装包 `bbswitch`；若使用其它内核，则安装包 `bbswitch-dkms`：
 
-:::: code-group
-::: code-group-item linux
+::: code-group
 
-```bash
+```bash [linux]
 sudo pacman -S bbswitch
 ```
 
-:::
-::: code-group-item others
-
-```bash
+```bash [others]
 sudo pacman -S bbswitch-dkms
 ```
 
 :::
-::::
 
 2. 右键 optimus-manager 的托盘图标 > 点击 `设置` > 在 Optimus 选项卡中的 `switch method` 中选择 `Bbswitch` 即可：
 
@@ -422,22 +398,17 @@ DRI_PRIME=1 steam steam://rungameid/730 # 运行 CS:GO
 
 - 可以使用以下命令分别对核芯显卡和独立显卡进行性能测试，选择分数更高的一个使用：
 
-:::: code-group
-::: code-group-item 核芯显卡
+::: code-group
 
-```bash
+```bash [核芯显卡]
 glmark2
 ```
 
-:::
-::: code-group-item 独立显卡
-
-```bash
+```bash [独立显卡]
 DRI_PRIME=1 glmark2
 ```
 
 :::
-::::
 
 关于 glmark2 的说明请参阅 [glmark2](./graphic-driver.md#glmark2)。
 
@@ -481,22 +452,17 @@ glmark2 提供了一系列丰富的测试，涉及图形单元性能（缓冲、
 
 1. 使用以下命令安装 glmark2：
 
-:::: code-group
-::: code-group-item cn
+:: code-group
 
-```bash
+```bash [cn]
 sudo pacman -S glmark2
 ```
 
-:::
-::: code-group-item aur
-
-```bash
+```bash [aur]
 yay -S aur/glmark2
 ```
 
 :::
-::::
 
 2. 使用以下命令启动 glmark2：
 
