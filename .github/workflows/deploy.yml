@@ -1,12 +1,15 @@
 name: Deploy
 on:
-  workflow_dispatch: {}
+  workflow_dispatch: { }
   push:
     branches:
       - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16 ]
     permissions:
       pages: write
       id-token: write
@@ -17,11 +20,16 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 16
-          cache: "pnpm"
-      - run: pnpm install --frozen-lockfile
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm docs:build
       - uses: actions/configure-pages@v2
