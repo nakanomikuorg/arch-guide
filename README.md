@@ -6,7 +6,7 @@
   >
     <img
       width="256px"
-      src="./docs/.vuepress/public/static/svg/arch.svg"
+      src="./docs/.vitepress/public/static/svg/arch.svg"
       alt="arch-guide"
     />
   </a>
