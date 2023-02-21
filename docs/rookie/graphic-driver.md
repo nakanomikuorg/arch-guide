@@ -472,7 +472,7 @@ glmark2 提供了一系列丰富的测试，涉及图形单元性能（缓冲、
 
 1. 使用以下命令安装 glmark2：
 
-:: code-group
+::: code-group
 
 ```bash [cn]
 sudo pacman -S glmark2
