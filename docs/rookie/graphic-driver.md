@@ -140,7 +140,27 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 
 如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
-- 较新型号的独立显卡使用以下命令直接安装如下几个包即可：
+- 对于 [Turing (NV160/TUXXX)](https://nouveau.freedesktop.org/CodeNames.html#NV160) 系列或更新的显卡，需要安装 nvidia-open 驱动
+
+::: tip ℹ️  提示
+
+该驱动的质量目前处于 'alpha quality' 状态，所以也许会有问题。并且它暂时不适用于具有 AMD 集成 GPU 的系统。
+
+:::
+
+::: code-group
+
+```bash [linux]
+sudo pacman -S nvidia-open nvidia-settings lib32-nvidia-utils # 必须安装
+```
+
+```bash [others]
+sudo pacman -S nvidia-open-dkms nvidia-settings lib32-nvidia-utils # 必须安装
+```
+
+:::
+
+- 其他较新型号的独立显卡使用以下命令直接安装如下几个包即可：
 
 ::: code-group
 
