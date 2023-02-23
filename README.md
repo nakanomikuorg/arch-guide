@@ -6,7 +6,7 @@
   >
     <img
       width="256px"
-      src="./docs/.vitepress/public/static/svg/arch.svg"
+      src="docs/public/static/svg/arch.svg"
       alt="arch-guide"
     />
   </a>
@@ -167,7 +167,7 @@ yarn docs:dev
 
 ## 🎋 版权说明
 
-[![by-sa](./docs/static/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
+[![by-sa](docs/assets/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 
 网站源代码采用 MIT 许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 进行许可。
 

@@ -1,0 +1,7 @@
+.grabient-text {
+  color: transparent;
+  background-color: #ed6ea0;
+  background-image: var(--vp-home-hero-name-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

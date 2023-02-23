@@ -1,0 +1,15 @@
+:root {
+  --md-ref-palette-primary30: #004494;
+  --md-ref-palette-primary35: #004faa;
+  --md-ref-palette-primary50: #2b74e2;
+  --md-ref-palette-primary60: #4d8efe;
+  /* light */
+  --md-sys-color-primary-light: #005ac1;
+  --md-sys-color-background-light: #fefbff;
+  --md-sys-color-on-surface-variant-light: #44474f;
+  --md-sys-color-outline-light: #74777f;
+  /* dark */
+  --md-sys-color-background-dark: #1b1b1f;
+  --md-sys-color-on-surface-variant-dark: #c4c6d0;
+  --md-sys-color-outline-dark: #8e9099;
+}

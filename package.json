@@ -1,26 +1,32 @@
 {
-  "name": "arch-guide",
-  "version": "1.0.0",
-  "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
-  "main": "index.js",
-  "repository": "https://github.com/NakanoMikuOrg/arch-guide",
   "author": "icekylin <wminid@yeah.net>",
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "keywords": [],
-  "license": "CC-BY-NC-SA-4.0",
+  "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "2.8.4",
     "vitepress": "1.0.0-alpha.46",
     "vue": "^3.2.47"
   },
+  "keywords": [],
+  "license": "CC-BY-NC-SA-4.0",
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "main": "index.js",
+  "name": "arch-guide",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search"
       ]
     }
-  }
+  },
+  "repository": "https://github.com/NakanoMikuOrg/arch-guide",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "prepare": "husky install"
+  },
+  "version": "1.0.0"
 }
