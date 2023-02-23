@@ -67,7 +67,7 @@ sudo pacman -S wps-office aur/ttf-wps-fonts
 :::
 ::::
 
-![wps-office](../../assets/app/apps/office/wps-office.png)
+![wps-office](../../assets/app/common/office/wps-office.png)
 
 > 🔗 相关链接：
 >
@@ -98,13 +98,13 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 :::
 ::::
 
-![libreoffice-1](../../assets/app/apps/office/libreoffice-1.png)
+![libreoffice-1](../../assets/app/common/office/libreoffice-1.png)
 
 ::: tip ℹ️ 提示
 
 可能需要在菜单栏 `工具` > `选项` > `视图` 中调整 `图标样式` 以适应暗色模式：
 
-![libreoffice-2](../../assets/app/apps/office/libreoffice-2.png)
+![libreoffice-2](../../assets/app/common/office/libreoffice-2.png)
 
 :::
 
@@ -122,7 +122,7 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 yay -S foxitreader
 ```
 
-![foxit-pdf-reader](../../assets/app/apps/office/foxit-pdf-reader.png)
+![foxit-pdf-reader](../../assets/app/common/office/foxit-pdf-reader.png)
 
 ## Markdown 编辑器
 
@@ -157,7 +157,7 @@ yay -S aur/typora pandoc
 yay -S typora-free
 ```
 
-![typora](../../assets/app/apps/office/typora.png)
+![typora](../../assets/app/common/office/typora.png)
 
 ### VNote
 
@@ -179,4 +179,4 @@ VNote 采用的是一种折中的方案——语法高亮和原地预览。通�
 yay -S vnote3-git
 ```
 
-![vnote](../../assets/app/apps/office/vnote.png)
+![vnote](../../assets/app/common/office/vnote.png)

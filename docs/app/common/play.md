@@ -67,15 +67,15 @@ sidebarDepth: 2
 sudo pacman -S steam
 ```
 
-![steam-1](../../assets/app/apps/play/steam-1.png)
+![steam-1](../../assets/app/common/play/steam-1.png)
 
 2. 为了能够安装 Windows 下的游戏，还需要在菜单栏 `查看` > `设置` > 侧边栏 `Steam Play` > 勾选 `为所有其他产品启用 Steam Play`，在 `运行其他产品时使用` 中选择 `Proton Experimental`（最新版本）：
 
-   ![steam-2](../../assets/app/apps/play/steam-2.png)
+   ![steam-2](../../assets/app/common/play/steam-2.png)
 
    随后即可安装 Windows 平台上的游戏，Steam 会自动下载并安装相关组件：
 
-   ![plants-vs-zombies](../../assets/app/apps/play/plants-vs-zombies.png)
+   ![plants-vs-zombies](../../assets/app/common/play/plants-vs-zombies.png)
 
 ::: tip ℹ️ 提示
 
@@ -224,9 +224,9 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 2. 打开 `Minecraft Launcher` > 根据提示登录帐号并下载主程序后即可畅玩：
 
-   ![minecraft-1](../../assets/app/apps/play/minecraft-1.png)
+   ![minecraft-1](../../assets/app/common/play/minecraft-1.png)
 
-   ![minecraft-2](../../assets/app/apps/play/minecraft-2.png)
+   ![minecraft-2](../../assets/app/common/play/minecraft-2.png)
 
 ## 🎮 游戏手柄
 
@@ -311,15 +311,15 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
      对于 Steam 游戏，在 Steam 库中右键游戏封面 > 点击 `属性...` > 侧边栏 `通用` > 在 `启动选项` 中添加 `MANGOHUD=1 %command%`：
 
-     ![mangohud-1](../../assets/app/apps/play/mangohud-1.png)
+     ![mangohud-1](../../assets/app/common/play/mangohud-1.png)
 
    - Lutris
 
      对于 Lutris 游戏，点击右上角的 `更多按钮`（三个点） > 点击 `System preferences`（系统设置） > 选项卡 `System preferences`（系统选项） > 勾选 `Show advanced options`（显示高级选项）> 在 `Command prefix`（命令前缀）中添加 `mangohud`：
 
-     ![mangohud-2](../../assets/app/apps/play/mangohud-2.png)
+     ![mangohud-2](../../assets/app/common/play/mangohud-2.png)
 
-![mangohud-3](../../assets/app/apps/play/mangohud-3.png)
+![mangohud-3](../../assets/app/common/play/mangohud-3.png)
 
 ::: tip ℹ️ 提示
 
@@ -437,7 +437,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
    ls -ahl /etc/udev/rules.d # 复查一下
    ```
 
-   ![openrgb-1](../../assets/app/apps/play/openrgb-1.png)
+   ![openrgb-1](../../assets/app/common/play/openrgb-1.png)
 
 3. 重启计算机或者通过以下命令重新载入 udev 规则（`.rules` 文件）：
 
@@ -446,7 +446,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
    sudo udevadm trigger # 强制内核触发设备事件，主要用于重放内核初始化过程中的冷插（coldplug）设备事件
    ```
 
-   ![openrgb-2](../../assets/app/apps/play/openrgb-2.png)
+   ![openrgb-2](../../assets/app/common/play/openrgb-2.png)
 
 4. 若显卡、内存条或者主板等带有 RGB 需要控制，则还需要载入额外的驱动：
 
@@ -469,7 +469,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
    :::
    ::::
 
-   ![openrgb-3](../../assets/app/apps/play/openrgb-3.png)
+   ![openrgb-3](../../assets/app/common/play/openrgb-3.png)
 
 5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/community/x86_64/i2c-tools/)<sup>community / aur</sup>：
 
@@ -490,7 +490,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
    :::
    ::::
 
-   ![openrgb-4](../../assets/app/apps/play/openrgb-4.png)
+   ![openrgb-4](../../assets/app/common/play/openrgb-4.png)
 
 6. 验证驱动载入情况：
 

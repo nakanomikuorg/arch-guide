@@ -67,7 +67,7 @@ yay -S aur/vlc-git
 :::
 ::::
 
-![vlc](../../assets/app/apps/media/vlc.png)
+![vlc](../../assets/app/common/media/vlc.png)
 
 ### mpv
 
@@ -99,7 +99,7 @@ yay -S aur/mpv-git
 :::
 ::::
 
-![mpv](../../assets/app/apps/media/mpv.png)
+![mpv](../../assets/app/common/media/mpv.png)
 
 ### Dragon Player
 
@@ -111,7 +111,7 @@ Dragon Player 是 KDE 开发的一个相比于功能来说更注重简洁的多�
 sudo pacman -S dragon
 ```
 
-![dragon](../../assets/app/apps/media/dragon.png)
+![dragon](../../assets/app/common/media/dragon.png)
 
 ### SMplayer
 
@@ -144,9 +144,9 @@ sudo pacman -S dragon
 
 3. 在设置中调整为下图即可：
 
-   ![smplayer-1](../../assets/app/apps/media/smplayer-1.png)
+   ![smplayer-1](../../assets/app/common/media/smplayer-1.png)
 
-![smplayer-2](../../assets/app/apps/media/smplayer-2.png)
+![smplayer-2](../../assets/app/common/media/smplayer-2.png)
 
 ### parole
 
@@ -158,7 +158,7 @@ Xfce 开发的基于 GStreamer 框架的现代媒体播放器。
 sudo pacman -S parole
 ```
 
-![parole](../../assets/app/apps/media/parole.png)
+![parole](../../assets/app/common/media/parole.png)
 
 ### ZY Player
 
@@ -172,7 +172,7 @@ ZY Player 是一个简洁、免费、无广告的跨平台视频资源播放器�
 yay -S zy-player-bin
 ```
 
-![zyplayer](../../assets/app/apps/media/zyplayer.png)
+![zyplayer](../../assets/app/common/media/zyplayer.png)
 
 ## 🎵 音乐播放器
 
@@ -219,13 +219,13 @@ yay -S aur/deadbeef-git
 :::
 ::::
 
-![deadbeef-1](../../assets/app/apps/media/deadbeef-1.png)
+![deadbeef-1](../../assets/app/common/media/deadbeef-1.png)
 
 ::: tip ℹ️ 提示
 
 若音乐无法正常播放，请将菜单栏 `编辑` > `偏好设置` > 标签页 `声音` > `输出插件` 改为其它选项：
 
-![deadbeef-2](../../assets/app/apps/media/deadbeef-2.png)
+![deadbeef-2](../../assets/app/common/media/deadbeef-2.png)
 
 :::
 
@@ -239,7 +239,7 @@ JuK 是 KDE 开发的一款音乐播放器和管理程序，支持 MP3、Ogg Vor
 sudo pacman -S juk
 ```
 
-![juk](../../assets/app/apps/media/juk.png)
+![juk](../../assets/app/common/media/juk.png)
 
 ### YesPlayMusic（推荐）
 
@@ -259,9 +259,9 @@ sudo pacman -S juk
 yay -S yesplaymusic
 ```
 
-![yesplaymusic-1](../../assets/app/apps/media/yesplaymusic-1.png)
+![yesplaymusic-1](../../assets/app/common/media/yesplaymusic-1.png)
 
-![yesplaymusic-2](../../assets/app/apps/media/yesplaymusic-2.png)
+![yesplaymusic-2](../../assets/app/common/media/yesplaymusic-2.png)
 
 ### Listen 1（推荐）
 
@@ -273,7 +273,7 @@ Listen 1 作为“老牌”的听歌软件可以搜索和播放来自网易云�
 yay -S listen1-desktop-appimage
 ```
 
-![listen1](../../assets/app/apps/media/listen1.png)
+![listen1](../../assets/app/common/media/listen1.png)
 
 ### 网易云音乐
 
@@ -300,7 +300,7 @@ yay -S aur/netease-cloud-music
 :::
 ::::
 
-![netease-cloud-music](../../assets/app/apps/media/netease-cloud-music.png)
+![netease-cloud-music](../../assets/app/common/media/netease-cloud-music.png)
 
 ### QQ 音乐
 
@@ -314,4 +314,4 @@ yay -S aur/netease-cloud-music
 yay -S qqmusic-bin
 ```
 
-![official-qq-music](../../assets/app/apps/media/official-qq-music.png)
+![official-qq-music](../../assets/app/common/media/official-qq-music.png)

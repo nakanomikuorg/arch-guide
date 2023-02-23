@@ -18,6 +18,18 @@ export default defineConfig({
         name: "keywords",
         href: "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux"
       }
+    ],
+    [
+      "script",
+      {
+        src: "/js/google.js"
+      }
+    ],
+    [
+      "script",
+      {
+        src: "/js/baidu.js"
+      }
     ]
   ],
   ignoreDeadLinks: true,
@@ -72,8 +84,8 @@ export default defineConfig({
           {
             text: "💽 常用软件",
             items: [
-              { text: "📐 日常办公", link: "/app/apps/daily" },
-              { text: "🎯 其它内容", link: "/app/apps/media" }
+              { text: "📐 日常办公", link: "/app/common/daily" },
+              { text: "🎯 其它内容", link: "/app/common/media" }
             ]
           },
           {
@@ -201,19 +213,19 @@ export default defineConfig({
             {
               text: "📐 日常办公",
               items: [
-                { text: "常用软件", link: "/app/apps/daily" },
-                { text: "聊天通讯", link: "/app/apps/communication" },
-                { text: "办公软件", link: "/app/apps/office" },
-                { text: "多屏协同", link: "/app/apps/collaboration" }
+                { text: "常用软件", link: "/app/common/daily" },
+                { text: "聊天通讯", link: "/app/common/communication" },
+                { text: "办公软件", link: "/app/common/office" },
+                { text: "多屏协同", link: "/app/common/collaboration" }
               ]
             },
             {
               text: "🎯 其它内容",
               items: [
-                { text: "视频影音", link: "/app/apps/media" },
-                { text: "游戏娱乐", link: "/app/apps/play" },
-                { text: "远程连接", link: "/app/apps/remote" },
-                { text: "安卓刷机", link: "/app/apps/android" }
+                { text: "视频影音", link: "/app/common/media" },
+                { text: "游戏娱乐", link: "/app/common/play" },
+                { text: "远程连接", link: "/app/common/remote" },
+                { text: "安卓刷机", link: "/app/common/android" }
               ]
             }
           ]

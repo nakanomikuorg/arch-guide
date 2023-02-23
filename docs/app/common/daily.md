@@ -46,7 +46,7 @@ sudo pacman -S firefox
 sudo pacman -S firefox-developer-edition
 ```
 
-![firefox-developer-edition](../../assets/app/apps/daily/firefox-developer-edition.png)
+![firefox-developer-edition](../../assets/app/common/daily/firefox-developer-edition.png)
 
 ### Chromium
 
@@ -64,7 +64,7 @@ sudo pacman -S firefox-developer-edition
 sudo pacman -S chromium
 ```
 
-![chromium](../../assets/app/apps/daily/chromium.png)
+![chromium](../../assets/app/common/daily/chromium.png)
 
 ::: tip ℹ️ 提示
 
@@ -102,7 +102,7 @@ yay -S brave-git
 :::
 ::::
 
-![brave](../../assets/app/apps/daily/brave.png)
+![brave](../../assets/app/common/daily/brave.png)
 
 ### Falkon
 
@@ -127,7 +127,7 @@ yay -S falkon-git
 :::
 ::::
 
-![falkon](../../assets/app/apps/daily/falkon.png)
+![falkon](../../assets/app/common/daily/falkon.png)
 
 ### Tor 浏览器
 
@@ -152,7 +152,7 @@ yay -S tor-browser
 :::
 ::::
 
-![tor](../../assets/app/apps/daily/tor.png)
+![tor](../../assets/app/common/daily/tor.png)
 
 ### Mircrosoft Edge
 
@@ -177,7 +177,7 @@ yay -S microsoft-edge-dev-bin
 :::
 ::::
 
-![edge](../../assets/app/apps/daily/edge.png)
+![edge](../../assets/app/common/daily/edge.png)
 
 ### Google Chrome
 
@@ -202,7 +202,7 @@ yay -S google-chrome
 :::
 ::::
 
-![chrome](../../assets/app/apps/daily/chrome.png)
+![chrome](../../assets/app/common/daily/chrome.png)
 
 ### Opera
 
@@ -236,7 +236,7 @@ yay -S aur/opera-beta
 :::
 ::::
 
-![opera](../../assets/app/apps/daily/opera.png)
+![opera](../../assets/app/common/daily/opera.png)
 
 ### Vivaldi
 
@@ -250,7 +250,7 @@ yay -S aur/opera-beta
 sudo pacman -S vivaldi
 ```
 
-![vivaldi](../../assets/app/apps/daily/vivaldi.png)
+![vivaldi](../../assets/app/common/daily/vivaldi.png)
 
 ## 📖 PDF 以及电子书阅读器
 
@@ -279,7 +279,7 @@ yay -S okular-git
 :::
 ::::
 
-![okular](../../assets/app/apps/daily/okular.png)
+![okular](../../assets/app/common/daily/okular.png)
 
 ### calibre
 
@@ -304,7 +304,7 @@ yay -S calibre-git
 :::
 ::::
 
-![calibre](../../assets/app/apps/daily/calibre.png)
+![calibre](../../assets/app/common/daily/calibre.png)
 
 ## 📷 截图工具
 
@@ -368,11 +368,11 @@ yay -S calibre-git
 
    3. 点击选项卡 `触发器` > 将 `快捷键` 设置为自定义快捷键：
 
-   ![flameshot-1](../../assets/app/apps/daily/flameshot-1.png)
+   ![flameshot-1](../../assets/app/common/daily/flameshot-1.png)
 
    4. 点击选项卡 `动作` > 将 `命令/URL：` 设置为 `flameshot gui`：
 
-   ![flameshot-2](../../assets/app/apps/daily/flameshot-2.png)
+   ![flameshot-2](../../assets/app/common/daily/flameshot-2.png)
 
 ### Spectacle
 
@@ -399,7 +399,7 @@ yay -S spectacle-git
 :::
 ::::
 
-![spectacle](../../assets/app/apps/daily/spectacle.png)
+![spectacle](../../assets/app/common/daily/spectacle.png)
 
 ## 💾 网盘存储
 
@@ -430,7 +430,7 @@ MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 �
 
 2. 根据提示登录账户以及配置同步文件夹后即可：
 
-   ![megasync](../../assets/app/apps/daily/megasync.png)
+   ![megasync](../../assets/app/common/daily/megasync.png)
 
 ::: tip ℹ️ 提示
 
@@ -452,7 +452,7 @@ MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 �
 yay -S baidunetdisk-bin
 ```
 
-![baidunetdisk](../../assets/app/apps/daily/baidunetdisk.png)
+![baidunetdisk](../../assets/app/common/daily/baidunetdisk.png)
 
 ### 坚果云
 
@@ -507,7 +507,7 @@ yay -S gwenview-git
 :::
 ::::
 
-![gwenview](../../assets/app/apps/daily/gwenview.png)
+![gwenview](../../assets/app/common/daily/gwenview.png)
 
 ### nomacs
 
@@ -532,13 +532,13 @@ yay -S nomacs-git
 :::
 ::::
 
-![nomacs-1](../../assets/app/apps/daily/nomacs-1.png)
+![nomacs-1](../../assets/app/common/daily/nomacs-1.png)
 
 ::: tip ℹ️ 提示
 
 可能需要在菜单栏 `编辑` > `设置` > 侧边栏 `一般` > `颜色设置` 中改变颜色以适应暗色模式：
 
-![nomacs-2](../../assets/app/apps/daily/nomacs-2.png)
+![nomacs-2](../../assets/app/common/daily/nomacs-2.png)
 
 :::
 
@@ -552,7 +552,7 @@ Xfce 开发的图像查看器。相对来说更加简洁。
 sudo pacman -S ristretto
 ```
 
-![ristretto](../../assets/app/apps/daily/ristretto.png)
+![ristretto](../../assets/app/common/daily/ristretto.png)
 
 ### feh
 
@@ -601,9 +601,9 @@ XnView MP 是一个免费的图像查看器，可以轻松打开和编辑照片�
 yay -S xnviewmp
 ```
 
-![xnviewmp-1](../../assets/app/apps/daily/xnviewmp-1.png)
+![xnviewmp-1](../../assets/app/common/daily/xnviewmp-1.png)
 
-![xnviewmp-2](../../assets/app/apps/daily/xnviewmp-2.png)
+![xnviewmp-2](../../assets/app/common/daily/xnviewmp-2.png)
 
 ## 🧰 实用工具
 
@@ -617,7 +617,7 @@ yay -S xnviewmp
   sudo pacman -S kcalc
   ```
 
-  ![kcalc](../../assets/app/apps/daily/kcalc.png)
+  ![kcalc](../../assets/app/common/daily/kcalc.png)
 
 - [Kamoso](https://archlinux.org/packages/extra/x86_64/kamoso/) —— 相机
 
@@ -625,7 +625,7 @@ yay -S xnviewmp
   sudo pacman -S kamoso
   ```
 
-  ![kamoso](../../assets/app/apps/daily/kamoso.png)
+  ![kamoso](../../assets/app/common/daily/kamoso.png)
 
 - [KTimer](https://archlinux.org/packages/extra/x86_64/ktimer/) —— 倒计时执行器
 
@@ -633,7 +633,7 @@ yay -S xnviewmp
   sudo pacman -S ktimer
   ```
 
-  ![ktimer](../../assets/app/apps/daily/ktimer.png)
+  ![ktimer](../../assets/app/common/daily/ktimer.png)
 
 ## 🍷 Wine
 
@@ -673,7 +673,7 @@ Wine 不是沙箱。如果很重视安全，请使用虚拟机。
    wine /path/of/xxx.exe
    ```
 
-   ![wine](../../assets/app/apps/daily/wine.png)
+   ![wine](../../assets/app/common/daily/wine.png)
 
    ::: danger ☢️ 警告
 

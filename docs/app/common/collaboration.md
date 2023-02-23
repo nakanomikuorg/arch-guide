@@ -73,7 +73,7 @@ scrcpy 有以下优点：
 
 2. 打开安卓设备的 `设置` > `开发人员选项`（多次点击 `关于手机（平板）` 中的 `版本号`，提示处在 `开发者模式` 后即可在设置中找到）> 打开 `USB 调试`：
 
-   ![scrcpy-1](../../assets/app/apps/collaboration/scrcpy-1.jpg)
+   ![scrcpy-1](../../assets/app/common/collaboration/scrcpy-1.jpg)
 
    ::: tip ℹ️ 提示
 
@@ -83,7 +83,7 @@ scrcpy 有以下优点：
 
 3. 通过数据线连接安卓设备和计算机 > 将 `USB 连接方式` 改为 `传输文件`：
 
-   ![scrcpy-2](../../assets/app/apps/collaboration/scrcpy-2.jpg)
+   ![scrcpy-2](../../assets/app/common/collaboration/scrcpy-2.jpg)
 
 4. 在终端执行以下命令：
 
@@ -93,7 +93,7 @@ scrcpy 有以下优点：
 
    终端上也会显示连接的安卓设备号：
 
-   ![scrcpy-3](../../assets/app/apps/collaboration/scrcpy-3.png)
+   ![scrcpy-3](../../assets/app/common/collaboration/scrcpy-3.png)
 
    ::: tip ℹ️ 提示
 
@@ -115,9 +115,9 @@ scrcpy 有以下优点：
    scrcpy
    ```
 
-   ![scrcpy-4](../../assets/app/apps/collaboration/scrcpy-4.png)
+   ![scrcpy-4](../../assets/app/common/collaboration/scrcpy-4.png)
 
-   ![scrcpy-5](../../assets/app/apps/collaboration/scrcpy-5.png)
+   ![scrcpy-5](../../assets/app/common/collaboration/scrcpy-5.png)
 
 2. 关闭窗口即可结束连接
 
@@ -133,7 +133,7 @@ scrcpy 有以下优点：
 
 3. 打开安卓设备的 `设置` > `关于手机（平板）` > `状态信息`（或类似位置）> 查看手机（平板）的 `IP 地址`：
 
-   ![scrcpy-6](../../assets/app/apps/collaboration/scrcpy-6.jpg)
+   ![scrcpy-6](../../assets/app/common/collaboration/scrcpy-6.jpg)
 
 4. 在终端执行以下命令即可看到现在的安卓设备界面了：
 
@@ -157,9 +157,9 @@ scrcpy 有以下优点：
    scrcpy
    ```
 
-   ![scrcpy-7](../../assets/app/apps/collaboration/scrcpy-7.png)
+   ![scrcpy-7](../../assets/app/common/collaboration/scrcpy-7.png)
 
-   ![scrcpy-8](../../assets/app/apps/collaboration/scrcpy-8.png)
+   ![scrcpy-8](../../assets/app/common/collaboration/scrcpy-8.png)
 
    ::: tip ℹ️ 提示
 
@@ -179,7 +179,7 @@ scrcpy 有以下优点：
       adb disconnect HOST:PORT
       ```
 
-      ![scrcpy-9](../../assets/app/apps/collaboration/scrcpy-9.png)
+      ![scrcpy-9](../../assets/app/common/collaboration/scrcpy-9.png)
 
    :::
 
@@ -285,13 +285,13 @@ echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.zshrc
    uxplay
    ```
 
-   ![uxplay-1](../../assets/app/apps/collaboration/uxplay-1.png)
+   ![uxplay-1](../../assets/app/common/collaboration/uxplay-1.png)
 
 5. 在 iPad 或 iPhone 中打开屏幕镜像，选择并连接 `Uxplay`，等待一会即可：
 
-   ![uxplay-2](../../assets/app/apps/collaboration/uxplay-2.png)
+   ![uxplay-2](../../assets/app/common/collaboration/uxplay-2.png)
 
-   ![uxplay-3](../../assets/app/apps/collaboration/uxplay-3.png)
+   ![uxplay-3](../../assets/app/common/collaboration/uxplay-3.png)
 
 ::::: tip ℹ️ 提示
 
@@ -326,7 +326,7 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 
 若使用了 [透明代理](../../guide/rookie/transparent.md#_7-配置-cgproxy)，请将 `/usr/bin/uxplay` 添加到 `/etc/cgproxy/config.json` 中的 `program_noproxy` 一行（不使用透明代理的名单）：
 
-![uxplay-4](../../assets/app/apps/collaboration/uxplay-4.png)
+![uxplay-4](../../assets/app/common/collaboration/uxplay-4.png)
 
 :::
 
@@ -364,21 +364,21 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 
 3. 将计算机和移动设备连接至同一个无线网络，根据提示信任并连接即可：
 
-   ![kdeconnect-1](../../assets/app/apps/collaboration/kdeconnect-1.png)
+   ![kdeconnect-1](../../assets/app/common/collaboration/kdeconnect-1.png)
 
 4. 为了让计算机可以访问移动设备的文件系统，需要在移动设备点击对应计算机右上角的 `更多按钮`（三个点） > `插件设置` > 打开 `开放文件系统` > 点击 `开放文件系统` 进入 `开放文件系统设置` > `添加储存位置` > 选择要共享的文件夹：
 
-   ![kdeconnect-2](../../assets/app/apps/collaboration/kdeconnect-2.jpg)
+   ![kdeconnect-2](../../assets/app/common/collaboration/kdeconnect-2.jpg)
 
 5. 然后便可以在 Dolphin 中查看并操作移动设备的文件系统了：
 
-   ![kdeconnect-3](../../assets/app/apps/collaboration/kdeconnect-3.png)
+   ![kdeconnect-3](../../assets/app/common/collaboration/kdeconnect-3.png)
 
 ::: tip ℹ️ 提示
 
 若使用了 [透明代理](../../guide/rookie/transparent.md#_7-配置-cgproxy)，请将 `/usr/lib/kdeconnectd` 添加到 `/etc/cgproxy/config.json` 中的 `program_noproxy` 一行（不使用透明代理的名单）：
 
-![uxplay-4](../../assets/app/apps/collaboration/uxplay-4.png)
+![uxplay-4](../../assets/app/common/collaboration/uxplay-4.png)
 
 :::
 

@@ -73,7 +73,7 @@ Telegram 有两种加密模式：
    :::
    ::::
 
-   ![telegram](../../assets/app/apps/communication/telegram.png)
+   ![telegram](../../assets/app/common/communication/telegram.png)
 
 2. 调整隐私权限以及自动下载：
 
@@ -140,7 +140,7 @@ wrap 版本[`linuxqq-nt-bwrap`](https://aur.archlinux.org/packages/linuxqq-nt-bw
 yay -S linuxqq-nt-bwrap
 ```
 
-![qq-3](../../assets/app/apps/communication/qq-3.png)
+![qq-3](../../assets/app/common/communication/qq-3.png)
 
 #### 其它版本
 
@@ -152,11 +152,11 @@ yay -S linuxqq-nt-bwrap
    yay -S deepin-wine-qq
    ```
 
-   ![qq-1](../../assets/app/apps/communication/qq-1.png)
+   ![qq-1](../../assets/app/common/communication/qq-1.png)
 
 2. 参考 [deepin-wine5 相关](../../guide/advanced/debug.md#deepin-wine5-相关) 完成配置：
 
-   ![qq-2](../../assets/app/apps/communication/qq-2.png)
+   ![qq-2](../../assets/app/common/communication/qq-2.png)
 
 #### 第三方
 
@@ -181,11 +181,11 @@ yay -S linuxqq-nt-bwrap
    yay -S com.qq.weixin.deepin
    ```
 
-   ![wechat-1](../../assets/app/apps/communication/wechat-1.png)
+   ![wechat-1](../../assets/app/common/communication/wechat-1.png)
 
 2. 参考 [deepin-wine5 相关](../../guide/advanced/debug.md#deepin-wine5-相关) 完成配置：
 
-   ![wechat-2](../../assets/app/apps/communication/wechat-2.png)
+   ![wechat-2](../../assets/app/common/communication/wechat-2.png)
 
 #### 其它版本
 
@@ -236,7 +236,7 @@ yay -S aur/skypeforlinux-preview-bin
 :::
 ::::
 
-![skype](../../assets/app/apps/communication/skype.png)
+![skype](../../assets/app/common/communication/skype.png)
 
 ### Discord
 
@@ -248,7 +248,7 @@ yay -S aur/skypeforlinux-preview-bin
 sudo pacman -S discord
 ```
 
-![discord](../../assets/app/apps/communication/discord.png)
+![discord](../../assets/app/common/communication/discord.png)
 
 ::: tip ℹ️ 提示
 
@@ -265,7 +265,7 @@ sudo pacman -S discord
 sudo pacman -S teamspeak3
 ```
 
-![teamspeak3](../../assets/app/apps/communication/teamspeak3.png)
+![teamspeak3](../../assets/app/common/communication/teamspeak3.png)
 ::: tip ℹ️ 提示
 
 1. [中文汉化](https://www.wevg.org/archives/fix-ts3-linux-plugin/) 没有目录就创建目录，脚本需要给执行权限
@@ -302,7 +302,7 @@ yay -S aur/slack-desktop
 :::
 ::::
 
-![slack](../../assets/app/apps/communication/slack.png)
+![slack](../../assets/app/common/communication/slack.png)
 
 ## 📹 网络会议
 
@@ -314,7 +314,7 @@ yay -S aur/slack-desktop
 yay -S zoom
 ```
 
-![zoom](../../assets/app/apps/communication/zoom.png)
+![zoom](../../assets/app/common/communication/zoom.png)
 
 ### 腾讯会议
 
@@ -324,7 +324,7 @@ yay -S zoom
 yay -S wemeet-bin
 ```
 
-![meeting-2](../../assets/app/apps/communication/meeting-2.png)
+![meeting-2](../../assets/app/common/communication/meeting-2.png)
 
 ## ✉️ 电子邮件
 
@@ -338,7 +338,7 @@ Mozilla Thunderbird（雷鸟）是由 Mozilla 基金会研发的一款自由开�
 sudo pacman -S thunderbird
 ```
 
-![thunderbird](../../assets/app/apps/communication/thunderbird.png)
+![thunderbird](../../assets/app/common/communication/thunderbird.png)
 
 ### KMail
 
@@ -350,7 +350,7 @@ KMail 是一款功能先进的电子邮件客户端，能与 GMail 等常用电�
 sudo pacman -S kmail
 ```
 
-![kmail](../../assets/app/apps/communication/kmail.png)
+![kmail](../../assets/app/common/communication/kmail.png)
 
 ### Mailspring
 
