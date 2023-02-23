@@ -260,7 +260,7 @@ yay -S obs-nvfbc-git
 
    ![bilibili-live-chat-5](../../assets/app/exclusive/vedio/bilibili-live-chat-5.png)
 
-6. 打开 [`OBS Studio`](vedio.md#obs-studio) > 在 `来源` 中添加 `🌏 浏览器`（BrowserSource）> 复制上方链接填写在 `URL`中。`宽度` 和 `高度` 可根据需要自行设置（不要在预览视图中拖拽缩放浏览器源的宽高），其它选项默认即可：
+6. 打开 [`OBS Studio`](video.md#obs-studio) > 在 `来源` 中添加 `🌏 浏览器`（BrowserSource）> 复制上方链接填写在 `URL`中。`宽度` 和 `高度` 可根据需要自行设置（不要在预览视图中拖拽缩放浏览器源的宽高），其它选项默认即可：
 
    ![bilibili-live-chat-6](../../assets/app/exclusive/vedio/bilibili-live-chat-6.png)
 
@@ -357,7 +357,7 @@ yay -S obs-nvfbc-git
 
 1. 首先要进行视频字幕的下载。这里可以使用一个 Chromium 浏览器拓展 —— [YouTube™ 双字幕](https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm)
 
-2. 接下来进行字幕与视频的重新烧录。[MKVToolNix](vedio.md#mkvtoolnix) 只能做那种分离的字幕，但是某些视频网站要上传烧录好的。为了更好的兼容性，建议始终将视频和文件重新烧录。使用 `ffmpeg` 进行操作：
+2. 接下来进行字幕与视频的重新烧录。[MKVToolNix](video.md#mkvtoolnix) 只能做那种分离的字幕，但是某些视频网站要上传烧录好的。为了更好的兼容性，建议始终将视频和文件重新烧录。使用 `ffmpeg` 进行操作：
 
    ```bash
    ffmpeg -i input.mp4 -vf subtitles=input.srt output.mp4

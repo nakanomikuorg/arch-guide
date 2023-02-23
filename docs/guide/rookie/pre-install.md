@@ -18,7 +18,8 @@
 
 ## 1. 确保网络环境
 
-如果你可以使用路由器分接出来的网线，以 dhcp 的方式直接上网，那么不用准备什么。如果你的环境只能使用无线网络安装，需要事先把自己所用的 wifi 名称改成自己能记住的英文名称。因为**安装时无法显示和输入中文名的 wifi**，你会看到一堆不知道是什么的方块，并且在安装过程中你将没有办法输入中文的无线名称进行连接。
+如果你可以使用路由器分接出来的网线，以 dhcp 的方式直接上网，那么不用准备什么。如果你的环境只能使用无线网络安装，需要事先把自己所用的
+wifi 名称改成自己能记住的英文名称。因为**安装时无法显示和输入中文名的 wifi**，你会看到一堆不知道是什么的方块，并且在安装过程中你将没有办法输入中文的无线名称进行连接。
 
 ![wireless-network-card-switch](../../assets/guide/rookie/pre-install/uefi-1.png)
 
@@ -61,7 +62,8 @@
 
 ### 3-1. Windows
 
-Windows 下推荐使用 [Ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/) 或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行 U 盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
+Windows 下推荐使用 [Ventoy](https://www.ventoy.net/cn/doc_start.html)、[Rufus](https://rufus.ie/)
+或者 [Power ISO](https://www.poweriso.com/download.php)<sup>EULA</sup> 进行 U 盘刻录。三者皆为免费使用的软件。具体操作请自行查阅，都非常简单。
 
 除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)：
 
@@ -69,31 +71,37 @@ Windows 下推荐使用 [Ventoy](https://www.ventoy.net/cn/doc_start.html)、[Ru
 
 ::: tip ℹ️ 提示
 
-使用 balenaEtcher 制作完成的安装盘若要重新作为普通 U 盘使用，需要用磁盘分区管理工具（如 [KDE 分区管理器](https://apps.kde.org/partitionmanager/)、[DiskGenius](https://www.diskgenius.cn/)<sup>EULA</sup>）重建分区表才能正常格式化。
+使用 balenaEtcher 制作完成的安装盘若要重新作为普通 U
+盘使用，需要用磁盘分区管理工具（如 [KDE 分区管理器](https://apps.kde.org/partitionmanager/)、[DiskGenius](https://www.diskgenius.cn/)<sup>
+EULA</sup>）重建分区表才能正常格式化。
 
 :::
 
 ### 3-2. Linux
 
-Linux 下同样可以使用 Ventoy 和 balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-install-disk.md#ventoy-推荐) 以及 [balenaEtcher](../advanced/make-install-disk.md#balenaetcher)。
+Linux 下同样可以使用 Ventoy 和
+balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-install-disk.md#ventoy-%E6%8E%A8%E8%8D%90)
+以及 [balenaEtcher](../advanced/make-install-disk.md#balenaetcher)。
 
 也可以直接用 `dd` 命令进行刻录，具体步骤可参阅 [dd 命令](/advanced/make-install-disk.html#dd-命令)。
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
-如果目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
+如果目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给
+archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
 ![disk-step_1](../../assets/guide/rookie/pre-install/disk-1.png)
 
 1. 右键点击 `开始菜单` > 点击 `磁盘管理`
 
-![disk-step_2](../../assets/guide/rookie/pre-install/disk-2.png)
+   ![disk-step_2](../../assets/guide/rookie/pre-install/disk-2.png)
 
 2. 右键点击 `需要压缩的分区` > 点击 `压缩卷`
 
-![disk-step_3](../../assets/guide/rookie/pre-install/disk-3.png)
+   ![disk-step_3](../../assets/guide/rookie/pre-install/disk-3.png)
 
-3. 在 `输入压缩空间量(MB)` 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB = 1024MB，128GB = 128 \* 1024MB = 131072MB）
+3. 在 `输入压缩空间量(MB)` 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB =
+   1024MB，128GB = 128 \* 1024MB = 131072MB）
 
 4. 点击 `压缩`，完成之后关闭磁盘管理即可
 
@@ -107,37 +115,40 @@ Linux 下同样可以使用 Ventoy 和 balenaEtcher，具体步骤可参阅 [Ven
 
 若 win10 分区使用了 🔐 Bitlocker 加密，请提前获取恢复密钥。
 
-关于解锁密钥的查找请参阅 [Mircosoft 相关页面](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD%E6%9F%A5%E6%89%BE-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5-6b71ad27-0b89-ea08-f143-056f5ab347d6)。
+关于解锁密钥的查找请参阅 [Microsoft 相关页面](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD%E6%9F%A5%E6%89%BE-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5-6b71ad27-0b89-ea08-f143-056f5ab347d6)。
 
-一般来说使用与 win10 相同的微软帐号登录 [aka.ms 相关页面](https://aka.ms/myrecoverykey) 即可获取。
+一般来说使用与 win10 相同的微软账号登录 [aka.ms 相关页面](https://aka.ms/myrecoverykey) 即可获取。
 
 ## 6. 进入主板 BIOS 进行设置
 
-**插入优盘并开机**。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的 BIOS 设置界面。
+**插入优盘并开机**。在开机的时候，按下 `F2` / `F8` / `F10` / `DEL` 等（取决与你的主板型号，具体请查阅你主板的相关信息）按键，进入主板的
+BIOS 设置界面。
 
 除此之外，如果你还嫌麻烦，还可以使用以下方法进入 BIOS：
 
-![uefi-step_1](../../assets/guide/rookie/pre-install/uefi-2.png)
-
 1. 在 win10 下 按住 `Shift` 键同时点击 `重启`
 
-![uefi-step_2](../../assets/guide/rookie/pre-install/uefi-3.png)
+   ![uefi-step_1](../../assets/guide/rookie/pre-install/uefi-2.png)
 
 2. 保持按住 `Shift` 键直到进入如图所示界面
 
+   ![uefi-step_2](../../assets/guide/rookie/pre-install/uefi-3.png)
+
 3. 选择 `疑难解答` 并回车 `Enter`
 
-![uefi-step_3](../../assets/guide/rookie/pre-install/uefi-4.png)
+   ![uefi-step_3](../../assets/guide/rookie/pre-install/uefi-4.png)
 
 4. 选择 `UEFI 固件设置` 并回车 `Enter`
 
-![uefi-step_4](../../assets/guide/rookie/pre-install/uefi-5.png)
+   ![uefi-step_4](../../assets/guide/rookie/pre-install/uefi-5.png)
 
 5. 按下 `Enter` 重启，此时应该已经进入了 BIOS
 
-> #### 🍧 碎碎念
->
-> 随着时代的发展，主板的 BIOS 界面也越来越现代；很多主板都有了中文，根据主板 BIOS 界面的提示进行操作吧！
+::: info 🍧 碎碎念
+
+随着时代的发展，主板的 BIOS 界面也越来越现代；很多主板都有了中文，根据主板 BIOS 界面的提示进行操作吧！
+
+:::
 
 ## 7. 关闭 BIOS 设置中的 Secure Boot
 
@@ -145,15 +156,19 @@ Linux 下同样可以使用 Ventoy 和 balenaEtcher，具体步骤可参阅 [Ven
 
 在类似名为 `security`（安全） 的选项卡中，找到一项名为 `Secure Boot`（安全启动，名称可能略有差异）的选项，选择 `Disable` 将其禁用。
 
-> #### 🍧 碎碎念
->
-> 有少数恶心的主板里面，`Secure Boot` 被设置为开启，却不存在关闭它的选项，但系统主板内置有 Windows 系统的公钥证书签名，使其只能加载 Windows，其它系统（包括 archlinux）一律不予加载。用户不能关闭它，还没法换系统，实在让人无语 😶
->
-> 如果你正好是这样的电脑，emmm... 不妨在虚拟机里尝试下 archlinux 吧！
+::: info 🍧 碎碎念
+
+有少数奇葩的主板里面，`Secure Boot` 被设置为开启，却不存在关闭它的选项，但系统主板内置有 Windows 系统的公钥证书签名，使其只能加载
+Windows，其它系统（包括 archlinux）一律不予加载。用户不能关闭它，还没法换系统，实在让人无语 😶
+
+如果你正好是这样的电脑，emmm... 不妨在虚拟机里尝试下 archlinux 吧！
+
+:::
 
 ## 8. 调整启动方式为 UEFI（可能不需要）
 
-在某些旧的主板里，需要调整启动模式为 `UEFI`，而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode` 的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
+在某些旧的主板里，需要调整启动模式为 `UEFI`，而非传统的 `BIOS/CSM`。在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Mode`
+的选项，确保将其调整为 `UEFI only`，而非 `legacy/CSM`。
 
 ## 9. 调整硬盘启动顺序
 
