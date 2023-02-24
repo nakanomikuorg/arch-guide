@@ -60,6 +60,11 @@ pnpm docs:dev
 ## 💎 版权说明
 
 网站源代码采用 MIT
-许可证；未经特殊说明，本作品采用[知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)进行许可。
+许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
+进行许可。
 
 更多信息请参阅 [版权说明](../postscript/copyright.md)。
+
+## ⭐ Star 历史
+
+[![Star History](https://starchart.cc/NakanoMikuOrg/arch-guide.svg)](https://starchart.cc/NakanoMikuOrg/arch-guide)
