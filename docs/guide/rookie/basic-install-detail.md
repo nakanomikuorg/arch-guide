@@ -38,14 +38,14 @@
 1. 若 archlinux 安装分区小于 `256GB`：
 
    - `/` 根目录：`全部空间`（用户主目录不单独分区）
-   - `/boot/efi` EFI 分区：`256MB`
+   - `/boot` EFI 分区：`256MB`
    - Swap 分区：`>= 电脑实际运行内存的 60%`
 
 2. 若 archlinux 安装分区大于 `256GB`：
 
    - `/` 根目录：`128GB`
    - `/home` 用户主目录：`剩余的全部空间`
-   - `/boot/efi` EFI 分区：`256MB`
+   - `/boot` EFI 分区：`256MB`
    - Swap 分区：`>= 电脑实际运行内存的 60%`
 
 分区同样使用 `cfdisk` 工具，具体操作类似上一节 [7-1. 分区](./basic-install.html#_7-1-分区) 所述，这里不再赘述。
@@ -72,16 +72,16 @@ mkfs.ext4 /dev/nvmexn1pn
 mount /dev/sdxn /mnt
 mkdir /mnt/home # 若 /home 目录单独分区
 mount /dev/sdxn /mnt/home # 若 /home 目录单独分区
-mkdir -p /mnt/boot/efi
-mount /dev/sdxn /mnt/boot/efi
+mkdir -p /mnt/boot
+mount /dev/sdxn /mnt/boot
 ```
 
 ```zsh [NVME]
 mount /dev/nvmexn1pn /mnt
 mkdir /mnt/home # 若 /home 目录单独分区
 mount /dev/nvmexn1pn /mnt/home # 若 /home 目录单独分区
-mkdir -p /mnt/boot/efi
-mount /dev/nvmexn1pn /mnt/boot/efi
+mkdir -p /mnt/boot
+mount /dev/nvmexn1pn /mnt/boot
 ```
 
 :::
@@ -224,7 +224,7 @@ chroot /mnt bash
 
 其它琐碎的问题不在一一展开叙述，这里通过列表统一说明：
 
-1. EFI 分区（又称 esp 分区）不一定要在 `/boot/efi` 目录下；也可以是 `/boot` 或者 `/efi` 等等（若为 `/boot` 则 `/boot` 目录中的文件会和 EFI 分区的文件混杂在一起）
+1. EFI 分区（又称 esp 分区）不一定要挂载在 `/boot` 目录下；也可以是 `/efi` 或者其他非常见路径（当然一般推荐挂载在 `/boot` 下，方便引导程序读取同样在这个目录下的内核、微码等启动系统的必要文件）
 2. 若为**联想小新 Pro14 / YOGA 14s 2021** 机型，发现安装前后键盘都无法正常工作。此时安装时请使用外接键盘。为了解决该问题，在 [17. 安装引导程序](./basic-install.html#_17-安装引导程序) 步骤中编辑 `/etc/default/grub` 文件时添加额外的 GRUB 参数 —— 在 `GRUB_CMDLINE_LINUX_DEFAULT` 这一行中添加参数 `i8042.dumbkbd`
 
 修改后复查：
