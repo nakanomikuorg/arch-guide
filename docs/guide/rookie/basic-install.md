@@ -504,8 +504,8 @@ umount /mnt
 mount -t btrfs -o subvol=/@,compress=zstd /dev/sdxn /mnt # 挂载 / 目录
 mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/sdxn /mnt/home # 挂载 /home 目录
-mkdir -p /mnt/boot/efi # 创建 /boot/efi 目录
-mount /dev/sdxn /mnt/boot/efi # 挂载 /boot/efi 目录
+mkdir -p /mnt/boot # 创建 /boot 目录
+mount /dev/sdxn /mnt/boot # 挂载 /boot 目录
 swapon /dev/sdxn # 挂载交换分区
 ```
 
@@ -513,8 +513,8 @@ swapon /dev/sdxn # 挂载交换分区
 mount -t btrfs -o subvol=/@,compress=zstd /dev/nvmexn1pn /mnt # 挂载 / 目录
 mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvmexn1pn /mnt/home # 挂载 /home 目录
-mkdir -p /mnt/boot/efi # 创建 /boot/efi 目录
-mount /dev/nvmexn1pn /mnt/boot/efi # 挂载 /boot/efi 目录
+mkdir -p /mnt/boot # 创建 /boot 目录
+mount /dev/nvmexn1pn /mnt/boot # 挂载 /boot 目录
 swapon /dev/nvmexn1pn # 挂载交换分区
 ```
 
@@ -609,8 +609,8 @@ cat /mnt/etc/fstab
 # /dev/nvme0n1p6  /  btrfs  rw,relatime,compress=zstd:3,ssd,space_cache,subvolid=256,subvol=/@,subvol=@ 0 0
 UUID=d01a3ca5-0798-462e-9a30-97065e7e36e1 /  btrfs  rw,relatime,compress=zstd:3,ssd,space_cache,subvolid=256,subvol=/@,subvol=@  0 0
 
-# /dev/nvme0n1p1  /boot/efi vfat  rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro      0 2
-UUID=522C-80C6  /boot/efi vfat  rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 2
+# /dev/nvme0n1p1  /boot vfat  rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro      0 2
+UUID=522C-80C6  /boot vfat  rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 2
 
 # /dev/nvme0n1p6  /home btrfs rw,relatime,compress=zstd:3,ssd,space_cache,subvolid=257,subvol=/@home,subvol=@home 0 0
 UUID=d01a3ca5-0798-462e-9a30-97065e7e36e1 /home btrfs rw,relatime,compress=zstd:3,ssd,space_cache,subvolid=257,subvol=/@home,subvol=@home 0 0
@@ -798,12 +798,12 @@ pacman -S grub efibootmgr os-prober
 2. 安装 GRUB 到 EFI 分区：
 
 ```bash
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ARCH
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=ARCH
 ```
 
 > 📑 命令参数说明：
 >
-> - `--efi-directory=/boot/efi` —— 将 `grubx64.efi` 安装到之前的指定位置（EFI 分区）
+> - `--efi-directory=/boot` —— 将 `grubx64.efi` 安装到之前的指定位置（EFI 分区）
 > - `--bootloader-id=ARCH` —— 取名为 `ARCH`
 
 ![grub_step-1](../../assets/guide/rookie/basic-install_grub-1.png)
@@ -850,11 +850,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ::: tip ℹ️ 提示
 
-在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [archWiki 对应内容](https://wiki.archlinux.org/index.php/GRUB#Default/fallback_boot_path)。
+在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [archWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
 
 ```bash
-mkdir -p /boot/efi/EFI/BOOT
-mv /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
+mv /boot/EFI/grub /boot/EFI/BOOT
+mv /boot/EFI/GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 ```
 
 :::
