@@ -1,12 +1,14 @@
+![logo](./docs/public/images/arch.svg)
+
 # archlinux 简明指南
 
-<p align="center">
-  📖 本指南包含从 archlinux
-  安装、显卡驱动、日常软件配置、多媒体制作、编程等你可能需要的全部内容
-</p>
-<p align="center">❤️ 让 archlinux 成为你的常用系统吧！</p>
+[📖 阅读地址](https://arch.icekylin.online/)
 
-<p align="center">
+:books: 本指南包含 archlinux 安装、配置、维护等，帮助新手快速上手。
+
+:heart: 让 archlinux 成为你的常用系统吧！
+
+<p>
   <a
     href="https://github.com/NakanoMikuOrg/arch-guide"
     target="_blank"
@@ -79,22 +81,13 @@
   </a>
 </p>
 
-<h2 align="center">
-  <a
-    href="https://arch.icekylin.online/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >📖 阅读地址</a
-  >
-</h2>
+## :construction: 文档施工中
 
-## 🚧 文档施工中
-
-## 📕 相关信息
+## :green_book: 相关信息
 
 本指南派生自 [Arch Linux 安装使用教程](https://github.com/ArchLinuxStudio/ArchLinuxTutorial)。
 
-## 💻 本地运行
+## :computer: 本地运行
 
 ### Pacman
 
@@ -129,17 +122,17 @@ pnpm docs:dev
 
 其它系统请参阅 [PnpM 中文文档](https://pnpm.io/zh/installation) 安装 `PnpM`。
 
-## 🔔 隐私提醒
+## :bell: 隐私提醒
 
 本站使用百度统计和 Google Analytics 分析流量。访问即同意它们的隐私政策。
 
-## 🌱 参与贡献
+## :seedling: 参与贡献
 
 欢迎对指南内容以及网站源码做出贡献，也欢迎对本指南的上游文档做出贡献。
 
 更多信息请参阅 [贡献指南](https://arch.icekylin.online/postscript/contribute.md)。
 
-💎 版权说明
+## :gem: 版权说明
 
 网站源代码采用 MIT
 许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
@@ -147,6 +140,12 @@ pnpm docs:dev
 
 更多信息请参阅 [版权说明](https://arch.icekylin.online/postscript/copyright.md)。
 
-## ⭐ Star 历史
+## :cake: 贡献者
+
+<a href="https://github.com/NakanoMikuOrg/arch-guide/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=NakanoMikuOrg/arch-guide" alt="contributors"/>
+</a>
+
+## :star: Star 历史
 
 [![Star History](https://starchart.cc/NakanoMikuOrg/arch-guide.svg)](https://starchart.cc/NakanoMikuOrg/arch-guide)
