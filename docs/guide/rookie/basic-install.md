@@ -240,7 +240,7 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 - `/` 根目录：`>= 128GB`（和用户主目录在同一个 `Btrfs` 文件系统上）
 - `/home` 用户主目录：`>= 128GB`（和根目录在同一个 `Btrfs` 文件系统上）
-- `/boot/efi` EFI 分区：`256MB`（由电脑厂商或 Windows 决定，无需再次创建）
+- `/boot` EFI 分区：`256MB`（由电脑厂商或 Windows 决定，无需再次创建）
 - Swap 分区：`>= 电脑实际运行内存的 60%`（设置这个大小是为了配置休眠准备）
 
 ::: tip ℹ️ 提示
