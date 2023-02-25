@@ -21,7 +21,7 @@
 如果你可以使用路由器分接出来的网线，以 dhcp 的方式直接上网，那么不用准备什么。如果你的环境只能使用无线网络安装，需要事先把自己所用的
 wifi 名称改成自己能记住的英文名称。因为**安装时无法显示和输入中文名的 wifi**，你会看到一堆不知道是什么的方块，并且在安装过程中你将没有办法输入中文的无线名称进行连接。
 
-![wireless-network-card-switch](../../assets/guide/rookie/pre-install/uefi-1.png)
+![wireless-network-card-switch](./pre-install/uefi-1.avif)
 
 其次，有些笔记本电脑上存在无线网卡的硬件开关或者键盘控制，开机后安装前需要**确保你的无线网卡硬件开关处于打开状态**。
 
@@ -36,11 +36,11 @@ wifi 名称改成自己能记住的英文名称。因为**安装时无法显示�
 - [华为开源镜像站](https://repo.huaweicloud.com/archlinux/)
 - [兰州大学开源镜像站](https://mirror.lzu.edu.cn/archlinux/)
 
-![清华大学开源软件镜像站](../../assets/guide/rookie/pre-install/tuna.png)
+![清华大学开源软件镜像站](./pre-install/tuna.avif)
 
 其中前两者点击网页右侧侧栏的获取下载链接，选择 archlinux 下载即可。
 
-![华为开源镜像站](../../assets/guide/rookie/pre-install/huawei.png)
+![华为开源镜像站](./pre-install/huawei.avif)
 
 后两者需要依次点击 `iso` > `20XX.XX.XX` > `archlinux-20XX.XX.XX-x86_64.iso`。
 
@@ -52,7 +52,7 @@ wifi 名称改成自己能记住的英文名称。因为**安装时无法显示�
 
 :::
 
-![download-speed](../../assets/guide/rookie/pre-install/download-speed.png)
+![download-speed](./pre-install/download-speed.avif)
 
 中科大的开源镜像站下载速度还是很快的。
 
@@ -67,7 +67,7 @@ Windows 下推荐使用 [Ventoy](https://www.ventoy.net/cn/doc_start.html)、[Ru
 
 除此之外，如果你还嫌麻烦，还可以使用更为简单的安装盘制作工具 [balenaEtcher](https://www.balena.io/etcher/)：
 
-![ethcer](../../assets/guide/rookie/pre-install/ethcer.png)
+![etcher](./pre-install/etcher.avif)
 
 ::: tip ℹ️ 提示
 
@@ -90,18 +90,18 @@ balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-insta
 如果目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给
 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
-![disk-step_1](../../assets/guide/rookie/pre-install/disk-1.png)
-
 1. 右键点击 `开始菜单` > 点击 `磁盘管理`
 
-   ![disk-step_2](../../assets/guide/rookie/pre-install/disk-2.png)
+   ![disk-step_1](./pre-install/disk-1.avif)
 
 2. 右键点击 `需要压缩的分区` > 点击 `压缩卷`
 
-   ![disk-step_3](../../assets/guide/rookie/pre-install/disk-3.png)
+   ![disk-step_2](./pre-install/disk-2.avif)
 
 3. 在 `输入压缩空间量(MB)` 输入需要分给 archlinux 的空闲硬盘空间大小。假设分配 `128GB` 则输入 `131072`（1GB =
    1024MB，128GB = 128 \* 1024MB = 131072MB）
+
+   ![disk-step_3](./pre-install/disk-3.webp)
 
 4. 点击 `压缩`，完成之后关闭磁盘管理即可
 
@@ -128,19 +128,19 @@ BIOS 设置界面。
 
 1. 在 win10 下 按住 `Shift` 键同时点击 `重启`
 
-   ![uefi-step_1](../../assets/guide/rookie/pre-install/uefi-2.png)
+   ![uefi-step_1](./pre-install/uefi-2.webp)
 
 2. 保持按住 `Shift` 键直到进入如图所示界面
 
-   ![uefi-step_2](../../assets/guide/rookie/pre-install/uefi-3.png)
+   ![uefi-step_2](./pre-install/uefi-3.webp)
 
 3. 选择 `疑难解答` 并回车 `Enter`
 
-   ![uefi-step_3](../../assets/guide/rookie/pre-install/uefi-4.png)
+   ![uefi-step_3](./pre-install/uefi-4.webp)
 
 4. 选择 `UEFI 固件设置` 并回车 `Enter`
 
-   ![uefi-step_4](../../assets/guide/rookie/pre-install/uefi-5.png)
+   ![uefi-step_4](./pre-install/uefi-5.webp)
 
 5. 按下 `Enter` 重启，此时应该已经进入了 BIOS
 
@@ -152,7 +152,7 @@ BIOS 设置界面。
 
 ## 7. 关闭 BIOS 设置中的 Secure Boot
 
-![uefi-step_5](../../assets/guide/rookie/pre-install/uefi-6.png)
+![uefi-step_5](./pre-install/uefi-6.webp)
 
 在类似名为 `security`（安全） 的选项卡中，找到一项名为 `Secure Boot`（安全启动，名称可能略有差异）的选项，选择 `Disable` 将其禁用。
 
@@ -172,15 +172,15 @@ Windows，其它系统（包括 archlinux）一律不予加载。用户不能关
 
 ## 9. 调整硬盘启动顺序
 
-![uefi-step_6](../../assets/guide/rookie/pre-install/uefi-7.png)
+![uefi-step_6](./pre-install/uefi-7.webp)
 
-![uefi-step_7](../../assets/guide/rookie/pre-install/uefi-8.png)
+![uefi-step_7](./pre-install/uefi-8.webp)
 
 在类似名为 `boot` 的选项卡中，找到类似名为 `Boot Options`（名称可能略有差异）的设置选项，将优盘的启动顺序调至首位。
 
 ## 10. 保存 BIOS 设置
 
-![uefi-step_8](../../assets/guide/rookie/pre-install/uefi-9.png)
+![uefi-step_8](./pre-install/uefi-9.avif)
 
 最后保存 BIOS 设置并退出，一般的按键是 `F10`。
 
@@ -194,6 +194,6 @@ Windows，其它系统（包括 archlinux）一律不予加载。用户不能关
 
 ::: tip ℹ️ 提示
 
-archlinux 安装盘应该一直插在 🖥️ 电脑上
+archlinux 安装盘应该一直插在电脑上。
 
 :::

@@ -7,52 +7,59 @@
 
 <p align="center">
   <a
-    href="https://actions-badge.atrox.dev/NakanoMikuOrg/arch-guide/goto?ref=main"
+    href="https://actions-badge.atrox.dev/nakanomikuorg/arch-guide/goto?ref=main"
    >
     <img
       alt="Build Status"
-      src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FNakanoMikuOrg%2Farch-guide%2Fbadge%3Fref%3Dmain&style=flat"
+      src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fnakanomikuorg%2Farch-guide%2Fbadge%3Fref%3Dmain&style=flat"
     />
   </a>
   <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="Lines of code"
-      src="https://img.shields.io/tokei/lines/github/NakanoMikuOrg/arch-guide"
-    />
-  </a>
-  <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
+    href="https://github.com/nakanomikuorg/arch-guide"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
       alt="arch-guide"
-      src="https://travis-ci.com/NakanoMikuOrg/arch-guide.svg?branch=main"
+      src="https://travis-ci.com/nakanomikuorg/arch-guide.svg?branch=main"
     />
   </a>
   <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
+    href="https://hits.seeyoufarm.com"
+  >
+    <img
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnakanomikuorg%2Farch-guide&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
+    />
+  </a>
+  <a
+    href="https://github.com/nakanomikuorg/arch-guide"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
       alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/NakanoMikuOrg/arch-guide"
+      src="https://img.shields.io/github/last-commit/nakanomikuorg/arch-guide"
     />
   </a>
   <a
-    href="https://github.com/NakanoMikuOrg/arch-guide"
+    href="https://github.com/nakanomikuorg/arch-guide"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
       alt="GitHub Repo stars"
-      src="https://img.shields.io/github/stars/NakanoMikuOrg/arch-guide?style=social"
+      src="https://img.shields.io/github/stars/nakanomikuorg/arch-guide?style=social"
     />
+  </a>
+  <a
+    href="https://github.com/nakanomikuorg/arch-guide/blob/main/LICENSE"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      alt="GitHub"
+      src="https://img.shields.io/github/license/nakanomikuorg/arch-guide"
+    >
   </a>
   <a
     href="https://arch.icekylin.online/postscript/contributor-covenant.html"
@@ -70,30 +77,30 @@
 
 > [📖 阅读地址](https://arch.icekylin.online/)
 >
-> :heart: 让 archlinux 成为你的日常系统吧！
+> 让 archlinux 成为你的日常系统吧！
 
-- 📖 Vitepress 驱动，格式优化
+- 📖 VitePress 驱动，格式优化
 - 📚 细节和原理进行了详细的说明，知其然知其所以然
 - 🏝️ 增加了更多可视化内容，生动形象
 - ❎ 删除了部分内容，如有需要请参阅原文档
 - ✅ 遵循 arch 实用性原则，避免意识形态问题，对非自由软件更加包容
 - 🌱 目前指南有许多需要改进的地方，参阅贡献章节帮助完善
 
-:books: 本指南包含 archlinux 安装、配置、维护等，帮助新手快速上手。
+📚 本指南包含 archlinux 安装、配置、维护等，帮助新手快速上手。
 
-## :construction: 文档施工中
+## 文档施工中
 
-## :green_book: 相关信息
+## 相关信息
 
 本指南派生自 [Arch Linux 安装使用教程](https://github.com/ArchLinuxStudio/ArchLinuxTutorial)。
 
-## :computer: 本地运行
+## 本地运行
 
 ### Pacman
 
 ```shell
 sudo pacman -S nodejs pnpm # 安装 nodejs 和 PnpM
-git clone https:/github.com/NakanoMikuOrg/arch-guide.git
+git clone https:/github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -103,7 +110,7 @@ pnpm docs:dev
 
 ```shell
 brew install pnpm # 安装 PnpM
-git clone https:/github.com/NakanoMikuOrg/arch-guide.git
+git clone https:/github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -114,7 +121,7 @@ pnpm docs:dev
 ```powershell
 scoop install nodejs # 安装 nodejs
 scoop install pnpm # 安装 PnpM
-git clone https:/github.com/NakanoMikuOrg/arch-guide.git
+git clone https:/github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -122,17 +129,17 @@ pnpm docs:dev
 
 其它系统请参阅 [PnpM 中文文档](https://pnpm.io/zh/installation) 安装 `PnpM`。
 
-## :bell: 隐私提醒
+## 隐私提醒
 
 本站使用百度统计和 Google Analytics 分析流量。访问即同意它们的隐私政策。
 
-## :seedling: 参与贡献
+## 参与贡献
 
 欢迎对指南内容以及网站源码做出贡献，也欢迎对本指南的上游文档做出贡献。
 
 更多信息请参阅 [贡献指南](https://arch.icekylin.online/postscript/contribute)。
 
-## :gem: 版权说明
+## 版权说明
 
 网站源代码采用 MIT
 许可证；未经特殊说明，本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
@@ -140,12 +147,12 @@ pnpm docs:dev
 
 更多信息请参阅 [版权说明](https://arch.icekylin.online/postscript/copyright)。
 
-## :cake: 贡献者
+## 贡献者
 
-<a href="https://github.com/NakanoMikuOrg/arch-guide/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=NakanoMikuOrg/arch-guide" alt="contributors"/>
+<a href="https://github.com/nakanomikuorg/arch-guide/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nakanomikuorg/arch-guide" alt="contributors"/>
 </a>
 
-## :star: Star 历史
+## Star 历史
 
-[![Star History](https://starchart.cc/NakanoMikuOrg/arch-guide.svg)](https://starchart.cc/NakanoMikuOrg/arch-guide)
+[![Star History](https://starchart.cc/nakanomikuorg/arch-guide.svg)](https://starchart.cc/nakanomikuorg/arch-guide)

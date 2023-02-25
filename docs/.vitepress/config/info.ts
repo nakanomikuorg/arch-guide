@@ -1,12 +1,27 @@
+const keywords = [
+  "archlinux 指南",
+  "archlinux 教程",
+  "archlinux 安装",
+  "archlinux tutorial",
+  "archlinux guide",
+  "archlinux install",
+  "archlinux",
+  "Arch Linux",
+  "Linux",
+  "tutorial",
+  "guide",
+  "ebook"
+];
+
 // Base Info
 export const TITLE = "archlinux 简明指南";
 export const DESCRIPTION = "本指南包含 archlinux 安装、配置、维护等，帮助新手快速上手";
 export const LANG = "zh-CN";
 export const DOMAIN = "arch.icekylin.online";
 export const URL = `https://${DOMAIN}`;
-export const REPO = "https://github.com/NakanoMikuOrg/arch-guide";
+export const REPO = "https://github.com/nakanomikuorg/arch-guide";
 export const LOGO = "/images/logo.svg";
-export const KEYWORDS = "archlinux 安装,archlinux 教程,archlinux 指南,archlinux,Arch Linux,Linux";
+export const KEYWORDS = keywords.join(",");
 export const META_TITLE = `${TITLE} —— Arch Linux 安装使用教程`;
 
 // Algolia Search

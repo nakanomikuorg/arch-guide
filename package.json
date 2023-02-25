@@ -1,14 +1,27 @@
 {
-  "author": "icekylin <wminid@yeah.net>",
+  "author": "icekylin <dwsdbcugm@mozmail.com>",
   "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "devDependencies": {
     "husky": "^8.0.3",
     "prettier": "2.8.4",
-    "vitepress": "1.0.0-alpha.46",
+    "vitepress": "1.0.0-alpha.47",
     "vue": "^3.2.47"
   },
-  "keywords": [],
-  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "archlinux 指南",
+    "archlinux 教程",
+    "archlinux 安装",
+    "archlinux tutorial",
+    "archlinux guide",
+    "archlinux install",
+    "archlinux",
+    "Arch Linux",
+    "Linux",
+    "tutorial",
+    "guide",
+    "ebook"
+  ],
+  "license": "CC-BY-SA-4.0",
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
   },
@@ -21,12 +34,13 @@
       ]
     }
   },
-  "repository": "https://github.com/NakanoMikuOrg/arch-guide",
+  "repository": "https://github.com/nakanomikuorg/arch-guide",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "update": "pnpm update -r --latest"
   },
   "version": "1.0.0"
 }

@@ -14,12 +14,12 @@ hero:
       link: /guide/index
     - theme: alt
       text: 🍺 Github
-      link: https://github.com/NakanoMikuOrg/arch-guide
+      link: https://github.com/nakanomikuorg/arch-guide
 
 features:
   - icon: 📖
     title: 格式优化
-    details: Vitepress 驱动，格式优化
+    details: VitePress 驱动，格式优化
   - icon: 📚
     title: 介绍详细
     details: 细节和原理进行了详细的说明，知其然知其所以然
