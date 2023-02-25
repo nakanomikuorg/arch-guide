@@ -5,3 +5,8 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+.badges img {
+  display: inline-block;
+  margin-right: 10px;
+}
