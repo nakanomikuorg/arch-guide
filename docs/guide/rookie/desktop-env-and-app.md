@@ -101,7 +101,7 @@ EDITOR=vim visudo # 这里需要显式的指定编辑器，因为上面的环境
 4. 找到如下这样的一行，把前面的注释符号 `#` 去掉：
 
 ```sudoers
-#%wheel ALL=(ALL) ALL
+#%wheel ALL=(ALL:ALL) ALL
 ```
 
 ![visudo](../../assets/guide/rookie/desktop-env-and-app_visudo.png)
@@ -110,7 +110,7 @@ EDITOR=vim visudo # 这里需要显式的指定编辑器，因为上面的环境
 >
 > - `%wheel` —— 用户名或用户组，此处则代表是 `wheel` 组，`%` 是用户组的前缀
 > - `ALL=` —— 主机名，此处则代表在所有主机上都生效（如果把同样的 `sudoers` 文件下发到了多个主机上）
-> - `(ALL)` —— 用户名，此处则代表可以成为任意目标用户
+> - `(ALL:ALL)` —— (任意用户:任意用户组)，此处则代表可以成为任意目标用户/用户组
 > - 最后的 `ALL` —— 代表可以执行任意命令
 >
 > 几个更详细的例子:
