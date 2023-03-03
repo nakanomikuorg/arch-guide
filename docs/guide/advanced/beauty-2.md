@@ -26,29 +26,21 @@
 
      1. 安装 [`tela-icon-theme`](https://github.com/vinceliuice/Tela-icon-theme)<sup>cn / aur</sup> 图标主题：
 
-        :::: code-group
-        ::: code-group-item cn (git)
+        ::: code-group
 
-        ```bash
+        ```bash [cn (git)]
         sudo pacman -S tela-icon-theme-git
         ```
 
-        :::
-        ::: code-group-item aur (git)
-
-        ```bash
+        ```bash [aur (git)]
         yay -S aur/tela-icon-theme-git
         ```
 
-        :::
-        ::: code-group-item aur
-
-        ```bash
+        ```bash [aur]
         yay -S aur/tela-icon-theme
         ```
 
         :::
-        ::::
 
         ![icon-yay-1](../../assets/guide/advanced/beauty/icon-yay-1.png)
 

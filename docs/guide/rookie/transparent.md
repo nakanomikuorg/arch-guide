@@ -318,9 +318,17 @@ clash 本身是一个网络连接的代理内核，通过预先定义的**规则
 vim ~/.config/clash/config.yaml
 ```
 
+### Clash-verge
+
+基于 tauri 框架开发的开源跨平台 Clash 客户端<small>（远离 Electron 从我做起）</small>
+
+```
+yay -S clash-verge
+```
+
 ### Clash for Windows
 
-这是一个比较推荐的客户端，支持 Windows/macOS/Linux ，基于 Clash 和 Electron 的一个 GUI 客户端。未开源
+这是一个功能较全的客户端，支持 Windows/macOS/Linux ，基于 Clash 和 Electron 的一个 GUI 客户端。未开源
 
 ```
 yay -S clash-for-windows-bin

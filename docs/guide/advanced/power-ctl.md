@@ -18,39 +18,29 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
 1. 安装 [TLP](https://linrunner.de/tlp/index.html)<sup>community / aur</sup>、[`tlp-rdw`](https://archlinux.org/packages/community/any/tlp-rdw/)<sup>community / aur</sup> 以及可选安装图形界面 [TLPUI](https://github.com/d4nj1/TLPUI)<sup>aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```bash
+   ```bash [community]
    sudo pacman -S tlp tlp-rdw
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S tlp-git tlp-rdw-git
    ```
 
    :::
-   ::::
 
-   :::: code-group
-   ::: code-group-item aur
+   ::: code-group
 
-   ```bash
+   ```bash [aur]
    yay -S tlpui
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S tlpui-git
    ```
 
    :::
-   ::::
 
    ::: tip ℹ️ 提示
 
@@ -138,22 +128,17 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
 1. 安装 `intel-undervolt`：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```bash
+   ```bash [community]
    sudo pacman -S intel-undervolt
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S intel-undervolt-git
    ```
 
    :::
-   ::::
 
    ![intel-undervolt-1](../../assets/guide/advanced/power-ctl/intel-undervolt-1.png)
 

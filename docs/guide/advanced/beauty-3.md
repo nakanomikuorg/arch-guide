@@ -140,22 +140,17 @@ yay -S nerd-fonts-jetbrains-mono
 
 1. 安装 [boxes](https://archlinux.org/packages/extra/any/cowsay/)<sup>aur</sup>：
 
-   :::: code-group
-   ::: code-group-item aur
+   ::: code-group
 
-   ```bash
+   ```bash [aur]
    yay -S boxes
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S boxes-git
    ```
 
    :::
-   ::::
 
 2. 通过管道符（`|`）将简短的其它命令输出传递给 `boxes`：
 
@@ -173,22 +168,17 @@ yay -S nerd-fonts-jetbrains-mono
 
 1. 安装 [cmatrix](https://archlinux.org/packages/community/x86_64/cmatrix/)：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```bash
+   ```bash [community]
    sudo pacman -S cmatrix
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash aur (git)
    yay -S aur/cmatrix-git
    ```
 
    :::
-   ::::
 
 2. 输入以下命令：
 
@@ -206,22 +196,17 @@ yay -S nerd-fonts-jetbrains-mono
 
 1. 安装 [asciiquarium](https://archlinux.org/packages/community/any/asciiquarium/)<sup>community / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```bash
+   ```bash [community]
    sudo pacman -S asciiquarium
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S aur/asciiquarium-git
    ```
 
    :::
-   ::::
 
 2. 输入以下命令：
 

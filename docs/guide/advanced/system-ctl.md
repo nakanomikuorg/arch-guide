@@ -74,22 +74,17 @@ sudo some_command # 使普通用户以 root 权限执行某些命令
 
 安装 `pacman-contrib` ：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```bash
+```bash [community]
 sudo pacman -S pacman-contrib
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
 yay -S pacman-contrib-git
 ```
 
 :::
-::::
 
 可以把 Pacman 理解为一个软件管理器（软件管家？），可以进行软件的安装、删除、查询等：
 
@@ -139,22 +134,17 @@ yay -Yc # 清理不需要的依赖
 
 1. 安装 Octopi：
 
-:::: code-group
-::: code-group-item aur
+::: code-group
 
-```bash
+```bash [aur]
    yay -S octopi
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
    yay -S octopi-git
 ```
 
 :::
-::::
 
 2. 打开 Octopi 即可看到图形化的 Pacman / yay 界面：
 
@@ -261,7 +251,7 @@ sudo pacman -S unarchiver
 2. 解压压缩包：
 
 ```bash
-   unar xxx.zip
+unar xxx.zip
 ```
 
 ## 磁盘空间信息
@@ -375,53 +365,41 @@ sudo pacman -S smartmontools
 
 2. 查看磁盘信息：
 
-:::: code-group
-::: code-group-item SATA
+::: code-group
 
-```bash
+```bash [SATA]
 sudo smartctl -A /dev/sdx # 硬盘
 sudo smartctl -d sat -A /dev/sdx # USB 设备
 ```
 
-:::
-::: code-group-item NVME
-
-```bash
+```bash [NVME]
 sudo smartctl -A /dev/nvmexn1 # 硬盘
 sudo smartctl -d sat -A /dev/sdx # USB 设备
 ```
 
 :::
-::::
 
 ### CPU 信息
 
 类似 Windows 下的 [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)<sup>EULA</sup>，Linux 下有 [CPU-X](https://x0rg.github.io/CPU-X/)<sup>cn / aur</sup>。
 
 1. 安装 CPU-X：
-   :::: code-group
-   ::: code-group-item cn
 
-```bash
+::: code-group
+
+```bash [cn]
 sudo pacman -S cpu-x
 ```
 
-:::
-::: code-group-item aur
-
-```bash
+```bash [aur]
 yay -S aur/cpu-x
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
 yay -S cpu-x-git
 ```
 
 :::
-::::
 
 2. 打开 CPU-X 即可看到 CPU 详细信息：
 
@@ -447,22 +425,17 @@ yay -S gpu-viewer
 
 1. 安装 Dmidecode：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```bash
+```bash [extra]
 sudo pacman -S dmidecode
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
 yay -S dmidecode-git
 ```
 
 :::
-::::
 
 2. 输入以下命令使用 Dmidecode 查看系统硬件信息：
 

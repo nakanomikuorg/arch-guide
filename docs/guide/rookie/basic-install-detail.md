@@ -58,7 +58,7 @@
 mkfs.ext4 /dev/sdax
 ```
 
-```zsh NVME
+```zsh [NVME]
 mkfs.ext4 /dev/nvmexn1pn
 ```
 
