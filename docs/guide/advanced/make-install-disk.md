@@ -20,22 +20,17 @@ Ventoy 支持 [大部分常见类型的操作系统](https://www.ventoy.net/cn/i
 
 安装 Ventoy：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```bash
+```bash [cn]
 sudo pacman -S ventoy-bin
 ```
 
-:::
-::: code-group-item aur
-
-```bash
+```bash [aur]
 yay -S aur/ventoy-bin
 ```
 
 :::
-::::
 
 #### 命令行模式
 
@@ -167,37 +162,29 @@ yay -S aur/ventoy-bin
 
 [balenaEtcher](https://www.balena.io/etcher/)<sup>aur</sup> 界面更加傻瓜一点。但是只支持对单个完整 U 盘进行制作，即使还有剩余的空间也无法使用。
 
-1. 安装 balenaEtcher：
+1.安装 balenaEtcher：
 
-   :::: code-group
-   ::: code-group-item aur
+::: code-group
 
-   ```bash
-   yay -S etcher-bin
-   ```
+```bash [aur]
+yay -S etcher-bin
+```
 
-   :::
-   ::: code-group-item aur (git)
+```bash [aur (git)]
+yay -S etcher-git
+```
+:::
 
-   ```bash
-   yay -S etcher-git
-   ```
+![balena-etcher-1](../../assets/guide/advanced/make-install-disk/balena-etcher-1.png)
 
-   :::
-   ::::
+::: tip ℹ️ 提示
 
-   ![balena-etcher-1](../../assets/guide/advanced/make-install-disk/balena-etcher-1.png)
+[`balena-etcher`](https://aur.archlinux.org/packages/balena-etcher) 打开后会白屏，无法正常使用。
+请安装 [`etcher-bin`](https://aur.archlinux.org/packages/etcher-bin/) 或 [`etcher-git`](https://aur.archlinux.org/packages/etcher-git/)。
 
-   ::: tip ℹ️ 提示
+:::
 
-   [`balena-etcher`](https://aur.archlinux.org/packages/balena-etcher) 打开后会白屏，无法正常使用。
-
-   请安装 [`etcher-bin`](https://aur.archlinux.org/packages/etcher-bin/) 或 [`etcher-git`](https://aur.archlinux.org/packages/etcher-git/)。
-
-   :::
-
-2. 打开 balenaEtcher，按提示操作即可：
-
+2.打开 balenaEtcher，按提示操作即可：
    ![balena-etcher-2](../../assets/guide/advanced/make-install-disk/balena-etcher-2.png)
 
 ::: tip ℹ️ 提示
@@ -357,24 +344,19 @@ sudo umount /mnt/mount_point
 
 1. 首先安装 Archiso 相关包：
 
-   :::: code-group
-   ::: code-group-item extra
+::: code-group
 
-   ```bash
-   sudo pacman -S archiso
-   ```
+```bash [extra]
+sudo pacman -S archiso
+```
 
-   :::
-   ::: code-group-item aur (git)
+```bash [aur (git)]
+yay -S archiso-git
+```
 
-   ```bash
-   yay -S archiso-git
-   ```
+:::
 
-   :::
-   ::::
-
-   ![archiso-1](../../assets/guide/advanced/make-install-disk/archiso-1.png)
+![archiso-1](../../assets/guide/advanced/make-install-disk/archiso-1.png)
 
 2. 复制 `releng` 配置方案到合适位置：
 

@@ -23,29 +23,21 @@
   - 启用了一些加固选项，比如用户命名空间（同时通过补丁禁用未授权用户的访问）、审计以及 SELinux
   - 需要注意的是使用此内核时部分软件包将不起作用
 
-:::: code-group
-::: code-group-item zen
+::: code-group
 
-```bash
+```bash [zen]
 sudo pacman -S linux-zen linux-zen-headers
 ```
 
-:::
-::: code-group-item lts
-
-```bash
+```bash [lts]
 sudo pacman -S linux-lts linux-lts-headers
 ```
 
-:::
-::: code-group-item hardened
-
-```bash
+```bash [hardened]
 sudo pacman -S linux-hardened linux-hardened-headers
 ```
 
 :::
-::::
 
 ![zen](../../assets/guide/advanced/optional-cfg/zen.png)
 

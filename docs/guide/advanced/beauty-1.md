@@ -74,22 +74,17 @@
 
 安装 [Weather Widget](https://archlinux.org/packages/community/x86_64/plasma5-applets-weather-widget/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```bash
+```bash [community]
 sudo pacman -S plasma5-applets-weather-widget qt5-xmlpatterns # 必须安装
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
 yay -S aur/plasma5-applets-weather-widget-git qt5-xmlpatterns # 必须安装
 ```
 
 :::
-::::
 
 ![weather-widget](../../assets/guide/advanced/beauty/weather-widget.png)
 
@@ -191,29 +186,21 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
 
 1. 为了实现 Dock 栏布局，需要安装 [Latte](https://github.com/KDE/latte-dock)<sup>community / cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```bash
+   ```bash [community]
    sudo pacman -S latte-dock
    ```
 
-   :::
-   ::: code-group-item cn (git)
-
-   ```bash
+   ```bash [cn (git)]
    sudo pacman -S latte-dock-git
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```bash
+   ```bash [aur (git)]
    yay -S aur/latte-dock-git
    ```
 
    :::
-   ::::
 
    ::: tip ℹ️ 提示
 
