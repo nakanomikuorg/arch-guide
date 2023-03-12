@@ -166,7 +166,7 @@ yay -S linuxqq-nt-bwrap
   ```sh
   yay -S icalingua
   ```
-- Icalingua++ [`Icalingua++`](https://aur.archlinux.org/packages/icalingua++/)<sup>aur</sup> - electron 开发的第三方 QQ ([github](https://github.com/Icalingua/Icalingua++))(为 icalingua 升级版)
+- Icalingua++ [`Icalingua++`](https://aur.archlinux.org/packages/icalingua++/)<sup>aur</sup> - electron 开发的第三方 QQ ([github](https://github.com/Icalingua-plus-plus/Icalingua-plus-plus))(为 icalingua 升级版)
   ```sh
   yay -S icalingua++
   ```
