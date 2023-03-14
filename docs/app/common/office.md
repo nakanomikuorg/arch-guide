@@ -36,36 +36,25 @@ sidebarDepth: 2
 
 安装 WPS Office（可选 [国内版](https://aur.archlinux.org/packages/wps-office-cn/)<sup>EULA / aur</sup> 或 [国际版](https://aur.archlinux.org/packages/wps-office/)<sup>EULA / aur</sup>）以及 [相关字体](https://aur.archlinux.org/packages/ttf-wps-fonts/)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn (cn)
+::: code-group
 
-```sh
+```sh [cn (cn)]
 yay -S wps-office-cn ttf-wps-fonts
 ```
 
-:::
-::: code-group-item cn
-
-```sh
+```sh [cn]
 sudo pacman -S wps-office ttf-wps-fonts
 ```
 
-:::
-::: code-group-item aur (cn)
-
-```sh
+```sh [aur (cn)]
 yay -S wps-office-cn aur/ttf-wps-fonts
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 sudo pacman -S wps-office aur/ttf-wps-fonts
 ```
 
 :::
-::::
 
 ![wps-office](../../assets/app/common/office/wps-office.png)
 
@@ -81,22 +70,17 @@ sudo pacman -S wps-office aur/ttf-wps-fonts
 
 安装 [LibreOffice](https://archlinux.org/packages/extra/x86_64/libreoffice-still/) 以及 [其中文语言包](https://archlinux.org/packages/extra/any/libreoffice-still-zh-cn/)：
 
-:::: code-group
-::: code-group-item 正式版
+::: code-group
 
-```sh
+```sh [正式版]
 sudo pacman -S libreoffice-still libreoffice-still-zh-cn
 ```
 
-:::
-::: code-group-item 尝鲜版
-
-```sh
+```sh [尝鲜版]
 sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 ```
 
 :::
-::::
 
 ![libreoffice-1](../../assets/app/common/office/libreoffice-1.png)
 
@@ -134,22 +118,17 @@ Typora 没有采用源代码和预览双栏显示的方式，而是采用所见�
 
 安装 [Typora](https://aur.archlinux.org/packages/typora/)<sup>EULA / cn / aur</sup> 以及 [Pandoc](https://archlinux.org/packages/community/x86_64/pandoc/)：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S typora pandoc
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/typora pandoc
 ```
 
 :::
-::::
 
 值得注意的是，目前 typora 软件已经开始收费。如果有能力购买的话可以进行购买。对于囊中羞涩的学生党或其他不愿购买的用户，我们可以选择使用 typora 的最后一个免费版本（注意：不是盗版），安装方式如下：
 

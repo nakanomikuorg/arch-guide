@@ -130,29 +130,21 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 1. 安装 [Lutris](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S lutris
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/lutris
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S lutris-git
    ```
 
    :::
-   ::::
 
 2. 参考 [🍷 Wine](daily.md#🍷-wine) 安装 Wine
 
@@ -180,22 +172,17 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 1. 安装 [Minecraft Launcher（我的世界官服启动器）](https://aur.archlinux.org/packages/minecraft-launcher/)<sup>EULA / cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S minecraft-launcher
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/minecraft-launcher
    ```
 
    :::
-   ::::
 
    ::::: tip ℹ️ 提示
 
@@ -203,22 +190,17 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    安装 [HMCL](https://aur.archlinux.org/packages/hmcl/)<sup>cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S hmcl
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/hmcl
    ```
 
    :::
-   ::::
 
    :::::
 
@@ -240,29 +222,21 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 1. 安装 [xow](https://aur.archlinux.org/packages/xow-git/)<sup>cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn (git)
+   ::: code-group
 
-   ```sh
+   ```sh [cn (git)]
    sudo pacman -S xow-git
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S xow
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S aur/xow-git
    ```
 
    :::
-   ::::
 
 2. 启动 `xcow` 服务：
 
@@ -280,22 +254,17 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 1. 安装 [MangoHud](https://aur.archlinux.org/pkgbase/mangohud/)<sup>aur</sup>：
 
-   :::: code-group
-   ::: code-group-item aur
+   ::: code-group
 
-   ```sh
+   ```sh [aur]
    yay -S mangohud lib32-mangohud
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S mangohud-git lib32-mangohud-git
    ```
 
    :::
-   ::::
 
 2. 通过以下方法使用 MangoHud：
 
@@ -403,32 +372,24 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 1. 安装 [OpenRGB](https://aur.archlinux.org/packages/openrgb/)<sup>cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S openrgb
    sudo pacman -S openrazer-driver-dkms # 雷蛇用户需要安装
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/openrgb
    sudo pacman -S openrazer-driver-dkms # 雷蛇用户需要安装
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S openrgb-git
    yay -S openrazer-driver-dkms-git # 雷蛇用户需要安装
    ```
 
    :::
-   ::::
 
 2. 为了让内核能够识别到设备文件，需要下载 [60-openrgb.rules](https://gitlab.com/CalcProgrammer1/OpenRGB/-/blob/master/60-openrgb.rules)，并将它复制到 `/etc/udev/rules.d` 文件夹下：
 
@@ -450,45 +411,35 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 4. 若显卡、内存条或者主板等带有 RGB 需要控制，则还需要载入额外的驱动：
 
-   :::: code-group
-   ::: code-group-item Intel
+   ::: code-group
 
-   ```sh
+   ```sh [Intel]
    sudo modprobe i2c-dev # 显卡、内存条
    sudo modprobe i2c-i801 # 芯片组
    ```
 
-   :::
-   ::: code-group-item AMD
-
-   ```sh
+   ```sh [AMD]
    sudo modprobe i2c-dev # 显卡、内存条
    sudo modprobe i2c-piix4 # 芯片组
    ```
 
    :::
-   ::::
 
    ![openrgb-3](../../assets/app/common/play/openrgb-3.png)
 
 5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/community/x86_64/i2c-tools/)<sup>community / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S i2c-tools
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S i2c-tools-git
    ```
 
    :::
-   ::::
 
    ![openrgb-4](../../assets/app/common/play/openrgb-4.png)
 

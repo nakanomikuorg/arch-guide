@@ -34,22 +34,17 @@ sidebarDepth: 2
 
 安装 [Kdenlive](https://archlinux.org/packages/extra/x86_64/kdenlive/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S kdenlive
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S kdenlive-git
 ```
 
 :::
-::::
 
 ![kdenlive](../../assets/app/exclusive/vedio/kdenlive.png)
 
@@ -59,22 +54,17 @@ yay -S kdenlive-git
 
 安装 [Shotcut](https://archlinux.org/packages/community/x86_64/shotcut/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S shotcut
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S shotcut-git
 ```
 
 :::
-::::
 
 ![shotcut](../../assets/app/exclusive/vedio/shotcut.png)
 
@@ -84,22 +74,17 @@ yay -S shotcut-git
 
 安装 [MKVToolNix](https://archlinux.org/packages/extra/x86_64/mkvtoolnix-gui/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S mkvtoolnix-gui
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S mkvtoolnix-git
 ```
 
 :::
-::::
 
 ![mkvtoolnix-1](../../assets/app/exclusive/vedio/mkvtoolnix-1.png)
 
@@ -117,22 +102,17 @@ yay -S mkvtoolnix-git
 
 安装 [DaVinci Resolve（免费版）](https://aur.archlinux.org/packages/davinci-resolve/)<sup>EULA / aur</sup>：
 
-:::: code-group
-::: code-group-item aur
+::: code-group
 
-```sh
+```sh [aur]
 yay -S davinci-resolve
 ```
 
-:::
-::: code-group-item aur (beta)
-
-```sh
+```sh [aur (beta)]
 yay -S davinci-resolve-beta
 ```
 
 :::
-::::
 
 ::: tip ℹ️ 提示
 
@@ -144,22 +124,17 @@ DaVinci Resolve 没有编入 fcitx 模块，所以在 Linux 下不能输入中�
 
 另外还有 [DaVinci Resolve Studio（付费版）](https://aur.archlinux.org/packages/davinci-resolve-studio/)<sup>EULA / aur</sup>：
 
-:::: code-group
-::: code-group-item aur
+::: code-group
 
-```sh
+```sh [aur]
 yay -S davinci-resolve-studio
 ```
 
-:::
-::: code-group-item aur (beta)
-
-```sh
+```sh [aur (beta)]
 yay -S davinci-resolve-studio-beta
 ```
 
 :::
-::::
 
 ## 📡 录屏直播
 
@@ -169,29 +144,21 @@ yay -S davinci-resolve-studio-beta
 
 安装 [OBS Studio](https://www.archlinux.org/packages/community/x86_64/obs-studio/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item aur (browser)
+::: code-group
 
-```sh
+```sh [aur (browser)]
 yay -S obs-studio-browser # 有浏览器插件集成的 OBS Studio。编译要很久（大约 15 min）
 ```
 
-:::
-::: code-group-item community
-
-```sh
+```sh [community]
 sudo pacman -S obs-studio
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S obs-studio-git
 ```
 
 :::
-::::
 
 ![obs-studio](../../assets/app/exclusive/vedio/obs-studio.png)
 
@@ -280,29 +247,21 @@ yay -S obs-nvfbc-git
 
 1. 安装 [弹幕库](https://www.danmaku.live/)<sup>cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S bilibili-live-helper-bin
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S aur/bilibili-live-helper-bin
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S bilibili-live-helper-git
    ```
 
    :::
-   ::::
 
    ![danmaku-1](../../assets/app/exclusive/vedio/danmaku-1.png)
 
@@ -316,22 +275,17 @@ yay -S obs-nvfbc-git
 
 1. 安装 [screenkey](https://archlinux.org/packages/community/any/screenkey/)<sup>community / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S screenkey
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S screenkey-git
    ```
 
    :::
-   ::::
 
 2. 在终端输入 `screenkey` 以启动：
 

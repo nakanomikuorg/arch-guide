@@ -34,29 +34,21 @@ sidebarDepth: 2
 
 安装 [GIMP](https://archlinux.org/packages/extra/x86_64/gimp/)<sup>extra / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S gimp
 ```
 
-:::
-::: code-group-item cn (git)
-
-```sh
+```sh [cn (git)]
 sudo pacman -S gimp-git
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aur/gimp-git
 ```
 
 :::
-::::
 
 ![gimp](../../assets/app/exclusive/image/gimp.png)
 
@@ -66,29 +58,21 @@ yay -S aur/gimp-git
 
 安装 [Aseprite](https://aur.archlinux.org/packages/aseprite/)<sup>EULA / aur</sup>：
 
-:::: code-group
-::: code-group-item aur
+::: code-group
 
-```sh
+```sh [aur]
 yay -S aseprite
 ```
 
-:::
-::: code-group-item aur (bin)
-
-```sh
+```sh [aur (bin)]
 yay -S aseprite-bin
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aseprite-git
 ```
 
 :::
-::::
 
 ![aseprite](../../assets/app/exclusive/image/aseprite.png)
 
@@ -98,22 +82,17 @@ yay -S aseprite-git
 
 安装 [RawTherapee](https://archlinux.org/packages/community/x86_64/rawtherapee/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S rawtherapee
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S rawtherapee-git
 ```
 
 :::
-::::
 
 ![rawtherapee](../../assets/app/exclusive/image/rawtherapee.png)
 
@@ -123,22 +102,17 @@ KolourPaint 是 KDE 开发的一个简单易用的自由开源的绘图程序（
 
 安装 [KolourPaint](https://archlinux.org/packages/extra/x86_64/kolourpaint/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S kolourpaint
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S kolourpaint-git
 ```
 
 :::
-::::
 
 ![kolourpaint](../../assets/app/exclusive/image/kolourpaint.png)
 
@@ -150,22 +124,17 @@ Inkscape 是自由开源的矢量图形编辑器。该软件的开发目标是�
 
 安装 [Inkscape](https://archlinux.org/packages/extra/x86_64/inkscape/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S inkscape
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S inkscape-git
 ```
 
 :::
-::::
 
 ![inkscape](../../assets/app/exclusive/image/inkscape.png)
 
@@ -187,22 +156,17 @@ yay -S inkscape-git
 
 安装 [Krita](https://archlinux.org/packages/extra/x86_64/krita/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S krita
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S krita-git
 ```
 
 :::
-::::
 
 ![krita](../../assets/app/exclusive/image/krita.png)
 

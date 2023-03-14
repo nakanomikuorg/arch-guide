@@ -34,22 +34,17 @@ sidebarDepth: 2
 
 安装 [Ardour](https://archlinux.org/packages/community/x86_64/ardour/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S ardour
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S ardour-git
 ```
 
 :::
-::::
 
 ![ardour](../../assets/app/exclusive/audio/ardour.png)
 
@@ -59,22 +54,17 @@ yay -S ardour-git
 
 安装 [Kwave](https://archlinux.org/packages/extra/x86_64/kwave/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S kwave
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S kwave-git
 ```
 
 :::
-::::
 
 ![kwave](../../assets/app/exclusive/audio/kwave.png)
 
@@ -84,22 +74,17 @@ yay -S kwave-git
 
 安装 [Audacity](https://archlinux.org/packages/community/x86_64/audacity/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S audacity
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S audacity-git
 ```
 
 :::
-::::
 
 ![audacity](../../assets/app/exclusive/audio/audacity.png)
 
@@ -129,29 +114,21 @@ yay -S audacium-git
 
 1. 安装 [VCV Rack](https://archlinux.org/packages/community/x86_64/audacity/)<sup>aur</sup>：
 
-   :::: code-group
-   ::: code-group-item aur (bin)
+   ::: code-group
 
-   ```sh
+   ```sh [aur (bin)]
    sudo pacman -S vcvrack-bin
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    sudo pacman -S vcvrack
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S vcvrack-git
    ```
 
    :::
-   ::::
 
 2. 在终端通过 `vcvrack` 命令启动 VCV Rack：
 
@@ -165,22 +142,17 @@ yay -S audacium-git
 
 安装 [Mixxx](https://archlinux.org/packages/community/x86_64/mixxx/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S mixxx
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S mixxx-git
 ```
 
 :::
-::::
 
 ![mixxx](../../assets/app/exclusive/audio/mixxx.png)
 
@@ -192,22 +164,17 @@ yay -S mixxx-git
 
 安装 [LMMS](https://archlinux.org/packages/community/x86_64/lmms/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S lmms
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S lmms-git
 ```
 
 :::
-::::
 
 ![lmms](../../assets/app/exclusive/audio/lmms.png)
 
@@ -217,29 +184,21 @@ yay -S lmms-git
 
 安装 [MuseScore](https://archlinux.org/packages/community/x86_64/lmms/)<sup>community / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S musescore
 ```
 
-:::
-::: code-group-item cn (git)
-
-```sh
+```sh [cn (git)]
 sudo pacman -S musescore-git
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aur/musescore-git
 ```
 
 :::
-::::
 
 ![musescore](../../assets/app/exclusive/audio/musescore.png)
 
@@ -265,21 +224,16 @@ yay -S lyrebird
 
 安装 [SoundConverter](https://archlinux.org/packages/community/any/soundconverter/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S soundconverter
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S soundconverter-git
 ```
 
 :::
-::::
 
 ![soundconverter](../../assets/app/exclusive/audio/soundconverter.png)

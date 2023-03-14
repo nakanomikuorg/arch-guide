@@ -34,22 +34,17 @@ sidebarDepth: 2
 
 安装 [Blender](https://archlinux.org/packages/community/x86_64/blender/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S blender
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S blender-git
 ```
 
 :::
-::::
 
 ![blender](../../assets/app/exclusive/media/blender.png)
 
@@ -71,22 +66,17 @@ sudo pacman -S sweethome3d
 
 安装 [Synfig Studio](https://archlinux.org/packages/community/x86_64/synfigstudio/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S synfigstudio
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S synfigstudio-git
 ```
 
 :::
-::::
 
 ![synfigstudio](../../assets/app/exclusive/media/synfigstudio.png)
 
@@ -124,21 +114,16 @@ yay -S figma-linux
 
 安装 [FontForge](https://archlinux.org/packages/extra/x86_64/fontforge/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S fontforge
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S fontforge-git
 ```
 
 :::
-::::
 
 ![fontforge](../../assets/app/exclusive/media/fontforge.png)
