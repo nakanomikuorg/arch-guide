@@ -42,36 +42,25 @@ Telegram 有两种加密模式：
 
 1. 安装 `Telegram`<sup>community / cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S telegram-desktop
    ```
 
-   :::
-   ::: code-group-item cn (git)
-
-   ```sh
+   ```sh [cn (git)]
    sudo pacman -S telegram-desktop-git
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S telegram-desktop-bin
    ```
 
-   :::
-   ::: code-group-item aur（dev）
-
-   ```sh
+   ```sh [aur（dev）]
    yay -S telegram-desktop-bin-dev
    ```
 
    :::
-   ::::
 
    ![telegram](../../assets/app/common/communication/telegram.png)
 
@@ -205,36 +194,25 @@ Skype 是一款通信应用软件，可通过互联网为电脑、平板电脑�
 
 安装 [Skype](https://www.skype.com/zh-Hans/)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S skypeforlinux-stable-bin
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/skypeforlinux-stable-bin
 ```
 
-:::
-::: code-group-item cn（preview）
-
-```sh
+```sh [cn（preview）]
 sudo pacman -S skypeforlinux-preview-bin
 ```
 
-:::
-::: code-group-item aur（preview）
-
-```sh
+```sh [aur（preview）]
 yay -S aur/skypeforlinux-preview-bin
 ```
 
 :::
-::::
 
 ![skype](../../assets/app/common/communication/skype.png)
 
@@ -285,22 +263,17 @@ sudo pacman -S teamspeak3
 
 安装 [Slack](https://aur.archlinux.org/packages/slack-desktop/)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S slack-desktop
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/slack-desktop
 ```
 
 :::
-::::
 
 ![slack](../../assets/app/common/communication/slack.png)
 
@@ -360,21 +333,16 @@ KDE 用户使用 mailspring 前需要安装`gnome-keyring`
 
 安装 [mailspring](https://github.com/Foundry376/Mailspring)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S mailspring
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/mailspring
 ```
 
 :::
-::::
 
 ![mailspring](https://raw.githubusercontent.com/Foundry376/Mailspring/master/screenshots/hero_graphic_mac%402x.png)

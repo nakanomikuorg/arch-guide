@@ -47,29 +47,21 @@ scrcpy 有以下优点：
 
 1. 安装 [scrcpy](https://aur.archlinux.org/packages/scrcpy/)<sup>cn / aur</sup> 以及 [安卓工具包](https://archlinux.org/packages/community/x86_64/android-tools/)：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S scrcpy android-tools
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/scrcpy android-tools
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S scrcpy-git android-tools
    ```
 
    :::
-   ::::
 
 2. 打开安卓设备的 `设置` > `开发人员选项`（多次点击 `关于手机（平板）` 中的 `版本号`，提示处在 `开发者模式` 后即可在设置中找到）> 打开 `USB 调试`：
 
@@ -219,22 +211,18 @@ scrcpy --turn-screen-off --stay-awake
 
 若亮屏是常用选项，可将这个命令设置为 scrcpy 的别名（alias）。只需要使用以下命令在 `~/.zshrc` 或者 `~/.bashrc` 中添加如下内容 > 重新打开终端或者 `source` 该文件即可：
 
-:::: code-group
-::: code-group-item bash
+::: code-group
 
-```sh
+```sh [bash]
 echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.bashrc
 ```
 
-:::
-::: code-group-item zsh
 
-```sh
+```sh [zsh]
 echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.zshrc
 ```
 
 :::
-::::
 
 ## 🍎 苹果设备投屏（UxPlay）
 
@@ -303,24 +291,17 @@ sudo systemctl enable avahi-daemon.service
 
 或者使用以下命令创建 `uxplay` 命令的别名（alias），只需要使用以下命令在 `~/.zshrc` 或者 `~/.bashrc` 中添加如下内容 > 重新打开终端或者 `source` 该文件即可：
 
-:::: code-group
-::: code-group-item bash
+::: code-group
 
-```sh
+```sh [bash]
 echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.bashrc
 ```
 
-:::
-::: code-group-item zsh
-
-```sh
+```sh [zsh]
 echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.zshrc
 ```
 
 :::
-::::
-
-:::::
 
 ::: tip ℹ️ 提示
 
@@ -336,29 +317,21 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 
 1. 安装 [KDE Connect](https://archlinux.org/packages/extra/x86_64/kdeconnect/)<sup>extra / cn / aur</sup> 及其相关可选依赖：
 
-   :::: code-group
-   ::: code-group-item extra
+   ::: code-group
 
-   ```sh
+   ```sh [extra]
    sudo pacman -S kdeconnect sshfs
    ```
 
-   :::
-   ::: code-group-item cn (git)
-
-   ```sh
+   ```sh [cn (git)]
    sudo pacman -S skdeconnect-git sshfs
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S aur/kdeconnect-git sshfs
    ```
 
    :::
-   ::::
 
 2. 移动端可在 [Google Play](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp) [App Store](https://apps.apple.com/us/app/kde-connect/id1580245991)下载并安装
 

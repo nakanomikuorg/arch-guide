@@ -78,29 +78,21 @@ Brave 是一个基于 Chromium 网页浏览器及其 Blink 排版引擎的自由
 
 安装 [Brave](https://archlinux.org/packages/extra/x86_64/falkon/)<sup>cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S brave-bin
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/brave-bin
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S brave-git
 ```
 
 :::
-::::
 
 ![brave](../../assets/app/common/daily/brave.png)
 
@@ -110,22 +102,17 @@ Falkon 是 KDE 开发的一款全新的 Qt 网络浏览器。它是一款轻量�
 
 安装 [Falkon](https://archlinux.org/packages/extra/x86_64/falkon/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S falkon
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S falkon-git
 ```
 
 :::
-::::
 
 ![falkon](../../assets/app/common/daily/falkon.png)
 
@@ -135,22 +122,17 @@ yay -S falkon-git
 
 安装 [Tor 浏览器](https://aur.archlinux.org/packages/tor-browser/)<sup>cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S tor-browser
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S tor-browser
 ```
 
 :::
-::::
 
 ![tor](../../assets/app/common/daily/tor.png)
 
@@ -160,22 +142,17 @@ Microsoft Edge（微软前沿浏览器）是一个由微软研发的浏览器，
 
 安装 [Microsoft Edge](https://aur.archlinux.org/packages/microsoft-edge-stable-bin)<sup>EULA / aur</sup>：
 
-:::: code-group
-::: code-group-item aur（beta）
+::: code-group
 
-```sh
+```sh [aur（beta）]
 yay -S microsoft-edge-beta-bin
 ```
 
-:::
-::: code-group-item aur（dev）
-
-```sh
+```sh [aur（dev）]
 yay -S microsoft-edge-dev-bin
 ```
 
 :::
-::::
 
 ![edge](../../assets/app/common/daily/edge.png)
 
@@ -185,22 +162,17 @@ Google Chrome 是由 Google 开发的免费网页浏览器。Chrome 相应的开
 
 安装 [Google Chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S google-chrome
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S google-chrome
 ```
 
 :::
-::::
 
 ![chrome](../../assets/app/common/daily/chrome.png)
 
@@ -212,29 +184,21 @@ Opera 软件公司为纳斯达克上市的挪威软件公司，现在已被中�
 
 安装 [Opera](https://archlinux.org/packages/community/x86_64/opera/)<sup>EULA / community / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S opera
 ```
 
-:::
-::: code-group-item cn（beta）
-
-```sh
+```sh [cn（beta）]
 sudo pacman -S opera-beta
 ```
 
-:::
-::: code-group-item aur（beta）
-
-```sh
+```sh [aur（beta）]
 yay -S aur/opera-beta
 ```
 
 :::
-::::
 
 ![opera](../../assets/app/common/daily/opera.png)
 
@@ -262,22 +226,17 @@ Okular 是 KDE 开发的一款功能丰富、轻巧快速的跨平台文档阅�
 
 安装 [Okular](https://archlinux.org/packages/extra/x86_64/okular/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S okular
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S okular-git
 ```
 
 :::
-::::
 
 ![okular](../../assets/app/common/daily/okular.png)
 
@@ -287,22 +246,17 @@ calibre 是一款功能强大且易于使用的电子书管理器。支持 epub�
 
 安装 [calibre](https://archlinux.org/packages/community/x86_64/calibre/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S calibre
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S calibre-git
 ```
 
 :::
-::::
 
 ![calibre](../../assets/app/common/daily/calibre.png)
 
@@ -336,29 +290,21 @@ yay -S calibre-git
 
 1. 安装 [火焰截图](https://archlinux.org/packages/community/x86_64/flameshot/)<sup>community / cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S flameshot
    ```
 
-   :::
-   ::: code-group-item cn (git)
-
-   ```sh
+   ```sh [cn (git)]
    sudo pacman -S flameshot-git
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S aur/flameshot-git
    ```
 
    :::
-   ::::
 
 2. 配置快捷键：
 
@@ -382,22 +328,17 @@ Spectacle 是 KDE 开发的用于抓取桌面截图的简单应用程序。它�
 
 安装 [Spectacle](https://archlinux.org/packages/extra/x86_64/spectacle/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S spectacle
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S spectacle-git
 ```
 
 :::
-::::
 
 ![spectacle](../../assets/app/common/daily/spectacle.png)
 
@@ -411,22 +352,17 @@ MEGA 是 Mega Limited 公司推出的一款云存储服务。2013 年 1 月 19 �
 
 1. 安装 [MEGA](https://aur.archlinux.org/packages/megasync)<sup>EULA / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item cn
+   ::: code-group
 
-   ```sh
+   ```sh [cn]
    sudo pacman -S megasync
    ```
 
-   :::
-   ::: code-group-item aur
-
-   ```sh
+   ```sh [aur]
    yay -S aur/megasync
    ```
 
    :::
-   ::::
 
 2. 根据提示登录账户以及配置同步文件夹后即可：
 
@@ -490,22 +426,17 @@ Gwenview 是 KDE 出品的一款轻便易用的图像查看器，是浏览、显
 
 安装 [Gwenview](https://archlinux.org/packages/extra/x86_64/gwenview/)<sup>extra / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S gwenview
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S gwenview-git
 ```
 
 :::
-::::
 
 ![gwenview](../../assets/app/common/daily/gwenview.png)
 
@@ -515,22 +446,17 @@ nomacs 是一个免费的开源图像查看器，支持多平台。可以使用�
 
 安装 [nomacs](https://archlinux.org/packages/community/x86_64/nomacs/)<sup>community / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S nomacs
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S nomacs-git
 ```
 
 :::
-::::
 
 ![nomacs-1](../../assets/app/common/daily/nomacs-1.png)
 
@@ -564,23 +490,18 @@ feh 是一款轻巧而功能强大的图像查看器，通过命令行操作，*
 
 1. 安装 [feh](https://archlinux.org/packages/extra/x86_64/feh/)<sup>extra / aur</sup>。若需要读取 SVG 图像，则还需要安装 [`imagemagick`](https://archlinux.org/packages/extra/x86_64/imagemagick/)：
 
-   :::: code-group
-   ::: code-group-item extra
+   ::: code-group
 
-   ```sh
+   ```sh [extra]
    sudo pacman -S feh imagemagick
 
    ```
 
-   :::
-   ::: code-group-item aur (git)
-
-   ```sh
+   ```sh [aur (git)]
    yay -S feh-git imagemagick
    ```
 
    :::
-   ::::
 
 2. 通过以下命令使用 feh。feh 是高度可配置的。有关选项的完整列表，请运行 `feh --help` 或 `man feh`：
 

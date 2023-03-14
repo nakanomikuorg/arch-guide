@@ -36,36 +36,25 @@ sidebarDepth: 2
 
 安装 [`VLC`](https://archlinux.org/packages/extra/x86_64/vlc/)<sup>extra / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```sh
+```sh [extra]
 sudo pacman -S vlc
 ```
 
-:::
-::: code-group-item cn (git)
-
-```sh
+```sh [cn (git)]
 sudo pacman -S vlc-git
 ```
 
-:::
-::: code-group-item aur（obs）
-
-```sh
+```sh [aur（obs）]
 yay -S vlc-luajit
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aur/vlc-git
 ```
 
 :::
-::::
 
 ![vlc](../../assets/app/common/media/vlc.png)
 
@@ -75,29 +64,21 @@ yay -S aur/vlc-git
 
 安装 [`mpv`](https://archlinux.org/packages/community/x86_64/mpv/)<sup>community / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item community
+::: code-group
 
-```sh
+```sh [community]
 sudo pacman -S mpv
 ```
 
-:::
-::: code-group-item cn (git)
-
-```sh
+```sh [cn (git)]
 sudo pacman -S mpv-git
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aur/mpv-git
 ```
 
 :::
-::::
 
 ![mpv](../../assets/app/common/media/mpv.png)
 
@@ -119,22 +100,17 @@ sudo pacman -S dragon
 
 1. 安装 [`SMplayer`](https://archlinux.org/packages/community/x86_64/smplayer/)<sup>community / cn / aur</sup>：
 
-   :::: code-group
-   ::: code-group-item community
+   ::: code-group
 
-   ```sh
+   ```sh [community]
    sudo pacman -S smplayer
    ```
 
-   :::
-   ::: code-group-item aur（svn）
-
-   ```sh
+   ```sh [aur（svn）]
    yay -S smplayer-svn
    ```
 
    :::
-   ::::
 
 2. 默认的外观不太美观，可选安装皮肤 [`papirus-smplayer-theme-git`](https://github.com/PapirusDevelopmentTeam/papirus-smplayer-theme)<sup>aur</sup>：
 
@@ -188,36 +164,25 @@ DeaDBeeF 可以播放各种音频格式，在它们之间进行转换，以几�
 
 安装 [`deadbeef`](https://aur.archlinux.org/packages/deadbeef)<sup>cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S deadbeef
 ```
 
-:::
-::: code-group-item cn (git)
-
-```sh
+```sh [cn (git)]
 sudo pacman -S deadbeef-git
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/deadbeef
 ```
 
-:::
-::: code-group-item aur (git)
-
-```sh
+```sh [aur (git)]
 yay -S aur/deadbeef-git
 ```
 
 :::
-::::
 
 ![deadbeef-1](../../assets/app/common/media/deadbeef-1.png)
 
@@ -283,22 +248,17 @@ yay -S listen1-desktop-appimage
 
 安装 [`netease-cloud-music`](https://aur.archlinux.org/packages/netease-cloud-music/)<sup>EULA / cn / aur</sup>：
 
-:::: code-group
-::: code-group-item cn
+::: code-group
 
-```sh
+```sh [cn]
 sudo pacman -S netease-cloud-music
 ```
 
-:::
-::: code-group-item aur
-
-```sh
+```sh [aur]
 yay -S aur/netease-cloud-music
 ```
 
 :::
-::::
 
 ![netease-cloud-music](../../assets/app/common/media/netease-cloud-music.png)
 

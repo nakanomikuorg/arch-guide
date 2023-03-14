@@ -270,22 +270,17 @@ df -h # 以人类可读格式显示
 
 1. 安装 Filelight：
 
-:::: code-group
-::: code-group-item extra
+::: code-group
 
-```bash
+```bash [extra]
 sudo pacman -S filelight
 ```
 
-:::
-::: code-group-item aur (git)
-
-```bash
+```bash [aur (git)]
 yay -S filelight-git
 ```
 
 :::
-::::
 
 2. 打开 Filelight 即可直观的看到空间占用情况：
 

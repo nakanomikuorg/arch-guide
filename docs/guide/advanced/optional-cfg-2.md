@@ -112,22 +112,17 @@ sudo vim /boot/efi/EFI/refind/refind.conf
 
 6. 使用以下命令查看内核：
 
-:::: code-group
-::: code-group-item uname
+::: code-group
 
-```bash
+```bash [uname]
 uname -r
 ```
 
-:::
-::: code-group-item neofetch
-
-```bash
+```bash [neofetch]
 neofetch
 ```
 
 :::
-::::
 
 ![kernel-version-1](../../assets/guide/advanced/optional-cfg/kernel-version-1.png)
 
@@ -153,29 +148,23 @@ KDE 自身提供开箱即用的睡眠功能（sleep），即将系统挂起到�
 
 1. 通过以下命令确认 Swap 分区的 `UUID`：
 
-:::: code-group
-::: code-group-item lsblk
+::: code-group
 
-```bash {8}
+```bash {8} [lsblk]
 lsblk -o name,mountpoint,size,uuid
 ```
 
-:::
-::: code-group-item blkid
-
-```bash
+```bash [blkid]
 sudo blkid
 ```
 
 :::
-::::
 
 输出结果应类似：
 
-:::: code-group
-::: code-group-item lsblk
+::: code-group
 
-```bash {6}
+```bash {6} [lsblk]
 NAME   MOUNTPOINT              SIZE UUID
 sda                             64G
 ├─sda1 /boot/efi               244M E519-88D8
@@ -186,10 +175,7 @@ sda                             64G
 sr0                          755.3M 2021-05-01-05-18-20-00
 ```
 
-:::
-::: code-group-item blkid
-
-```bash {2}
+```bash {2} [blkid]
 /dev/sr0: BLOCK_SIZE="2048" UUID="2021-05-01-05-18-20-00" LABEL="ARCH_202105" TYPE="iso9660" PTTYPE="PMBR"
 /dev/sda4: UUID="13ec7b86-eb9c-45a9-ae50-9606279b506a" TYPE="swap" PARTUUID="7a9e75d7-eca2-c849-9372-85c6889a7861"
 /dev/sda2: PARTUUID="bfc5f742-be1e-cb41-911f-ec5466d670de"
@@ -199,7 +185,6 @@ sr0                          755.3M 2021-05-01-05-18-20-00
 ```
 
 :::
-::::
 
 > #### 📑 相关资料：UUID
 >
