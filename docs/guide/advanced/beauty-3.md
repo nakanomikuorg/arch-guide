@@ -14,7 +14,7 @@
 
 ::: tip ℹ️ 提示
 
-确保你安装过 zsh ，安装方法及相关配置可在 [可选配置（基础）](/advanced/optional-cfg-1.html) 一章中查看。
+确保你安装过 zsh ，安装方法及相关配置可在 [可选配置（基础）](/guide/advanced/optional-cfg-1.html) 一章中查看。
 
 [oh-my-zsh](https://ohmyz.sh/) 实际上并没有那么好用，反而拖慢了 Zsh 的速度，本指南不会介绍。
 

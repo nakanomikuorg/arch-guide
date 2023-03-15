@@ -68,7 +68,7 @@
 
         ::: tip ℹ️ 提示
 
-        为了流畅的连接服务器，你可能需要按照章节 [透明代理](/rookie/transparent.md) 配置透明代理。
+        为了流畅的连接服务器，你可能需要按照章节 [透明代理](/guide/rookie/transparent.md) 配置透明代理。
 
         :::
 
