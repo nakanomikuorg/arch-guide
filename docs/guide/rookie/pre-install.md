@@ -83,7 +83,7 @@ Linux 下同样可以使用 Ventoy 和
 balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-install-disk.md#ventoy-%E6%8E%A8%E8%8D%90)
 以及 [balenaEtcher](../advanced/make-install-disk.md#balenaetcher)。
 
-也可以直接用 `dd` 命令进行刻录，具体步骤可参阅 [dd 命令](/advanced/make-install-disk.html#dd-命令)。
+也可以直接用 `dd` 命令进行刻录，具体步骤可参阅 [dd 命令](/guide/advanced/make-install-disk.html#dd-命令)。
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 

@@ -2,7 +2,7 @@
 
 > ### ⛵ 万事俱备，只欠东风
 >
-> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](/basic-install-detail.md)
+> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](/guide/basic-install-detail.md)
 
 本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 

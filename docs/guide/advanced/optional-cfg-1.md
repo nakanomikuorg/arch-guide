@@ -92,7 +92,7 @@ Windows 字体不仅日常可能会使用到，还可以让部分需要这些字
 
 由于 Fcitx5 自带词库简陋，部分本地化符号难以输入（如中文输入下按下 `/` 键无法打出 `、`），Emoji 输入复杂等问题，本指南提供额外输入方案。
 
-在步骤 [10. 安装输入法](/rookie/desktop-env-and-app.md#_10-安装输入法) 中，我们已经安装了 Fcitx5 相关的包。接下来的操作要依赖之前的包。
+在步骤 [10. 安装输入法](/guide/rookie/desktop-env-and-app.md#_10-安装输入法) 中，我们已经安装了 Fcitx5 相关的包。接下来的操作要依赖之前的包。
 
 1. 通过以下命令安装 Rime 输入法：
 
@@ -355,7 +355,7 @@ source /usr/share/autojump/autojump.zsh
 - 将在 `~/.bash_profile` 所做的配置复制到 `~/.zsh_profile`
 - 将在 `~/.bashrc` 所做的配置复制到 `~/.zshrc`
 
-如在步骤 [1. 配置 root 账户的默认编辑器](/rookie/desktop-env-and-app.md#_1-配置-root-账户的默认编辑器) 和 [8. 配置非 root 账户的默认编辑器](/rookie/desktop-env-and-app.md#_8-配置非-root-账户的默认编辑器) 所做的配置。
+如在步骤 [1. 配置 root 账户的默认编辑器](/guide/rookie/desktop-env-and-app.md#_1-配置-root-账户的默认编辑器) 和 [8. 配置非 root 账户的默认编辑器](/guide/rookie/desktop-env-and-app.md#_8-配置非-root-账户的默认编辑器) 所做的配置。
 
 :::
 
