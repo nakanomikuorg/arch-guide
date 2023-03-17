@@ -39,19 +39,19 @@ sidebarDepth: 2
 ::: code-group
 
 ```sh [cn (cn)]
-yay -S wps-office-cn ttf-wps-fonts
+yay -S wps-office-cn ttf-wps-fonts libtiff5
 ```
 
 ```sh [cn]
-sudo pacman -S wps-office ttf-wps-fonts
+sudo pacman -S wps-office ttf-wps-fonts aur/libtiff5
 ```
 
 ```sh [aur (cn)]
-yay -S wps-office-cn aur/ttf-wps-fonts
+yay -S wps-office-cn aur/ttf-wps-fonts aur/libtiff5
 ```
 
 ```sh [aur]
-sudo pacman -S wps-office aur/ttf-wps-fonts
+sudo pacman -S wps-office aur/ttf-wps-fonts aur/libtiff5
 ```
 
 :::
@@ -98,9 +98,9 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 
 ### Foxit PDF Reader
 
-[Foxit PDF Reader](https://www.foxitsoftware.com/products/pdf-reader/)是福建福昕软件开发股份有限公司推出的一款轻量级 PDF 编辑器，是目前笔者在 Linux 平台下使用过免费且最好用的 PDF 编辑器。Foxit PDF Reader 提供常规的 PDF 注释功能：段落高亮、区域高亮、下划线、波浪线、图形、删除线和备注等标记，也提供许多其他平台付费 PDF 编辑器提供的打字机、文本框、笔迹等轻量级 PDF 编辑。加载和保存 PDF 速度较 Libre Office Draw 快，打字机功能较 KDE Okular 支持非拉丁字符输入，是 PDF 笔记文档注释的好帮手。
+[Foxit PDF Reader](https://www.foxitsoftware.com/products/pdf-reader/)<sup>EULA / aur</sup>是福建福昕软件开发股份有限公司推出的一款轻量级 PDF 编辑器，是目前笔者在 Linux 平台下使用过免费且最好用的 PDF 编辑器。Foxit PDF Reader 提供常规的 PDF 注释功能：段落高亮、区域高亮、下划线、波浪线、图形、删除线和备注等标记，也提供许多其他平台付费 PDF 编辑器提供的打字机、文本框、笔迹等轻量级 PDF 编辑。加载和保存 PDF 速度较 Libre Office Draw 快，打字机功能较 KDE Okular 支持非拉丁字符输入，是 PDF 笔记文档注释的好帮手。
 
-安装[Foxit PDF Reader](https://aur.archlinux.org/packages/foxitreader/):
+安装[Foxit PDF Reader](https://aur.archlinux.org/packages/foxitreader/)<sup>EULA / aur</sup>:
 
 ```sh
 yay -S foxitreader
