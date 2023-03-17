@@ -43,7 +43,7 @@ yay -S wps-office-cn ttf-wps-fonts libtiff5
 ```
 
 ```sh [cn]
-sudo pacman -S wps-office ttf-wps-fonts aur/libtiff5
+sudo pacman -S wps-office ttf-wps-fonts libtiff5
 ```
 
 ```sh [aur (cn)]
