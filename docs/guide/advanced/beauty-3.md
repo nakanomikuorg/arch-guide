@@ -64,10 +64,10 @@ AUR 和 ArchLinuxCN 源中都有很多 Nerd Font，在终端使用 yay 搜索安
 yay -Ss nerd-font
 ```
 
-个人推荐使用 nerd-fonts-jetbrains-mono 字体，可在 aur 中安装
+个人推荐使用 [ttf-jetbrains-mono-nerd](https://archlinux.org/packages/community/any/ttf-jetbrains-mono-nerd/) 字体，可在 aur 中安装
 
 ```sh
-yay -S nerd-fonts-jetbrains-mono
+sudo pacman -S ttf-jetbrains-mono-nerd
 ```
 
 安装完任意一个 Nerd Font 字体后，打开 Konsole 的 _设置_ > _编辑当前方案_ > _外观_，把 _字体_ 改为刚刚安装的 Nerd Font 即可。
