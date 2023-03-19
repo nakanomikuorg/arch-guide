@@ -17,13 +17,6 @@ v2rayA 的优势：
 
 ### 安装 v2ray 和 v2rayA:
 
-::: tip ℹ️ 提示
-
-v2rayA 2.0 版本全面转向 V2Ray 第五代版本，不支持第四代与 Xray，建议升级 V2Ray 到 5.10 版本。
-如果你坚持使用 Xray，那么你可以停留在 1.x 版本，或者自行编译 Master 分支。
-
-:::
-
 ::: code-group
 
 ```bash [cn]
