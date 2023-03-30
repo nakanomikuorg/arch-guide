@@ -91,7 +91,7 @@ yay -S pacman-contrib-git
 ```bash {1-4, 6-8, 10}
 sudo pacman -S package_name # 安装软件包
 pacman -Ss # 在同步数据库中搜索包，包括包的名称和描述
-sudo pacman -Syyu # 升级系统。-yy：标记强制刷新、-u：标记升级动作
+sudo pacman -Syu # 升级系统。 -y:标记刷新、-yy：标记强制刷新、-u：标记升级动作（一般使用 -Syu 即可）
 sudo pacman -Rns package_name # 删除软件包，及其所有没有被其他已安装软件包使用的依赖包
 sudo pacman -R package_name # 删除软件包，保留其全部已经安装的依赖关系
 pacman -Qi package_name # 检查已安装包的相关信息。-Q：查询本地软件包数据库

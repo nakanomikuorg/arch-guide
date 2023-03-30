@@ -425,7 +425,7 @@ proxychains %command%
 如使用 proxychains-ng 代理 yay:
 
 ```bash
-proxychains yay -Syyu
+proxychains yay -Syu
 ```
 
 ![proxychains_step-3](../../assets/guide/rookie/transparent/proxychains-3.png)
