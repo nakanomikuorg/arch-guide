@@ -79,7 +79,7 @@ Telegram 有两种加密模式：
 >
 > - [#archlinux-cn](https://t.me/archlinuxcn_group)
 > - [#archlinux-cn-offtopic](https://t.me/archlinuxcn_offtopic)
-> - [篝ノ雾枝的咕咕小屋 | ArchLinux Studio](https://t.me/kdwu1fan)
+> - [ArchLinuxStudio🇨🇦🏳️‍⚧️🏳️‍🌈](https://t.me/FSF_Ministry_of_Truth)
 
 ::: tip ℹ️ 提示
 
