@@ -44,7 +44,7 @@
 
 ### Intel 核芯显卡
 
-如有需要可以参阅 [archWiki 相关内容](https://wiki.archlinux.org/index.php/Intel_graphics)。
+如有需要可以参阅 [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Intel_graphics)。
 
 通过以下命令安装如下几个包即可：
 
@@ -62,7 +62,7 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 ### AMD 核芯显卡
 
-如有需要可以参阅 [archWiki 相关内容](https://wiki.archlinux.org/title/ATI)。
+如有需要可以参阅 [ArchWiki 相关内容](https://wiki.archlinux.org/title/ATI)。
 
 #### 选择驱动
 
@@ -138,7 +138,7 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 
 :::
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 - 对于 [Turing (NV160/TUXXX)](https://nouveau.freedesktop.org/CodeNames.html#NV160) 系列或更新的显卡，需要安装 nvidia-open 驱动
 
@@ -198,7 +198,7 @@ AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的
 
 ## 双显卡（核显 + 独显）
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ### NVIDIA 独立显卡
 
@@ -436,7 +436,7 @@ DRI_PRIME=1 glmark2
 
 ## 性能测试
 
-如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/Benchmarking_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参考 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Benchmarking_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ### glxgears
 

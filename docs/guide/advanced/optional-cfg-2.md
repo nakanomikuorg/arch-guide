@@ -6,7 +6,7 @@
 
 ## 🐧 更换可选内核
 
-如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Kernel_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 以及 [rEFind 官方文档](http://www.rodsbooks.com/refind/linux.html)。
+如有需要可参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Kernel_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 以及 [rEFind 官方文档](http://www.rodsbooks.com/refind/linux.html)。
 
 除了 [linux](https://archlinux.org/packages/core/x86_64/linux/) 内核，还有以下官方支持的内核可供选择：
 
@@ -130,7 +130,7 @@ neofetch
 
 ## 💤 休眠（hibernate）设置
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Power_management_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Suspend_and_hibernate_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Power_management_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Suspend_and_hibernate_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 KDE 自身提供开箱即用的睡眠功能（sleep），即将系统挂起到内存，消耗少量的电量。休眠（hibernate）则会将系统挂起到交换分区或交换文件，几乎不消耗电量。
 
@@ -302,7 +302,7 @@ sudo mkinitcpio -P
 
 ## 🔍 rEFind
 
-如有需要可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/REFInd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参考 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/REFInd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 相对于 GRUB，rEFind 的启动项更加灵活，相对来说也更加美观。
 

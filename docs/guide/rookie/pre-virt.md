@@ -89,7 +89,7 @@ VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox
 
 ::: warning ⚠️ 注意
 
-请不要在 `硬件加速` 中勾选 `启用3D加速`。否则会导致安装好桌面环境后无法进入桌面，只有黑屏和光标。如有需要可以参阅 [archWiki 相关说明](<https://wiki.archlinux.org/title/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#Arch_Linux_guest%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E6%B2%A1%E6%9C%89%E7%A1%AC%E4%BB%B63D%E5%8A%A0%E9%80%9F>)。
+请不要在 `硬件加速` 中勾选 `启用3D加速`。否则会导致安装好桌面环境后无法进入桌面，只有黑屏和光标。如有需要可以参阅 [ArchWiki 相关说明](<https://wiki.archlinux.org/title/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#Arch_Linux_guest%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E6%B2%A1%E6%9C%89%E7%A1%AC%E4%BB%B63D%E5%8A%A0%E9%80%9F>)。
 
 :::
 

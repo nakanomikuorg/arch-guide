@@ -14,13 +14,13 @@
 
 1. 通过安装和使用 archlinux 我可以更好的了解 Linux 底层运作的原理
 2. archlinux 的软件很多
-3. 遇到问题好好看 [archWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 就好啦
+3. 遇到问题好好看 [ArchWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 就好啦
 
 这些理由所叙述的事实单独来看确实没有任何问题，但作为推荐 Linux 萌新选择 archlinux 作为入门发行版就显得不太合适了。理由有下：
 
 1. 了解 Linux 底层运作的原理对于学习 Linux 的人来说无疑是一个进阶的话题了；脚踏实地，先**从 Linux 基础甚至基本的计算机常识开始掌握才是正确的学习姿势**。否则知识体系就如同空中楼阁，摇摇欲坠
 2. archlinux 的软件确实很多，甚至由于 arch 之道中实用性大于意识形态的原则，包含有不开源甚至非自由软件；但是对于其它发行版来说，日常使用的大部分软件也都在软件仓库中存在
-3. [archWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 的内容的确包含面非常广，甚至非常细节的问题也有说明和解答。但也正是由于这种特性，导致其指引性较差，让用户容易迷失方向，更不用说对于 Linux 萌新了
+3. [ArchWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 的内容的确包含面非常广，甚至非常细节的问题也有说明和解答。但也正是由于这种特性，导致其指引性较差，让用户容易迷失方向，更不用说对于 Linux 萌新了
 
 对于这一部分同学，笔者的建议是先去阅读相关的书籍，在掌握了扎实的 Linux 基础之后，再来尝试 archlinux 吧！这里推荐一本由刘遄老师编写的 Linux 入门 📖 书籍 [《Linux 就该这么学》](https://www.linuxprobe.com/docs/LinuxProbe.pdf)，并且作者本着开源精神让广大读者可以免费下载阅读，直接点击链接即可跳转下载（linuxprobe）。此外，掌握基础的英语阅读水平也是很有必要的，例如经常有一些同学在安装 archlinux 的时候由于看不懂英语的报错信息在已经发生错误的情况下继续执行下一步命令导致安装失败。
 

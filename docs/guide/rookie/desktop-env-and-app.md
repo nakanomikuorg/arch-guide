@@ -12,7 +12,7 @@
 >
 > :::
 
-这一小节，我们开始着手安装桌面环境和一些常用的软件。如有需要可以参阅 [archWiki 一般性建议](<https://wiki.archlinux.org/title/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+这一小节，我们开始着手安装桌面环境和一些常用的软件。如有需要可以参阅 [ArchWiki 一般性建议](<https://wiki.archlinux.org/title/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ::: tip ℹ️ 提示
 

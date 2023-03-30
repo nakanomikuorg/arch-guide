@@ -105,7 +105,7 @@ pactree package_name # 查看一个包的依赖树
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 >
 > 关于 Pacman 常见错误的排除请参阅 [常见问题](debug.md)。
 
@@ -152,7 +152,7 @@ yay -Yc # 清理不需要的依赖
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
 
 ### downgrade
 
@@ -231,7 +231,7 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
 > - [systemd 配置文件样例解释](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples)
 >
 > 关于关闭出错服务（出错启动项）请参阅 [常见问题](debug.md)。
@@ -527,4 +527,4 @@ rsync -a bar/ me@server:/home/me/ # -a：标记实现目录复制等。比 scp -
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
