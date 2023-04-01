@@ -91,7 +91,7 @@ yay -S pacman-contrib-git
 ```bash {1-4, 6-8, 10}
 sudo pacman -S package_name # 安装软件包
 pacman -Ss # 在同步数据库中搜索包，包括包的名称和描述
-sudo pacman -Syyu # 升级系统。-yy：标记强制刷新、-u：标记升级动作
+sudo pacman -Syu # 升级系统。 -y:标记刷新、-yy：标记强制刷新、-u：标记升级动作（一般使用 -Syu 即可）
 sudo pacman -Rns package_name # 删除软件包，及其所有没有被其他已安装软件包使用的依赖包
 sudo pacman -R package_name # 删除软件包，保留其全部已经安装的依赖关系
 pacman -Qi package_name # 检查已安装包的相关信息。-Q：查询本地软件包数据库
@@ -105,7 +105,7 @@ pactree package_name # 查看一个包的依赖树
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 >
 > 关于 Pacman 常见错误的排除请参阅 [常见问题](debug.md)。
 
@@ -152,7 +152,7 @@ yay -Yc # 清理不需要的依赖
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Pacman)
 
 ### downgrade
 
@@ -231,7 +231,7 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)
 > - [systemd 配置文件样例解释](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples)
 >
 > 关于关闭出错服务（出错启动项）请参阅 [常见问题](debug.md)。
@@ -527,4 +527,4 @@ rsync -a bar/ me@server:/home/me/ # -a：标记实现目录复制等。比 scp -
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)
+> - [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup)

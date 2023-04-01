@@ -12,7 +12,7 @@
 >
 > :::
 
-这一小节，我们开始着手安装桌面环境和一些常用的软件。如有需要可以参阅 [archWiki 一般性建议](<https://wiki.archlinux.org/title/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+这一小节，我们开始着手安装桌面环境和一些常用的软件。如有需要可以参阅 [ArchWiki 一般性建议](<https://wiki.archlinux.org/title/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ::: tip ℹ️ 提示
 
@@ -29,7 +29,7 @@
 如果你在做完章节 [archlinux 基础安装](basic-install.md) 的内容后，关机并放置过一段时间，那么需要先按照 [18. 完成安装](./basic-install.html#_18-完成安装) 中连接网络的方法重新连网，然后使用以下命令更新系统：
 
 ```bash
-pacman -Syyu # 升级系统中全部包
+pacman -Syu # 升级系统中全部包
 ```
 
 ![update](../../assets/guide/rookie/desktop-env-and-app_update.png)

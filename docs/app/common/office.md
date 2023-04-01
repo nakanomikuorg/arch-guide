@@ -60,7 +60,7 @@ sudo pacman -S wps-office aur/ttf-wps-fonts aur/libtiff5
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/WPS_Office_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/WPS_Office_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 ### LibreOffice
 
@@ -94,7 +94,7 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/LibreOffice_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/LibreOffice_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 ### Foxit PDF Reader
 

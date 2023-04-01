@@ -20,7 +20,7 @@
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Android_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Android_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 买可以刷机的手机最好买知名度大的品牌、有可能解锁 BootLoader 的手机以及较热门的机型，这样在刷机时可以方便的找到官方的 TWRP 和知名的 ROM 包（如 [LineageOS](https://lineageos.org/)、[crDroid](https://crdroid.net/)、 [Resurrection Remix](https://resurrectionremix.com/) 和 [PixelExperience](https://download.pixelexperience.org/devices)等）。
 

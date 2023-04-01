@@ -336,7 +336,7 @@ sudo umount /mnt/mount_point
 
 > 🔗 相关链接：
 >
-> 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+> 如有需要可参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 [Archiso](https://archlinux.org/packages/extra/any/archiso/)<sup>extra / aur</sup> 是自动化制作最新版 archlinux 镜像的工具集，可用于制作定制化的 archlinux 镜像。
 
@@ -481,7 +481,7 @@ yay -S archiso-git
 
    > #### 🔗 相关链接
    >
-   > 如有需要可参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%90%91%E6%98%A0%E5%83%8F%E9%87%8C%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6>)。
+   > 如有需要可参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Archiso_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%90%91%E6%98%A0%E5%83%8F%E9%87%8C%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6>)。
 
 4. 配置登录管理器：
 

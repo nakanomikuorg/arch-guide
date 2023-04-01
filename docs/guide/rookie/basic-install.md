@@ -4,7 +4,7 @@
 >
 > 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](/guide/basic-install-detail.md)
 
-本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [archWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [ArchWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 ::: tip ℹ️ 提示
 
@@ -156,7 +156,7 @@ ping www.bilibili.com
 
 如果无线网络还是无法连接，请使用 `ip link` 命令查看无线网卡设备，使用 `ip link set <设备名> up` 命令激活对应的无线网卡。若看到类似 `Operation not possible due to RF-kill` 的报错，继续尝试 `rfkill unblock wifi` 来解锁无线网卡。
 
-如有需要，可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Wireless_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%A3%80%E6%9F%A5%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81>)。
+如有需要，可以参考 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Wireless_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%A3%80%E6%9F%A5%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81>)。
 
 :::
 
@@ -780,7 +780,7 @@ pacman -S amd-ucode # AMD
 
 ## 17. 安装引导程序
 
-如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+如有需要可以参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 1. 安装相应的包：
 
@@ -850,7 +850,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ::: tip ℹ️ 提示
 
-在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [archWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
+在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [ArchWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
 
 ```bash
 mv /boot/EFI/grub /boot/EFI/BOOT

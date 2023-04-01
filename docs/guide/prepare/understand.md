@@ -14,7 +14,7 @@
   年 3 月 11 日正式发行 0.1 版。它受到 Slackware、BSD、PLD Linux 和 CRUX 的启发。但是那时候这些发行版缺少软件包管理器。所以
   Judd Vinet 以同样的简洁原则建立了 archlinux 发行版，并编写了 `pacman` 软件包管理器，自动处理软件包的安装、删除和更新
 - `2005` —— 2005 年 7 月 8 日，用 MediaWiki
-  搭建的 [archWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 开始运行
+  搭建的 [ArchWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 开始运行
 - `2007` —— 2007 下半年，Judd Vinet 退出了 archlinux 的开发，并把统治权交给美国程序员 Aaron Griffin，目前他依然是 archlinux
   的开发者
 - `2012 ~ 2013` —— 2012 年 7 月发行的 archlinux 安装 ISO
@@ -81,7 +81,7 @@ archlinux 开发者都是志愿者，通过持续的贡献成为团队的一员�
 
 Archers
 可以自行贡献软件包到 [Arch 用户仓库](<https://wiki.archlinux.org/title/Arch_User_Repository_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)（`AUR`
-）；提升 [archWiki 文档质量](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+）；提升 [ArchWiki 文档质量](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 ；在 [论坛](https://bbs.archlinux.org/)、[邮件列表](https://lists.archlinux.org/listinfo/)
 或者 [IRC](<https://wiki.archlinux.org/title/Arch_IRC_channels_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 中给其他用户提供技术支持。archlinux
@@ -206,7 +206,7 @@ Ubuntu 由 [Canonical](https://canonical.com/) 支持，Fedora 来自 [Red Hat](
 
 > 📔 本节参考资料：
 >
-> - [archWiki](<https://wiki.archlinux.org/title/Arch_compared_to_other_distributions_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki](<https://wiki.archlinux.org/title/Arch_compared_to_other_distributions_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 > - [Why People Are Crazy About Arch Linux? What’s so Special About it?](https://itsfoss.com/why-arch-linux/)
 > - [What is Arch User Repository (AUR)? How to Use AUR on Arch and Manjaro Linux?](https://itsfoss.com/aur-arch-linux/)
 > - [Linux 服务器几乎从不采用 Arch Linux？](https://www.linuxprobe.com/linux-arch-linux.html)

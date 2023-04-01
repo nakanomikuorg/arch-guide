@@ -8,7 +8,7 @@
 
 > 🔗 相关链接：
 >
-> 如有需要可参阅 [TLP 官方文档](https://linrunner.de/tlp/settings/index.html) 和 [archwiki 相关内容](<https://wiki.archlinux.org/title/TLP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
+> 如有需要可参阅 [TLP 官方文档](https://linrunner.de/tlp/settings/index.html) 和 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/TLP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 多年来，Linux 在电池优化方面取得了很大进步，但仍然有一些可选步骤改善笔记本电脑的电池寿命并且延长续航。
 
@@ -104,7 +104,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
 > 🔗 相关链接：
 >
-> 如有需要可参阅 [archWiki 相关内容](https://wiki.archlinux.org/index.php/Undervolting_CPU)。
+> 如有需要可参阅 [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Undervolting_CPU)。
 
 对处理器的电压进行最大限度的下探，在挖掘 CPU 体质的极限的同时，起到既能降低发热，又能最大限度保持性能的效果。
 
@@ -112,7 +112,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
 ::: tip ℹ️ 提示
 
-以下方法**仅适用于 Intel 四代酷睿 ™ Haswell 及更新 CPU**。有关 AMD CPU 和 Intel 四代酷睿 ™ Haswell 之前的 CPU 请参考 [archWiki 相关内容](https://wiki.archlinux.org/index.php/Undervolting_CPU)。
+以下方法**仅适用于 Intel 四代酷睿 ™ Haswell 及更新 CPU**。有关 AMD CPU 和 Intel 四代酷睿 ™ Haswell 之前的 CPU 请参考 [ArchWiki 相关内容](https://wiki.archlinux.org/index.php/Undervolting_CPU)。
 
 :::
 

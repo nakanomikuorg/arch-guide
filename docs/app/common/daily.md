@@ -484,7 +484,7 @@ sudo pacman -S ristretto
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Feh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Feh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 feh 是一款轻巧而功能强大的图像查看器，通过命令行操作，**还可用于管理缺少此类功能的独立窗口管理器的桌面壁纸**。
 
@@ -560,7 +560,7 @@ yay -S xnviewmp
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Wine_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Wine_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 > - [WineWiki](https://wiki.winehq.org/%E4%B8%BB%E9%A1%B5)
 
 Wine 是类 UNIX 系统下运行 Windows 程序的“兼容层”，是正在持续开发中的自由软件。在 Wine 中运行的 Windows 程序，就如同运行原生 Linux 程序一样，不会有模拟器那样的严重性能问题。

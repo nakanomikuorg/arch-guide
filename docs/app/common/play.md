@@ -47,7 +47,7 @@ sidebarDepth: 2
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Steam_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Steam_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 ::: tip ℹ️ 提示
 
@@ -81,7 +81,7 @@ sudo pacman -S steam
 
 如果某些游戏启动或者游玩有问题，可以用终端使用 `steam` 命令启动 Steam 客户端，并观察游戏崩溃时的终端报错。一般都是缺少某种依赖造成的，可以根据具体情况自行安装依赖。
 
-同时，archWiki 也提供了一个 [查错页面](https://wiki.archlinux.org/title/Steam/Game-specific_troubleshooting)，记录了一些游戏问题的解决方式。
+同时，ArchWiki 也提供了一个 [查错页面](https://wiki.archlinux.org/title/Steam/Game-specific_troubleshooting)，记录了一些游戏问题的解决方式。
 
 :::
 
@@ -166,7 +166,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 > 🔗 相关链接：
 >
-> - [archWiki 相关内容](<https://wiki.archlinux.org/title/Minecraft_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+> - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Minecraft_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
 我的世界（Minecraft）是一个关于击毁和放置方块的游戏。游戏一开始玩家的主要目的是搭建各种结构使自己免遭夜晚出没的怪物的攻击并生存下来，但随着游戏的进行，玩家们可以合作创造出一些不可思议的、富有想象力的东西。
 
