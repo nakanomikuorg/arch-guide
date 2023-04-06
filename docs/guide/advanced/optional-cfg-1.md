@@ -120,7 +120,7 @@ sudo pacman -S fcitx5-rime
 
 ![remove](../../assets/guide/advanced/optional-cfg/remove.png)
 
-5. 通过以下命令安装 [🍀️ 四叶草拼音输入方案](https://github.com/fkxxyz/rime-cloverpinyin)<sup>cn / aur</sup>：
+5. 通过以下命令安装 [🍀️ 四叶草拼音输入方案](https://github.com/fkxxyz/rime-cloverpinyin)<sup>cn / aur</sup>（四叶草许久没更新了，可换后文的雾凇拼音）：
 
 ::: code-group
 
@@ -187,6 +187,65 @@ patch:
 同样的，通过 `Ctrl` + `空格` 切换中英文输入（若 Pinyin 输入法未移除则会在这三者之间循环切换）。
 
 :::
+
+### 雾凇拼音(Rime-ice)输入法
+
+1. 安装[rime-ice输入法](https://github.com/iDvel/rime-ice)：
+
+```bash
+yay -S rime-ice
+```
+
+2. 创建ice的配置文件：
+
+```bash
+mkdir ~/.local/share/fcitx5/rime # 创建 rime 目录
+vim ~/.local/share/fcitx5/rime/default.custom.yaml
+```
+
+输入以下内容
+
+```yaml
+patch:
+  "menu/page_size": 5  #候选词
+  schema_list:
+    - schema: rime_ice
+```
+
+保存并退出
+
+3. 右键输入法图标，重新启动或重新部署即可启用雾凇拼音输入法
+
+4. （可选）增加萌娘百科词库
+
+雾凇拼音取消了对萌娘词库的支持，如果需要得自己添加
+
+```bash
+yay -S fcitx5-pinyin-moegirl-rime
+```
+
+安装完成之后将配置复制到个人配置目录
+
+```bash
+cp /usr/share/rime-data/rime_ice.dict.yaml ~/.local/share/fcitx5/rime/rime_ice.dict.yaml
+```
+
+打开配置文件
+
+```bash
+code ~/.local/share/fcitx5/rime/rime_ice.dict.yaml
+```
+
+根据提示在`import_tables:`中添加词库
+
+```yaml
+import_tables:
+  ...
+  ...
+  - moegirl
+```
+
+5. 尝试输入中文
 
 > 🔗 相关链接：
 >
