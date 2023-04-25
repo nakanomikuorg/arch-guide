@@ -110,7 +110,7 @@ pnpm docs:dev
 
 ```shell
 brew install pnpm # 安装 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -121,7 +121,7 @@ pnpm docs:dev
 ```powershell
 scoop install nodejs # 安装 nodejs
 scoop install pnpm # 安装 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
