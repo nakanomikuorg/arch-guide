@@ -477,8 +477,15 @@ sudo timeshift --restore --snapshot '20XX-XX-XX_XX-XX-XX' --skip-grub # 选择�
 ```bash
 sudo timeshift --restore --snapshot-device /dev/sdbx
 ```
-
 后续步骤同 [若无法进入桌面环境](#若无法进入桌面环境)。
+
+在archiso live镜像中安装timeshift提示空间不足
+
+mount -o remount,size=2G /run/archiso/cowspace
+
+#### timeshift segmentation fault
+
+sudo timeshift-gtk > 选中想恢复的快照 > 浏览 > 选中要恢复的文件 > 右键复制,如提示空间不足,就分几次复制
 
 #### 恢复后无法挂载目录
 
