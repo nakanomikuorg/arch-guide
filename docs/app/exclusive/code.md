@@ -10,7 +10,7 @@
 
 浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
 
-网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>aur</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>aur</sup>以及 [wireshark-qt](https://archlinux.org/packages/community/x86_64/wireshark-qt/)。
+网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>aur</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>aur</sup>以及 [wireshark-qt](https://archlinux.org/packages/extra/x86_64/wireshark-qt/)。
 
 至于 [yarn](https://www.archlinux.org/packages/community/any/yarn/)、[npm](https://www.archlinux.org/packages/community/any/npm/) 等前端常用工具，也均可用 pacman 安装。
 
