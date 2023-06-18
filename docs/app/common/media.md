@@ -62,11 +62,11 @@ yay -S aur/vlc-git
 
 [mpv](https://mpv.io/) 是一个自由免费的媒体播放器。它支持多种媒体文件格式、音频和视频编解码器以及字幕类型。相比 VLC 更加简洁。
 
-安装 [`mpv`](https://archlinux.org/packages/community/x86_64/mpv/)<sup>community / cn / aur</sup>：
+安装 [`mpv`](https://archlinux.org/packages/extra/x86_64/mpv/)<sup>extra / cn / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S mpv
 ```
 
@@ -98,11 +98,11 @@ sudo pacman -S dragon
 
 [SMPlayer](https://www.smplayer.info/) 是个适用于 Windows 和 Linux 的自由免费的媒体播放器，内置解码器，可以播放几乎所有格式的视频和音频文件。无需再安装任何外部解码器。只要安装了 SMPlayer，就能够播放所有的格式，不用再费事查找安装解码包。
 
-1. 安装 [`SMplayer`](https://archlinux.org/packages/community/x86_64/smplayer/)<sup>community / cn / aur</sup>：
+1. 安装 [`SMplayer`](https://archlinux.org/packages/extra/x86_64/smplayer/)<sup>extra / cn / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S smplayer
    ```
 
@@ -128,7 +128,7 @@ sudo pacman -S dragon
 
 Xfce 开发的基于 GStreamer 框架的现代媒体播放器。
 
-安装 [`parole`](https://archlinux.org/packages/community/x86_64/parole/)：
+安装 [`parole`](https://archlinux.org/packages/extra/x86_64/parole/)：
 
 ```sh
 sudo pacman -S parole

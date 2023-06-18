@@ -90,7 +90,7 @@
 
 ```shell
 sudo pacman -S nodejs pnpm # 安装 nodejs 和 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev

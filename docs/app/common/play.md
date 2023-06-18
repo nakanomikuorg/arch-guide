@@ -128,11 +128,11 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 :::
 
-1. 安装 [Lutris](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
+1. 安装 [Lutris](https://archlinux.org/packages/extra/any/lutris/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S lutris
    ```
 
@@ -302,7 +302,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 自动方式
 
-1. 安装[GameMode](https://archlinux.org/packages/community/x86_64/gamemode/)
+1. 安装[GameMode](https://archlinux.org/packages/extra/x86_64/gamemode/)
 
    ```sh
    # 安装配置文件
@@ -427,11 +427,11 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    ![openrgb-3](../../assets/app/common/play/openrgb-3.png)
 
-5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/community/x86_64/i2c-tools/)<sup>community / aur</sup>：
+5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/extra/x86_64/i2c-tools/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S i2c-tools
    ```
 
