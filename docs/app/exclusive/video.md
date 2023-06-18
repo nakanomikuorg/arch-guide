@@ -52,11 +52,11 @@ yay -S kdenlive-git
 
 [Shotcut](https://www.shotcut.org/) 是一个免费开源的跨平台视频编辑软件。
 
-安装 [Shotcut](https://archlinux.org/packages/community/x86_64/shotcut/)<sup>community / aur</sup>：
+安装 [Shotcut](https://archlinux.org/packages/extra/x86_64/shotcut/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S shotcut
 ```
 
@@ -142,7 +142,7 @@ yay -S davinci-resolve-studio-beta
 
 [OBS Studio](https://obsproject.com/zh-cn) 是免费开源的用于视频录制以及直播串流的软件。Linux 下操作与 Windows 下基本一致。
 
-安装 [OBS Studio](https://www.archlinux.org/packages/community/x86_64/obs-studio/)<sup>community / aur</sup>：
+安装 [OBS Studio](https://www.archlinux.org/packages/extra/x86_64/obs-studio/)<sup>extra / aur</sup>：
 
 ::: code-group
 
@@ -150,7 +150,7 @@ yay -S davinci-resolve-studio-beta
 yay -S obs-studio-browser # 有浏览器插件集成的 OBS Studio。编译要很久（大约 15 min）
 ```
 
-```sh [community]
+```sh [extra]
 sudo pacman -S obs-studio
 ```
 
@@ -190,7 +190,7 @@ yay -S obs-nvfbc-git
 
    ![bilibili-live-chat-1](../../assets/app/exclusive/vedio/bilibili-live-chat-1.png)
 
-2. 安装 [Node.js](https://archlinux.org/packages/community/x86_64/nodejs/) 和 [Yarn](https://archlinux.org/packages/community/any/yarn/)：
+2. 安装 [Node.js](https://archlinux.org/packages/extra/x86_64/nodejs/) 和 [Yarn](https://archlinux.org/packages/extra/any/yarn/)：
 
    ```sh
    sudo pacman -S nodejs yarn
@@ -273,11 +273,11 @@ yay -S obs-nvfbc-git
 
 [screenkey](https://www.thregr.org/~wavexx/software/screenkey/) 是一个用于显示键盘键入在屏幕上的工具，可用于录屏演示。
 
-1. 安装 [screenkey](https://archlinux.org/packages/community/any/screenkey/)<sup>community / aur</sup>：
+1. 安装 [screenkey](https://archlinux.org/packages/extra/any/screenkey/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S screenkey
    ```
 

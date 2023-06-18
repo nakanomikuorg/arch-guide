@@ -45,7 +45,7 @@ scrcpy 有以下优点：
 
 :::
 
-1. 安装 [scrcpy](https://aur.archlinux.org/packages/scrcpy/)<sup>cn / aur</sup> 以及 [安卓工具包](https://archlinux.org/packages/community/x86_64/android-tools/)：
+1. 安装 [scrcpy](https://aur.archlinux.org/packages/scrcpy/)<sup>cn / aur</sup> 以及 [安卓工具包](https://archlinux.org/packages/extra/x86_64/android-tools/)：
 
    ::: code-group
 

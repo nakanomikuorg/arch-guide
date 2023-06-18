@@ -32,7 +32,7 @@ sidebarDepth: 2
 
 [Ardour](https://ardour.org/) 是一款自由开源的让你可以在 Linux 上录音、编辑和混音的软件。
 
-安装 [Ardour](https://archlinux.org/packages/community/x86_64/ardour/)<sup>community / aur</sup>：
+安装 [Ardour](https://archlinux.org/packages/extra/x86_64/ardour/)<sup>extra / aur</sup>：
 
 ::: code-group
 
@@ -72,11 +72,11 @@ yay -S kwave-git
 
 [Audacity](https://www.audacityteam.org/) 是一款跨平台的自由开源音频编辑软件，用于录音和编辑音频。2021 年 4 月 30 日，Audacity 被 [Muse Group](https://mu.se/) 收购。
 
-安装 [Audacity](https://archlinux.org/packages/community/x86_64/audacity/)<sup>community / aur</sup>：
+安装 [Audacity](https://archlinux.org/packages/extra/x86_64/audacity/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S audacity
 ```
 
@@ -112,7 +112,7 @@ yay -S audacium-git
 
 [VCV Rack](https://vcvrack.com/) 是一款开源可视化、模块化的音响合成器。
 
-1. 安装 [VCV Rack](https://archlinux.org/packages/community/x86_64/audacity/)<sup>aur</sup>：
+1. 安装 [VCV Rack](https://archlinux.org/packages/extra/x86_64/audacity/)<sup>aur</sup>：
 
    ::: code-group
 
@@ -140,11 +140,11 @@ yay -S audacium-git
 
 [Mixxx](https://mixxx.org/) 集成了 DJ 使用数字音乐文件进行创造性现场混音所需的工具。
 
-安装 [Mixxx](https://archlinux.org/packages/community/x86_64/mixxx/)<sup>community / aur</sup>：
+安装 [Mixxx](https://archlinux.org/packages/extra/x86_64/mixxx/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S mixxx
 ```
 
@@ -162,11 +162,11 @@ yay -S mixxx-git
 
 [LMMS](https://lmms.io/) 是免费自由开源并且跨平台的作曲工具。通过制作旋律和节拍，合成和混合音频，安排音频片段等方法创作音乐。
 
-安装 [LMMS](https://archlinux.org/packages/community/x86_64/lmms/)<sup>community / aur</sup>：
+安装 [LMMS](https://archlinux.org/packages/extra/x86_64/lmms/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S lmms
 ```
 
@@ -182,11 +182,11 @@ yay -S lmms-git
 
 [MuseScore](https://musescore.org/zh-hans) 是 Muse Group 开发的一个跨平台的自由开源制谱软件。
 
-安装 [MuseScore](https://archlinux.org/packages/community/x86_64/lmms/)<sup>community / cn / aur</sup>：
+安装 [MuseScore](https://archlinux.org/packages/extra/x86_64/lmms/)<sup>extra / cn / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S musescore
 ```
 
@@ -208,7 +208,7 @@ yay -S aur/musescore-git
 
 [Lyrebird](https://github.com/lyrebird-voice-changer/lyrebird)是 自由开源且简单强大的 Linux 变声器，用 GTK 3 编写。
 
-安装 [Lyrebird](https://archlinux.org/packages/community/x86_64/lmms/)<sup>aur</sup>：
+安装 [Lyrebird](https://archlinux.org/packages/extra/x86_64/lmms/)<sup>aur</sup>：
 
 ```sh
 yay -S lyrebird
@@ -222,11 +222,11 @@ yay -S lyrebird
 
 [SoundConverter](https://soundconverter.org/) 是 GNOME 桌面的音频文件转换器（这不影响在 Plasma 桌面环境下使用）。
 
-安装 [SoundConverter](https://archlinux.org/packages/community/any/soundconverter/)<sup>community / aur</sup>：
+安装 [SoundConverter](https://archlinux.org/packages/extra/any/soundconverter/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S soundconverter
 ```
 

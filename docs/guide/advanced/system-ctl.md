@@ -70,13 +70,13 @@ sudo some_command # 使普通用户以 root 权限执行某些命令
 
 在 archlinux 上安装的软件都通过 Pacman 来进行管理。
 
-为了使用 Pacman 额外的命令需要先安装 [ `pacman-contrib` ](https://archlinux.org/packages/community/x86_64/pacman-contrib/)<sup>community / aur</sup>。
+为了使用 Pacman 额外的命令需要先安装 [ `pacman-contrib` ](https://archlinux.org/packages/extra/x86_64/pacman-contrib/)<sup>extra / aur</sup>。
 
 安装 `pacman-contrib` ：
 
 ::: code-group
 
-```bash [community]
+```bash [extra]
 sudo pacman -S pacman-contrib
 ```
 
@@ -240,7 +240,7 @@ systemctl daemon-reload dhcpcd # 重新载入 systemd 配置。扫描新增或�
 
 除了众所周知的 `tar` 命令，我们在之前安装过的 `ark` 包可以配合 Dolphin 文件管理器轻松的右键压缩包直接解压。其可选依赖提供了各个压缩格式的支持，可以自行选择安装。
 
-但是使用此方法解压 Windows 下的压缩包可能会乱码。使用 [Unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) 可以避免这个问题。
+但是使用此方法解压 Windows 下的压缩包可能会乱码。使用 [Unarchiver](https://archlinux.org/packages/extra/x86_64/unarchiver/) 可以避免这个问题。
 
 1. 安装 Unarchiver：
 

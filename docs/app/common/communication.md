@@ -40,11 +40,11 @@ Telegram 有两种加密模式：
 
 官方宣称当两名用户进行通信时，第三方包含管理人员皆无法访问用户的通信内容。当用户在进行秘密聊天时，消息包含多媒体皆可以被指定为自毁消息，当消息被用户阅读之后，消息在指定的时间内会自动销毁。一旦消息过期，消息会消失在用户的设备上。
 
-1. 安装 `Telegram`<sup>community / cn / aur</sup>：
+1. 安装 `Telegram`<sup>extra / cn / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S telegram-desktop
    ```
 
@@ -133,7 +133,7 @@ yay -S linuxqq-nt-bwrap
 
 #### 其它版本
 
-基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
+基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / extra / cn / aur</sup> 的 QQ。
 
 1. 安装 [`deepin-wine-qq`](https://aur.archlinux.org/packages/deepin-wine-qq/)<sup>aur</sup>：
 
@@ -220,7 +220,7 @@ yay -S aur/skypeforlinux-preview-bin
 
 [Discord](https://discord.com/) 是一款专为社区设计的免费网络实时通话软件与数字发行平台，主要针对游戏玩家、教育人士及商业人士，用户之间可以在其中的聊天频道通过信息、图片、视频和音频进行互动。
 
-安装 [Discord](https://archlinux.org/packages/community/x86_64/discord/)：
+安装 [Discord](https://archlinux.org/packages/extra/x86_64/discord/)：
 
 ```sh
 sudo pacman -S discord

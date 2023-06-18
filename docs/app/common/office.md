@@ -116,7 +116,7 @@ yay -S foxitreader
 
 Typora 没有采用源代码和预览双栏显示的方式，而是采用所见即所得的编辑方式，实现了即时预览的功能，但也可切换至源代码编辑模式。在编辑时，除了通过传统的 Markdown 代码的方式来实现富文本之外，Typora 支持通过菜单栏或者鼠标右键选取命令的方式来实现富文本，也支持通过快捷键的方式插入。Typora 也支持通过以 TeX 的格式来插入行间公式和行内公式。在完成编辑后导出文件时，Typora 支持以 PDF 或 Html 的形式导出，如果安装了 Pandoc，也能够以 Word、RTF、MediaWiki、LaTeX 等形式导出。
 
-安装 [Typora](https://aur.archlinux.org/packages/typora/)<sup>EULA / cn / aur</sup> 以及 [Pandoc](https://archlinux.org/packages/community/x86_64/pandoc/)：
+安装 [Typora](https://aur.archlinux.org/packages/typora/)<sup>EULA / cn / aur</sup> 以及 [Pandoc](https://archlinux.org/packages/extra/x86_64/pandoc/)：
 
 ::: code-group
 

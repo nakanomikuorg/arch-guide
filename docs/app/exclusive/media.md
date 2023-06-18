@@ -32,7 +32,7 @@ sidebarDepth: 2
 
 [Blender](https://www.blender.org/) 是一款开源免费的三维图形图像软件，提供从建模、动画、材质、渲染、到音频处理、视频剪辑等一系列动画短片制作解决方案。
 
-安装 [Blender](https://archlinux.org/packages/community/x86_64/blender/)<sup>community / aur</sup>：
+安装 [Blender](https://archlinux.org/packages/extra/x86_64/blender/)<sup>extra / aur</sup>：
 
 ::: code-group
 
@@ -52,7 +52,7 @@ yay -S blender-git
 
 [Sweet Home 3D](http://www.sweethome3d.com/zh-cn/) 是一款免费的家装辅助设计软件。它能帮您通过二维的家居平面图来设计和布置您的家具，还可以用三维的视角浏览整个装修布局的全貌。
 
-安装 [Sweet Home 3D](https://archlinux.org/packages/community/x86_64/sweethome3d/)：
+安装 [Sweet Home 3D](https://archlinux.org/packages/extra/x86_64/sweethome3d/)：
 
 ```sh
 sudo pacman -S sweethome3d
@@ -64,7 +64,7 @@ sudo pacman -S sweethome3d
 
 [Synfig Studio](https://www.synfig.org/) 是一款免费开源的 2D 动画软件，用于使用矢量和位图图稿创建电影质量的动画。
 
-安装 [Synfig Studio](https://archlinux.org/packages/community/x86_64/synfigstudio/)<sup>community / aur</sup>：
+安装 [Synfig Studio](https://archlinux.org/packages/extra/x86_64/synfigstudio/)<sup>extra / aur</sup>：
 
 ::: code-group
 

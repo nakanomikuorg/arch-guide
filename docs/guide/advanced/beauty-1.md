@@ -72,11 +72,11 @@
 
 天气插件。相比 KDE 自带的天气插件显示信息更加详细，也不会经常刷新不出天气信息。
 
-安装 [Weather Widget](https://archlinux.org/packages/community/x86_64/plasma5-applets-weather-widget/)<sup>community / aur</sup>：
+安装 [Weather Widget](https://archlinux.org/packages/extra/x86_64/plasma5-applets-weather-widget/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```bash [community]
+```bash [extra]
 sudo pacman -S plasma5-applets-weather-widget qt5-xmlpatterns # 必须安装
 ```
 
@@ -184,11 +184,11 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
 
 ### 3-2. Dock 栏布局
 
-1. 为了实现 Dock 栏布局，需要安装 [Latte](https://github.com/KDE/latte-dock)<sup>community / cn / aur</sup>：
+1. 为了实现 Dock 栏布局，需要安装 [Latte](https://github.com/KDE/latte-dock)<sup>extra / cn / aur</sup>：
 
    ::: code-group
 
-   ```bash [community]
+   ```bash [extra]
    sudo pacman -S latte-dock
    ```
 
