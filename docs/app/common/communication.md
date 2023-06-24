@@ -162,17 +162,17 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
-推荐使用基于 `deepin-wine5` 的微信。
+基于目前社区的反馈，更推荐使用上游来自 Deepin 社区主导的星火商店，用 `wine` 运行的 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>，功能相对较全也较少 bug。
 
-1. 安装 [`com.qq.weixin.deepin`](https://aur.archlinux.org/packages/com.qq.weixin.deepin/)<sup>EULA / aur</sup>：
+1. 安装 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>：
 
    ```sh
-   yay -S com.qq.weixin.deepin
+   yay -S com.qq.weixin.spark
    ```
 
    ![wechat-1](../../assets/app/common/communication/wechat-1.png)
 
-2. 参考 [deepin-wine5 相关](../../guide/advanced/debug.md#deepin-wine5-相关) 完成配置：
+2. 如果存在透明窗口等问题，可以考虑使用 [`wine-for-wechat`](https://github.com/archlinuxcn/repo/tree/master/archlinuxcn/wine-for-wechat)<sup>cn</sup>：
 
    ![wechat-2](../../assets/app/common/communication/wechat-2.png)
 
@@ -185,6 +185,8 @@ yay -S linuxqq-nt-bwrap
   ```sh
   yay -S wechat-uos
   ```
+
+相关内容：[ArchWiki - 微信](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)
 
 ### Skype
 
