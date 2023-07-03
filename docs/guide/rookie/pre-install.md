@@ -87,6 +87,7 @@ balenaEtcher，具体步骤可参阅 [Ventoy（推荐）](../advanced/make-insta
 
 ## 4. 为 archlinux 分出硬盘空间（可选）
 
+### (1) 系统盘
 如果目标是双系统（win10 + archlinux），并且 win10 和 archlinux 将要共存在一个硬盘上的话，往往要在 win10 使用的分区上分出空闲硬盘空间给
 archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
@@ -110,6 +111,9 @@ archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 请不要做多余的动作！不要在这里为分出的硬盘空间创建分区！
 
 :::
+
+### (2) EFI 分区
+如果 archlinux 需要和 Windows 共存在一个硬盘上，需要通过 DiskGenius 或其他分区软件检查 EFI 分区容量不小于 256MB，如果小于，可能需要扩容（推荐，但可能不太好整）或者按照 [ArchWiki 提供的第三种挂载方式](https://wiki.archlinuxcn.org/wiki/EFI_%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA#%E5%85%B8%E5%9E%8B%E6%8C%82%E8%BD%BD%E7%82%B9) 新增一个额外的挂载点。
 
 ## 5. 获取 Bitlocker 恢复密钥
 
