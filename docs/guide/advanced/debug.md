@@ -23,6 +23,18 @@ sudo pacman -S alsa-utils pulseaudio pavucontrol
 
 重启系统即可
 
+另外，部分装有Nvidia显卡的笔记本（如dell g3-3590）可能会出现`aplay -l`只有Nvidia HDMI，无法识别内置音频的现象，这是soh驱动程序的问题~~从19年到现在还没修好~~<u>我们可以通过在内核启动时添加参数</u>解决这个问题：
+
+```bash
+snd_hda_intel.dmic_detect=0
+```
+
+::: tip ℹ️ 提示
+
+各个boot-loader有自己的配置文件，如`grub`的配置文件在`/etc/default/grub`，修改内核启动参数在`GRUB_CMDLINE_LINUX_DEFAULT`，更改完成后需要运行`grub-mkconfig -o /boot/grub/grub.cfg`，请查阅您的boot-loader的配置说明。
+
+:::
+
 ### 键盘没有反应
 
 若为联想小新 Pro14 / YOGA 14s 2021 或相似机型，可能发现笔记本内建键盘没有反应。
