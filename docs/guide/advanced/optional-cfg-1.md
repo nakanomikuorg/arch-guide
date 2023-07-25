@@ -418,6 +418,28 @@ source /usr/share/autojump/autojump.zsh
 
 :::
 
+::: tip ℹ️ 提示
+
+在部分终端，<kbd>Home</kbd>键，<kbd>End</kbd>键和<kbd>Del</kbd>键在zsh里不起作用。一种方法是`autoload zkbd` 来问答式生成按键和含义对应表，一种是手动绑定按键。
+前者是通用成熟的解决方案，但是为了一个<kbd>Home</kbd>键而去安装一个插件未免有些小题大做了。实际上，我们只需要我们的按键的转义字符，并
+ 在`~/.zshrc`追加`bindkey`便可。
+
+下面这个小技巧可能鲜为人知，就是利用 `cat` 来查看按键码。很简单，在命令行下直接`cat`+ <kbd>Enter</kbd>，然后接着按你想知道转义字符的按键，下面以<kbd>Home</kbd>键为例：
+
+![zsh-1](../../assets/guide/advanced/optional-cfg/zsh-8.png)
+
+我们获知：在我的设备上，<kbd>Home</kbd>键对应的转义字符是`^[[H`。依样画葫芦，我以如此格式在`~/.zshrc`绑定我的按键：
+
+```bash
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+```
+
+不同设备按键的转义字符不一样，请务必依照自己设备的实际情况操作。
+
+:::
+
 > 🔗 相关链接：
 >
 > 关于 zsh 的美化请参阅 [系统美化](./beauty-3.html#_2-zsh-美化)。
