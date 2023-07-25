@@ -54,35 +54,49 @@
 
 Windows 字体不仅日常可能会使用到，还可以让部分需要这些字体的应用（如 Wine）显示字体不会乱码。
 
-1. 首先需要挂载 Windows 下的 C 盘所在分区。若分区为 Bitlocker 上锁分区，可通过 Dolphin 使用对应的恢复密钥解锁
+* 从本地 Windows 获取字体文件
 
+   1. 首先需要挂载 Windows 下的 C 盘所在分区。若分区为 Bitlocker 上锁分区，可通过 Dolphin 使用对应的恢复密钥解锁
+
+      ::: tip ℹ️ 提示
+
+      有关解锁密钥的获取请参阅 [5. 获取 Bitlocker 恢复密钥](../rookie/pre-install.md#_5-%E8%8E%B7%E5%8F%96-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5)。
+
+      :::
+
+   2. 建立 archlinux 下存放 Windows 字体的文件夹：
+
+      ```sh
+      sudo mkdir /usr/share/fonts/WindowsFonts
+      ```
+
+   3. 进入 Windows 的 `Fonts` 文件夹，将字体复制到建立的文件夹并设置合理的权限：
+
+      ```sh
+      cd /path/to/C:/Windows/Fonts # 或者通过 Dolphin 在此文件夹下右键 > 点击 打开终端
+      sudo cp ./* /usr/share/fonts/WindowsFonts
+      sudo chmod 755 /usr/share/fonts/WindowsFonts/* # 设置合理的权限
+      ```
+
+      ![windows-fonts-1](../../assets/guide/advanced/optional-cfg/windows-fonts-1.png)
+
+   4. 刷新字体：
+
+      ```sh
+      fc-cache -vf # -v：显示过程
+      ```
+
+* 从 AUR 安装
+
+   通过以下命令安装 Windows 11 的中文字体
+   ```
+   yay -S ttf-ms-win11-auto-zh_cn
+   ```
    ::: tip ℹ️ 提示
 
-   有关解锁密钥的获取请参阅 [5. 获取 Bitlocker 恢复密钥](../rookie/pre-install.md#_5-%E8%8E%B7%E5%8F%96-bitlocker-%E6%81%A2%E5%A4%8D%E5%AF%86%E9%92%A5)。
+   原理是网络挂载 Windows 11 安装镜像并从中提取字体文件，完全合法   
 
    :::
-
-2. 建立 archlinux 下存放 Windows 字体的文件夹：
-
-   ```sh
-   sudo mkdir /usr/share/fonts/WindowsFonts
-   ```
-
-3. 进入 Windows 的 `Fonts` 文件夹，将字体复制到建立的文件夹并设置合理的权限：
-
-   ```sh
-   cd /path/to/C:/Windows/Fonts # 或者通过 Dolphin 在此文件夹下右键 > 点击 打开终端
-   sudo cp ./* /usr/share/fonts/WindowsFonts
-   sudo chmod 755 /usr/share/fonts/WindowsFonts/* # 设置合理的权限
-   ```
-
-   ![windows-fonts-1](../../assets/guide/advanced/optional-cfg/windows-fonts-1.png)
-
-4. 刷新字体：
-
-   ```sh
-   fc-cache -vf # -v：显示过程
-   ```
 
 > 🔗 相关链接：
 >
