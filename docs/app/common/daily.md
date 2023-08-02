@@ -277,7 +277,7 @@ yay -S calibre-git
 >
   <iframe
     style="position: absolute; width: 100%; height: 100%; left: 0; top: 0"
-    src="//player.bilibili.com/player.html?aid=417575346&bvid=BV1hV411H7Sf&cid=322832461&page=1&as_wide=1&high_quality=1&danmaku=1"
+    src="//player.bilibili.com/player.html?aid=417575346&bvid=BV1hV411H7Sf&cid=322832461&page=1&as_wide=1&high_quality=1&danmaku=1&autoplay=0"
     scrolling="no"
     border="0"
     frameborder="no"
