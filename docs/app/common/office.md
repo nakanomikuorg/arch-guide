@@ -162,6 +162,8 @@ yay -S vnote3-git
 
 ### Marktext
 
+![marktext](../../assets/app/common/office/marktext.png)
+
 [Marktext](https://github.com/marktext/marktext) 是一个简单而优雅的开源 Markdown 编辑器，专注于速度和可用性，使用 **MIT License** 开源。和 Typora 一样，Marktext 亦是 Electron 应用，目前在 Github 上有 40k+ Stars 。
 
 Marktext 常常被人视作 Typora 的替代品。事实上，论易用性， Marktext 在追赶 Typora 的过程上还有很长的一段路要走。
@@ -193,23 +195,23 @@ sudo pacman -S marktext-git
 
 ### Visual Studio Code
 
+![vsc](../../assets/app/common/office/vsc.png)
+
 VS Code 在担任代码编辑的能力之外，亦可成为Markdown编辑器。毕竟，web 能做到的，VS Code 的扩展就能做到。下面推荐几个插件。
 
 - Markdown All in One Markdown一揽子插件
-  
+
 - Markdown Preview Enhanced 非常强大 [查看它提供的众多feature](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
-  
+
 - Word Count CJK 统计字数
-  
 
 常用快捷键（ From Markdown Preview Enhanced）
 
-| 快捷键 | 功能  |
-| --- | --- |
-| cmd-k v or ctrl-k v | 在侧边栏打开预览 |
-| cmd-shift-v or ctrl-shift-v | 打开预览 |
-| ctrl-shift-s | 同步预览/源文档 |
-| shift-enter | 检查 Markdown |
-| ctrl-shift-enter | 检查所有 Markdown |
-| esc | 打开侧边目录 |
-
+| 快捷键                         | 功能            |
+| --------------------------- | ------------- |
+| cmd-k v or ctrl-k v         | 在侧边栏打开预览      |
+| cmd-shift-v or ctrl-shift-v | 打开预览          |
+| ctrl-shift-s                | 同步预览/源文档      |
+| shift-enter                 | 检查 Markdown   |
+| ctrl-shift-enter            | 检查所有 Markdown |
+| esc                         | 打开侧边目录        |
