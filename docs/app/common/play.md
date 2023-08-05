@@ -204,17 +204,13 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    出于安全性的考虑，hmcl仅在官方提供的构建版本才会包含微软登录功能。为了登陆正版账户，我们可以使用[hmcl-bin](https://aur.archlinux.org/packages/hmcl-bin)<sup>aur</sup>作为启动器：
 
-   ::: code-group
-
    ```sh [aur]
    yay -S hmcl-bin
    ```
-
-   :::
    
 ​   使用[hmcl-bin](https://aur.archlinux.org/packages/hmcl-bin)<sup>aur</sup>在让我们获取良好的官方支持以外，还能够让其自身使用系统的java-openjfx包，符合「低耦合、高内聚」的软件工程原则。
 
-   :::::
+   :::
 
 2. 打开 `Minecraft Launcher` > 根据提示登录帐号并下载主程序后即可畅玩：
 
