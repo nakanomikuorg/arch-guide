@@ -22,11 +22,11 @@
 
 ## 0. 进入安装环境
 
-![archlinux-iso-1](../../assets/guide/rookie/pre-virt_vb-17.png)
+![archlinux-iso-1](../../assets/guide/rookie/pre-virt_vb-14.png)
 
 1. 在第一个选项回车
 
-![archlinux-iso-2](../../assets/guide/rookie/pre-virt_vb-18.png)
+![archlinux-iso-2](../../assets/guide/rookie/pre-virt_vb-15.png)
 
 2. 进入安装环境后，便可以开始通过命令安装 archlinux 了
 
