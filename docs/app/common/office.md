@@ -159,3 +159,59 @@ yay -S vnote3-git
 ```
 
 ![vnote](../../assets/app/common/office/vnote.png)
+
+### Marktext
+
+![marktext](../../assets/app/common/office/marktext.png)
+
+[Marktext](https://github.com/marktext/marktext) 是一个简单而优雅的开源 Markdown 编辑器，专注于速度和可用性，使用 **MIT License** 开源。和 Typora 一样，Marktext 亦是 Electron 应用，目前在 Github 上有 40k+ Stars 。
+
+Marktext 常常被人视作 Typora 的替代品。事实上，论易用性， Marktext 在追赶 Typora 的过程上还有很长的一段路要走。
+
+> 摘自 README ：
+> 
+> 如上所述，**MarkText**是完全免费和开源的，并且将永远开源。我们希望所有 Markdown 爱好者贡献自己的代码，帮助将**MarkText**开发成流行的 Markdown 编辑器。
+> 
+> Markdown 编辑器有很多，并且都有各自的优点，有些具有其他功能而没有的功能。满足每个 Markdown 用户的需求是很困难的，但我们希望**MarkText**能够尽可能满足每个 Markdown 用户。虽然最新的**MarkText**还不够完美，但我们会尽力做到最好。
+
+在AUR中，有四个关于 Marktext 的包： `marktext`, `marktext-bin`, `marktext-git` 和 `marktext-appimage` 。
+
+为了减少维护成本，同时尽量避免 appimage 对性能的影响，我们从 AUR 安装 marktext -bin：
+
+```bash
+yay -S marktext-bin
+```
+
+::: tip ℹ️ 提示
+
+marktext-git 在 `archlinuxcn` 提供，但是其所依赖的 electron17 需要自行从AUR安装。
+
+```bash
+yay -S electron17 #或者是 electron17-bin
+sudo pacman -S marktext-git
+```
+
+:::
+
+### Visual Studio Code
+
+![vsc](../../assets/app/common/office/vsc.png)
+
+VS Code 在担任代码编辑的能力之外，亦可成为Markdown编辑器。毕竟，web 能做到的，VS Code 的扩展就能做到。下面推荐几个插件。
+
+- Markdown All in One Markdown一揽子插件
+
+- Markdown Preview Enhanced 非常强大 [查看它提供的众多feature](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
+
+- Word Count CJK 统计字数
+
+常用快捷键（ From Markdown Preview Enhanced）
+
+| 快捷键                         | 功能            |
+| --------------------------- | ------------- |
+| cmd-k v or ctrl-k v         | 在侧边栏打开预览      |
+| cmd-shift-v or ctrl-shift-v | 打开预览          |
+| ctrl-shift-s                | 同步预览/源文档      |
+| shift-enter                 | 检查 Markdown   |
+| ctrl-shift-enter            | 检查所有 Markdown |
+| esc                         | 打开侧边目录        |
