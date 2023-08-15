@@ -848,6 +848,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ![os-prober-1](../../assets/guide/rookie/basic-install/os-prober-1.png)
 
+若win10安装在另一个硬盘中则不会输出
+可在进入系统后挂载硬盘并重新执行该命令
+
 ::: tip ℹ️ 提示
 
 1.在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [ArchWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
