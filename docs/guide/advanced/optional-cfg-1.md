@@ -116,7 +116,7 @@ sudo pacman -S fcitx5-rime
 
 ![rime_step-1](../../assets/guide/advanced/optional-cfg/rime-1.png)
 
-2. 然后添加 Rime 输入法。打开 `系统设置` > 点击侧栏 `区域设置` > `输入法`：
+2. 然后添加 Rime 输入法。打开 `系统设置` > 点击侧栏 `语言和区域设置` > `输入法`：
 
 ![rime_step-2](../../assets/guide/advanced/optional-cfg/rime-2.png)
 
@@ -126,7 +126,7 @@ sudo pacman -S fcitx5-rime
 
 :::
 
-3. 点击 `添加输入法` > 找到**汉语**下的 `Rime` > 点击 `添加`：
+3. 点击 `添加输入法` > 找到**汉语**下的 `中州语` > 点击 `添加`：
 
 ![rime_step-3](../../assets/guide/advanced/optional-cfg/rime-3.png)
 
