@@ -11,18 +11,18 @@ Btrfs 是一种新型的写时复制（CoW）Linux 文件系统，已经并入�
 - `2007` —— [甲骨文（Oracle）](https://www.oracle.com/cn/index.html) 宣布并开始研发
   - 对标 ZFS（开源社区对 ZFS 所作出的回应）
 - `2010`
-  - 在 SUSE Linux Enterprise Server 11 SP1（OpenSUSE 11）上技术预览
+  - 在 SUSE Linux Enterprise Server 11 SP1（openSUSE 11）上技术预览
   - Btrfs 在 2010 年 10 月推出的 Ubuntu 10.10 中得到了应用
 - `2011`
   - 2011 年 6 月 8 日，在 Fedora 工程指导委员会会议上，委员会决定 Fedora 16 将以 Btrfs 作为默认文件系统.
   - 2011 年 8 月 9 日，Fedora 撤回了决定，Btrfs 不再作为 Fedora 16 默认文件系统；原因是时间不充足，无法达到改变默认文件系统所要满足的基本要求
   - 2011 年 10 月 5 日，Fedora 16 测试版发布，BTRFS 将做为其默认文件系统
   - 2011 年 11 月 8 日，Fedora 16 正式版发布，默认文件系统依然采用 ext4，并未采用预计的 Btrfs 文件系统
-- `2012` —— 在 SUSE Linux Enterprise Server 11 SP2（OpenSUSE 11）得到完整支持
-- `2014` —— 在 SUSE Linux Enterprise Server 12（OpenSUSE 12）上作为默认文件系统
-- `2018` —— 在 SUSE Linux Enterprise Server 15（OpenSUSE 15）上作为默认文件系统
+- `2012` —— 在 SUSE Linux Enterprise Server 11 SP2（openSUSE 11）得到完整支持
+- `2014` —— 在 SUSE Linux Enterprise Server 12（openSUSE 12）上作为默认文件系统
+- `2018` —— 在 SUSE Linux Enterprise Server 15（openSUSE 15）上作为默认文件系统
 - `2020` —— 2020 年 8 月 24 日，Btrfs 将取代 ext4 作为 Fedora 33 中的默认文件系统
-- `2021` —— 在 SUSE MicroOS（OpenSUSE MicroOS）上作为默认文件系统
+- `2021` —— 在 SUSE MicroOS（openSUSE MicroOS）上作为默认文件系统
 
 ### Btrfs 的特性
 

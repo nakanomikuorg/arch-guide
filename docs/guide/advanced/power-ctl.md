@@ -16,11 +16,11 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
 ### 安装与配置
 
-1. 安装 [TLP](https://linrunner.de/tlp/index.html)<sup>community / aur</sup>、[`tlp-rdw`](https://archlinux.org/packages/community/any/tlp-rdw/)<sup>community / aur</sup> 以及可选安装图形界面 [TLPUI](https://github.com/d4nj1/TLPUI)<sup>aur</sup>：
+1. 安装 [TLP](https://linrunner.de/tlp/index.html)<sup>extra / aur</sup>、[`tlp-rdw`](https://archlinux.org/packages/extra/any/tlp-rdw/)<sup>extra / aur</sup> 以及可选安装图形界面 [TLPUI](https://github.com/d4nj1/TLPUI)<sup>aur</sup>：
 
    ::: code-group
 
-   ```bash [community]
+   ```bash [extra]
    sudo pacman -S tlp tlp-rdw
    ```
 
@@ -116,7 +116,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
 :::
 
-使用 [`intel-undervolt`](https://github.com/kitsunyan/intel-undervolt)<sup>community / aur</sup> 即可降压。
+使用 [`intel-undervolt`](https://github.com/kitsunyan/intel-undervolt)<sup>extra / aur</sup> 即可降压。
 
 ::: danger ☢️ 警告
 
@@ -130,7 +130,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
 
    ::: code-group
 
-   ```bash [community]
+   ```bash [extra]
    sudo pacman -S intel-undervolt
    ```
 
@@ -167,7 +167,7 @@ tlp-stat -s # 显示系统数据信息 / 验证 TLP 服务运行状况
    sudo intel-undervolt read # 复查是否成功降压
    ```
 
-4. 可以尝试使用 [s-tui](https://archlinux.org/packages/community/any/s-tui/) 这个工具进行烤机测试，同时观察温度、频率、TDP 的数据。
+4. 可以尝试使用 [s-tui](https://archlinux.org/packages/extra/any/s-tui/) 这个工具进行烤机测试，同时观察温度、频率、TDP 的数据。
 
 5. 在调整到一个合适的降压配置后，开启 `intel-undervolt.service` 服务即可：
 

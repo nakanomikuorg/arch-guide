@@ -40,11 +40,11 @@ Telegram 有两种加密模式：
 
 官方宣称当两名用户进行通信时，第三方包含管理人员皆无法访问用户的通信内容。当用户在进行秘密聊天时，消息包含多媒体皆可以被指定为自毁消息，当消息被用户阅读之后，消息在指定的时间内会自动销毁。一旦消息过期，消息会消失在用户的设备上。
 
-1. 安装 `Telegram`<sup>community / cn / aur</sup>：
+1. 安装 `Telegram`<sup>extra / cn / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S telegram-desktop
    ```
 
@@ -133,7 +133,7 @@ yay -S linuxqq-nt-bwrap
 
 #### 其它版本
 
-基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / community / cn / aur</sup> 的 QQ。
+基于 [`deepin-wine5`](https://aur.archlinux.org/packages/deepin-wine5)<sup>EULA / extra / cn / aur</sup> 的 QQ。
 
 1. 安装 [`deepin-wine-qq`](https://aur.archlinux.org/packages/deepin-wine-qq/)<sup>aur</sup>：
 
@@ -162,17 +162,17 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
-推荐使用基于 `deepin-wine5` 的微信。
+基于目前社区的反馈，更推荐使用上游来自 Deepin 社区主导的星火商店，用 `wine` 运行的 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>，功能相对较全也较少 bug。
 
-1. 安装 [`com.qq.weixin.deepin`](https://aur.archlinux.org/packages/com.qq.weixin.deepin/)<sup>EULA / aur</sup>：
+1. 安装 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>：
 
    ```sh
-   yay -S com.qq.weixin.deepin
+   yay -S com.qq.weixin.spark
    ```
 
    ![wechat-1](../../assets/app/common/communication/wechat-1.png)
 
-2. 参考 [deepin-wine5 相关](../../guide/advanced/debug.md#deepin-wine5-相关) 完成配置：
+2. 如果存在透明窗口等问题，可以考虑使用 [`wine-for-wechat`](https://github.com/archlinuxcn/repo/tree/master/archlinuxcn/wine-for-wechat)<sup>cn</sup>：
 
    ![wechat-2](../../assets/app/common/communication/wechat-2.png)
 
@@ -185,6 +185,8 @@ yay -S linuxqq-nt-bwrap
   ```sh
   yay -S wechat-uos
   ```
+
+相关内容：[ArchWiki - 微信](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)
 
 ### Skype
 
@@ -220,7 +222,7 @@ yay -S aur/skypeforlinux-preview-bin
 
 [Discord](https://discord.com/) 是一款专为社区设计的免费网络实时通话软件与数字发行平台，主要针对游戏玩家、教育人士及商业人士，用户之间可以在其中的聊天频道通过信息、图片、视频和音频进行互动。
 
-安装 [Discord](https://archlinux.org/packages/community/x86_64/discord/)：
+安装 [Discord](https://archlinux.org/packages/extra/x86_64/discord/)：
 
 ```sh
 sudo pacman -S discord

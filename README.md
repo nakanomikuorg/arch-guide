@@ -15,16 +15,6 @@
     />
   </a>
   <a
-    href="https://github.com/nakanomikuorg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="arch-guide"
-      src="https://travis-ci.com/nakanomikuorg/arch-guide.svg?branch=main"
-    />
-  </a>
-  <a
     href="https://hits.seeyoufarm.com"
   >
     <img
@@ -100,7 +90,7 @@
 
 ```shell
 sudo pacman -S nodejs pnpm # 安装 nodejs 和 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -110,7 +100,7 @@ pnpm docs:dev
 
 ```shell
 brew install pnpm # 安装 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev
@@ -121,7 +111,7 @@ pnpm docs:dev
 ```powershell
 scoop install nodejs # 安装 nodejs
 scoop install pnpm # 安装 PnpM
-git clone https:/github.com/nakanomikuorg/arch-guide.git
+git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
 pnpm docs:dev

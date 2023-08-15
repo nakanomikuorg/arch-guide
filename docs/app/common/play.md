@@ -128,11 +128,11 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 :::
 
-1. 安装 [Lutris](https://archlinux.org/packages/community/any/lutris/)<sup>community / aur</sup>：
+1. 安装 [Lutris](https://archlinux.org/packages/extra/any/lutris/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S lutris
    ```
 
@@ -186,7 +186,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    ::::: tip ℹ️ 提示
 
-   除了官方启动器，还有第三方启动器 [HMCL（Hello Minecraft! Launcher）](https://hmcl.huangyuhui.net/)，支持模组管理、游戏定制、自动安装（Forge、LiteLoader 和 OptiFine）、模组包创建、UI 定制等。
+   除了官方启动器，还有第三方启动器 [HMCL（Hello Minecraft! Launcher）](https://hmcl.huangyuhui.net/)，支持模组管理、游戏定制、自动安装（Forge、LiteLoader 和 OptiFine）、模组包创建、UI 定制等。同时，国产第三方启动器如hmcl一般支持使用国内镜像源下载游戏，而非使用在国内访问不稳定的官方源下载游戏。
 
    安装 [HMCL](https://aur.archlinux.org/packages/hmcl/)<sup>cn / aur</sup>：
 
@@ -202,7 +202,15 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    :::
 
-   :::::
+   出于安全性的考虑，hmcl仅在官方提供的构建版本才会包含微软登录功能。为了登陆正版账户，我们可以使用[hmcl-bin](https://aur.archlinux.org/packages/hmcl-bin)<sup>aur</sup>作为启动器：
+
+   ```sh [aur]
+   yay -S hmcl-bin
+   ```
+   
+​   使用[hmcl-bin](https://aur.archlinux.org/packages/hmcl-bin)<sup>aur</sup>在让我们获取良好的官方支持以外，还能够让其自身使用系统的java-openjfx包，符合「低耦合、高内聚」的软件工程原则。
+
+   :::
 
 2. 打开 `Minecraft Launcher` > 根据提示登录帐号并下载主程序后即可畅玩：
 
@@ -302,7 +310,7 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
 自动方式
 
-1. 安装[GameMode](https://archlinux.org/packages/community/x86_64/gamemode/)
+1. 安装[GameMode](https://archlinux.org/packages/extra/x86_64/gamemode/)
 
    ```sh
    # 安装配置文件
@@ -427,11 +435,11 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    ![openrgb-3](../../assets/app/common/play/openrgb-3.png)
 
-5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/community/x86_64/i2c-tools/)<sup>community / aur</sup>：
+5. 为了验证驱动载入情况，还需要安装 [I<sup>2</sup>C Tools](https://archlinux.org/packages/extra/x86_64/i2c-tools/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S i2c-tools
    ```
 

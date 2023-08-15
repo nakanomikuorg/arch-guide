@@ -289,7 +289,7 @@ sudo umount /mnt/mount_point
 
    ![win-5](../../assets/guide/advanced/make-install-disk/win-5.png)
 
-5. 得到复制出来的文件后，最后要进行的就是压缩 `install.wim` 文件（在 `sources` 文件夹下）。这里需要首先安装一个包 [`wimlib`](https://archlinux.org/packages/community/x86_64/wimlib/)（可能已经作为依赖安装了）：
+5. 得到复制出来的文件后，最后要进行的就是压缩 `install.wim` 文件（在 `sources` 文件夹下）。这里需要首先安装一个包 [`wimlib`](https://archlinux.org/packages/extra/x86_64/wimlib/)（可能已经作为依赖安装了）：
 
    ```bash
    sudo pacman -S wimlib

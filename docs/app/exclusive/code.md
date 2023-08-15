@@ -6,26 +6,26 @@
 
 对于前端来说，一般需要浏览器以及 IDE 即可，附加一些网络工具。
 
-关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/community/x86_64/code/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/)<sup>aur</sup> 的开源版本，此外有社区构建的 [VSCodium](https://aur.archlinux.org/packages/vscodium-bin/)<sup>aur</sup> 可供选择)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/community/x86_64/atom/)。
+关于 IDE(或编辑器),可以使用 [OSS code](https://www.archlinux.org/packages/extra/x86_64/code/) (微软 [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin/)<sup>aur</sup> 的开源版本，此外有社区构建的 [VSCodium](https://aur.archlinux.org/packages/vscodium-bin/)<sup>aur</sup> 可供选择)，[webstorm](https://aur.archlinux.org/packages/webstorm/)<sup>aur</sup> 或者 [atom](https://archlinux.org/packages/extra/x86_64/atom/)。
 
-浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/community/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/community/x86_64/opera/) 可供选择。
+浏览器方面有 [firefox](https://archlinux.org/packages/extra/x86_64/firefox/)，[chromium](https://archlinux.org/packages/extra/x86_64/chromium/)，[google-chrome](https://aur.archlinux.org/packages/google-chrome/)<sup>aur</sup>，[vivaldi](https://archlinux.org/packages/extra/x86_64/vivaldi/)，[firefox-developer-edition](https://www.archlinux.org/packages/extra/x86_64/firefox-developer-edition/)，[Edge](https://aur.archlinux.org/packages/microsoft-edge-dev-bin/)<sup>aur</sup>，以及 [opera](https://archlinux.org/packages/extra/x86_64/opera/) 可供选择。
 
-网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>aur</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>aur</sup>以及 [wireshark-qt](https://archlinux.org/packages/community/x86_64/wireshark-qt/)。
+网络工具常使用 [charles](https://aur.archlinux.org/packages/charles/)<sup>aur</sup>，[postman](https://aur.archlinux.org/packages/postman-bin/)<sup>aur</sup>以及 [wireshark-qt](https://archlinux.org/packages/extra/x86_64/wireshark-qt/)。
 
-至于 [yarn](https://www.archlinux.org/packages/community/any/yarn/)、[npm](https://www.archlinux.org/packages/community/any/npm/) 等前端常用工具，也均可用 pacman 安装。
+至于 [yarn](https://www.archlinux.org/packages/extra/any/yarn/)、[npm](https://www.archlinux.org/packages/extra/any/npm/) 等前端常用工具，也均可用 pacman 安装。
 
 > OSS code 存在的问题：[官方 wiki](https://wiki.archlinux.org/index.php/Visual_Studio_Code)。一个普遍问题是删文件 UI 会卡住很久，原因是 electron 在 linux 下默认使用 `gio` 删除，但是 KDE 用户一般都不装这个。解决办法是把 `ELECTRON_TRASH=kioclient5` 环境变量加在~/.pam_environment 里。
 
 ## 后端编程
 
-Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜索，如[IntelliJ Idea](https://www.archlinux.org/packages/community/x86_64/intellij-idea-community-edition/)，[PyCharm](https://www.archlinux.org/packages/community/x86_64/pycharm-community-edition/)，[GoLand](https://aur.archlinux.org/packages/goland/)<sup>aur</sup>等。
-较为老式的 IDE 有 [Netbeans](https://www.archlinux.org/packages/community/any/netbeans/) 以及 eclipse，eclipse 有多种版本，可在 AUR 中自行搜索。
+Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜索，如[IntelliJ Idea](https://www.archlinux.org/packages/extra/x86_64/intellij-idea-community-edition/)，[PyCharm](https://www.archlinux.org/packages/extra/x86_64/pycharm-community-edition/)，[GoLand](https://aur.archlinux.org/packages/goland/)<sup>aur</sup>等。
+较为老式的 IDE 有 [Netbeans](https://www.archlinux.org/packages/extra/any/netbeans/) 以及 eclipse，eclipse 有多种版本，可在 AUR 中自行搜索。
 
 关于数据库相关软件，也有多种选择。
 
-- [Mysql Workbench](https://www.archlinux.org/packages/community/x86_64/mysql-workbench/)
-- [pgadmin4](https://www.archlinux.org/packages/community/x86_64/pgadmin4/)
-- [dbeaver](https://www.archlinux.org/packages/community/x86_64/dbeaver/)
+- [Mysql Workbench](https://www.archlinux.org/packages/extra/x86_64/mysql-workbench/)
+- [pgadmin4](https://www.archlinux.org/packages/extra/x86_64/pgadmin4/)
+- [dbeaver](https://www.archlinux.org/packages/extra/x86_64/dbeaver/)
 - [robo3t](https://aur.archlinux.org/packages/robo3t-bin/)<sup>aur</sup>
 - [RESP.app](https://aur.archlinux.org/packages/resp-app/)<sup>aur</sup> （原 redis-desktop-manager）
 - [rdm-bin](https://aur.archlinux.org/packages/rdm-bin/)<sup>aur</sup> 如果上面的编译有问题，可用这个 bin 版本
@@ -40,7 +40,7 @@ Jetbrains 家的全家桶基本都有支持可以在源中或 AUR 中自行搜�
 
 ## 机器学习
 
-安装 [jupyter-notebook](https://archlinux.org/packages/community/any/jupyter-notebook/) 以及所需要的相关库如[numpy](https://archlinux.org/packages/extra/x86_64/python-numpy/)即可，均可在源中找到。机器学习常用开源框架有[Pytorch](https://pytorch.org/), [Tensorflow](https://www.tensorflow.org)等 ([Wiki](https://wiki.archlinux.org/title/List_of_applications/Science#Artificial_intelligence))。
+安装 [jupyter-notebook](https://archlinux.org/packages/extra/any/jupyter-notebook/) 以及所需要的相关库如[numpy](https://archlinux.org/packages/extra/x86_64/python-numpy/)即可，均可在源中找到。机器学习常用开源框架有[Pytorch](https://pytorch.org/), [Tensorflow](https://www.tensorflow.org)等 ([Wiki](https://wiki.archlinux.org/title/List_of_applications/Science#Artificial_intelligence))。
 
 ## 科学计算
 

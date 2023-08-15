@@ -64,7 +64,7 @@ AUR 和 ArchLinuxCN 源中都有很多 Nerd Font，在终端使用 yay 搜索安
 yay -Ss nerd-font
 ```
 
-个人推荐使用 [ttf-jetbrains-mono-nerd](https://archlinux.org/packages/community/any/ttf-jetbrains-mono-nerd/) 字体，可在 aur 中安装
+个人推荐使用 [ttf-jetbrains-mono-nerd](https://archlinux.org/packages/extra/any/ttf-jetbrains-mono-nerd/) 字体，可在 aur 中安装
 
 ```sh
 sudo pacman -S ttf-jetbrains-mono-nerd
@@ -82,7 +82,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 用渐变为终端输出着色，看起来就像彩虹一样！
 
-1. 安装 [lolcat](https://archlinux.org/packages/community/any/lolcat/)：
+1. 安装 [lolcat](https://archlinux.org/packages/extra/any/lolcat/)：
 
    ```bash
    sudo pacman -S lolcat
@@ -166,11 +166,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 向下滚动的代码流如同黑客帝国一样！
 
-1. 安装 [cmatrix](https://archlinux.org/packages/community/x86_64/cmatrix/)：
+1. 安装 [cmatrix](https://archlinux.org/packages/extra/x86_64/cmatrix/)：
 
    ::: code-group
 
-   ```bash [community]
+   ```bash [extra]
    sudo pacman -S cmatrix
    ```
 
@@ -194,11 +194,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 将终端化身海洋馆！
 
-1. 安装 [asciiquarium](https://archlinux.org/packages/community/any/asciiquarium/)<sup>community / aur</sup>：
+1. 安装 [asciiquarium](https://archlinux.org/packages/extra/any/asciiquarium/)<sup>extra / aur</sup>：
 
    ::: code-group
 
-   ```bash [community]
+   ```bash [extra]
    sudo pacman -S asciiquarium
    ```
 
@@ -222,7 +222,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 终端里的小火车。
 
-1. 安装 [sl](https://archlinux.org/packages/community/x86_64/sl/)：
+1. 安装 [sl](https://archlinux.org/packages/extra/x86_64/sl/)：
 
    ```bash
    sudo pacman -S sl

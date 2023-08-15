@@ -80,11 +80,11 @@ yay -S aseprite-git
 
 [RawTherapee](https://rawtherapee.com/) 是一个自由开源的跨平台 RAW 格式图像处理程序。
 
-安装 [RawTherapee](https://archlinux.org/packages/community/x86_64/rawtherapee/)<sup>community / aur</sup>：
+安装 [RawTherapee](https://archlinux.org/packages/extra/x86_64/rawtherapee/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S rawtherapee
 ```
 

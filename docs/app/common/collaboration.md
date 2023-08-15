@@ -45,7 +45,7 @@ scrcpy 有以下优点：
 
 :::
 
-1. 安装 [scrcpy](https://aur.archlinux.org/packages/scrcpy/)<sup>cn / aur</sup> 以及 [安卓工具包](https://archlinux.org/packages/community/x86_64/android-tools/)：
+1. 安装 [scrcpy](https://aur.archlinux.org/packages/scrcpy/)<sup>cn / aur</sup> 以及 [安卓工具包](https://archlinux.org/packages/extra/x86_64/android-tools/)：
 
    ::: code-group
 
@@ -241,7 +241,7 @@ echo 'alias scrcpy="scrcpy --turn-screen-off --stay-awake"' >> ~/.zshrc
 >
   <iframe
     style="position: absolute; width: 100%; height: 100%; left: 0; top: 0"
-    src="//player.bilibili.com/player.html?aid=972705991&bvid=BV1fp4y1t71r&cid=328263624&page=1&as_wide=1&high_quality=1&danmaku=1"
+    src="//player.bilibili.com/player.html?aid=972705991&bvid=BV1fp4y1t71r&cid=328263624&page=1&as_wide=1&high_quality=1&danmaku=1&autoplay=0"
     scrolling="no"
     border="0"
     frameborder="no"

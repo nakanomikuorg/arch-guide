@@ -182,11 +182,11 @@ Opera 是由 Opera 软件公司为个人电脑推出的网页浏览器。
 
 Opera 软件公司为纳斯达克上市的挪威软件公司，现在已被中国商人周亚辉联合 [奇虎 360](https://www.360.cn/) 收购。
 
-安装 [Opera](https://archlinux.org/packages/community/x86_64/opera/)<sup>EULA / community / cn / aur</sup>：
+安装 [Opera](https://archlinux.org/packages/extra/x86_64/opera/)<sup>EULA / community / cn / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S opera
 ```
 
@@ -208,7 +208,7 @@ yay -S aur/opera-beta
 
 ‎Vivaldi 追求「为我们的朋友而打造」，旨在为原先 Opera 的忠实用户，如高阶技术专家、重度的互联网用户，提供原 Presto Opera 的诸多专属功能，例如自订面板、笔记、分页群组、单键快捷键等等。
 
-安装 [‎Vivaldi](https://archlinux.org/packages/community/x86_64/vivaldi/)<sup>EULA</sup>：
+安装 [‎Vivaldi](https://archlinux.org/packages/extra/x86_64/vivaldi/)<sup>EULA</sup>：
 
 ```sh
 sudo pacman -S vivaldi
@@ -244,11 +244,11 @@ yay -S okular-git
 
 calibre 是一款功能强大且易于使用的电子书管理器。支持 epub、txt、azw3 等文件格式。
 
-安装 [calibre](https://archlinux.org/packages/community/x86_64/calibre/)<sup>community / aur</sup>：
+安装 [calibre](https://archlinux.org/packages/extra/x86_64/calibre/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S calibre
 ```
 
@@ -277,7 +277,7 @@ yay -S calibre-git
 >
   <iframe
     style="position: absolute; width: 100%; height: 100%; left: 0; top: 0"
-    src="//player.bilibili.com/player.html?aid=417575346&bvid=BV1hV411H7Sf&cid=322832461&page=1&as_wide=1&high_quality=1&danmaku=1"
+    src="//player.bilibili.com/player.html?aid=417575346&bvid=BV1hV411H7Sf&cid=322832461&page=1&as_wide=1&high_quality=1&danmaku=1&autoplay=0"
     scrolling="no"
     border="0"
     frameborder="no"
@@ -288,11 +288,11 @@ yay -S calibre-git
 
 :::
 
-1. 安装 [火焰截图](https://archlinux.org/packages/community/x86_64/flameshot/)<sup>community / cn / aur</sup>：
+1. 安装 [火焰截图](https://archlinux.org/packages/extra/x86_64/flameshot/)<sup>extra / cn / aur</sup>：
 
    ::: code-group
 
-   ```sh [community]
+   ```sh [extra]
    sudo pacman -S flameshot
    ```
 
@@ -444,11 +444,11 @@ yay -S gwenview-git
 
 nomacs 是一个免费的开源图像查看器，支持多平台。可以使用它来查看所有常见的图像格式，包括 RAW 和 psd 图像。
 
-安装 [nomacs](https://archlinux.org/packages/community/x86_64/nomacs/)<sup>community / aur</sup>：
+安装 [nomacs](https://archlinux.org/packages/extra/x86_64/nomacs/)<sup>extra / aur</sup>：
 
 ::: code-group
 
-```sh [community]
+```sh [extra]
 sudo pacman -S nomacs
 ```
 
