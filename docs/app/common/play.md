@@ -323,7 +323,9 @@ Lutris 支持超过 20 个模拟器并且提供了从七十年代到现在的大
 
    ```sh
    # 进入下载配置文件的文件夹
-   sudo cp gamemode.ini /etc/gamemode.ini
+   sudo cp gamemode.ini ~/.config/gamemode.ini
+   # 注意：需要将当前用户名添加到gamemode用户组
+   sudo usermod -aG gamemode username
    ```
 
 3. 进行测试，运行`gamemoded -t`
