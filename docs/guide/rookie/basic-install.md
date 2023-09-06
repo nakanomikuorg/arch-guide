@@ -378,11 +378,11 @@ lsblk # 复查磁盘情况
 ::: code-group
 
 ```zsh [SATA]
-mkfs.fat -F32 /dev/sdxn
+mkfs.fat -F 32 /dev/sdxn
 ```
 
 ```zsh [NVME]
-mkfs.fat -F32 /dev/nvmexn1pn
+mkfs.fat -F 32 /dev/nvmexn1pn
 ```
 
 :::
@@ -848,7 +848,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ![os-prober-1](../../assets/guide/rookie/basic-install/os-prober-1.png)
 
-若win10安装在另一个硬盘中则不会输出
+若 win10 安装在另一个硬盘中则不会输出
 可在进入系统后挂载硬盘并重新执行该命令
 
 ::: tip ℹ️ 提示

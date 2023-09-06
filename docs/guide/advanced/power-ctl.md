@@ -4,6 +4,20 @@
 >
 > 针对散热不好的设备或者续航能力不佳的笔记本，功耗控制显得非常必要
 
+## 使用 KDE 本身的电源管理
+
+安装 [powerdevil](https://archlinux.org/packages/extra/x86_64/powerdevil/)<sup>extra</sup>、[power-profiles-daemon](https://archlinux.org/packages/extra/x86_64/power-profiles-daemon/)<sup>extra</sup>
+
+```bash
+sudo pacman -S powerdevil power-profiles-daemon
+```
+
+安装完成后重启系统即可在 kde 右下角托盘`电池与亮度`对电源配置进行调节
+
+::: tip ℹ️ 提示
+使用 KDE 本身的电源配置后不建议继续使用下文所述的其他方案
+:::
+
 ## 使用 TLP 延长电池寿命及续航
 
 > 🔗 相关链接：

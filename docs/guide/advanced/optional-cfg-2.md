@@ -62,6 +62,10 @@ sudo pacman -S linux-hardened linux-hardened-headers
 
 2. 为了让 GRUB 记住最后在 GRUB 引导菜单里选择的内核，以便在下次启动时自动使用对应的内核，需要编辑 `/etc/default/grub` 文件：
 
+::: tip ℹ️ 提示
+当前 btrfs 并不支持记住上次选择内核，btrfs 用户请勿配置
+:::
+
 ```bash
 sudo vim /etc/default/grub
 ```

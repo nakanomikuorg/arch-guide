@@ -74,7 +74,31 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 现在再打开 `powerlevel10k` 配置（`p10k configure`），就可以看到图标符号，正常配置了。
 
-## 3. vim 美化
+<!-- ## 3. vim 美化 -->
+
+## 3. fish 配置
+
+fish 是另一个 shell，名字是"**\*f**riendly **i**nteractive **sh**ell\*"的缩写，作为一个友好交互式的命令行 shell
+
+::: tip ℹ️ 提示
+需要注意，fish 本身和 bash 并不完全兼容（但有方法可以直接运行 bash 格式的脚本）
+:::
+
+```sh
+sudo pacman -S fish
+```
+
+fish 本身自带补全，所需要做的仅仅是少量美化，我们可以选择[starship](https://starship.rs/)
+
+```sh
+sudo pacman -S starship
+```
+
+编辑文件`~/.config/fish/config.fish`添加以下内容:
+
+```sh
+starship init fish | source
+```
 
 ## 4. ASCII 艺术与终端玩具
 
@@ -236,4 +260,4 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
    ![sl](../../assets/guide/advanced/beauty/sl.png)
 
-## 5. Linux 彩蛋
+<!-- ## 5. Linux 彩蛋 -->
