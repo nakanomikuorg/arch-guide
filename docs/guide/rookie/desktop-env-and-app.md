@@ -204,6 +204,8 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 ```
 pacman -S  plasma-wayland-session xdg-desktop-portal
 # N卡用户需要额外安装egl-wayland,xdg-desktop-portal包是为了如obs此类工具录制屏幕使用
+# xdg-desktop-portal包组提供了不同环境下使用的软件包
+# 例如kde用户可选择xdg-desktop-portal-kde包
 ```
 
 3. 安装完成后，可以在后续登录时选择使用 xorg 还是 wayland
