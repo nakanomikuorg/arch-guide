@@ -254,6 +254,18 @@ sudo pacman -S unarchiver
 unar xxx.zip
 ```
 
+或者尝试以下ark中文乱码解决方案
+
+1. 安装 [p7zip-natspec](https://aur.archlinux.org/packages/p7zip-natspec)<sup>cn / aur </sup>：
+
+```bash
+sudo pacman -S p7zip-natspec
+# 具有i18n补丁的p7zip包，可以替代p7zip包
+```
+
+2. 打开 ark 配置页面，选择“插件”，取消勾选“Info-zip 插件”和“Libzip 插件”，点击“应用”后重启 ark ，即可正常解压缩中文名称的文件。
+
+
 ## 磁盘空间信息
 
 ### df 命令
