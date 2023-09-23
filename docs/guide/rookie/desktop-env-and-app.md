@@ -204,6 +204,8 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 ```
 pacman -S  plasma-wayland-session xdg-desktop-portal
 # N卡用户需要额外安装egl-wayland,xdg-desktop-portal包是为了如obs此类工具录制屏幕使用
+# xdg-desktop-portal包组提供了不同环境下使用的软件包
+# 例如kde用户可选择xdg-desktop-portal-kde包
 ```
 
 3. 安装完成后，可以在后续登录时选择使用 xorg 还是 wayland
@@ -263,6 +265,7 @@ KDE 桌面环境中连接网络和 win10 一样，这里不再赘述。
 3. 接下来安装一些基础功能包：
 
 ```bash
+sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf # 声音固件
 sudo pacman -S ntfs-3g # 使系统可以识别 NTFS 格式的硬盘
 sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 安装几个开源中文字体。一般装上文泉驿就能解决大多 wine 应用中文方块的问题
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安装谷歌开源字体及表情
@@ -320,7 +323,7 @@ export EDITOR='vim'
 
 ## 9. 设置系统为中文
 
-1. 打开 `System Settings` > `Regional Settings` > 在 `Language` 中点击 `Add languages...` > 选择中文加入 `ADD`，再拖拽到第一位 > 点击 `Apply`
+1. 打开 `System Settings` > `Language and Regional Settings` > 在 `Language` 中点击 `Add languages...` > 选择中文加入 `ADD`，再拖拽到第一位 > 点击 `Apply`
 
 ![language](../../assets/guide/rookie/desktop-env-and-app_language.png)
 

@@ -2,7 +2,7 @@
 
 > ### ⛵ 万事俱备，只欠东风
 >
-> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](/guide/basic-install-detail.md)
+> 经过了上一节的准备工作，我们可以开始正式安装 archlinux 了。如果你还没有完成前面的阅读，请先仔细阅读章节 [安装前的准备](pre-install.md)。如果对本节的步骤不理解或者有疑问，请阅读下一节 [基础安装详解](basic-install-detail.md)
 
 本节从安装最基础的、无图形化界面的 archlinux 系统开始。如有需要可以参阅 [ArchWiki 官方安装指南](<https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -22,11 +22,11 @@
 
 ## 0. 进入安装环境
 
-![archlinux-iso-1](../../assets/guide/rookie/pre-virt_vb-17.png)
+![archlinux-iso-1](../../assets/guide/rookie/pre-virt_vb-14.png)
 
 1. 在第一个选项回车
 
-![archlinux-iso-2](../../assets/guide/rookie/pre-virt_vb-18.png)
+![archlinux-iso-2](../../assets/guide/rookie/pre-virt_vb-15.png)
 
 2. 进入安装环境后，便可以开始通过命令安装 archlinux 了
 
@@ -847,6 +847,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 若引导了 win10，则输出应该包含倒数第二行：
 
 ![os-prober-1](../../assets/guide/rookie/basic-install/os-prober-1.png)
+
+若win10安装在另一个硬盘中则不会输出
+可在进入系统后挂载硬盘并重新执行该命令
 
 ::: tip ℹ️ 提示
 
