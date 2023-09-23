@@ -311,6 +311,24 @@ clash 本身是一个网络连接的代理内核，通过预先定义的**规则
 vim ~/.config/clash/config.yaml
 ```
 
+如果你有一个 ✈ 场提供的订阅链接，可以通过以下指令手动配置到 clash：
+
+```shell
+curl -A clash -o ~/.config/clash/config.yaml <SUSCRIPTION_URL>
+# 使用`clash`的用户代理（UA）。
+# 请将 <SUSCRIPTION_URL> 替换成你的订阅链接。
+```
+
+::: tip ℹ️ 提示
+
+请在使用 clash 等代理服务前确保自己已经校准系统时钟，否则可能出现无法联网的问题。如果需要校准，可以使用
+
+```shell
+sudo timedatectl set-ntp true
+```
+
+:::
+
 ### Clash-verge
 
 基于 tauri 框架开发的开源跨平台 Clash 客户端<small>（远离 Electron 从我做起）</small>
