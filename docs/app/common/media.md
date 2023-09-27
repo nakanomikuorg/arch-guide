@@ -228,6 +228,20 @@ yay -S yesplaymusic
 
 ![yesplaymusic-2](../../assets/app/common/media/yesplaymusic-2.png)
 
+### go-musicfox
+
+go-musicfox 是用 Go 写的又一款网易云音乐命令行客户端，支持各种音质级别、UnblockNeteaseMusic、Last.fm、MPRIS 和 macOS 交互响应（睡眠暂停、蓝牙耳机连接断开响应和菜单栏控制等）等功能特性。
+
+安装 [`go-musicfox`](https://github.com/go-musicfox/go-musicfox)<sup>aur/cn</sup>：
+
+```sh
+yay -S go-musicfox
+```
+
+安装完之后通过 `musicfox` 命令启动，快捷键可参考[官方 Readme](https://github.com/go-musicfox/go-musicfox/blob/master/README.md#%E5%BF%AB%E6%8D%B7%E9%94%AE)。
+
+![musicfox](../../assets/app/common/media/musicfox.png)
+
 ### Listen 1（推荐）
 
 Listen 1 作为“老牌”的听歌软件可以搜索和播放来自网易云音乐、虾米、QQ 音乐、酷狗音乐、酷我音乐、Bilibili、咪咕音乐网站的歌曲，让你的曲库更全面。
