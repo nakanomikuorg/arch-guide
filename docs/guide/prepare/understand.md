@@ -12,14 +12,14 @@
 
 - `2001 ~ 2002` —— 加拿大程序员兼吉他手 [Judd Vinet](https://github.com/jvinet) 从 2001 年初开始开发 archlinux，并在 2002
   年 3 月 11 日正式发行 0.1 版。它受到 Slackware、BSD、PLD Linux 和 CRUX 的启发。但是那时候这些发行版缺少软件包管理器。所以
-  Judd Vinet 以同样的简洁原则建立了 archlinux 发行版，并编写了 `pacman` 软件包管理器，自动处理软件包的安装、删除和更新
+  Judd Vinet 以同样的简洁原则建立了 archlinux 发行版，并编写了 `pacman` 软件包管理器，自动处理软件包的安装、删除和更新。
 - `2005` —— 2005 年 7 月 8 日，用 MediaWiki
-  搭建的 [ArchWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 开始运行
-- `2007` —— 2007 下半年，Judd Vinet 退出了 archlinux 的开发，并把统治权交给美国程序员 Aaron Griffin，目前他依然是 archlinux
-  的开发者
-- `2012 ~ 2013` —— 2012 年 7 月发行的 archlinux 安装 ISO
-  映像开始放弃安装框架而转为使用不同的辅助脚本 [arch-install-scripts](https://archlinux.org/packages/extra/any/arch-install-scripts/)
-  。并逐步开始将初始化系统迁移至 Systemd
+  搭建的 [ArchWiki](<https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>) 开始运行。
+- `2007` —— 2007 下半年，Judd Vinet 退出了 archlinux 的开发，并把统治权交给美国程序员 Aaron Griffin。
+- `2012 ~ 2013` —— 2012 年 7 月发行的 archlinux 安装 ISO 映像开始放弃安装框架而转为使用不同的辅助脚本 [arch-install-scripts](https://archlinux.org/packages/extra/any/arch-install-scripts/)
+  。并逐步开始将初始化系统迁移至 Systemd。
+- `2017` —— archlinux 抛弃 32 位镜像和除 [Multilib 仓库](https://archlinux.org/packages/?sort=&repo=Multilib&q=&maintainer=&flagged=) 外的所有 32 位包的维护。
+- `2020` —— Arch 开始用新的流程选择未来的领袖，Aaron Griffin 决定不再担任项目领导，因此 Arch [通过选举方式正式确认 Levente Polyak 为新的领导](https://archlinux.org/news/the-future-of-the-arch-linux-project-leader/)。
 
 值得说明的是，archlinux 从早期开始就树立起了开放、友好和社区互助的形象。早期 archlinux 用户 Ben Mazer 在 2003
 年发表的 [这篇文章](https://www.osnews.com/story/4827/) 可以看出这一点。
