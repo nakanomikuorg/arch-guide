@@ -452,7 +452,7 @@ Timeshift 还能恢复到其它硬盘用作系统迁移，通过 arch 安装盘�
 
 直接打开 Timeshift，选择快照后根据提示还原即可。
 
-#### 若无法进入桌面环境 😥
+#### 若无法进入桌面环境
 
 1. 通过 `Ctrl` + `Alt` + `F2 ~ F6` 进入 tty 终端
 
@@ -504,10 +504,26 @@ vim /etc/fstab
 sudo btrfs sub list -u /
 ```
 
+#### 恢复后无法挂载 boot
+
+Timeshift 恢复 Btrfs 快照时，可能出现由于内核版本不一致导致无法挂载 boot 分区而无法进入系统。执行 `journalctl -xb` 查看，可能会发现 _unknown filesystem type 'vfat'_ error。这里给出一个解法：进入 archiso 并[联网](../rookie/basic-install.md#_3-连接网络)后，执行以下修复：
+
+```bash
+# 手动挂载子卷 / 和 /boot（nvmexnxpx 填写实际分区号）
+mount -t btrfs -o subvol=/@,compress=zstd /dev/nvmexnxpx /mnt
+mount /dev/nvmexnxpx /mnt/boot
+# chroot
+arch-chroot /mnt
+# 更新内核与软件包
+pacman -Syu linux
+# 重启
+reboot
+```
+
 #### 定时任务不生效
 
-Timeshift 设定任务后定时不生效那是因为相关的服务 `cron` 没有启动导致的问题。
-在终端命令行下输入以下命令第一行为设置开机启动 第二行为启动相关服务
+Timeshift 设定任务后定时不生效，那是因为相关的服务 `cron` 没有启动导致的问题。
+在终端命令行下输入以下命令，第一行为设置开机启动，第二行为启动相关服务：
 
 ```bash
 sudo systemctl enable --now cronie.service

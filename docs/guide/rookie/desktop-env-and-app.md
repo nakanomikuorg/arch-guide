@@ -477,9 +477,15 @@ Timeshift 只支持快照操作系统安装在具有 Ubuntu 类型的子卷布�
 
 5. 点击 `完成` 结束配置
 
-::: tip ℹ️ 提示
+::: warning ⚠️ 注意
 
-恢复 BTRFS 类型快照时，可能因子卷 ID 改变导致无法正常进入系统，参阅 [恢复后无法挂载目录](../advanced/system-ctl.md#恢复后无法挂载目录)。
+完成后建议执行下述指令删除 `subvolid`：
+
+```bash
+sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab
+```
+
+否则，恢复 BTRFS 类型快照时，可能因子卷 ID 改变导致无法正常进入系统，参阅 [恢复后无法挂载目录](../advanced/system-ctl.md#恢复后无法挂载目录)。
 
 :::
 
