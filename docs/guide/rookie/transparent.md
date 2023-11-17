@@ -302,7 +302,22 @@ sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/xray
 
 :::
 
+## nekoray
+
+一个基于 Qt 的跨平台客户端，后端基于 Xray 和 sing-box。
+
+```bash
+yay -S nekoray
+# yay -S nekoray-git #开发版
+```
+
 ## Clash
+
+::: tip ℹ️ 提示
+
+截至这次编辑时（2023.11.14）下面所介绍的 Clash 项目均已删除或存档，但就目前而言不影响安装及使用。
+
+:::
 
 clash 本身是一个网络连接的代理内核，通过预先定义的**规则**，对网络连接进行转发。clash 内核规定了配置文件 `config.yaml` 的格式。支持 VMess、Shadowsocks、Trojan、Snell 协议。
 
@@ -337,7 +352,7 @@ sudo timedatectl set-ntp true
 yay -S clash-verge
 ```
 
-### Clash for Windows
+### Clash for Windows（不建议，现已删库）
 
 这是一个功能较全的客户端，支持 Windows/macOS/Linux ，基于 Clash 和 Electron 的一个 GUI 客户端。未开源
 

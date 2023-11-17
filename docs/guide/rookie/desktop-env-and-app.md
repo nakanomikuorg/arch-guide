@@ -373,7 +373,11 @@ Konsole 以及 Dolphin 都需要这些环境变量，倒是 Firefox 和 Chromium
 
 ::: tip ℹ️ 提示
 
-检查一下是否有拼写错误，如果输入法无法正常切换，可尝试执行 `fcitx5-diagnose` 命令来诊断问题的原因。
+1. 如果使用 Wayland 而非 X11，请参照如下方式进行配置而非上面的配置方法：
+
+> 在「系统设置 - 输入设备 - 虚拟键盘」中选中 Fcitx 5；`environment` 仅保留 `XMODIFIERS=@im=fcitx` 一行；在基于 Chromium 的程序（包括浏览器和使用 Electron 的程序）中加入 `--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime` 启动参数。
+
+2. 检查一下是否有拼写错误，如果输入法无法正常切换，可尝试执行 `fcitx5-diagnose` 命令来诊断问题的原因。
 
 由于存在[安全性问题](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4708)，自 2022 年 10 月 21 日起，[Arch Linux 默认不再读取](https://github.com/archlinux/svntogit-packages/commit/891610cfcc202916cf5eb46d6df56e885062f78e) `~/.pam_environment` 文件中的设置。
 
