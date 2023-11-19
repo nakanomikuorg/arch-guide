@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  arch-guide:
+    build: .
+    container_name: arch-guide
+    restart: unless-stopped
+    ports:
+      - 5173:5173
