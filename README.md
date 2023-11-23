@@ -117,6 +117,15 @@ pnpm i
 pnpm docs:dev
 ```
 
+### Docker
+
+```shell
+git clone https://github.com/nakanomikuorg/arch-guide.git
+cd ./arch-guide
+# 如需使用代理请取消注释 Dockerfile 中的 ENV 并适当修改
+docker compose up -d
+```
+
 其它系统请参阅 [PnpM 中文文档](https://pnpm.io/zh/installation) 安装 `PnpM`。
 
 ## 隐私提醒
