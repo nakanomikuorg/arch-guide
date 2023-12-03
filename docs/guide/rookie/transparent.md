@@ -315,18 +315,26 @@ yay -S nekoray
 
 ::: tip ℹ️ 提示
 
-截至这次编辑时（2023.11.14）下面所介绍的 Clash 项目均已删除或存档，但就目前而言不影响安装及使用。
+~~2023.11.14 下面所介绍的 Clash 系项目大多均已删除或存档，但就目前而言不影响安装及使用。~~
+
+2023.12.03 截至目前 Meta 内核已恢复更新，而主要的客户端也都有接任者了
 
 :::
 
-clash 本身是一个网络连接的代理内核，通过预先定义的**规则**，对网络连接进行转发。clash 内核规定了配置文件 `config.yaml` 的格式。支持 VMess、Shadowsocks、Trojan、Snell 协议。
+Clash 本身是一个网络连接的代理内核，通过预先定义的**规则**，对网络连接进行转发。Clash 内核规定了配置文件 `config.yaml` 的格式。支持 VMess、Shadowsocks、Trojan、Snell 协议。
+
+[Clash.Meta（现改名成 mihomo）](https://github.com/MetaCubeX/mihomo/tree/Alpha)（为了表达方便后面会使用 Meta 指代这个版本）是一个基于开源项目 Clash 的二次开发版本，增加了一些独有特性。支持所有原版 Clash 开源核心的全部特性，支持原 Clash Premium 核心部分特性。基于目前原版内核已无人维护且 Meta 更新较为活跃，更推荐使用 Meta 而非原版。
+
+Meta 的大体配置步骤可参考[官方教程](https://wiki.metacubex.one/startup/service/)，其中的 `config.yaml` 配置文件需要自己新建并填入内容，配置文件可直接复制 Meta 官方文档的[配置示例-懒人配置](https://wiki.metacubex.one/example/#_2)，在 `proxy-providers` 补充你的 ✈ 场提供的订阅链接即可。
+
+::: details 原版 Clash 配置方法
 
 ```shell
 # 配置文件
 vim ~/.config/clash/config.yaml
 ```
 
-如果你有一个 ✈ 场提供的订阅链接，可以通过以下指令手动配置到 clash：
+如果你有一个 ✈ 场提供的订阅链接，可以通过以下指令手动配置到 Clash：
 
 ```shell
 curl -A clash -o ~/.config/clash/config.yaml <SUSCRIPTION_URL>
@@ -334,9 +342,11 @@ curl -A clash -o ~/.config/clash/config.yaml <SUSCRIPTION_URL>
 # 请将 <SUSCRIPTION_URL> 替换成你的订阅链接。
 ```
 
+:::
+
 ::: tip ℹ️ 提示
 
-请在使用 clash 等代理服务前确保自己已经校准系统时钟，否则可能出现无法联网的问题。如果需要校准，可以使用
+请在使用 Clash 等代理服务前确保自己已经校准系统时钟，否则可能出现无法联网的问题。如果需要校准，可以使用
 
 ```shell
 sudo timedatectl set-ntp true
@@ -344,15 +354,15 @@ sudo timedatectl set-ntp true
 
 :::
 
-### Clash-verge
+### Clash-verge-rev
 
-基于 tauri 框架开发的开源跨平台 Clash 客户端<small>（远离 Electron 从我做起）</small>
+Clash-Verge 目前的继任者（原版仓库目前还在存档），基于 tauri 框架开发的开源跨平台 Clash 客户端<small>（远离 Electron 从我做起）</small>
 
 ```
-yay -S clash-verge
+yay -S clash-verge-rev-bin
 ```
 
-### Clash for Windows（不建议，现已删库）
+### Clash for Windows（不建议，现已停止更新）
 
 这是一个功能较全的客户端，支持 Windows/macOS/Linux ，基于 Clash 和 Electron 的一个 GUI 客户端。未开源
 
