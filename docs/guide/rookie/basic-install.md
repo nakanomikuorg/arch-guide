@@ -848,7 +848,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ![os-prober-1](../../assets/guide/rookie/basic-install/os-prober-1.png)
 
-若win10安装在另一个硬盘中则不会输出
+若 win10 安装在另一个硬盘中则不会输出
 可在进入系统后挂载硬盘并重新执行该命令
 
 ::: tip ℹ️ 提示
@@ -899,7 +899,7 @@ reboot # 重启
 
 你应该在步骤 [5. 获取 Bitlocker 恢复密钥](pre-install.md#_5-获取-bitlocker-恢复密钥) 中已经知晓了 Bitlocker 解锁密钥。
 
-若无法从 [aka.ms 相关页面](aka.ms/myrecoverykey) 获取解锁密钥，请尝试在 BIOS 中将 Windows Boot Manager 移动到启动顺序首位再尝试进入 win10。
+若无法从 [aka.ms 相关页面](https://aka.ms/myrecoverykey) 获取解锁密钥，请尝试在 BIOS 中将 Windows Boot Manager 移动到启动顺序首位再尝试进入 win10。
 
 :::
 
