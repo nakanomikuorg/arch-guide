@@ -923,13 +923,19 @@ nmcli dev wifi list # 显示附近的 Wi-Fi 网络
 nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码" # 连接指定的无线网络
 ```
 
+也可以使用 `nmtui` 来配置网络
+
+```bash
+nmtui
+```
+
 5. `neofetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `neofetch`：
 
 ```bash
 pacman -S neofetch
 ```
 
-5. 使用 `neofetch` 打印系统信息：
+使用 `neofetch` 打印系统信息：
 
 ```bash
 neofetch
@@ -953,6 +959,8 @@ neofetch
 
 ```bash
 shutdown -h now
+# 或者
+poweroff
 ```
 
 :::
