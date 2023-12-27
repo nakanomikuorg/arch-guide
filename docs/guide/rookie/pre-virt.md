@@ -20,7 +20,7 @@
 
 ## 1. 安装 VirtualBox
 
-VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox 官方下载页面](https://archlinux.org/download/) 下载。
+VirtualBox 安装包同样可以在开源镜像站（推荐）或者 [VirtualBox 官方下载页面](https://www.virtualbox.org/wiki/Downloads) 下载。
 
 下面是国内常用的提供 VirtualBox 安装包的开源镜像站（选一个即可）：
 
