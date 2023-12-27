@@ -215,7 +215,7 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 主题配合 Kvantum Manager 可以达到更好的效果。
 
 ```bash
-sudo pacman -S kvantum-qt5
+sudo pacman -S kvantum
 ```
 
 在[这里](https://www.pling.com/p/1325246/)下载 Layan 的 Kvantum 主题，并解压。打开 Kvantum Manager,选择主题并安装，接下来在`Change/Delete Theme`中选择 Layan,Use this theme。最后在系统设置，外观中的应用程序风格中选择 kvantum 即可。
