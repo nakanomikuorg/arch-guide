@@ -287,6 +287,24 @@ sudo pacman -S yay # yay 命令可以让用户安装 AUR 中的软件（yay 在 
 
 若安装 `archlinuxcn-keyring` 时报错，是由于密钥环的问题。可先按照 [archlinuxcn 官方说明](https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/) 执行其中的命令，再安装 `archlinuxcn-keyring`。
 
+`archlinuxcn` 社区源的 `keyring` 包 `archlinuxcn-keyring` 由 `farseerfc` 的 key 签署验证，而 `Arch Linux` 官方 `keyring` 中包含了 farseerfc 的 key 。自 12 月初 `archlinux-keyring` 中删除了一个退任的 [master key](https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/issues/246) 导致 `farseerfc` 的 key 的信任数不足，由 `GnuPG` 的 `web of trust` 推算为 `marginal trust`，从而不再能自动信任 `archlinuxcn-keyring` 包的签名。
+
+如果你在新系统中尝试安装 `archlinuxcn-keyring` 包时遇到如下报错：
+
+```bash
+error: archlinuxcn-keyring: Signature from "Jiachen YANG (Arch Linux Packager Signing Key) <farseerfc@archlinux.org>" is marginal trust
+```
+
+请使用以下命令在本地信任 `farseerfc 的 key` 。此 `key` 已随 `archlinux-keyring` 安装在系统中，只是缺乏信任：
+
+```bash
+sudo pacman-key --lsign-key "farseerfc@archlinux.org"
+```
+
+之后继续安装 `archlinuxcn-keyring` ：
+`sudo pacman -S archlinuxcn-keyring`
+https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/
+
 :::
 
 ## 7. 检查家目录
