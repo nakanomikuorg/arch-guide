@@ -169,12 +169,12 @@ yay -S vnote3-git
 Marktext 常常被人视作 Typora 的替代品。事实上，论易用性， Marktext 在追赶 Typora 的过程上还有很长的一段路要走。
 
 > 摘自 README ：
-> 
+>
 > 如上所述，**MarkText**是完全免费和开源的，并且将永远开源。我们希望所有 Markdown 爱好者贡献自己的代码，帮助将**MarkText**开发成流行的 Markdown 编辑器。
-> 
+>
 > Markdown 编辑器有很多，并且都有各自的优点，有些具有其他功能而没有的功能。满足每个 Markdown 用户的需求是很困难的，但我们希望**MarkText**能够尽可能满足每个 Markdown 用户。虽然最新的**MarkText**还不够完美，但我们会尽力做到最好。
 
-在AUR中，有四个关于 Marktext 的包： `marktext`, `marktext-bin`, `marktext-git` 和 `marktext-appimage` 。
+在 AUR 中，有四个关于 Marktext 的包： `marktext`, `marktext-bin`, `marktext-git`  和  `marktext-appimage` 。
 
 为了减少维护成本，同时尽量避免 appimage 对性能的影响，我们从 AUR 安装 marktext -bin：
 
@@ -184,7 +184,7 @@ yay -S marktext-bin
 
 ::: tip ℹ️ 提示
 
-marktext-git 在 `archlinuxcn` 提供，但是其所依赖的 electron17 需要自行从AUR安装。
+marktext-git 在 `archlinuxcn` 提供，但是其所依赖的 electron17 需要自行从 AUR 安装。
 
 ```bash
 yay -S electron17 #或者是 electron17-bin
@@ -197,21 +197,49 @@ sudo pacman -S marktext-git
 
 ![vsc](../../assets/app/common/office/vsc.png)
 
-VS Code 在担任代码编辑的能力之外，亦可成为Markdown编辑器。毕竟，web 能做到的，VS Code 的扩展就能做到。下面推荐几个插件。
+VS Code 在担任代码编辑的能力之外，亦可成为 Markdown 编辑器。毕竟，web 能做到的，VS Code 的扩展就能做到。下面推荐几个插件。
 
-- Markdown All in One Markdown一揽子插件
+- Markdown All in One Markdown 一揽子插件
 
-- Markdown Preview Enhanced 非常强大 [查看它提供的众多feature](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
+- Markdown Preview Enhanced 非常强大 [查看它提供的众多 feature](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
 
 - Word Count CJK 统计字数
 
 常用快捷键（ From Markdown Preview Enhanced）
 
-| 快捷键                         | 功能            |
-| --------------------------- | ------------- |
-| cmd-k v or ctrl-k v         | 在侧边栏打开预览      |
+| 快捷键                      | 功能              |
+| --------------------------- | ----------------- |
+| cmd-k v or ctrl-k v         | 在侧边栏打开预览  |
 | cmd-shift-v or ctrl-shift-v | 打开预览          |
-| ctrl-shift-s                | 同步预览/源文档      |
-| shift-enter                 | 检查 Markdown   |
+| ctrl-shift-s                | 同步预览/源文档   |
+| shift-enter                 | 检查 Markdown     |
 | ctrl-shift-enter            | 检查所有 Markdown |
-| esc                         | 打开侧边目录        |
+| esc                         | 打开侧边目录      |
+
+### Joplin
+
+[Joplin](https://joplinapp.org/) 是一款免费、开源的笔记和待办事项应用程序，可以处理大量整理到笔记本中的笔记。笔记可以搜索，可以直接从应用程序或从自己的文本编辑器中复制、标记和修改。
+
+笔记支持“端到端”的数据加密 (需要手动开启)，可以与各种目标同步，包括文件系统（例如网络目录）、Nextcloud、Dropbox、OneDrive 或 WebDAV。同步笔记时，笔记本、标签和其他元数据都会保存到纯文本文件中，便于检查、备份和移动。
+
+Joplin 桌面客户端支持插件拓展，在 [Firefox](https://addons.mozilla.org/firefox/addon/joplin-web-clipper/) 和 [Chrome](https://chrome.google.com/webstore/detail/joplin-web-clipper/alofnhikmmkdbbbgpnglcpdollgjjfek) 浏览器也有 Web Clipper 可用于保存网页和浏览器截图。
+
+安装 [Joplin](https://aur.archlinux.org/packages/joplin-desktop/)<sup>aur</sup>：
+
+```sh
+sudo pacman -S joplin-desktop
+```
+
+![joplin-desktop](../../assets/app/common/office/joplin-desktop.png)
+
+::: tip ℹ️ 提示
+
+[Joplin](https://aur.archlinux.org/packages/joplin/) 也提供了 cli 版本,需要搭配终端文本编辑器使用。
+
+详情请参阅[官方文档](https://joplinapp.org/help/apps/terminal)
+
+```sh
+sudo pacman -S joplin
+```
+
+:::
