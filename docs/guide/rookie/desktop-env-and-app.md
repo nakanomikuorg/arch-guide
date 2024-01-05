@@ -461,6 +461,12 @@ yay -S aur/timeshift
 
 :::
 
+安装之后，如果 Timeshift 没有自动备份，需要手动开启`cronie`服务：
+
+```bash
+sudo systemctl enable --now cronie.service
+```
+
 2. 打开 Timeshift，第一次启动会自动启动设置向导
 
 ### 12-1. 若使用 Btrfs 文件系统
