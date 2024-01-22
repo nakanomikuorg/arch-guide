@@ -353,6 +353,9 @@ export EDITOR='vim'
 
 很多人会错误的更改 `System Settings` > `Regional Settings` > `Formats` 中的值为中文蒙古、默认或者其他值。这会导致系统中一半英文一半中文。这里的值要保持默认的 `en_US` 或 `zh_CN`，或者改为你在 `locale.gen` 中添加的任意一种语言。
 
+部分设备在设置系统语言后仍然出现部分设置为英文的情况（比如右键、部分菜单设置项）
+过修改 `~/.config/plasma-localerc` 中的为`zh_CN`可以`zh_CN.UTF-8`解决
+
 :::
 
 ## 10. 安装输入法
