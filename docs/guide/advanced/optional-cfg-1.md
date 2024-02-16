@@ -231,9 +231,11 @@ vim ~/.local/share/fcitx5/rime/default.custom.yaml
 
 ```yaml
 patch:
-  "menu/page_size": 5  #候选词
-  schema_list:
-    - schema: rime_ice
+  # 仅使用「雾凇拼音」的默认配置，配置此行即可
+  __include: rime_ice_suggestion:/
+  # 以下根据自己所需自行定义
+  __patch:
+    menu/page_size: 5   #候选词个数
 ```
 
 保存并退出
@@ -257,7 +259,7 @@ cp /usr/share/rime-data/rime_ice.dict.yaml ~/.local/share/fcitx5/rime/rime_ice.d
 打开配置文件
 
 ```bash
-code ~/.local/share/fcitx5/rime/rime_ice.dict.yaml
+vim ~/.local/share/fcitx5/rime/rime_ice.dict.yaml
 ```
 
 根据提示在`import_tables:`中添加词库
