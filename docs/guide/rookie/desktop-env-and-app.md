@@ -161,6 +161,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch # 中国科学技术大�
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch # 清华大学开源软件镜像站
 Server = https://mirrors.hit.edu.cn/archlinuxcn/$arch # 哈尔滨工业大学开源镜像站
 Server = https://repo.huaweicloud.com/archlinuxcn/$arch # 华为开源镜像站
+Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch # 阿里云开源镜像站
 ```
 
 ![archlinuxcn](../../assets/guide/rookie/desktop-env-and-app_archlinuxcn.png)
