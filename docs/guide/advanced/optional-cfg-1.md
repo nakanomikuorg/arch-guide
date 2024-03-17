@@ -64,9 +64,9 @@
 
 Windows 字体不仅日常可能会使用到，还可以让部分需要这些字体的应用（如 Wine）显示字体不会乱码。
 
-* 从本地 Windows 获取字体文件
+- 从本地 Windows 获取字体文件
 
-   1. 首先需要挂载 Windows 下的 C 盘所在分区。若分区为 Bitlocker 上锁分区，可通过 Dolphin 使用对应的恢复密钥解锁
+  1.  首先需要挂载 Windows 下的 C 盘所在分区。若分区为 Bitlocker 上锁分区，可通过 Dolphin 使用对应的恢复密钥解锁
 
       ::: tip ℹ️ 提示
 
@@ -74,13 +74,13 @@ Windows 字体不仅日常可能会使用到，还可以让部分需要这些字
 
       :::
 
-   2. 建立 archlinux 下存放 Windows 字体的文件夹：
+  2.  建立 archlinux 下存放 Windows 字体的文件夹：
 
       ```sh
       sudo mkdir /usr/share/fonts/WindowsFonts
       ```
 
-   3. 进入 Windows 的 `Fonts` 文件夹，将字体复制到建立的文件夹并设置合理的权限：
+  3.  进入 Windows 的 `Fonts` 文件夹，将字体复制到建立的文件夹并设置合理的权限：
 
       ```sh
       cd /path/to/C:/Windows/Fonts # 或者通过 Dolphin 在此文件夹下右键 > 点击 打开终端
@@ -90,23 +90,25 @@ Windows 字体不仅日常可能会使用到，还可以让部分需要这些字
 
       ![windows-fonts-1](../../assets/guide/advanced/optional-cfg/windows-fonts-1.png)
 
-   4. 刷新字体：
+  4.  刷新字体：
 
       ```sh
       fc-cache -vf # -v：显示过程
       ```
 
-* 从 AUR 安装
+- 从 AUR 安装
 
-   通过以下命令安装 Windows 11 的中文字体
-   ```
-   yay -S ttf-ms-win11-auto-zh_cn
-   ```
-   ::: tip ℹ️ 提示
+  通过以下命令安装 Windows 11 的中文字体
 
-   原理是网络挂载 Windows 11 安装镜像并从中提取字体文件，完全合法   
+  ```
+  yay -S ttf-ms-win11-auto-zh_cn
+  ```
 
-   :::
+  ::: tip ℹ️ 提示
+
+  原理是网络挂载 Windows 11 安装镜像并从中提取字体文件，完全合法
+
+  :::
 
 > 🔗 相关链接：
 >
@@ -125,6 +127,22 @@ sudo pacman -S fcitx5-rime
 ```
 
 ![rime_step-1](../../assets/guide/advanced/optional-cfg/rime-1.png)
+
+由于默认的 rime 输入法不太符合大陆用户的使用习惯，可以使用 [rime-auto-deploy](https://github.com/Mark24Code/rime-auto-deploy) 脚本来进行自动配置，需要先安装 ruby 和 git：
+
+```bash
+sudo pacman -S ruby git
+```
+
+拉取最新版的脚本并运行：
+
+```bash
+git clone --depth=1 https://github.com/Mark24Code/rime-auto-deploy.git --branch latest
+cd rime-auto-deploy
+./installer.rb
+```
+
+选择 fcitx5-rime 输入法并自动配置，然后 Deploy 输入法即可。脚本会将默认输入方式改为雾凇拼音。
 
 2. 然后添加 Rime 输入法。打开 `系统设置` > 点击侧栏 `语言和区域设置` > `输入法`：
 
@@ -214,13 +232,13 @@ patch:
 
 ### 雾凇拼音(Rime-ice)输入法
 
-1. 安装[rime-ice输入法](https://github.com/iDvel/rime-ice)：
+1. 安装[rime-ice 输入法](https://github.com/iDvel/rime-ice)：
 
 ```bash
 yay -S rime-ice
 ```
 
-2. 创建ice的配置文件：
+2. 创建 ice 的配置文件：
 
 ```bash
 mkdir ~/.local/share/fcitx5/rime # 创建 rime 目录
@@ -235,7 +253,7 @@ patch:
   __include: rime_ice_suggestion:/
   # 以下根据自己所需自行定义
   __patch:
-    menu/page_size: 5   #候选词个数
+    menu/page_size: 5 #候选词个数
 ```
 
 保存并退出
@@ -265,8 +283,7 @@ vim ~/.local/share/fcitx5/rime/rime_ice.dict.yaml
 根据提示在`import_tables:`中添加词库
 
 ```yaml
-import_tables:
-  ...
+import_tables: ...
   ...
   - moegirl
 ```
@@ -446,9 +463,9 @@ source /usr/share/autojump/autojump.zsh
 
 ::: tip ℹ️ 提示
 
-在部分终端，<kbd>Home</kbd>键，<kbd>End</kbd>键和<kbd>Del</kbd>键在zsh里不起作用。一种方法是`autoload zkbd` 来问答式生成按键和含义对应表，一种是手动绑定按键。
+在部分终端，<kbd>Home</kbd>键，<kbd>End</kbd>键和<kbd>Del</kbd>键在 zsh 里不起作用。一种方法是`autoload zkbd` 来问答式生成按键和含义对应表，一种是手动绑定按键。
 前者是通用成熟的解决方案，但是为了一个<kbd>Home</kbd>键而去安装一个插件未免有些小题大做了。实际上，我们只需要我们的按键的转义字符，并
- 在`~/.zshrc`追加`bindkey`便可。
+在`~/.zshrc`追加`bindkey`便可。
 
 下面这个小技巧可能鲜为人知，就是利用 `cat` 来查看按键码。很简单，在命令行下直接`cat`+ <kbd>Enter</kbd>，然后接着按你想知道转义字符的按键，下面以<kbd>Home</kbd>键为例：
 

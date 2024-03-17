@@ -122,6 +122,8 @@ cd fcitx5-gruvbox
 cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 ```
 
+还有一些简约风格皮肤可以在 [fcitx5-themes](https://github.com/thep0y/fcitx5-themes) 获取，安装过程亦同上。
+
 ## 3. 设置 SDDM 主题
 
 默认的登录界面不太好看，我们将它替换掉。
