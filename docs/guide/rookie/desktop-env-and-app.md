@@ -201,7 +201,7 @@ pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终�
 
 2. kde 默认安装的是[xorg](https://wiki.archlinuxcn.org/zh-hans/Xorg)，如果想使用[wayland](https://wiki.archlinuxcn.org/wiki/Wayland)的话安装以下包：
 
-```
+```bash
 pacman -S  plasma-wayland-session xdg-desktop-portal
 # N卡用户需要额外安装egl-wayland,xdg-desktop-portal包是为了如obs此类工具录制屏幕使用
 # xdg-desktop-portal包组提供了不同环境下使用的软件包
