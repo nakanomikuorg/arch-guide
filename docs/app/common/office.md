@@ -39,7 +39,7 @@ sidebarDepth: 2
 ::: code-group
 
 ```sh [cn (cn)]
-yay -S wps-office-cn ttf-wps-fonts libtiff5
+yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts
 ```
 
 ```sh [cn]
