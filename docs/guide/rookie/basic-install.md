@@ -836,6 +836,12 @@ GRUB_DISABLE_OS_PROBER=false
 ...
 ```
 
+::: tip ℹ️ 提示
+
+`nowatchdog` 参数无法禁用英特尔的看门狗硬件，改为 `modprobe.blacklist=iTCO_wdt` 即可。如有需要可以参考 [ArchWiki 对应内容](https://wiki.archlinuxcn.org/wiki/性能优化#看门狗)
+
+:::
+
 4. 最后生成 `GRUB` 所需的配置文件：
 
 ```bash
