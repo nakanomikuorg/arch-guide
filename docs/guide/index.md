@@ -22,16 +22,6 @@
     />
   </a>
   <a
-    href="https://github.com/nakanomikuorg/arch-guide"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      alt="arch-guide"
-      src="https://travis-ci.com/nakanomikuorg/arch-guide.svg?branch=main"
-    />
-  </a>
-  <a
     href="https://hits.seeyoufarm.com"
   >
     <img

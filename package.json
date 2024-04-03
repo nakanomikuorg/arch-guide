@@ -3,9 +3,9 @@
   "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "devDependencies": {
     "husky": "^8.0.3",
-    "prettier": "2.8.4",
-    "vitepress": "1.0.0-alpha.47",
-    "vue": "^3.2.47"
+    "prettier": "^2.8.8",
+    "vitepress": "^1.0.2",
+    "vue": "^3.4.21"
   },
   "keywords": [
     "archlinux 指南",
@@ -42,5 +42,6 @@
     "prepare": "husky install",
     "update": "pnpm update -r --latest"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "type": "module"
 }
