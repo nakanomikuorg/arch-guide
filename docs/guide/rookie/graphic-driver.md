@@ -2,7 +2,7 @@
 
 > ### 🪁 接天莲叶无穷碧，映日荷花别样红
 >
-> 近年来，archlinux 的显卡驱动安装已经变得非常容易。本小节区分核芯显卡、独立显卡和双显卡（核显 + 独显）三大类讨论 archlinux 显卡驱动的安装
+> 近年来，archlinux 的显卡驱动安装已经变得非常容易。本小节区分集成显卡、独立显卡和双显卡（集显 + 独显）三大类讨论 archlinux 显卡驱动的安装
 
 > ### 🔖 这一节将会讨论：
 >
@@ -40,7 +40,7 @@
 
 :::
 
-## 核芯显卡
+## 集成显卡
 
 ### Intel 核芯显卡
 
@@ -56,17 +56,17 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 不建议安装 `xf86-video-intel`，而应使用 Xorg 的 modesetting 驱动（也就是什么都不用装的意思）
 
-注意，只有 Intel HD 4000 及以上的核显才支持 vulkan。
+注意，只有 Intel HD 4000 及以上的集显才支持 vulkan。
 
 :::
 
-### AMD 核芯显卡
+### AMD 集成显卡
 
 如有需要可以参阅 [ArchWiki 相关内容](https://wiki.archlinux.org/title/ATI)。
 
 #### 选择驱动
 
-对于具有核芯显卡的 AMD 处理器，需要先确定核显架构（Architecture）是什么，再决定安装什么驱动。
+对于具有集成显卡的 AMD 处理器，需要先确定集显架构（Architecture）是什么，再决定安装什么驱动。
 
 推荐在 [TECHPOWERUP](https://www.techpowerup.com/) 进行查询，信息非常全面。在确定了显卡架构后，再根据架构对照下表决定安装什么驱动。
 
@@ -94,17 +94,17 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 
 `GCN 2.0` 及以下架构的老显卡也**不要使用开源 AMPGPU 驱动**，因为其仅处于实验性质，需要各种自定义内核编译选项与配置，非常麻烦、得不偿失。
 
-对于新型号（`GCN 3` 架构及更新）的核心显卡，**直接安装开源驱动 AMDGPU 即可**。
+对于新型号（`GCN 3` 架构及更新）的集成显卡，**直接安装开源驱动 AMDGPU 即可**。
 
 :::
 
 下面是一些例子：
 
-- 你的笔记本 cpu 是目前常见的 AMD Ryzen™ 7 4800U，它的核显为 Vega 8。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
+- 你的笔记本 cpu 是目前常见的 AMD Ryzen™ 7 4800U，它的集显为 Vega 8。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
 
-- 你的台式机 cpu 是目前常见的 AMD Ryzen™ 5 3400G，它的核显为 Vega 11。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
+- 你的台式机 cpu 是目前常见的 AMD Ryzen™ 5 3400G，它的集显为 Vega 11。通过查询，可知其为 `GCN 5.0` 架构，那么对照上表，你应该安装 AMDGPU 开源驱动。
 
-- 再老一些的 7th Gen A10-9700 APU 处理器 ，它的核显为 Radeon R7。通过查询，可知其为 `GCN 2.0` 架构，那么对照上表，你应该安装 ATI 开源驱动。
+- 再老一些的 7th Gen A10-9700 APU 处理器 ，它的集显为 Radeon R7。通过查询，可知其为 `GCN 2.0` 架构，那么对照上表，你应该安装 ATI 开源驱动。
 
 #### 安装驱动
 
@@ -134,7 +134,7 @@ sudo pacman -S mesa lib32-mesa xf86-video-ati
 2. 游戏无法正常运行
 3. 画面撕裂
 
-若遇到了上述问题，建议在 archlinux 中还是单独使用核芯显卡（如果有）吧（还可以节省电量）。如果要 🎮 打游戏不妨重启到 win10。
+若遇到了上述问题，建议在 archlinux 中还是单独使用集成显卡（如果有）吧（还可以节省电量）。如果要 🎮 打游戏不妨重启到 win10。
 
 :::
 
@@ -194,9 +194,9 @@ sudo pacman -S mesa lib32-mesa xf86-video-nouveau
 
 ### AMD 独立显卡
 
-AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的**，都需要先确定架构，然后选定正确的驱动安装即可。参考步骤 [AMD 核芯显卡](graphic-driver.md#amd-核芯显卡)。
+AMD 独立显卡的驱动安装步骤实际上**和 AMD 集成显卡是相同的**，都需要先确定架构，然后选定正确的驱动安装即可。参考步骤 [AMD 集成显卡](graphic-driver.md#amd-集成显卡)。
 
-## 双显卡（核显 + 独显）
+## 双显卡（集显 + 独显）
 
 如有需要可以参阅 [ArchWiki 相关内容](<https://wiki.archlinux.org/title/PRIME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
@@ -204,13 +204,13 @@ AMD 独立显卡的驱动安装步骤实际上**和 AMD 核芯显卡是相同的
 
 ::: tip ℹ️ 提示
 
-optimus-manager 已经支持 AMD 核芯显卡 + NVIDIA 独立显卡组合。
+optimus-manager 已经支持 AMD 集成显卡 + NVIDIA 独立显卡组合。
 
 :::
 
 如有需要可以参考 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
 
-同时拥有核芯显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>cn / aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在核芯显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用核显以及 hybrid 动态切换模式。
+同时拥有集成显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>cn / aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在集成显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用集显以及 hybrid 动态切换模式。
 
 1. 使用以下命令安装相关软件包：
 
@@ -242,7 +242,7 @@ sudo systemctl enable optimus-manager.service
 
 如果有问题，请详细阅读 optimus-manager 的文档，里面有详细的描述。由于各类问题太多，本文不再赘述。此处仅列出几项较为重要的注意事项:
 
-- 如果需要在独显和核显模式间切换，要注意你没安装各类 GPU 监控插件，它们会阻止显卡切换，导致不可预料的错误
+- 如果需要在独显和集显模式间切换，要注意你没安装各类 GPU 监控插件，它们会阻止显卡切换，导致不可预料的错误
 - 不要使用 Nvidia Control Panel 中的 `Save to X Configuration file` ，会导致配置冲突
 - 在显卡之间的切换时，重新登陆后如在 splash screen 卡住或者黑屏，可以尝试按照上述提示在 `tty1 ~ tty6` 之间进行切换
 
@@ -363,7 +363,7 @@ __VK_LAYER_NV_optimus="NVIDIA_only"
 
 :::
 
-电源管理做的事情是，**在只用核显的模式下，确保正确关闭独立显卡**；而在混合模式下，绝大多数情况下 NVIDIA 模块实际是始终开启的，**电源管理并不生效**。
+电源管理做的事情是，**在只用集显的模式下，确保正确关闭独立显卡**；而在混合模式下，绝大多数情况下 NVIDIA 模块实际是始终开启的，**电源管理并不生效**。
 
 这件事情其实很复杂，因为对于不同的显卡型号，以及笔记本型号的组合，可行的方案都是不同的。笼统来说，最广泛适用的办法是 Bbswitch。但**不建议上来就按照此方式安装使用**，因为某些特定的硬件就是会出问题（黑屏）。
 
@@ -389,7 +389,7 @@ sudo pacman -S bbswitch-dkms
 
 ![Bbswitch](../../assets/guide/rookie/graphic-driver/bbswitch.png)
 
-3. 重启之后，若使用仅核显模式使用如下命令验证 NVIDIA 独立显卡是否被禁用：
+3. 重启之后，若使用仅集显模式使用如下命令验证 NVIDIA 独立显卡是否被禁用：
 
 ```bash
 lspci | grep NVIDIA
@@ -416,11 +416,11 @@ DRI_PRIME=1 steam steam://rungameid/570 # 运行 Dota 2
 DRI_PRIME=1 steam steam://rungameid/730 # 运行 CS:GO
 ```
 
-- 可以使用以下命令分别对核芯显卡和独立显卡进行性能测试，选择分数更高的一个使用：
+- 可以使用以下命令分别对集成显卡和独立显卡进行性能测试，选择分数更高的一个使用：
 
 ::: code-group
 
-```bash [核芯显卡]
+```bash [集成显卡]
 glmark2
 ```
 
@@ -494,7 +494,7 @@ glmark2
 
 ![glmark2-1](../../assets/guide/rookie/graphic-driver/glmark2-1.png)
 
-以笔者的硬件为例（核芯显卡），测试结果如下：
+以笔者的硬件为例（集成显卡），测试结果如下：
 
 ![glmark2-2](../../assets/guide/rookie/graphic-driver/glmark2-2.png)
 
@@ -546,7 +546,7 @@ unigine-sanctuary
 
 `nvidia-settings` 这个包即可全面的展示显卡相关信息（在步骤 [NVIDIA 独立显卡](graphic-driver.md#独立显卡) 中已经安装）。
 
-### AMD 独立显卡 / 核芯显卡
+### AMD 独立显卡 / 集成显卡
 
 1. 通过以下命令安装 [radeon-profile-git](https://aur.archlinux.org/packages/?O=0&SeB=nd&K=radeon-profile-git&outdated=&SB=n&SO=a&PP=50&do_Search=Go)<sup>aur</sup> 包以及其依赖 [radeon-profile-daemon-git](https://aur.archlinux.org/packages/?O=0&SeB=nd&K=radeon-profile-daemon-git&outdated=&SB=n&SO=a&PP=50&do_Search=Go)<sup>aur</sup>：
 

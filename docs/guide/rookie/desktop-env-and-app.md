@@ -381,10 +381,10 @@ sudo vim /etc/environment
 3. 在文件中加入以下内容并保存退出：
 
 ```environment
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
+SDL_IM_MODULE=fcitx5
 GLFW_IM_MODULE=ibus
 ```
 

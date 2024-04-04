@@ -12,9 +12,9 @@
 >
 > :::
 
-::: tip ℹ️ 提示
+::: warning ⚠️ 注意
 
-以下内容未经验证，内容和原教程基本相同。
+刷机有风险，解锁需谨慎
 
 :::
 
@@ -22,15 +22,15 @@
 >
 > - [ArchWiki 相关内容](<https://wiki.archlinux.org/title/Android_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-买可以刷机的手机最好买知名度大的品牌、有可能解锁 BootLoader 的手机以及较热门的机型，这样在刷机时可以方便的找到官方的 TWRP 和知名的 ROM 包（如 [LineageOS](https://lineageos.org/)、[crDroid](https://crdroid.net/)、 [Resurrection Remix](https://resurrectionremix.com/) 和 [PixelExperience](https://download.pixelexperience.org/devices)等）。
+买可以刷机的手机最好买知名度大的品牌、有可能解锁 BootLoader 的手机以及较热门的机型，这样在刷机时可以方便的找到官方的 TWRP 和知名的 ROM 包（如 [LineageOS](https://lineageos.org/)、[crDroid](https://crdroid.net/) 和 [PixelExperience](https://download.pixelexperience.org/devices)等）。
 
 如果是较冷门的品牌，官方可能没有提供 ROM，只能在网上自行寻找个人改造过的 TWRP 和上述 ROM 包的非官方（unofficial）ROM。这种个人改造版本的安全性比较难说，而且还可能有更多的 🐛 Bug。也有可能翻遍全网，也找不到冷门机型能用（指好用的、非硬件提供商的官方 ROM）的 TWRP 和 ROM。
 
-硬件方面，一般推荐买高通骁龙的 CPU，不要买联发科的，因为更多 ROM 的版本都是适配高通硬件的。
+硬件方面，一般推荐买高通骁龙的 CPU，不建议买联发科的，因为更多 ROM 的版本都是适配高通硬件的。
 
 ::: tip ℹ️ 提示
 
-若为华为设备，如果没有在 18 年华为关闭 BootLoader 解锁码申请前拿到解锁码，那刷机在现在将变得基本不可能，尤其是近一年左右的新设备（用鸿蒙了还刷个 🔨）。
+较新的华为、VIVO等设备解锁困难，刷机几乎成为不可能。
 
 :::
 
@@ -42,9 +42,11 @@ sudo pacman -S android-tools
 
 ## 1. 解锁 BootLoader
 
-一般来说像小米这种品牌，官方会提供解锁 BootLoader 的途径和工具，但是这些工具基本只能在 Windows 下用。
+   ::: tip ℹ️ 提示
 
-除此之外，如果你能通过其它方法获取，或通过很硬核的方式拿到 BootLoader 的解锁码，那么也可以使用 Android 调试桥（adb）在 fastboot 模式下进行解锁。
+   解锁之前建议先退出手机内的Google账号，部分机型需要在开发者设置中打开OEM解锁一项。
+
+   :::
 
 1. 手机先通过数据线连接电脑，重启到 fastboot 模式：
 
@@ -60,21 +62,25 @@ sudo pacman -S android-tools
 
 2. 解锁 BootLoader：
 
+**小米：** 小米官方会提供解锁 BootLoader 的途径和工具，但是这些工具基本只能在 Windows 下用。
+
+**OPPO、真我realme:** 黑厂的机型一般需要进行深度测试解锁，申请速度很慢，并且新机型在第一时间内不能申请深度测试解锁。
+
+**一加、红魔、LG、Google：** 这些品牌的解锁比较简单。
+
+```sh
+fastboot flashing unlock
+```
+
+之后按照手机上的提示，使用音量键选择unlock解锁并用电源键确认即可。
+
+**其他：** 不知名的机型和部分OEM机型。可以尝试下面的指令解锁
+
    ```sh
-   fastboot oem unlock xxxxxxx # 使用 BootLoader 解锁码在 fastboot 模式下解锁
+   fastboot oem unlock
    ```
 
-   ::: tip ℹ️ 提示
-
-   要使用正确的 BootLoader 解锁码才能解锁，否则会报错：
-
-   ```sh
-   FAILED (remote: 'check password failed!')
-   fastboot: error: Command failed
-   ```
-
-   :::
-
+对于部分较旧的（3年前的）联发科芯片的手机可以[使用漏洞解锁](https://github.com/notmyst33d/mtkclient-gui)。
 ## 2. 刷入 TWRP 并进行刷机
 
 1. 在 [TWRP 官网](https://twrp.me/Devices/) 搜索并下载机型对应的 TWRP
