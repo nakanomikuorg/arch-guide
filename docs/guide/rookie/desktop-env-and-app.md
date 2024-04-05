@@ -375,16 +375,16 @@ sudo pacman -S fcitx5-material-color # 输入法主题
 2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `/etc/environment`：
 
 ```bash
-sudo vim /etc/environment
+sudoedit /etc/environment
 ```
 
 3. 在文件中加入以下内容并保存退出：
 
 ```environment
-GTK_IM_MODULE=fcitx5
-QT_IM_MODULE=fcitx5
-XMODIFIERS=@im=fcitx5
-SDL_IM_MODULE=fcitx5
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
 GLFW_IM_MODULE=ibus
 ```
 
