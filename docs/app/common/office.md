@@ -39,7 +39,7 @@ sidebarDepth: 2
 ::: code-group
 
 ```sh [cn (cn)]
-yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts
+yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts freetype2-wps
 ```
 
 ```sh [cn]
@@ -47,7 +47,7 @@ sudo pacman -S wps-office ttf-wps-fonts libtiff5
 ```
 
 ```sh [aur (cn)]
-yay -S wps-office-cn aur/ttf-wps-fonts aur/libtiff5
+yay -S wps-office-cn aur/ttf-wps-fonts aur/wps-office-mui-zh-cn aur/freetype2-wps
 ```
 
 ```sh [aur]
