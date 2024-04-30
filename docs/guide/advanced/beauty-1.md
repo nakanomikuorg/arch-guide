@@ -72,16 +72,16 @@
 
 天气插件。相比 KDE 自带的天气插件显示信息更加详细，也不会经常刷新不出天气信息。
 
-安装 [Weather Widget](https://archlinux.org/packages/extra/x86_64/plasma5-applets-weather-widget/)<sup>extra / aur</sup>：
+安装 [Weather Widget](https://aur.archlinux.org/packages/plasma-applets-weather-widget-2)<sup>aur</sup>：
 
 ::: code-group
 
-```bash [extra]
-sudo pacman -S plasma5-applets-weather-widget qt5-xmlpatterns # 必须安装
+```bash [aur]
+yay -S plasma-applets-weather-widget-2 qt6-5compat qt6-declarative # 必须安装
 ```
 
 ```bash [aur (git)]
-yay -S aur/plasma5-applets-weather-widget-git qt5-xmlpatterns # 必须安装
+yay -S plasma6-applets-weather-widget-3-git qt6-5compat qt6-declarative # 必须安装
 ```
 
 :::
@@ -184,6 +184,14 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
 
 ### 3-2. Dock 栏布局
 
+::: tip ℹ️ 提示
+
+截至目前，Latte 尚未支持 KDE Plasma 6，所以该部分内容暂时折叠。
+
+:::
+
+::: details Latte 配置教程
+
 1. 为了实现 Dock 栏布局，需要安装 [Latte](https://github.com/KDE/latte-dock)<sup>extra / cn / aur</sup>：
 
    ::: code-group
@@ -199,7 +207,6 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
    ```bash [aur (git)]
    yay -S aur/latte-dock-git
    ```
-
 
 2. 进入 `编辑面板...` > 通过拖拽 `屏幕边缘` 按钮将菜单栏拖拽至底部或左右侧：
 
@@ -291,6 +298,8 @@ KDE 默认即菜单栏布局。只需调整一下小部件的位置和样式即�
     - 添加全局菜单即可使菜单显示在顶栏中（类似 macOS）：
 
       ![dock-layout-11](../../assets/guide/advanced/beauty/dock-layout-11.png)
+
+:::
 
 ### 3-3. 调整细节
 
