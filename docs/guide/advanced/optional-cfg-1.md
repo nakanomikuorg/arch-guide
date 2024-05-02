@@ -416,9 +416,9 @@ sudo vim root/.zshrc
 将以下内容分别添加到需要设置 zsh 账户的 `~/.zshrc` 中：
 
 ```zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/autojump/autojump.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 ![zsh_step-6](../../assets/guide/advanced/optional-cfg/zsh-6.png)
