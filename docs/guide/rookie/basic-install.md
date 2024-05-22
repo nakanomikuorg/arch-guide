@@ -63,7 +63,20 @@ systemctl status reflector.service
   ```zsh
   rmmod pcspkr
   ```
-  
+- 要永久禁用蜂鸣器内核模块, 请创建并编辑 `/etc/modprobe.d/blacklist.conf`
+
+  ```zsh
+  sudoedit /etc/modprobe.d/blacklist.conf
+  ```
+
+  加入以下内容
+
+  ```
+  blacklist pcspkr
+  ```
+
+  这样下次启动就不会加载 pcspkr 模块了
+
 :::
 
 ## 2. 再次确认是否为 UEFI 模式
