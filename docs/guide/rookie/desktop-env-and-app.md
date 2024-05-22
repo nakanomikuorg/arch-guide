@@ -372,15 +372,16 @@ sudo pacman -S fcitx5-pinyin-moegirl # 萌娘百科词库。二刺猿必备（ar
 sudo pacman -S fcitx5-material-color # 输入法主题
 ```
 
-2. 此外，我们还需要设置环境变量。通过 `vim` 编辑文件 `/etc/environment`：
+2. 此外，我们还需要设置环境变量。通过 `vim` 创建并编辑文件 `~/.config/environment.d/im.conf`：
 
 ```bash
-sudoedit /etc/environment
+vim ~/.config/environment.d/im.conf
 ```
 
 3. 在文件中加入以下内容并保存退出：
 
 ```environment
+# fix fcitx problem
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
