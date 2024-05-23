@@ -210,9 +210,7 @@ resume=UUID=13ec7b86-eb9c-45a9-ae50-9606279b506a
 
 3. 接下来参考步骤 [共同后续步骤](optional-cfg-2.md#共同后续步骤) 完成配置。
 
-### 休眠到 Swap 文件（Btrfs）
-
-### 休眠到 Swap 文件（ext4）
+### 休眠到 Swap 文件
 
 1. 首先确认 Swap 文件所在分区的 `UUID`：
 
@@ -221,6 +219,16 @@ sudo findmnt -no UUID -T /swapfile
 ```
 
 2. 确认 Swap 文件的偏移值：
+
+- Btrfs 文件系统
+
+```bash
+sudo btrfs inspect-internal map-swapfile -r /swapfile
+```
+
+命令返回结果即所需要的数据。
+
+- Ext4 文件系统
 
 ```bash
 sudo filefrag -v /swapfile
