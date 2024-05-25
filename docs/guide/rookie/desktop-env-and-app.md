@@ -314,7 +314,7 @@ https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/
 ```bash
 cd ~
 ls -hl
-mkdir Desktop Documents Downloads Music Pictures Videos
+xdg-user-dirs-update
 ```
 
 ![mkdir](../../assets/guide/rookie/desktop-env-and-app_mkdir.png)
