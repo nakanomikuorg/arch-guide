@@ -4,41 +4,56 @@
 >
 > 全球化浪潮无法阻挡，我们常常有访问一些资料的客观需求。但有的时候因为一些因素往往导致无法正常访问（包括但不限于**终端中下载文件特别慢、无法访问部分网站、部分应用无法正常使用**等）。虽然前路千沟万壑，但无法阻挡我们前行的脚步。本节我们通过设置透明代理解决这一问题
 
+## dae
+
 ::: tip ℹ️ 提示
 
-鉴于 Qv2ray 原项目已[停止开发](https://github.com/Qv2ray/Qv2ray)，新的版本还不够完善，有魔法上网需求者建议使用 v2rayA 替代 Qv2ray。
+v2rayA 开发者已逐步转向 dae。作为 v2rayA 的继承者，dae 放弃了 v2ray-core，以更灵活地满足用户的需求。daed 的图形化界面界面仍与 v2rayA 相似。
 
-v2rayA 的优势：
+dae 的优势：
 
-- 支持一键开启全局代理，配置方便
-- 客户端运行在浏览器中，轻量
+dae 是一种高性能透明代理解决方案。
+为了尽可能提升分流性能，dae 利用了 Linux 内核中的 eBPF 技术，采用了透明代理和流量分流套件。因此，dae 可以使流量直接绕过代理应用程序转发，从而实现真正的直接分流。
+
+你可以直接安装 dae 内核，或者安装带有图形化界面的 daed.
 
 :::
 
-### 安装 v2ray 和 v2rayA:
+### 安装 dae 或 daed:
 
 ::: code-group
 
 ```bash [cn]
-sudo pacman -S v2ray v2raya
+sudo pacman -S dae daed
 ```
 
 ```bash [aur]
-sudo pacman -S v2ray
-yay -S aur/v2raya
+yay -S aur/dae aur/daed
 ```
 
 :::
 
-### 配置 v2raya
+### 配置 dae
 
 安装后启动服务：
+::: code-group
 
-```bash
-sudo systemctl enable --now v2raya
+```bash [dae]
+sudo systemctl enable --now dae
 ```
 
-随后在开始菜单中搜索 v2rayA，点击即可打开浏览器页面。在其中加入订阅(没有魔法上网节点？请参考[原文档相关内容](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/fxckGFW?id=%e5%b7%b2%e6%9c%89%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91%e7%9a%84%e8%8a%82%e7%82%b9%e7%9a%84%e6%83%85%e5%86%b5))。在设置中建议开启全局透明代理(选择`大陆白名单`)，同时开启防止 DNS 劫持功能，否则可能会拿不到被 DNS 污染的资源(如 github raw)。
+```bash [daed]
+sudo systemctl enable --now daed
+```
+
+:::
+
+然后你就可以参照官方文档来使用了：
+
+dae：https://github.com/daeuniverse/dae/blob/main/docs/zh/README.md
+
+daed：https://github.com/daeuniverse/daed/blob/main/docs/getting-started.md
+安装完 daed 后，打开浏览器访问 http://localhost:2023 开始使用
 
 ## 安装和配置 Qv2ray
 
