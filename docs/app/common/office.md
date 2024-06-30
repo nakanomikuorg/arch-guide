@@ -62,7 +62,13 @@ sudo pacman -S wps-office aur/ttf-wps-fonts aur/libtiff5
 
 WPS可能会出现部分中文字体过粗的情况。文本看起来特别粗，标题、粗体文本几乎不可用。
 
-可以通过降级`freetype2`至2.13.0版本解决
+可以通过降级`freetype2`至2.13.0版本解决。
+
+WPS PDF可能会出现无法导出pdf或者无法打开的情况，通过安装`libtiff5`即可解决。
+
+```bash
+yay -S libtiff5 
+```
 
 :::
 
