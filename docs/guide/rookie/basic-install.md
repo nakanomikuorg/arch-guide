@@ -954,16 +954,16 @@ nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码" # 连接指�
 nmtui
 ```
 
-5. `neofetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `neofetch`：
+5. `fastfetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `fastfetch`：
 
 ```bash
-pacman -S neofetch
+pacman -S fastfetch
 ```
 
-使用 `neofetch` 打印系统信息：
+使用 `fastfetch` 打印系统信息：
 
 ```bash
-neofetch
+fastfetch
 ```
 
 ![neofetch](../../assets/guide/rookie/basic-install_neofetch.png)

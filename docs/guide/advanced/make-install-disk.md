@@ -431,7 +431,7 @@ yay -S archiso-git
    iftop # 流量监控工具
    iotop # 磁盘 I/O 监控工具
    ipmitool # 用于管理和配置，支持智能平台管理接口（IPMI）1.5 版和 2.0 版规范的设备的实用程序（给运维用的）
-   neofetch # 打印系统信息
+   fastfetch # 打印系统信息
    plasma-meta
    konsole
    dolphin

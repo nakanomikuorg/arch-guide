@@ -162,6 +162,16 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
+2024 年 3 月，微信 Linux 原生版重构，可以安装 [`wechat-uos-qt`](https://aur.archlinux.org/packages/wechat-uos-qt/)<sup>aur</sup> 体验，这是目前最好的解决方案。
+
+```bash
+yay -S wechat-uos-qt
+```
+
+对于沙盒等存在的一些问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
+
+### wine版
+
 基于目前社区的反馈，更推荐使用上游来自 Deepin 社区主导的星火商店，用 `wine` 运行的 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>，功能相对较全也较少 bug。
 
 1. 安装 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>：
