@@ -74,7 +74,41 @@ sudo pacman -S ttf-jetbrains-mono-nerd
 
 现在再打开 `powerlevel10k` 配置（`p10k configure`），就可以看到图标符号，正常配置了。
 
+### 2-2. grml's zsh config
+
+如果你不想麻烦，想要一个看起来还算可以并且包含许多高级功能（如拼写纠错）的 zsh 配置，可以使用 grml's zsh config。
+
+```sh
+sudo pacman -S grml-zsh-config
+```
+
+然后重新登录就可。如果出现了什么问题，请删除当前的 .zshrc 然后重新撰写一份。
+
 ## 3. vim 美化
+
+安装 Vim-plug。这是一个极简风的 vim 插件管理器。
+
+```sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+然后安装 Airline. 它是一个状态栏插件。
+
+把下面的内容加入 .vimrc 中
+
+```text
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='ayu_dark'
+```
+
+然后进入 vim, 运行
+
+```sh
+:source %
+:PlugInstall
+```
 
 ## 4. ASCII 艺术与终端玩具
 
