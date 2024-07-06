@@ -98,15 +98,18 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 把下面的内容加入 .vimrc 中
 
 ```text
+call plug#begin()
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='ayu_dark'
+
+call plug#end()
 ```
 
 然后进入 vim, 运行
 
 ```sh
-:source %
 :PlugInstall
 ```
 
