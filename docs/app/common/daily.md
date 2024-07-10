@@ -308,15 +308,13 @@ yay -S calibre-git
 
 2. 配置快捷键：
 
-   1. 打开 `系统设置` > 点击侧栏 `快捷键` > `自定义快捷键`
+   1. 打开 `系统设置` > 点击侧栏 `键盘` > `快捷键` > `新建` > `程序` > `火焰截图`
 
-   2. 点击 `编辑` > `新建` > `全局快捷键` > `命令/URL：`
+   2. 点击选项卡 `火焰截图` > `进行截图` > 点击此按钮 > 按下自定义快捷键 > 完成
+  
+   ![flameshot-1](https://github.com/PILIHU2022/arch-guide/assets/100511118/ea013e35-51e4-43fd-8c41-1b992b839b4e)
 
-   3. 点击选项卡 `触发器` > 将 `快捷键` 设置为自定义快捷键：
-
-   ![flameshot-1](../../assets/app/common/daily/flameshot-1.png)
-
-   4. 点击选项卡 `动作` > 将 `命令/URL：` 设置为 `flameshot gui`：
+   3. 点击选项卡 `动作` > 将 `命令/URL：` 设置为 `flameshot gui`：
 
    ![flameshot-2](../../assets/app/common/daily/flameshot-2.png)
 
