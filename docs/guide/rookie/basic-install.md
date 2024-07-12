@@ -970,7 +970,7 @@ fastfetch
 
 > #### 🍧 碎碎念
 >
-> 又到了 `neofetch` 的时间了吗？
+> 又到了 `fastfetch` 的时间了吗？
 
 ## 🎉 祝贺！🎉
 
