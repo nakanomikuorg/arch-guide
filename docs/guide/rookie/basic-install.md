@@ -954,6 +954,13 @@ nmcli dev wifi connect "Wi-Fi名（SSID）" password "网络密码" # 连接指�
 nmtui
 ```
 
+::: tip ℹ️ 提示
+
+neofetch 原作者 dylanaraps 已于 2024 年 04 月 26 日归档 neofetch 仓库，在下面我们会使用 `fastfetch` 代替 `neofetch`。
+
+:::
+
+
 5. `fastfetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `fastfetch`：
 
 ```bash
@@ -966,7 +973,7 @@ pacman -S fastfetch
 fastfetch
 ```
 
-![neofetch](../../assets/guide/rookie/basic-install_neofetch.png)
+![fastfetch](../../assets/guide/rookie/basic-install_fastfetch.png)
 
 > #### 🍧 碎碎念
 >
