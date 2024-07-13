@@ -541,15 +541,13 @@ swapon /dev/nvmexn1pn # 挂载交换分区
 
 ![mount_step-1](../../assets/guide/rookie/basic-install_mount-1.png)
 
-![mount_step-2](../../assets/guide/rookie/basic-install_mount-2.png)
-
 2. 使用 `df` 命令复查挂载情况：
 
 ```zsh
 df -h
 ```
 
-![mount_step-3](../../assets/guide/rookie/basic-install_mount-3.png)
+![mount_step-2](../../assets/guide/rookie/basic-install_mount-2.png)
 
 3. 使用 `free` 命令复查 Swap 分区挂载情况：
 
@@ -557,7 +555,7 @@ df -h
 free -h # -h 选项会使输出以人类可读的单位显示
 ```
 
-![mount_step-4](../../assets/guide/rookie/basic-install_mount-4.png)
+![mount_step-3](../../assets/guide/rookie/basic-install_mount-3.png)
 
 ## 9. 安装系统
 
@@ -878,11 +876,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ::: tip ℹ️ 提示
 
-1.在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以直接把已经生成好的 `efi` 文件移动到默认目录下，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [ArchWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
+1.在某些主板安装完成后，你会发现没有启动条目。这是因为某些主板的 UEFI 固件在显示 UEFI NVRAM 引导条目之前，需要在特定的位置存放可引导文件，不支持自定义存放 `efi` 文件（如微星 Z170-A Gaming PRO）。解决方案是在默认启动路径下安装 `GRUB`。重新插入安装优盘，按原先顺序挂载目录（不需要再次创建文件夹了），`chroot` 到 `/mnt`，然后你可以重新用 `--removable` 安装grub2，如下命令所示。只有安装完成后你的主板不出现启动条目才需要尝试如下命令，正常安装无需执行。如有需要可以参考 [ArchWiki 对应内容](https://wiki.archlinuxcn.org/wiki/GRUB#缺省/后备启动路径)。
 
 ```bash
-mv /boot/EFI/grub /boot/EFI/BOOT
-mv /boot/EFI/GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=ARCH --removable
 ```
 
 2.`os-prober` 在 chroot 环境中可能无法正常运作。如果遇到这种情况，重启并引导进入系统后再次尝试生成配置文件。
