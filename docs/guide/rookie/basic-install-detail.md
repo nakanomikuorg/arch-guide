@@ -246,3 +246,87 @@ GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=5 nowatchdog i8042.dumbkbd"
 GRUB_CMDLINE_LINUX=""
 ```
+
+3. 若为机械革命机型，则建议通过 CPIO archive 修复
+
+本部分来源于：[机械革命 蛟龙 15K Linux 内置键盘失灵解决 (ACPI)_linux 笔记本键盘失灵](https://blog.csdn.net/ZGY_121/article/details/134834265)
+
+工具：acpica和cpio
+
+```bash
+sudo pacman -S acpica cpio
+```
+
+获得原来的 DSDT
+
+```bash
+cat /sys/firmware/acpi/tables/DSDT > dsdt.dat # 获取dsdt
+iasl -d dsdt.dat # 反编译DSDT成AML文件(.dsl)
+```
+
+修改 dsdt.dsl ： 找到 Device(PS2K) ，向下找第一个 ActiveLow 改成 ActiveHigh ，样例如下：
+
+```
+Device (PS2K)
+{                                             
+    Name (_HID, "MSFT0001")  // _HID: Hardware ID
+    Name (_CID, EisaId ("PNP0303") /* IBM Enhanced Keyboard (101/102-key, PS/2 Mouse) */)  // _CID: Compatible ID
+    Method (_STA, 0, NotSerialized)  // _STA: Status
+    {                    
+        Return (0x0F)
+    }                    
+    
+    Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+    {
+        IO (Decode16,
+            0x0060,             // Range Minimum
+            0x0060,             // Range Maximum
+            0x00,               // Alignment
+            0x01,               // Length
+            )
+        IO (Decode16,
+            0x0064,             // Range Minimum
+            0x0064,             // Range Maximum
+            0x00,               // Alignment
+            0x01,               // Length
+            )
+        IRQ (Edge, ActiveLow, Shared, ) // <<=== 目标
+            {1}
+    })
+//... 省略无关内容
+}
+```
+
+最后，给DefinitionBlock 升一个版本 (最后一个十六进制数加一)： `DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)` 改为 `DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x0107200A)`
+
+编译新的 AML 文件
+
+```bash
+iasl dsdt.dsl
+```
+加入 initrd
+
+```
+mkdir -p kernel/firmware/acpi
+cp dsdt.aml kernel/firmware/acpi
+find kernel | cpio -H newc --create > acpi_override
+sudo cp acpi_override /boot
+echo "GRUB_EARLY_INITRD_LINUX_CUSTOM=\"acpi_override\"" >> /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+::: tip ℹ️ 提示
+
+如果使用 systemd-boot , 则只需要在内核加载后再加一条 `initrd` 命令即可，样例如下：
+
+```
+# Created by: archinstall
+# Created on: 2024-07-28_08-06-24
+title   Arch Linux (linux-zen)
+linux   /vmlinuz-linux-zen
+initrd  /acpi_override # 这一行
+initrd  /initramfs-linux-zen.img
+options root=PARTUUID=d1204e8c-13ab-4c8d-a6fd-45d731684912 zswap.enabled=0 rootflags=subvol=@ rw rootfstype=btrfs
+```
+
+:::

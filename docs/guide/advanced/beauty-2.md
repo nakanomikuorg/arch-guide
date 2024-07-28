@@ -90,7 +90,17 @@
 
 ## 2. 更改 Fcitx5 输入法皮肤
 
-默认的输入法主题并不好看,这里有两个漂亮的主题：
+默认的输入法主题并不好看,这里有三个漂亮的主题：
+
+### [内置的Breeze](https://planet.kde.org/weng-xuetian-2022-07-04-fcitx-5-plasma-theme-support/)
+
+![fcitx-breeze](../../assets/guide/advanced/beauty/fcitx-breeze.png)
+
+只需在 fcitx5 的经典 UI 配置中选择“KDE Plasma (Experimental)”作为主题即可。
+
+原作者的视频教程如下：
+
+<video controls="" src="https://www.csslayer.info/wordpress/wp-content/uploads/2022/07/demo.mp4"></video>
 
 ### [fcitx5-nord](https://github.com/ayamir/fcitx5-nord)
 
