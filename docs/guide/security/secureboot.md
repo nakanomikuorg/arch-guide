@@ -29,7 +29,33 @@
 
 3. ☢️ 你的电脑必须支持导入你自己的 Secure Boot 密钥 ☢️
 
-## 2. 进入电脑的固件设置，将安全启动模式设置成Setup Mode (设置模式)
+## 2. 备份原来的密钥
+
+2-1. 安装efitools
+
+```bash
+sudo pacman -S efitools
+```
+
+2-2. 备份密钥
+
+```bash
+sudo efi-readvar -v PK -o factory_PK.esl
+
+sudo efi-readvar -v KEK -o factory_KEK.esl
+
+sudo efi-readvar -v db -o factory_db.esl
+
+sudo efi-readvar -v dbx -o factory_dbx.esl
+```
+
+::: warning ⚠️ 注意
+
+如果想手动导入 DBX 密钥则必须执行 `sudo efi-readvar -v dbx -o factory_dbx.esl`
+
+:::
+
+## 3. 进入电脑的固件设置，将安全启动模式设置成Setup Mode (设置模式)
 
 ::: warning ⚠️ 注意
 
@@ -37,29 +63,29 @@
 
 :::
 
-2-1. 按下 F2 进入固件设置，依次选择 `Boot -> Secure Boot -> Clear Secure Boot Data `__(这里要临时开启安全启动才可以执行此操作)__
+3-1. 按下 F2 进入固件设置，依次选择 `Boot -> Secure Boot -> Clear Secure Boot Data `__(这里要临时开启安全启动才可以执行此操作)__
 ![setup-mode](../../assets/security/setup-mode.png)
 
-2-2. 按下 F10 保存并退出
+3-2. 按下 F10 保存并退出
 
-2-3. 再次进入固件设置，你会发现 PK、KEK、DB、DBX 密钥都被清除了
+3-3. 再次进入固件设置，你会发现 PK、KEK、DB、DBX 密钥都被清除了
 ![check](../../assets/security/check.png)
 
-## 3. 安装 sbctl 并配置
+## 4. 安装 sbctl 并配置
 
-3-1. 安装 [sbctl](https://archlinux.org/packages/extra/x86_64/sbctl/)<sup>Extra</sup> 包：
+4-1. 安装 [sbctl](https://archlinux.org/packages/extra/x86_64/sbctl/)<sup>Extra</sup> 包：
 
 ```bash
 sudo pacman -S sbctl
 ```
 
-3-2. 使用 `sbctl` 生成 `PK`、`KEK`、`DB` 密钥：
+4-2. 使用 `sbctl` 生成 `PK`、`KEK`、`DB` 密钥：
 
 ```bash
 sudo sbctl create-keys
 ```
 
-## 4. 重新安装GRUB
+## 5. 重新安装GRUB
 
 ```bash
 sudo grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB --modules="tpm" --disable-shim-lock   # 重新安装 Grub
@@ -67,22 +93,38 @@ sudo grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB -
 sudo grub-mkconfig -o /boot/grub/grub.cfg    # 生成启动项
 ```
 
-## 5. 对GRUB进行签名并将密钥导入UEFI环境里
+## 6. 对GRUB进行签名并将密钥导入UEFI环境里
 
-5-1. 使用 `sbctl sign` 对引导文件签名：
+6-1. 使用 `sbctl sign` 对引导文件签名：
 
 ```bash
 sudo sbctl sign -s /boot/vmlinuz-linux
 
 sudo sbctl sign -s /boot/EFI/GRUB/grubx64.efi
 ```
-5-2. 进行检查
+6-2. 进行检查
 
 ```bash
 sudo sbctl verify
 ```
 
-## 6. 将密钥导入UEFI环境并启用安全启动
+## 7. (可选) 手动导入 DBX 密钥
+
+将原来备份的 DBX 密钥导入到 UEFI 环境里
+
+```bash
+sudo efi-updatevar -a -e -f factory_dbx.esl dbx
+```
+
+::: warning ⚠️ 注意
+
+由于 `sbctl enroll-keys` 命令会导入 PK (Platform Key) 密钥，会导致安全启动模式变成 User 模式，使得导入新密钥很难，所以推荐你在执行 `sbctl enroll-keys` 命令前执行上述命令
+
+通过此方法导入的 DBX 密钥是原机备份的，所以这个密钥可能不是最新的(目前最新版本是371)，可能需要[更新 DBX 密钥](#9-可选-更新-dbx-密钥)
+
+:::
+
+## 8. 将密钥导入UEFI环境并启用安全启动
 
 如果你只安装Arch Linux且不需要双系统，请输入：
 
@@ -114,3 +156,48 @@ sbctl 会把它生成的密钥和微软的密钥一并导入UEFI环境里
 
 再次进入固件设置，开启安全启动
 
+## 9. (可选) 更新 DBX 密钥
+
+::: tip ℹ️ 提示
+
+此操作只对导入了微软密钥的设备有效
+
+:::
+
+9-1. 安装 fwupd
+
+```bash
+sudo pacman -S fwupd
+```
+
+9-2. 启用服务
+
+```bash
+sudo systemctl enable --now fwupd
+```
+
+9-3. 更新 fwupd 元数据
+
+```bash
+sudo fwupdmgr refresh --force
+```
+
+9-4. 对 fwupd 的 EFI 文件签名
+
+```bash
+sudo sbctl sign -s /usr/lib/fwupd/efi/fwupdx64.efi -o /usr/lib/fwupd/efi/fwupdx64.efi.signed
+```
+
+9-5. 更新 DBX 密钥
+
+```bash
+sudo fwupdmgr get-updates # 用于查看是否有更新
+
+sudo fwupdmgr update # 用于更新
+```
+
+::: tip ℹ️ 提示
+
+如果你的设备是联想的 ThinkPad 系列、惠普或者戴尔，可能会同时把设备 BIOS 固件一起更新了。注意更新 BIOS 固件时千万不能断电，否则后果很严重(可能无法开机)😱
+
+:::
