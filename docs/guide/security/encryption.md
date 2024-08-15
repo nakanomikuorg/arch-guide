@@ -155,9 +155,9 @@ mount /dev/vg/root /mnt
 sudo pacman -S tpm2-tools tpm2-tss 
 ```
 
-5-2. 重新安装内核以生成 initramfs 或 UKI 镜像
+5-2. 重新安装内核以生成 initramfs
 
-__原因是要将 tpm2-tss 模块导入 initramfs 或 UKI 镜像__
+__原因是要将 tpm2-tss 模块导入 initramfs__
 
 ::: code-group
 
@@ -229,7 +229,7 @@ sudo systemd-cryptenroll --wipe-slot tpm2 --tpm2-device auto --tpm2-pcrs "0+1+2+
 
 :::
 
-还有可能是你配置 `--tpm2-pcrs` 参数不正确，请删除 `--tpm2-pcrs` 参数里有冲突的值：
+还有可能是你配置 `--tpm2-pcrs` 参数不正确，请删除 `--tpm2-pcrs` 参数里有问题的值：
 
 ::: code-group
 
@@ -249,7 +249,7 @@ sudo systemd-cryptenroll --wipe-slot tpm2 --tpm2-device auto --tpm2-pcrs "0+1+7"
 
 `fscrypt` 只适用于 `EXT4`、`F2FS` 和 `UBIFS`，如果想同时使用 `fscrypt` 和 `Btrfs`，请你单独创建一个分区，用上述文件系统格式化并挂载到 `/home` 目录
 
-⚠️对分区进行格式化时需要加入 encrypt 参数，如下所示：
+⚠️对分区进行格式化时需要加入 `encrypt` 参数，如下所示：
 
 EXT4: mkfs.ext4 -O encrypt ***
 
@@ -261,6 +261,7 @@ EXT4: sudo tune2fs -O encrypt ***
 
 F2FS: sudo fsck.f2fs -O encrypt ***
 
+⚠️ 这里`***`指的是分区的路径 ⚠️
 :::
 
 ## 1. 安装fscrypt
@@ -293,7 +294,7 @@ sudo fscrypt setup /home
 
 ::: danger ☢️ 警告
 
-严禁删除 .fscrypt 目录，否则永远无法解密被加密的目录
+严禁删除 `.fscrypt` 目录，否则永远无法解密被加密的目录
 
 :::
 

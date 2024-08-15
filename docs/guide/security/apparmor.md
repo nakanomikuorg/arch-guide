@@ -22,27 +22,15 @@ __如果能找到 CONFIG_SECURITY_APPARMOR=y 和 CONFIG_AUDIT=y 则说明此内�
 
 由于官方内核默认没有开启 Apparmor，所以要添加 lsm=apparmor 和 audit=1 到内核启动参数里
 
-::: code-group
-
-```bash [GRUB]
+```bash
 sudo vim /boot/grub/grub.cfg
 
-.   .....
+    ......
     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lsm=apparmor audit=1" # 找到这一行并添加参数到末尾
     ......
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-```bash [UKI]
-sudo vim /etc/dracut.conf.d/cmdline.conf
-
-    kernel_cmdline="root=/dev/nvmexn1pn rootfstype=btrfs rootflags=rw,relatime quiet splash lsm=apparmor audit=1" # 找到这一行并添加参数到末尾
-
-sudo pacman -S linux
-```
-
-:::
 
 ## 3. 安装 Apparmor
 
