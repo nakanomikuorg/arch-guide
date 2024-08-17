@@ -197,37 +197,6 @@
  * Component: Code
  * -------------------------------------------------------------------------- */
 
-:root {
-  --vp-code-line-height: 1.7;
-  --vp-code-font-size: 0.875em;
-
-  --vp-code-block-color: var(--vp-c-text-dark-1);
-  --vp-code-block-bg: #292b30;
-  --vp-code-block-divider-color: #000000;
-
-  --vp-code-line-highlight-color: rgba(0, 0, 0, 0.5);
-  --vp-code-line-number-color: var(--vp-c-text-dark-3);
-
-  --vp-code-line-diff-add-color: var(--vp-c-green-dimm-2);
-  --vp-code-line-diff-add-symbol-color: var(--vp-c-green);
-
-  --vp-code-line-diff-remove-color: var(--vp-c-red-dimm-2);
-  --vp-code-line-diff-remove-symbol-color: var(--vp-c-red);
-
-  --vp-code-line-warning-color: var(--vp-c-yellow-dimm-2);
-  --vp-code-line-error-color: var(--vp-c-red-dimm-2);
-
-  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
-  --vp-code-copy-code-active-text: var(--vp-c-text-dark-2);
-
-  --vp-code-tab-divider: var(--vp-code-block-divider-color);
-  --vp-code-tab-text-color: var(--vp-c-text-dark-2);
-  --vp-code-tab-bg: var(--vp-code-block-bg);
-  --vp-code-tab-hover-text-color: var(--vp-c-text-dark-1);
-  --vp-code-tab-active-text-color: var(--vp-c-text-dark-1);
-  --vp-code-tab-active-bar-color: var(--vp-c-brand);
-}
-
 .dark {
   --vp-code-block-bg: #161618;
 }
