@@ -32,7 +32,19 @@
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
-2.  编辑 Zsh 配置文件 `~/.zimrc` ：
+::: tip ℹ️ 提示
+
+如果您没有设置代理且在中国大陆进行`Git.raw`的下载 ,往往会下载失败。可以尝试使用镜像网站或者加速代理进行下载。
+
+以下为加速代理网站使用示例,仅做展示。不存在引流行为
+
+```sh
+curl -fsSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+```
+
+:::
+
+1.  编辑 Zsh 配置文件 `~/.zimrc` ：
 
 ```sh
 vim ~/.zimrc
@@ -44,7 +56,22 @@ vim ~/.zimrc
 zmodule romkatv/powerlevel10k
 ```
 
-4.  安装 `powerlevel10k` 模块，在终端输入如下命令即可。
+::: tip ℹ️ 提示
+
+如果您没有设置代理且在中国大陆进行`Git`的下载 ,往往会下载失败。可以尝试使用镜像网站进行下载。
+
+1. 可以把[powerlevel10k](https://github.com/romkatv/powerlevel10k)的项目复制到`gitee`(中国大陆境内的代码托管平台,提供一键式的导入 github 项目)上。
+2. 导入完毕后,复制生成的链接。把上文中的`romkatv/powerlevel10k`替换成完整链接地址。
+
+```
+zmodule https://gitee.com/myObject/powerlevel10k.git
+```
+
+另: 您当然可以选择[他人](https://gitee.com/insanemac/powerlevel10k.git)导入的`powerlevel10k`镜像项目,但是实效性不能保证。
+
+:::
+
+1.  安装 `powerlevel10k` 模块，在终端输入如下命令即可。
 
 ```sh
 zimfw install
