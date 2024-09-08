@@ -44,7 +44,7 @@ curl -fsSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/zimfw/in
 
 :::
 
-1.  编辑 Zsh 配置文件 `~/.zimrc` ：
+2.  编辑 Zsh 配置文件 `~/.zimrc` ：
 
 ```sh
 vim ~/.zimrc
