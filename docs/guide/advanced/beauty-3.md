@@ -71,7 +71,7 @@ zmodule https://gitee.com/myObject/powerlevel10k.git
 
 :::
 
-1.  安装 `powerlevel10k` 模块，在终端输入如下命令即可。
+4.  安装 `powerlevel10k` 模块，在终端输入如下命令即可。
 
 ```sh
 zimfw install
