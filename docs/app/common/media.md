@@ -156,6 +156,14 @@ yay -S zy-player-bin
 
 在线音乐收听可以使用官方的网易云音乐或企鹅的 QQ 音乐，但在 Linux 下体验不佳，且很久没有更新了。显然这些企业是不会愿意向 Linux 桌面投放精力的。推荐使用维护到位的自由开源软件，它们一般是资源整合类型的第三方客户端，曲库较为完整。
 
+::: warning ⚠️ 注意
+
+近期多个网易云第三方客户端的 issues 都有反映封号问题，包括下文提到的 [`YesPlayMusic`](https://github.com/qier222/YesPlayMusic)<sup>aur</sup>，疑似覆盖范围包括所有使用开源网易云 api 的播放器。
+
+请谨慎使用网易云第三方客户端，以免账号被风控。
+
+:::
+
 ### DeaDBeeF
 
 [DeaDBeeF](https://deadbeef.sourceforge.io/) 是一个自由开源（[GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)）模块化的**无损**音频播放器，用于 GNU/Linux、\*BSD、OpenSolaris、macOS 和其它类 UNIX 系统。
