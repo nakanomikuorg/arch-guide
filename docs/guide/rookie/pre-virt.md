@@ -12,7 +12,7 @@
 >
 > :::
 
-本小节将在 win10 环境下使用 [Oracle VM VirtualBox](https://www.virtualbox.org/) 虚拟机安装 archlinux。
+本小节将在 win11 环境下使用 [Oracle VM VirtualBox](https://www.virtualbox.org/) 虚拟机安装 archlinux。
 
 > #### 📑 相关资料：VirtualBox
 >
