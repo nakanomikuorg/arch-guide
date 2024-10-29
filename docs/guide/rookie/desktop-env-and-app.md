@@ -546,6 +546,27 @@ sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab
 
 自此，Timeshift 快照已经成功设置。Timeshift 将按照计划快照系统并删除久远的快照。Timeshift 快照为系统增加了一层保障。
 
+## 自动生成 GRUB 启动项
+安装 `grub-btrfs` 包可以实现自动生成快照的 GRUB 启动项
+安装后每次使用 `grub-mkconfig` 生成 grub.cfg 都会将快照启动项加入 GRUB 中
+如果想要在 timeshift 自动创建快照时自动生成启动项，可以配置以下服务：
+1. 覆盖默认配置
+```bash
+sudo systemctl edit grub-btrfsd.service
+```
+在默认光标处，添加以下内容后保存退出
+```
+[Service]
+ExecStart=
+ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
+```
+2. 重载并配置为自动启动
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now grub-btrfsd.service
+```
+这样就能够实现在 timeshift 生成快照时，自动添加快照启动项
+
 ## ✨ 太棒了
 
 自此，一个可以当作日常系统使用的 archlinux 已经基本配置完成了！KDE 桌面环境经过了多年的迭代更新，已经非常完善和强大了，将 archlinux 作为日常使用的主力系统不在话下。
