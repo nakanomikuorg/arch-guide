@@ -546,26 +546,69 @@ sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab
 
 自此，Timeshift 快照已经成功设置。Timeshift 将按照计划快照系统并删除久远的快照。Timeshift 快照为系统增加了一层保障。
 
-## 自动生成 GRUB 启动项
-安装 `grub-btrfs` 包可以实现自动生成快照的 GRUB 启动项
-安装后每次使用 `grub-mkconfig` 生成 grub.cfg 都会将快照启动项加入 GRUB 中
-如果想要在 timeshift 自动创建快照时自动生成启动项，可以配置以下服务：
+## 13. 自动生成快照启动项
+
+通过安装 `grub-btrfs` 包，可以实现在每次使用 `grub-mkconfig` 重新生成 GRUB 启动项时，自动添加快照的启动入口。
+如果希望在 Timeshift 自动创建快照的能够同时自动生成启动项，可以通过以下命令运行 `grub-btrfsd.service` 并将其配置为自动启动
+
+```bash
+sudo systemctl enable --now grub-btrfsd.service
+```
+
+由于该服务默认的监视路径为 `/.snapshots`，因此还需要对该路径进行修改，你需要：
+
 1. 覆盖默认配置
+
 ```bash
 sudo systemctl edit grub-btrfsd.service
 ```
-在默认光标处，添加以下内容后保存退出
+
+在默认的光标位置，添加以下内容后保存并退出
+
 ```
 [Service]
 ExecStart=
 ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
 ```
-2. 重载并配置为自动启动
+
+2. 重载并重启服务
+
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable --now grub-btrfsd.service
+sudo systemctl restart grub-btrfsd.service
 ```
-这样就能够实现在 timeshift 生成快照时，自动添加快照启动项
+
+这样就能够实现在 Timeshift 生成快照时，自动添加快照启动项
+
+::: tip ℹ️ 提示
+
+目前（v24.06.3）Timeshift 创建的快照默认是可读可写，并且没有提供创建只读快照的功能。
+
+如果你不是使用 Timeshift 对系统进行快照管理，而是使用其它工具，你可能会遇到由于创建了只读快照导致无法正常启动到快照系统的问题，你需要通过 `btrfs property set` 修改快照的读写属性才能解决。
+
+对此，grub-btrfs 提供了一个[initramfs hook](https://github.com/Antynea/grub-btrfs/blob/master/initramfs/readme.md)，你可以添加这个名为 `grub-btrfs-overlayfs` 的 hook，使用 overlayfs 的方式启动只读快照。
+
+这样每当启动到只读快照时，所有的写操作都会被重定向到 overlayfs 的 upper 层，也就是将数据写入到内存中，而不会影响到快照本身，就像 live-cd 一样。
+
+你需要编辑 `/etc/mkinitcpio.conf`
+
+```bash
+sudo -e /etc/mkinitcpio.conf
+```
+
+找到 `HOOKS`，并在列表末尾添加 `grub-btrfs-overlayfs`，就像这样:
+
+```
+HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block filesystems fsck resume numlock grub-btrfs-overlayfs)
+```
+
+并重新生成 initramfs:
+
+```bash
+sudo mkinitcpio -P
+```
+
+:::
 
 ## ✨ 太棒了
 
