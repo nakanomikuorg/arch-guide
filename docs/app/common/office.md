@@ -60,14 +60,14 @@ sudo pacman -S wps-office aur/ttf-wps-fonts aur/libtiff5
 
 ::: tip ℹ️ 提示
 
-WPS可能会出现部分中文字体过粗的情况。文本看起来特别粗，标题、粗体文本几乎不可用。
+WPS 可能会出现部分中文字体过粗的情况。文本看起来特别粗，标题、粗体文本几乎不可用。
 
-可以通过降级`freetype2`至2.13.0版本解决。
+可以通过降级`freetype2`至 2.13.0 版本解决。
 
-WPS PDF可能会出现无法导出pdf或者无法打开的情况，通过安装`libtiff5`即可解决。
+WPS PDF 可能会出现无法导出 pdf 或者无法打开的情况，通过安装`libtiff5`即可解决。
 
 ```bash
-yay -S libtiff5 
+yay -S libtiff5
 ```
 
 :::
@@ -257,3 +257,28 @@ sudo pacman -S joplin
 ```
 
 :::
+
+### Obsidian
+
+[**Obsidian**](https://obsidian.md/)因为他支持在笔记中创建双向链接的功能在众多 mkdown 编辑器中脱颖而出，这款闭源软件对个人用户是免费开放的，它同时还拥有一个活跃的社区，庞大的第三方插件库和主题库让 obsidian 拥有了无限可能。同时适配所有常见平台，同步服务需要付费。
+
+obsidian 同时内置图谱视图，这有助你将知识连接起来形成网络。同时也提供画布
+
+![alt text](../../assets/app/common/office/obsidian.png)
+
+<center> 官网预览图 </center>
+
+你可以通过 yay 安装也可以通过官网安装。
+
+```shell
+sudo yay -S obsidian
+```
+
+如果你在 wayland 下无法使用 fcitx5 输入法，可以尝试添加运行时参数`--enable-wayland-ime`, 这个参数最后会传递给 electron,也就是这款应用的开发框架。
+
+最后推荐一些第三方插件：
+
+- commander: 自定义工具栏按钮...
+- editing toolbar: 增加像 word 编辑拦一样的 toolbar，可自定义...
+- mousewheel image zoom: 滚轮调整图片大小
+- excalidraw: 思维导图...
