@@ -214,6 +214,40 @@ sudo pacman -S juk
 
 ![juk](../../assets/app/common/media/juk.png)
 
+### FeelUOwn
+
+FeelUOwn 是一个稳定、用户友好以及高度可定制的音乐播放器。
+
+#### 特性
+
+- 稳定、易用：
+  - 一键安装，各流行平台均有打包（如 Arch Linux, Windows, macOS 等）
+  - 有各媒体资源平台的插件，充分且合理的利用全网免费资源（如网易云、QQ、Bilibili 等）
+  - 基础功能完善，桌面歌词、资源智能替换、多音质选择、nowplaying 协议等
+  - 核心模块有较好的测试覆盖、核心接口保持较好的向后兼容
+- 可玩性强：
+  - 提供基于 TCP 的交互控制协议
+  - 基于文本的歌单，方便与朋友分享、设备之间同步
+  - 支持基于 Python 的配置文件 `.fuorc`，类似 `.vimrc` 和 `.emacs`
+
+安装 FeelUOwn：
+
+```sh
+yay -S feeluown
+```
+
+安装扩展（可选，按需安装）：
+
+```sh
+yay -S --asdeps feeluown-qqmusic
+yay -S --asdeps feeluown-netease
+yay -S --asdeps feeluown-kuwo
+yay -S --asdeps feeluown-ytmusic
+yay -S --asdeps feeluown-bilibili
+```
+
+[![macOS 效果预览](https://user-images.githubusercontent.com/4962134/235288158-39e6e01d-74f4-4f14-b942-7af924fc6a90.png)](https://www.bilibili.com/video/av46787694/)
+
 ### YesPlayMusic（推荐）
 
 高颜值的第三方网易云播放器，显著的优点包括但不限于：
