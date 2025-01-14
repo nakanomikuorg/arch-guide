@@ -355,6 +355,15 @@ sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/xray
 
 :::
 
+## v2rayN
+
+一个基于 .Net 8.0 的跨平台客户端，支持 Xray、sing-box 等[多种内核](https://github.com/2dust/v2rayN/wiki/List-of-supported-cores)。
+
+```bash
+yay -S v2rayn-bin
+# yay -S v2rayn #从源代码编译
+```
+
 ## nekoray
 
 一个基于 Qt 的跨平台客户端，后端基于 Xray 和 sing-box。
@@ -409,15 +418,23 @@ sudo timedatectl set-ntp true
 
 Clash-Verge 目前的继任者（原版仓库目前还在存档），基于 tauri 框架开发的开源跨平台 Clash 客户端<small>（远离 Electron 从我做起）</small>
 
-```
+```bash
 yay -S clash-verge-rev-bin
+```
+
+### Clash-Nyanpasu
+
+Clash-Nyanpasu 是 clash-verge 的另一个继任者，支持原版 Clash 的 Prenium 内核，并侧重于用户的使用体验，采用了 MD3 界面。
+
+```bash
+yay -S clash-nyanpasu-bin
 ```
 
 ### Clash for Windows（不建议，现已停止更新）
 
 这是一个功能较全的客户端，支持 Windows/macOS/Linux ，基于 Clash 和 Electron 的一个 GUI 客户端。未开源
 
-```
+```bash
 yay -S clash-for-windows-bin
 ```
 

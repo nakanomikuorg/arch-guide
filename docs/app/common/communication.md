@@ -162,15 +162,21 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
-2024 年 3 月，微信 Linux 原生版重构，可以安装 [`wechat-uos-qt`](https://aur.archlinux.org/packages/wechat-uos-qt/)<sup>aur</sup> 体验，这是目前最好的解决方案。
+2024 年 3 月，微信 Linux 原生版重构，可以安装 [`wechat-bin`](https://aur.archlinux.org/packages/wechat-bin)<sup>aur</sup> 体验，这是目前最好的解决方案。
 
 ```bash
-yay -S wechat-uos-qt
+yay -S wechat-bin
+```
+
+当然，还有对应的 bwrap 封装版本 [`wechat-universal-bwrap`](https://aur.archlinux.org/packages/wechat-universal-bwrap)<sup>aur</sup>，该版本限制了微信的目录访问。
+
+```bash
+yay -S wechat-universal-bwrap
 ```
 
 对于沙盒等存在的一些问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
 
-### wine版
+### wine 版
 
 基于目前社区的反馈，更推荐使用上游来自 Deepin 社区主导的星火商店，用 `wine` 运行的 [`com.qq.weixin.spark`](https://aur.archlinux.org/packages/com.qq.weixin.spark)<sup>EULA / aur</sup>，功能相对较全也较少 bug。
 
@@ -190,7 +196,7 @@ yay -S wechat-uos-qt
 
 以下为其它的微信版本，但体验一般：
 
-- [`wechat-uos`](https://aur.archlinux.org/packages/wechat-uos/)<sup>aur</sup> —— UOS 版本原生微信的移植版本
+- [`wechat-uos`](https://aur.archlinux.org/packages/wechat-uos/)<sup>aur</sup> —— UOS 版本原生微信的移植版本，此包功能较少，基本是微信网页版套壳。
 
   ```sh
   yay -S wechat-uos
@@ -306,8 +312,10 @@ yay -S zoom
 安装 [`wemeet-bin`](https://aur.archlinux.org/packages/wemeet-bin)<sup>EULA / aur</sup>：
 
 ```sh
-yay -S wemeet-bin
+yay -S wemeet-bin wemeet-wayland-screenshare-git
 ```
+
+同时安装 [`wemeet-wayland-screenshare-git`](https://aur.archlinux.org/packages/wemeet-wayland-screenshare-git)<sup>aur</sup>以实现在 Wayland 环境下的屏幕共享需求，具体教程可参见[项目 GitHub](https://github.com/xuwd1/wemeet-wayland-screenshare)
 
 ![meeting-2](../../assets/app/common/communication/meeting-2.png)
 
