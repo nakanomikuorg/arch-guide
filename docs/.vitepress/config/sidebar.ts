@@ -95,6 +95,21 @@ const sidebarConfig:DefaultTheme.Sidebar = {
             },
             { text: "Btrfs 相关", link: "/guide/advanced/btrfs" }
           ]
+        },
+        {
+          text: "🛡️ 安全相关",
+          items: [
+            {
+              text: "概述",
+              link: "/guide/security/summary"
+            },
+            { text: "安全启动", link: "/guide/security/secureboot" },
+            {
+              text: "全盘加密和文件级加密",
+              link: "/guide/security/encryption"
+            },
+            { text: "Apparmor 配置和使用", link: "/guide/security/apparmor" }
+          ]
         }
       ]
     }

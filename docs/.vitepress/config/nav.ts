@@ -21,7 +21,8 @@ const navConfig: DefaultTheme.NavItem[] = [
         items: [
           { text: "⚙️ 可选配置", link: "/guide/advanced/optional-cfg-1" },
           { text: "🌸 系统美化", link: "/guide/advanced/beauty-1" },
-          { text: "🧰 系统管理", link: "/guide/advanced/system-ctl" }
+          { text: "🧰 系统管理", link: "/guide/advanced/system-ctl" },
+          { text: "🛡️ 安全相关", link: "/guide/security/summary" }
         ]
       }
     ]
