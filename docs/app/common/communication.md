@@ -162,13 +162,13 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
-2024 年 3 月，微信 Linux 原生版重构，可以安装 [`wechat-uos-qt`](https://aur.archlinux.org/packages/wechat-uos-qt/)<sup>aur</sup> 体验，这是目前最好的解决方案。
+2024 年 3 月，2024年3月，腾讯推出了基于原生跨平台方案的微信（Universal），可以安装 [`wechat`](https://aur.archlinux.org/packages/wechat/)<sup>aur</sup> 体验，这是目前最好的解决方案。
 
 ```bash
-yay -S wechat-uos-qt
+yay -S wechat wechat-bin
 ```
 
-对于沙盒等存在的一些问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
+wehcat<sup>aur</sup> 基于[`wechat-bin`](https://aur.archlinux.org/packages/wechat-bin/)<sup>aur</sup> 实现，并添加有进程管理，沙盒（可选），输入法及 HiDPI 修复等功能。更多问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
 
 ### wine版
 
