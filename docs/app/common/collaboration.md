@@ -311,6 +311,8 @@ echo 'alias uxplay="sudo systemctl start avahi-daemon.service && uxplay"' >> ~/.
 
 :::
 
+:::::
+
 ## 🔗 KDE Connect
 
 [KDE Connect](https://kdeconnect.kde.org/) 提供了各种用于整合移动设备和计算机的功能。它可以将文件发送到另一台设备、控制它的媒体播放、发送远程输入、查看它的通知，以及做许多其它事情。
