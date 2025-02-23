@@ -143,7 +143,7 @@ sudo pacman -S fcitx5-rime
 
 :::
 
-3. 点击 `添加输入法` > 找到**汉语**下的 `中州语` > 点击 `添加`：
+3. 点击 `添加输入法` > 找到**汉语**下的 `中州韵` > 点击 `添加`：
 
 ![rime_step-3](../../assets/guide/advanced/optional-cfg/rime-3.png)
 
