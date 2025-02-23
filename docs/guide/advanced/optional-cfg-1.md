@@ -254,7 +254,7 @@ patch:
 雾凇拼音取消了对萌娘词库的支持，如果需要得自己添加
 
 ```bash
-yay -S fcitx5-pinyin-moegirl-rime
+yay -S rime-pinyin-moegirl
 ```
 
 安装完成之后将配置复制到个人配置目录
