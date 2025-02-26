@@ -143,7 +143,7 @@ sudo pacman -S fcitx5-rime
 
 :::
 
-3. 点击 `添加输入法` > 找到**汉语**下的 `中州语` > 点击 `添加`：
+3. 点击 `添加输入法` > 找到**汉语**下的 `中州韵` > 点击 `添加`：
 
 ![rime_step-3](../../assets/guide/advanced/optional-cfg/rime-3.png)
 
@@ -254,7 +254,7 @@ patch:
 雾凇拼音取消了对萌娘词库的支持，如果需要得自己添加
 
 ```bash
-yay -S fcitx5-pinyin-moegirl-rime
+yay -S rime-pinyin-moegirl
 ```
 
 安装完成之后将配置复制到个人配置目录
