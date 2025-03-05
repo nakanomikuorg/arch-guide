@@ -4,7 +4,7 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
-    "vitepress": "^1.0.2",
+    "vitepress": "^1.6.3",
     "vue": "^3.4.21"
   },
   "keywords": [
