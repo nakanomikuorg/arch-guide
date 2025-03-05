@@ -972,7 +972,7 @@ pacman -S fastfetch
 fastfetch
 ```
 
-![fastfetch](../../assets/guide/rookie/basic-install_fastfetch.png)
+![fastfetch](../../assets/guide/rookie/basic-install_neofetch.png)
 
 > #### 🍧 碎碎念
 >
