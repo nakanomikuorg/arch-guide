@@ -264,7 +264,7 @@ sudo pacman -S joplin
 
 obsidian 同时内置图谱视图，这有助你将知识连接起来形成网络。同时也提供画布
 
-![alt text](../../assets/app/common/office/obsidian.png)
+![alt text](https://obsidian.md/images/screenshot-1.0-hero-combo.png)
 
 <center> 官网预览图 </center>
 
