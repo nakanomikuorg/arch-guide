@@ -51,7 +51,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 更新 GRUB 即可。
 ::: tip ℹ️ 提示
+
 如果下载慢，可以按照[透明代理](/guide/rookie/transparent.md)里的方式配置好代理
+
 :::
 
 ## 2. rEFInd
@@ -62,7 +64,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 解压到 /boot/efi/EFI/refind/themes/ 下主题作者指定的文件夹（通常是仓库名称，注意不带分支名），例如 rEFInd-glassy 就为 /boot/efi/EFI/refind/themes/rEFInd-glassy/
 
 ::: tip ℹ️ 提示
+
 若您不是按照本指南章节 archlinux 基础安装 安装的 archlinux，请确认您 rEFInd 的安装位置。
+
 :::
 
 使用 vim 编辑 /boot/efi/EFI/refind/refind.conf 文件：
