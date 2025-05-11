@@ -50,6 +50,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 更新 GRUB 即可。
+
 ::: tip ℹ️ 提示
 
 如果下载慢，可以按照[透明代理](/guide/rookie/transparent.md)里的方式配置好代理
