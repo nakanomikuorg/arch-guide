@@ -234,16 +234,43 @@ sudo pacman -S kvantum
 
 ## 6. 更改字体
 
+可以使用 [pacman](https://wiki.archlinuxcn.org/wiki/Pacman) 安装已启用的软件源中的字体和字体集。
+
+例如在之前[安装基础功能包](../rookie/desktop-env-and-app.md#_6-安装基础功能包)时我们使用了：
+
+```bash
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+```
+
+所有可用的字体可以通过[查询包](https://wiki.archlinuxcn.org/wiki/Pacman#%E6%9F%A5%E8%AF%A2%E5%8C%85%E6%95%B0%E6%8D%AE%E5%BA%93)查找：
+
+```bash
+sudo pacman -Ss ttf | less
+```
+
+可以使用
+
+```bash
+fc-list | less
+```
+
+查看已安装的字体。
+
+安装好之后可进入<b>系统设置>文字和字体>字体</b>更改系统字体。
+
+![font-family.png](../../assets/guide/advanced/beauty/font-family.png)
+
 ## 7. 引导界面美化
 
 ### 7-1. 设置 GRUB 主题
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
-在[这里](https://www.pling.com/p/1482847/)下载 Distro 的 GRUB 主题并解压。接下来 `cd` 进解压出来的文件夹，打开 konsole 输入
+在[这里](https://www.pling.com/p/1482847/)下载 Distro 的 GRUB 主题并解压。接下来<b> `cd` 进解压出来的文件夹</b>，打开 konsole 输入
 
 ```bash
-sudo cp . /usr/share/grub/themes/Distro -rf
+sudo cp -rf . /usr/share/grub/themes/Distro
 ```
 
 以将主题放置在系统的 GRUB 默认文件夹内。
