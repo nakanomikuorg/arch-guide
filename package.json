@@ -2,10 +2,10 @@
   "author": "icekylin <dwsdbcugm@mozmail.com>",
   "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "devDependencies": {
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8",
-    "vitepress": "^1.0.2",
-    "vue": "^3.4.21"
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
   },
   "keywords": [
     "archlinux 指南",

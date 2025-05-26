@@ -60,9 +60,11 @@ sudo pacman -S wps-office aur/ttf-wps-fonts aur/libtiff5
 
 ::: tip ℹ️ 提示
 
-WPS 可能会出现部分中文字体过粗的情况。文本看起来特别粗，标题、粗体文本几乎不可用。
+WPS 可能会出现部分中文字体过粗的情况。文本看起来特别粗，标题、粗体文本几乎不可用。可以通过安装`freetype2-wps`<sup>aur</sup>解决。
 
-可以通过降级`freetype2`至 2.13.0 版本解决。
+```bash
+yay -S freetype2-wps
+```
 
 WPS PDF 可能会出现无法导出 pdf 或者无法打开的情况，通过安装`libtiff5`即可解决。
 
@@ -264,7 +266,7 @@ sudo pacman -S joplin
 
 obsidian 同时内置图谱视图，这有助你将知识连接起来形成网络。同时也提供画布
 
-![alt text](../../assets/app/common/office/obsidian.png)
+![alt text](https://obsidian.md/images/screenshot-1.0-hero-combo.png)
 
 <center> 官网预览图 </center>
 

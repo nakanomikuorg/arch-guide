@@ -443,19 +443,11 @@ sudo systemctl enable --now bluetooth
 
 ## 12. 设置 Timeshift 快照
 
-1. 通过以下命令安装 Timeshift<sup>cn / aur</sup>：
+1. 通过以下命令安装 Timeshift：
 
-::: code-group
-
-```bash [cn]
+```bash
 sudo pacman -S timeshift
 ```
-
-```bash [aur]
-yay -S aur/timeshift
-```
-
-:::
 
 ![timeshift-install](../../assets/guide/rookie/desktop-env-and-app_timeshift-install.png)
 
