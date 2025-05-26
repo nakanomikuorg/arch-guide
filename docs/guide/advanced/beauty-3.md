@@ -115,6 +115,68 @@ call plug#end()
 
 ## 4. ASCII 艺术与终端玩具
 
+### neofetch
+
+<del>Arch Linux核心出装</del>
+
+1. 安装[neofetch](https://aur.archlinux.org/packages/neofetch)：
+
+   **neofetch不在[Arch Linux官方仓库](https://archlinux.org/packages/)中，我们需要从AUR下载**
+
+   ```bash
+   yay -S neofetch
+   ```
+
+2. 运行仅需
+
+   ```bash
+   neofetch
+   ```
+
+   是不是很简单？<del>快去和群u炫耀吧！</del>
+
+3. 自定义输出
+
+   neofetch支持自定义输出内容（包括但不限于更改图标和输出文字）
+
+   以下以更改输出系统图标为例。
+
+   修改`~/.config/neofetch/config.conf`：
+
+   ```shell
+   vim ~/.config/neofetch/config.conf
+   ```
+
+   找到这一段配置文件
+
+   ```shell
+   # Image backend.
+   #
+   # Default:  'ascii'
+   # Values:   'ascii', 'caca', 'chafa', 'jp2a', 'iterm2', 'off',
+   #           'pot', 'termpix', 'pixterm', 'tycat', 'w3m', 'kitty'
+   # Flag:     --backend
+   image_backend="ascii"
+   
+   # Image Source
+   #
+   # Which image or ascii file to display.
+   #
+   # Default:  'auto'
+   # Values:   'auto', 'ascii', 'wallpaper', '/path/to/img', '/path/to/ascii', '/path/to/dir/'
+   #           'command output (neofetch --ascii "$(fortune | cowsay -W 30)")'
+   # Flag:     --source
+   #
+   # NOTE: 'auto' will pick the best image source for whatever image backend is used.
+   #       In ascii mode, distro ascii art will be used and in an image mode, your
+   #       wallpaper will be used.
+   image_source="auto"
+   ```
+
+   将上述代码中的`image_backend`值改为你需要的（这里我使用ascii）下面的`image_source`改为图像或ascii图画路径（例如`/path/to/ascii-art.txt`）。
+
+   ![neofetch-ascii](../../assets/guide/advanced/beauty/neofetch-ascii.png)
+
 ### lolcat
 
 用渐变为终端输出着色，看起来就像彩虹一样！
