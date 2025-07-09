@@ -590,7 +590,7 @@ pacstrap /mnt networkmanager vim sudo zsh zsh-completions
 > 📑 命令参数说明：
 >
 > - `zsh` —— `zsh-completions` 如果你是 bash 的爱好者，请把这两个包换成`bash-completion`
-> - 如果你是第一次接触\*nix 系统的新手，不建议换成 bash
+> - 如果你是第一次接触\unix 系统的新手，不建议换成 bash
 
 ![pacstrap_step-2](../../assets/guide/rookie/basic-install_pacstrap-2.png)
 
