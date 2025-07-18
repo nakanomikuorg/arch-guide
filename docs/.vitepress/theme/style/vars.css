@@ -143,12 +143,14 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-font-family-base: "Inter var", "Inter", "Segoe UI Emoji", ui-sans-serif,
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --vp-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+  --vp-font-family-base:
+    "Inter var", "Inter", "Segoe UI Emoji", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --vp-font-family-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -160,7 +162,8 @@
   --vp-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
   --vp-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
   --vp-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
-  --vp-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+  --vp-shadow-5:
+    0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 /**
@@ -169,10 +172,10 @@
 
 :root {
   --vp-z-index-local-nav: 10;
-  --vp-z-index-nav: 20;
-  --vp-z-index-layout-top: 30;
-  --vp-z-index-backdrop: 40;
-  --vp-z-index-sidebar: 50;
+  --vp-z-index-layout-top: 20;
+  --vp-z-index-backdrop: 30;
+  --vp-z-index-sidebar: 40;
+  --vp-z-index-nav: 50;
   --vp-z-index-footer: 60;
 }
 
