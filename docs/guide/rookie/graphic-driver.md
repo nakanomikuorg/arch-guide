@@ -332,7 +332,7 @@ _It is not recommended to set those variables system-wide (like in `/etc/environ
 
 也就是说会遇到这些问题：
 
-1. Kwin / 显示特效混合器（混成器）奔溃（毛玻璃效果消失，原本是透明或毛玻璃效果的背景变黑）
+1. Kwin / 显示特效混合器（混成器）崩溃（毛玻璃效果消失，原本是透明或毛玻璃效果的背景变黑）
 2. 黑屏
 
 :::
