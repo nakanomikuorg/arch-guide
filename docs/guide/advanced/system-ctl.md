@@ -481,7 +481,7 @@ sudo timeshift --restore --snapshot '20XX-XX-XX_XX-XX-XX' --skip-grub # 选择�
 
 #### 若无法进入系统 😱
 
-此时系统一般已经完全奔溃，可以通过 Live CD 进行还原。（若使用 arch 安装盘请连接网络和配置好源后安装 Timeshift，然后通过命令行方式还原）
+此时系统一般已经完全崩溃，可以通过 Live CD 进行还原。（若使用 arch 安装盘请连接网络和配置好源后安装 Timeshift，然后通过命令行方式还原）
 
 1. 进入 Live 系统后打开 Timeshift，点击设置按钮，设置为原来快照的存储位置。
 2. 选择快照后根据提示还原即可。
