@@ -531,7 +531,7 @@ qimgv 是一个轻量级的跨平台图像查看器，基于 Qt 开发。有可�
 安装 [`qimgv`](https://aur.archlinux.org/packages/qimgv)<sup>aur</sup>:
 
 ```sh
-sudo pacman -S qimgv
+yay -S qimgv
 ```
 
 ![qimgv](../../assets/app/common/daily/qimgv.png)
