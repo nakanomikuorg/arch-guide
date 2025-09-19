@@ -525,6 +525,7 @@ mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/sdxn /mnt/home # 挂载 /home 目录
 mkdir -p /mnt/boot # 创建 /boot 目录
 mount /dev/sdxn /mnt/boot # 挂载 /boot 目录
+#mount /dev/sdxn /mnt/efi # 若efi分区较小, 可将其挂载到 /efi 目录
 swapon /dev/sdxn # 挂载交换分区
 ```
 
@@ -534,6 +535,7 @@ mkdir /mnt/home # 创建 /home 目录
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvmexn1pn /mnt/home # 挂载 /home 目录
 mkdir -p /mnt/boot # 创建 /boot 目录
 mount /dev/nvmexn1pn /mnt/boot # 挂载 /boot 目录
+#mount /dev/nvmexn1pn /mnt/efi # 若efi分区较小, 可将其挂载到 /efi 目录
 swapon /dev/nvmexn1pn # 挂载交换分区
 ```
 
