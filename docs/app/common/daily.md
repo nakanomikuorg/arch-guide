@@ -524,6 +524,18 @@ yay -S xnviewmp
 
 ![xnviewmp-2](../../assets/app/common/daily/xnviewmp-2.png)
 
+### qimgv
+
+qimgv 是一个轻量级的跨平台图像查看器，基于 Qt 开发。有可选的视频支持（使用mpv）。
+
+安装 [`qimgv`](https://aur.archlinux.org/packages/qimgv)<sup>aur</sup>:
+
+```sh
+yay -S qimgv
+```
+
+![qimgv](../../assets/app/common/daily/qimgv.png)
+
 ## 🧰 实用工具
 
 日常用到的各类小工具有很多实现，其中 [KDE 的套件](https://apps.kde.org/zh-cn/) 中就有很多，可以自行查询。
