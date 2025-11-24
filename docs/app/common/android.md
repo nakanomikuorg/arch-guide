@@ -42,16 +42,17 @@ sudo pacman -S android-tools android-udev
 
 ::: tip ℹ️ 提示
 
-仅仅安装android-tools是不够的，
-还必须安装android-udev。
+对于部分机型，仅仅安装android-tools是不够的，还必须安装android-udev。
+（systemd版本v258之前必须安装）
 不安装,使用fastboot devices可以查看设备，可进行部分操作。
 一些关键操作，比如fastboot flash boot xxx 大概率会中断，然后设备会自动重启（这里可能会让人感到很困惑）。
 
-不安装android-udev，只能在fastbootd模式下使用fastboot命令进行操作。
+fastbootd模式，运行着一个fastboot daemon。不安装udev也可以正常工作，但是使用fastboot模式时，必须安装。
 
-fastbootd运行着一个fastboot daemon，不安装udev没有问题，但是使用fastboot模式时，必须安装。
+这里的android-udev，就类似于Windows系统安装驱动
 
-这里的android-udev，就相当于Windows系统安装的驱动。
+这里是来自arch wiki的解释：
+Since systemd v258 it now includes basic udev rules for android devices to make adb and fastboot work out of the box. If your device does not show up, try to install the android-udev package with additional rules.
 
 :::
 
