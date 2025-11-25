@@ -54,6 +54,13 @@ fastbootd模式，运行着一个fastboot daemon。不安装udev也可以正常�
 这里是来自arch wiki的解释：
 Since systemd v258 it now includes basic udev rules for android devices to make adb and fastboot work out of the box. If your device does not show up, try to install the android-udev package with additional rules.
 
+立刻生效：sudo udevadm control --reload-rules && sudo udevadm trigger
+生效依据：fastboot刷写分区不再有warning.
+
+git clone https://github.com/M0Rf30/android-udev-rules.git
+cd android-udev-rules
+sudo ./install.sh
+
 :::
 
 ## 1. 解锁 BootLoader
