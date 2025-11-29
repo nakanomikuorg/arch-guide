@@ -37,8 +37,65 @@
 首先需要安装 Linux 上的安卓工具包：
 
 ```sh
-sudo pacman -S android-tools
+sudo pacman -S android-tools android-udev
 ```
+
+::: tip ℹ️ 提示
+
+对于部分机型，仅仅安装android-tools是不够的，还必须安装android-udev。
+（systemd版本v258之前必须安装）
+不安装,使用fastboot devices可以查看设备，可进行部分操作。
+一些关键操作，比如fastboot flash boot xxx 大概率会中断，然后设备会自动重启（这里可能会让人感到很困惑）。
+
+fastbootd模式，运行着一个fastboot daemon。不安装udev也可以正常工作，但是使用fastboot模式时，必须安装。
+
+这里的android-udev，就类似于Windows系统安装驱动
+
+- 这里是来自arch wiki的解释：
+Since systemd v258 it now includes basic udev rules for android devices to make adb and fastboot work out of the box. If your device does not show up, try to install the android-udev package with additional rules.
+
+- 立刻生效：sudo udevadm control --reload-rules && sudo udevadm trigger
+- 生效依据：fastboot刷写分区不再有warning.
+
+! 还有特殊情况，使用以上方法依旧无法正常操作设备
+
+- 常见失效命令有：
+fastboot flash ...
+
+首行出现警告⚠
+
+- 在以上指南下依旧失效的情况下
+不妨试试：
+fastboot boot ...
+
+- 如果长时间卡住
+直接取消然后再次尝试：
+fastboot flash boot ...
+
+- 如果出现等待设备字样
+这时手机应该是一个特殊界面，界面只有fastboot字样
+顶部有一行小字
+按任意键即可触发重启
+
+这个时候按音量下+关机键，重新进入fastboot
+
+刚刚等待的设备，等到了
+
+有一定概率这样操作就能成功刷入了
+
+- 其他~~不一定有效~~(没有控制变量实验验证)的方法：
+- 安装android-studio
+~~获得google的保佑~~
+~~效果：机魂大悦~~
+
+- 安装android-sdk-platform-tools
+yay -S android-sdk-platform-tools
+[参考链接](https://developer.android.google.cn/studio/run/device?hl=zh-cn)
+
+- 最后兜底的方法：
+不要用linux刷机了，回Windows，安装驱动刷。
+
+:::
 
 ## 1. 解锁 BootLoader
 
