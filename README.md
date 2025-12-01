@@ -89,7 +89,7 @@
 ### Pacman
 
 ```shell
-sudo pacman -S nodejs pnpm # 安装 nodejs 和 PnpM
+sudo pacman -S nodejs pnpm # 安装 nodejs 和 pnpm
 git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
@@ -99,7 +99,7 @@ pnpm docs:dev
 ### HomeBrew
 
 ```shell
-brew install pnpm # 安装 PnpM
+brew install pnpm # 安装 pnpm
 git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
@@ -110,7 +110,7 @@ pnpm docs:dev
 
 ```powershell
 scoop install nodejs # 安装 nodejs
-scoop install pnpm # 安装 PnpM
+scoop install pnpm # 安装 pnpm
 git clone https://github.com/nakanomikuorg/arch-guide.git
 cd ./arch-guide
 pnpm i
@@ -126,7 +126,7 @@ cd ./arch-guide
 docker compose up -d
 ```
 
-其它系统请参阅 [PnpM 中文文档](https://pnpm.io/zh/installation) 安装 `PnpM`。
+其它系统请参阅 [pnpm 中文文档](https://pnpm.io/zh/installation) 安装 `pnpm`。
 
 ## 隐私提醒
 
