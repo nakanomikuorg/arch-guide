@@ -168,7 +168,7 @@ yay -S linuxqq-nt-bwrap
 yay -S wechat wechat-bin
 ```
 
-wehcat<sup>aur</sup> 基于[`wechat-bin`](https://aur.archlinux.org/packages/wechat-bin/)<sup>aur</sup> 实现，并添加有进程管理，沙盒（可选），输入法及 HiDPI 修复等功能。更多问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
+wechat<sup>aur</sup> 基于[`wechat-bin`](https://aur.archlinux.org/packages/wechat-bin/)<sup>aur</sup> 实现，并添加有进程管理，沙盒（可选），输入法及 HiDPI 修复等功能。更多问题可以参照[Wiki](https://wiki.archlinuxcn.org/wiki/%E5%BE%AE%E4%BF%A1)来解决。
 
 ### wine版
 
