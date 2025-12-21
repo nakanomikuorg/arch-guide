@@ -115,7 +115,7 @@ archlinux。这里建议**至少分 `128GB` 给 archlinux**。
 
 ### (2) EFI 分区
 
-如果 archlinux 需要和 Windows 共存在一个硬盘上，需要通过 DiskGenius 或其他分区软件检查 EFI 分区容量不小于 256MB，如果小于，可能需要扩容（推荐，但可能不太好整）或者按照 [ArchWiki 提供的第三种挂载方式](https://wiki.archlinuxcn.org/wiki/EFI_%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA#%E5%85%B8%E5%9E%8B%E6%8C%82%E8%BD%BD%E7%82%B9) 新增一个额外的挂载点。
+如果 archlinux 需要和 Windows 共存在一个硬盘上，需要通过 DiskGenius 或其他分区软件检查 EFI 分区容量不小于 256MB，如果小于，可能需要扩容（推荐，但可能不太好整）或者按照 [ArchWiki 提供的第三种挂载方式](https://wiki.archlinuxcn.org/wiki/EFI_%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA#%E5%85%B8%E5%9E%8B%E6%8C%82%E8%BD%BD%E7%82%B9) [新增一个额外的挂载点](./basic-install.md#8-挂载)。
 
 ## 5. 获取 Bitlocker 恢复密钥
 
