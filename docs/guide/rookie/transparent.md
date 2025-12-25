@@ -70,6 +70,8 @@ yay -S dae-avx2-bin
 
 # Git version
 yay -S dae-git
+
+
 ```
 
 :::
@@ -88,8 +90,13 @@ yay -S daed-avx2-bin
 
 # Git version
 yay -S daed-git
+
+# 开机自启动
+sudo systemctl enable --now daed.service
+
 ```
 :::
+
 
 
 :::
