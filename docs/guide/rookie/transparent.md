@@ -56,37 +56,45 @@ dae 是一种高性能透明代理解决方案。
 你可以直接安装 dae 内核，或者安装带有图形化界面的 daed.
 
 :::
-
-### 安装 dae 或 daed:
-
+### 仅安装dae
+建议直接安装daed跳过此步骤
 ::: code-group
 
-```bash [cn]
-sudo pacman -S dae daed
-```
+```bash
+# Standard version
+yay -S dae
 
-```bash [aur]
-yay -S aur/dae aur/daed
+# AVX2 optimized version
+# x86-64 v3
+yay -S dae-avx2-bin
+
+# Git version
+yay -S dae-git
 ```
 
 :::
 
-### 配置 dae
+### 安装 daed(dae+webui):
 
-安装后启动服务：
 ::: code-group
 
-```bash [dae]
-sudo systemctl enable --now dae
-```
+```bash
+# Standard version
+yay -S daed
 
-```bash [daed]
-sudo systemctl enable --now daed
+# AVX2 optimized version
+# x86-64 v3
+yay -S daed-avx2-bin
+
+# Git version
+yay -S daed-git
 ```
+:::
+
 
 :::
 
-然后你就可以参照官方文档来使用了：
+建议直接参照官方文档来安装：
 
 dae：https://github.com/daeuniverse/dae/blob/main/docs/zh/README.md
 
