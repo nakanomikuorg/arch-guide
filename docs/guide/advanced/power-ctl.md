@@ -46,6 +46,8 @@ TLP 作为一款自由开源的高级电源管理工具提供开箱即用的默�
 
    另外请参阅 [Smartmontools](/guide/advanced/system-ctl.html#smartmontools) 安装 Smartmontools 以显示 `tlp-stat` 中的 S.M.A.R.T. 数据。
 
+   如果你需要了解 `NetworkManager` 与 `systemd-rfkill` / 无线设备交互的细节（例如为什么要 mask `systemd-rfkill.service`），或想进一步掌握网络管理（`NetworkManager` / `systemd-networkd`）与无线后端（`iwd` / `wpa_supplicant`）的使用建议与故障排查，请参阅高级章节： [网络相关进阶](/guide/advanced/network.html)。
+
    :::
 
    ::: tip ℹ️ 提示

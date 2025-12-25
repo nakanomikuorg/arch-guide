@@ -254,11 +254,17 @@ reboot
 
 ![konsole](../../assets/guide/rookie/desktop-env-and-app_konsole.png)
 
-2. 首先进行桌面环境中的网络设置：
+2. 首先进行桌面环境中的网络设置
 
 ```bash
 ping www.bilibili.com # 测试网络连通性
 ```
+
+::: tip ℹ️ 进阶阅读
+
+关于网络管理器（`NetworkManager` / `systemd-networkd`）、无线后端（`iwd` / `wpa_supplicant`）以及 Wi‑Fi / 网络故障排查的进阶指南，请参阅高级章节：[网络相关进阶](../advanced/network.md)。
+
+:::
 
 KDE 桌面环境中连接网络和 win10 一样，这里不再赘述。
 

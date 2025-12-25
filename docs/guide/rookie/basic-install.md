@@ -151,6 +151,12 @@ rfkill unblock wifi
 
 :::
 
+::: tip ℹ️ 进阶阅读
+
+本仓库还有一篇关于网络管理、Wi‑Fi 后端与常见故障排查的进阶文档： [网络相关进阶](../advanced/network.md)。在需要了解 `NetworkManager`、`systemd-networkd`、`iwd` 与 `wpa_supplicant` 之间差异以及如何切换/配置时，请参考该文档。
+
+:::
+
 ### 若使用**有线连接**
 
 正常来说，只要插上一个已经联网的路由器分出的网线（DHCP），直接就能联网。
@@ -937,6 +943,12 @@ reboot # 重启
 systemctl enable --now NetworkManager # 设置开机自启并立即启动 NetworkManager 服务
 ping www.bilibili.com # 测试网络连接
 ```
+
+::: tip ℹ️ 进阶阅读
+
+如果你想了解更多关于 `NetworkManager`、`iwd` 与 `wpa_supplicant` 的使用、在桌面/服务器场景的选择，以及如何用 `nmcli`/`iwctl` 进行脚本化管理，请参阅高级章节：[网络相关进阶](../advanced/network.md)。
+
+:::
 
 ![last-step-3](../../assets/guide/rookie/basic-install_last-step-3.png)
 
