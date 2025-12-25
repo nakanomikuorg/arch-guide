@@ -2,7 +2,7 @@
 
 > ### 🔌 NetworkManager / systemd-networkd 与无线后端（iwd / wpa_supplicant）
 >
-> 本节介绍 Linux 下常见的两类网络管理方案：`NetworkManager`（面向桌面、DE 集成良好）和 `systemd-networkd`（面向服务器/精简场景），并对常见的 Wi‑Fi 后端 `iwd`（iNet Wireless Daemon）与 `wpa_supplicant`（常写作 `wpa_*` 的一组工具）进行对比与配合建议。最后给出识别当前系统“管理器 + Wi‑Fi 后端”组合的方法，并给出切换到推荐组合 `iwd + NetworkManager` 的步骤，以及各组合下常用的工具建议（例如 `nmtui`、`nmcli`、`impala` 等）。
+> 本节介绍 Linux 下常见的两类网络管理方案：`NetworkManager`（面向桌面、DE 集成良好）和 `systemd-networkd`（面向服务器/精简场景），并对常见的 Wi‑Fi 后端 `iwd`（iNet Wireless Daemon）与 `wpa_supplicant`进行对比与配合建议。最后给出识别当前系统“管理器 + Wi‑Fi 后端”组合的方法，并给出切换到推荐组合 `iwd + NetworkManager` 的步骤，以及各组合下常用的工具建议（例如 `nmtui`、`nmcli`、`impala` 等）。
 >
 > 🔗 建议阅读：[ArchWiki — Wireless network configuration](https://wiki.archlinux.org/title/Wireless_network_configuration)
 >
