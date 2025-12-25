@@ -12,7 +12,7 @@
 >
 > :::
 
-所有 AMD 显卡建议使用开源驱动，英伟达显卡建议使用闭源驱动。
+所有 AMD 显卡建议使用开源驱动，英伟达显卡建议优先使用最新的官方开源驱动，其次是官方闭源驱动，nouveau驱动是最终兜底选择。
 
 ::: tip ℹ️ 提示
 
@@ -189,6 +189,25 @@ sudo pacman -S mesa lib32-mesa xf86-video-nouveau
 ::: tip ℹ️ 提示
 
 安装 NVIDIA 官方的驱动之后，需要编辑 `/etc/mkinitcpio.conf`，在 `HOOKS` 一行删除 `kms` 并保存，然后执行 `mkinitcpio -P` 重新生成一次镜像。这能防止 initramfs 包含 nouveau 模块，避免 nouveau 和官方驱动的冲突。
+
+实际上，安装任何版本的 NVIDIA 驱动时，都会通过 nvidia-utils 包在 /usr/lib/modprobe.d/ 中放置一个黑名单文件来禁用 nouveau，但这个黑名单只在操作系统启动后期生效。
+
+参见：[ArchWiki](https://wiki.archlinux.org/title/NVIDIA#:~:text=The%20nvidia%2Dutils%20package%20contains%20a%20file%20which,kernel%20cannot%20load%20it%20during%20early%20boot.)
+
+以下是修改示例：
+
+- 修改前
+MODULES=(btrfs)
+
+- 修改后
+MODULES=(btrfs nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+
+- 修改前
+HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont kms block filesystems fsck)
+
+- 修改后
+HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block filesystems fsck)
+
 
 :::
 
