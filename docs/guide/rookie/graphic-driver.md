@@ -160,16 +160,12 @@ sudo pacman -S nvidia-open-dkms nvidia-settings lib32-nvidia-utils # 必须安�
 
 :::
 
-- 其他较新型号的独立显卡使用以下命令直接安装如下几个包即可：
+- 其他较新型号(10系及以下)的独立显卡使用以下命令直接安装如下几个包即可：
 
 ::: code-group
 
-```bash [linux]
-sudo pacman -S nvidia nvidia-settings lib32-nvidia-utils # 必须安装
-```
-
-```bash [others]
-sudo pacman -S nvidia-dkms nvidia-settings lib32-nvidia-utils # 必须安装
+```bash 
+yay -S nvidia-580xx-dkms lib32-nvidia-580xx-utils nvidia-580xx-utils # 必须安装
 ```
 
 :::
