@@ -42,6 +42,14 @@ sudo systemctl enable --now v2raya
 
 随后在开始菜单中搜索 v2rayA，点击即可打开浏览器页面。在其中加入订阅(没有魔法上网节点？请参考[原文档相关内容](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/fxckGFW?id=%e5%b7%b2%e6%9c%89%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91%e7%9a%84%e8%8a%82%e7%82%b9%e7%9a%84%e6%83%85%e5%86%b5))。在设置中建议开启全局透明代理(选择`大陆白名单`)，同时开启防止 DNS 劫持功能，否则可能会拿不到被 DNS 污染的资源(如 github raw)。
 
+## v2rayn
+
+v2rayn可一键开启tun模式，支持xray、sing-box、mihomo多核心，可以直接从aur安装二进制包
+
+```bash [aur]
+yay -S v2rayn-bin
+```
+
 ## dae
 
 ::: tip ℹ️ 提示
