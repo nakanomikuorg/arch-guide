@@ -162,7 +162,7 @@ yay -S linuxqq-nt-bwrap
 
 ### 微信
 
-2024 年 3 月，2024年3月，腾讯推出了基于原生跨平台方案的微信（Universal），可以安装 [`wechat`](https://aur.archlinux.org/packages/wechat/)<sup>aur</sup> 体验，这是目前最好的解决方案。
+2024 年 3 月，腾讯推出了基于原生跨平台方案的微信（Universal），可以安装 [`wechat`](https://aur.archlinux.org/packages/wechat/)<sup>aur</sup> 体验，这是目前最好的解决方案。
 
 ```bash
 yay -S wechat wechat-bin
