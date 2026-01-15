@@ -443,6 +443,17 @@ sudo systemctl enable --now bluetooth
 
 ## 12. 设置 Timeshift 快照
 
+0. 检查以下内容
+
+- 你的子卷是否为ubuntu-style 布局？
+即：是否仅包含@ 和@home字卷
+如果不是，请移步：
+[设置snapper快照](snapper.md)
+
+- 你是否正在使用grub？
+如果不是，并且你希望能自动将快照添加到启动项方便回滚：
+[设置snapper快照](snapper.md)
+
 1. 通过以下命令安装 Timeshift：
 
 ```bash

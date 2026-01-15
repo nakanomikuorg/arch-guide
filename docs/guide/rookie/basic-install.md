@@ -485,15 +485,28 @@ df -h # -h 选项会使输出以人类可读的单位显示
 1. 通过以下命令创建两个 `Btrfs` 子卷，之后将分别挂载到 `/` 根目录和 `/home` 用户主目录：
 
 ```zsh
-btrfs subvolume create /mnt/@ # 创建 / 目录子卷
-btrfs subvolume create /mnt/@home # 创建 /home 目录子卷
+btrfs subvolume create /mnt/@ # 挂载点建议：/ 
+btrfs subvolume create /mnt/@home # 挂载点建议：/home 
+# 以上为ubuntu-style的子卷布局
+# 取消下面的注释创建更多子卷(非ubuntu-style字卷布局,你将无法使用timeshift)，例如：
+# btrfs subvolume create /mnt/@cache # 挂载点建议：/var/cache 
+# btrfs subvolume create /mnt/@log # 挂载点建议：/var/log
+# btrfs subvolume create /mnt/@pkg # 挂载点建议：/var/cache/pacman/pkg
+# btrfs subvolume create /mnt/@opt # 挂载点建议：/opt
+# btrfs subvolume create /mnt/@tmp # 挂载点建议：/tmp
+# btrfs subvolume create /mnt/@srv # 挂载点建议：/srv [可选，此目录放服务数据]
+
 ```
 
 ![mkbtrfs_step-3](../../assets/guide/rookie/basic-install_mkbtrfs-3.png)
 
 ::: warning ⚠️ 注意
 
-除非你清楚你的操作产生的后果，否则请保持子卷名称和结构与本指南一致，因为在后面我们会设置的快照工具 `timeshift` 只支持这种子卷布局。
+除非你清楚你的操作产生的后果，否则请保持子卷名称和结构与本指南一致，因为在后面我们会设置的快照工具 `timeshift` 只支持这种子卷布局
+
+对于非ubuntu-style的子卷布局( 创建了除了@ 和 @home的子卷 )
+
+后面不要采用快照工具 `timeshift`，应当改用`snapper`
 
 :::
 
