@@ -331,3 +331,22 @@ yay -S qqmusic-bin
 ```
 
 ![official-qq-music](../../assets/app/common/media/official-qq-music.png)
+
+### 网易云音乐(基于GTK4+Libadwaita)
+
+这是一种在Linux 平台下基于 Rust + GTK4 开发的网易云音乐播放器
+
+安装 [`netease-cloud-music-gtk4`](https://aur.archlinux.org/packages/netease-cloud-music-gtk4)<sup>/ cn / aur</sup>：
+
+::: code-group
+
+```sh [cn]
+sudo pacman -S netease-cloud-music-gtk4
+```
+
+```sh [aur]
+paru -S netease-cloud-music-gtk4
+# 在未开启CN仓库的情况下依据原作者（gmg137）的参考命令执行
+```
+
+:::
