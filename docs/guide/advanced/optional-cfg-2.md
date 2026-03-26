@@ -118,8 +118,8 @@ sudo vim /boot/efi/EFI/refind/refind.conf
 uname -r
 ```
 
-```bash [neofetch]
-neofetch
+```bash [fastfetch]
+fastfetch
 ```
 
 :::
