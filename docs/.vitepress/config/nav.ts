@@ -23,6 +23,15 @@ const navConfig: DefaultTheme.NavItem[] = [
           { text: "🌸 系统美化", link: "/guide/advanced/beauty-1" },
           { text: "🧰 系统管理", link: "/guide/advanced/system-ctl" }
         ]
+      },
+      {
+        text: "🛡️ 安全强化",
+        items: [
+          { text: "📄 写在前面", link: "/guide/security/summary" },
+          { text: "🔐 数据加密", link: "/guide/security/encryption" },
+          { text: "🪪 安全启动", link: "/guide/security/secureboot" },
+          { text: "🧱 LSM", link: "/guide/security/apparmor" }
+        ]
       }
     ]
   },
