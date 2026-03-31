@@ -97,6 +97,35 @@ const sidebarConfig:DefaultTheme.Sidebar = {
           ]
         }
       ]
+    },
+    {
+      text: "🛡️ 安全",
+      items: [
+        {
+          text: "📄 写在前面",
+          items: [
+            { text: "概览", link: "/guide/security/summary" }
+          ]
+        },
+        {
+          text: "🔐 数据加密",
+          items: [
+            { text: "磁盘加密", link: "/guide/security/encryption" }
+          ]
+        },
+        {
+          text: "🪪 安全启动",
+          items: [
+            { text: "安全启动", link: "/guide/security/secureboot" }
+          ]
+        },
+        {
+          text: "🧱 LSM",
+          items: [
+            { text: "AppArmor 配置和使用", link: "/guide/security/apparmor" }
+          ]
+        }
+      ]
     }
   ],
   "/app/": [
