@@ -210,21 +210,13 @@ optimus-manager 已经支持 AMD 集成显卡 + NVIDIA 独立显卡组合。
 
 如有需要可以参考 [optimus-manager 官方文档](https://github.com/Askannz/optimus-manager/wiki)。
 
-同时拥有集成显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>cn / aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在集成显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用集显以及 hybrid 动态切换模式。
+同时拥有集成显卡与独立显卡的笔记本电脑，同样需要**按照上述步骤先安装各个对应的软件包**。除此之外还需要安装 optimus-manager<sup>aur</sup> 以及其图形前端 optimus-manager-qt<sup>aur</sup>。通过该程序可以在集成显卡和独立显卡间轻松切换。optimus-manager 提供三种模式 —— 分别为仅用独显、仅用集显以及 hybrid 动态切换模式。
 
 1. 使用以下命令安装相关软件包：
 
-::: code-group
-
-```bash [cn]
-yay -S optimus-manager optimus-manager-qt
+```bash
+yay -S optimus-manager-git optimus-manager-qt
 ```
-
-```bash [aur]
-yay -S aur/optimus-manager optimus-manager-qt
-```
-
-:::
 
 2. 安装完成后重启即可使用。optimus-manager 安装完成后会默认设置 `optimus-manager.service` 服务自动启动，但建议还是通过以下命令手动设置一下：
 
