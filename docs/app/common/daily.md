@@ -238,6 +238,38 @@ yay -S okular-git
 
 ![okular](../../assets/app/common/daily/okular.png)
 
+### zathura
+
+zathura 是一款可拓展的文檔閱讀器，可以閱讀 pdf(mupdf,poppler)，postscript, DjVu 以及漫畫。且支持 Vi 鍵位，書籤或快速標記(設置快捷導航)，自動刷新。  
+安裝 [zathura](https://archlinux.org/packages/extra/x86_64/zathura/)<sup>extra / aur</sup>
+::: code-group
+
+```sh [extra]
+sudo pacman -S zathura
+
+# DjVu 支持
+sudo pacman -S zathura-djvu
+
+# PDF 支持 (二選一)
+sudo pacman -S zathura-pdf-poppler
+sudo pacman -S zathura-pdf-mupdf
+
+# PostScript 支持
+sudo pacman -S zathura-ps
+
+# 漫畫支持
+sudo pacman -S zathura-cb
+
+```
+
+```sh [aur (git)]
+yay -S zathura
+# 其餘插件請自行前往 https://aur.archlinux.org/packages?O=0&K=zathura 查看
+```
+
+:::
+![zathura](../../assets/app/common/daily/zathura.png)
+
 ### calibre
 
 calibre 是一款功能强大且易于使用的电子书管理器。支持 epub、txt、azw3 等文件格式。
@@ -565,6 +597,14 @@ yay -S qimgv
   ```
 
   ![ktimer](../../assets/app/common/daily/ktimer.png)
+
+- [Qalculate](http://qalculate.github.io/) 非 KDE 但很好用的計算器，支持多種單位及函數
+
+```sh
+# gtk或qt二選一
+sudo pacman -S qalculate-gtk
+sudo pacman -S qalculate-qt
+```
 
 ## 🍷 Wine
 
