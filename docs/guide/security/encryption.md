@@ -105,11 +105,11 @@ cryptsetup open /dev/nvmexn1pn cryptlvm
 
 打开后，此分区设备地址将是 `/dev/mapper/cryptlvm` 而不是分区
 
-命令后面的 `cryptlvm` 可以修改成任何名称，假设改成 `root`，则此分区设备地址将是 `/dev/mapper/root`
+命令后面的 `cryptlvm` 可以修改成任何名称，假设改成 `root`，则此分区设备地址将会是 `/dev/mapper/root`
 
 :::
 
-## 3. 设置 LVM 逻辑卷
+## 3. (可选) 设置 LVM 逻辑卷
 
 ```zsh
 pvcreate /dev/mapper/cryptlvm
@@ -125,15 +125,31 @@ lvcreate -l 100%FREE vg -n root
 
 :::
 
-## 4. 挂载逻辑分区
+## 4. 挂载分区
 
-4-1. 格式化逻辑分区：
+4-1. 格式化分区
+
+如果不使用 LVM 逻辑分区：
+
+```zsh
+mkfs.btrfs /dev/mapper/cryptlvm
+```
+
+如果使用 LVM 逻辑分区：
 
 ```zsh
 mkfs.btrfs /dev/vg/root
 ```
 
-4-2. 挂载逻辑分区到 /mnt 目录：
+4-2. 挂载分区到 /mnt 目录
+
+如果不使用 LVM 逻辑分区：
+
+```zsh
+mount /dev/mapper/cryptlvm /mnt
+```
+
+如果使用 LVM 逻辑分区：
 
 ```zsh
 mount /dev/vg/root /mnt
@@ -141,7 +157,81 @@ mount /dev/vg/root /mnt
 
 然后[继续完成安装](../rookie/basic-install.md#10-生成-fstab-文件)
 
-## 5. (可选) 使用 TPM 自动解锁 LUKS 分区
+## 5. 修改 mkinitcpio 和 GRUB 配置
+
+5-1. 修改 /etc/mkinitcpio.conf
+
+```zsh
+vim /etc/mkinitcpio.conf
+
+    ......
+    HOOKS=(base udev microcode autodetect keyboard keymap modconf block encrypt lvm2 filesystems fsck) # 找到这行并添加 keyboard keymap encrypt lvm2 到括号里面
+    ......
+```
+
+5-2. 重新生成 initramfs
+
+```zsh
+mkinitcpio -P
+```
+
+5-3. 查看加密分区的 UUID
+
+::: code-group
+
+```zsh [SATA]
+blkid -o value -s UUID /dev/sdxn # 这里输入你的加密分区路径
+```
+
+```zsh [NVME]
+blkid -o value -s UUID /dev/nvmexn1pn # 这里输入你的加密分区路径
+```
+
+:::
+
+::: tip ℹ️ 提示
+
+请仔细抄写输出的 UUID 值哦
+
+:::
+
+5-4. 修改 /etc/default/grub
+
+如果不使用 LVM 逻辑分区：
+
+```zsh
+vim /etc/default/grub
+
+    .....
+    GRUB_CMDLINE_LINUX="cryptdevice=UUID=<刚刚抄写的 UUID 值>:cryptlvm root=/dev/mapper/cryptlvm" # 找到这行并修改
+
+    GRUB_PRELOAD_MODULES="... cryptodisk luks" # 找到这行并添加 cryptodisk luks 到双引号里面
+
+    GRUB_ENABLE_CRYPTODISK=y # 将这一行前面的 # 号去掉
+    .....
+```
+
+如果使用 LVM 逻辑分区：
+
+```zsh
+vim /etc/default/grub
+
+    .....
+    GRUB_CMDLINE_LINUX="cryptdevice=UUID=<刚刚抄写的 UUID 值>:cryptlvm root=/dev/mapper/vg-root" # 找到这行并修改
+
+    GRUB_PRELOAD_MODULES="... cryptodisk luks lvm" # 找到这行并添加 cryptodisk luks lvm 到双引号里面
+
+    GRUB_ENABLE_CRYPTODISK=y # 将这一行前面的 # 号去掉
+    .....
+```
+
+5-5. 重新生成 GRUB 配置文件
+
+```zsh
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 6. (可选) 使用 TPM 自动解锁 LUKS 分区
 
 ::: warning ⚠️ 注意
 
@@ -149,37 +239,21 @@ mount /dev/vg/root /mnt
 
 :::
 
-5-1. 安装所需软件
+6-1. 安装所需软件
 
 ```bash
 sudo pacman -S tpm2-tools tpm2-tss 
 ```
 
-5-2. 重新安装内核以生成 initramfs
+6-2. 重新生成 initramfs
 
 __原因是要将 tpm2-tss 模块导入 initramfs__
 
-::: code-group
-
-```bash [linux]
-sudo pacman -S linux
+```bash
+sudo mkinitcpio -P
 ```
 
-```bash [linux-hardened]
-sudo pacman -S linux-hardened
-```
-
-```bash [linux-zen]
-sudo pacman -S linux-zen
-```
-
-```bash [linux-lts]
-sudo pacman -S linux-lts
-```
-
-:::
-
-5-3. 将密钥导入 TPM
+6-3. 将密钥导入 TPM
 
 ::: code-group
 
@@ -211,7 +285,7 @@ sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs ="0+1+2+3+4+5+7+13" /dev
 
 :::
 
-5-4. 重启系统，你会发现无需输入解密密码，直接进入登录界面
+6-4. 重启系统，你会发现无需输入解密密码，直接进入登录界面
 
 ## 系统更新后无法自动解锁 LUKS 分区？
 
@@ -247,7 +321,7 @@ sudo systemd-cryptenroll --wipe-slot tpm2 --tpm2-device auto --tpm2-pcrs "0+1+7"
  
 ::: warning ⚠️ 注意
 
-`fscrypt` 只适用于 `EXT4`、`F2FS` 和 `UBIFS`，如果想同时使用 `fscrypt` 和 `Btrfs`，请你单独创建一个分区，用上述文件系统格式化并挂载到 `/home` 目录
+`fscrypt` 只适用于 `EXT4`、`F2FS` 和 `UBIFS`，如果想同时使用 `fscrypt` 和 `Btrfs`，请你单独创建一个分区或 LVM 逻辑卷，用上述文件系统格式化并挂载到 `/home` 目录
 
 ⚠️对分区进行格式化时需要加入 `encrypt` 参数，如下所示：
 
