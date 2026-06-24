@@ -534,6 +534,12 @@ qimgv 是一个轻量级的跨平台图像查看器，基于 Qt 开发。有可�
 yay -S qimgv
 ```
 
+如果你需要 avif 等格式的支持，还需要安装 [`kimageformats5`](https://archlinux.org/packages/extra/x86_64/kimageformats5/)<sup>extra</sup>:
+
+```sh
+sudo pacman -S kimageformats5
+```
+
 ![qimgv](../../assets/app/common/daily/qimgv.png)
 
 ## 🧰 实用工具
