@@ -228,7 +228,7 @@ cp -r Gruvbox-Light/ Gruvbox-Dark ~/.local/share/fcitx5/themes/
 sudo pacman -S kvantum
 ```
 
-在[这里](https://www.pling.com/p/1325246/)下载 Layan 的 Kvantum 主题，并解压。打开 Kvantum Manager,选择主题并安装，接下来在`Change/Delete Theme`中选择 Layan,Use this theme。最后在系统设置，外观中的应用程序风格中选择 kvantum 即可。
+在[这里](https://store.kde.org/p/1325246/)下载 Layan 的 Kvantum 主题，并解压。打开 Kvantum Manager,选择主题并安装，接下来在`Change/Delete Theme`中选择 Layan,Use this theme。最后在系统设置，外观中的应用程序风格中选择 kvantum 即可。
 
 > 如果透明的效果没有显示，确保 KDE 的全局缩放比例为整数倍。或者尝试切换混成器中 openGL 的设置。
 
@@ -267,10 +267,16 @@ fc-list | less
 
 开机时有个漂亮的 GRUB 也是很舒服的。
 
-在[这里](https://www.pling.com/p/1482847/)下载 Distro 的 GRUB 主题并解压。接下来<b> `cd` 进解压出来的文件夹</b>，打开 konsole 输入
+在[这里](https://store.kde.org/p/1482847/)下载 Distro 的 GRUB 主题并解压。接下来<b> `cd` 进解压出来的文件夹</b>，打开 konsole 输入
 
 ```bash
 sudo cp -rf . /usr/share/grub/themes/Distro
+```
+
+或者安装AUR主题
+
+```bash
+yay -S distro-grub-themes-arch
 ```
 
 以将主题放置在系统的 GRUB 默认文件夹内。
