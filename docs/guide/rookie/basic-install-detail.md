@@ -116,6 +116,8 @@ New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。�
 (parted) quit # 退出 parted 命令行交互
 ```
 
+或在cfdisk进行设置，如果磁盘无分区表，cfdisk会询问你使用何种类型的分区表，使用UEFI启动的系统使用GPT分区表，使用BIOS启动的系统使用MBR分区表。
+
 :::
 
 ::: danger ☢️ 警告
@@ -142,10 +144,14 @@ New disk label type? gpt # 输入 gpt，将磁盘类型转换为 GPT 类型。�
 
 ```zsh [SATA]
 mkfs.vfat /dev/sdxn
+#或
+mkfs.fat -F 32 /dev/sdxn
 ```
 
 ```zsh [NVME]
 mkfs.vfat /dev/nvmexn1pn
+#或
+mkfs.fat -F 32 /dev/nvmexn1pn
 ```
 
 :::
