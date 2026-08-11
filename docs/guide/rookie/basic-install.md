@@ -37,6 +37,7 @@
 :::
 
 ::: tip ℹ️ 提示
+
 - 在命令行中你可以使用如下命令清屏：
 
   ```zsh
@@ -50,6 +51,7 @@
   ```zsh
   rmmod pcspkr
   ```
+
 - 要永久禁用蜂鸣器内核模块, 请创建并编辑 `/etc/modprobe.d/blacklist.conf`
 
   ```zsh
@@ -559,6 +561,7 @@ pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
 >
 > - `base-devel` —— `base-devel` 在 `AUR` 包的安装过程中是必须用到的
 > - `linux` —— 内核软件包，这里建议先不要替换为其它内核
+> - `linux-firmware` —— 硬件固件软件包，包含显卡、无线网卡、蓝牙等设备运行所需的固件文件
 
 ![pacstrap_step-1](../../assets/guide/rookie/basic-install_pacstrap-1.png)
 
@@ -945,7 +948,6 @@ nmtui
 neofetch 原作者 dylanaraps 已于 2024 年 04 月 26 日归档 neofetch 仓库，在下面我们会使用 `fastfetch` 代替 `neofetch`。
 
 :::
-
 
 5. `fastfetch` 可以将系统信息和发行版 logo 一并打印出来。通过 `pacman` 安装 `fastfetch`：
 

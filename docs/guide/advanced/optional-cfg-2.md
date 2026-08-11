@@ -49,6 +49,8 @@ sudo pacman -S linux-hardened linux-hardened-headers
 
 更换内核后还需要留意部分应用需要更换为相应的 dkms 版本。
 
+相反的，如果你使用了 dkms 版本的应用，请保证你安装了对应内核头文件。
+
 本指南涉及的应用如下：
 
 - [`nvidia-dkms`](/guide/rookie/graphic-driver.md#nvidia-独立显卡)
@@ -56,9 +58,10 @@ sudo pacman -S linux-hardened linux-hardened-headers
 
 :::
 
-> #### 📑 相关资料：DKMS
+> #### 📑 相关资料
 >
-> DKMS，即 **D**ynamic **K**ernel **M**odule **S**ystem。可以使内核变更（如升级）后自动编译模块，适配新内核。
+> - DKMS，即 **D**ynamic **K**ernel **M**odule **S**ystem。可以使内核变更（如升级）后自动编译模块，适配新内核。
+> - 内核头文件（Kernel Headers）是编译内核模块所需的接口文件。Arch Linux 中对应的软件包通常为 `linux-headers`，其中包含当前 Linux 内核版本的头文件，用于编译 NVIDIA DKMS 驱动、VirtualBox、ZFS 等第三方内核模块。
 
 2. 为了让 GRUB 记住最后在 GRUB 引导菜单里选择的内核，以便在下次启动时自动使用对应的内核，需要编辑 `/etc/default/grub` 文件：
 
