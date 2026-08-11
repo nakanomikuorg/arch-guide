@@ -198,8 +198,15 @@ pacman -Syyu
 1. 通过以下命令安装相关软件包：
 
 ```bash
-pacman -S plasma-meta konsole dolphin # plasma-meta 元软件包、konsole 终端模拟器和 dolphin 文件管理器
+pacman -S plasma-meta konsole dolphin sddm
 ```
+
+> 📑 命令参数说明：
+>
+> - `plasma-meta` —— KDE Plasma 桌面元软件包，安装 KDE 桌面环境的核心组件（如 Plasma Shell、KWin 窗口管理器、系统设置等）
+> - `konsole` —— KDE 默认终端模拟器，用于执行命令
+> - `dolphin` —— KDE 默认文件管理器，用于浏览和管理文件
+> - `sddm` —— KDE 推荐的显示管理器，提供图形化登录界面，并负责在系统启动后启动 KDE Plasma 会话
 
 ![install-kde](../../assets/guide/rookie/desktop-env-and-app_install-kde.png)
 
